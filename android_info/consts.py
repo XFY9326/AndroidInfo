@@ -4,7 +4,7 @@ ANDROID_MAIN_REFS: str = "refs/heads/main"
 ANDROID_MANIFEST_NS: dict[str, str] = {
     "android": "http://schemas.android.com/apk/res/android",
     "tools": "http://schemas.android.com/tools",
-    "app": "http://schemas.android.com/apk/res-auto"
+    "app": "http://schemas.android.com/apk/res-auto",
 }
 
 # Manually written due to lack of documentation

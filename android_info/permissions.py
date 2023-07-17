@@ -1,13 +1,15 @@
 from dataclasses import dataclass
-from functools import lru_cache
 from typing import Optional
 
 import aiohttp
 from dataclasses_json import DataClassJsonMixin
 from lxml import etree
+# noinspection PyProtectedMember
+from lxml.etree import _Element
 
 from .consts import ANDROID_MANIFEST_NS
 from .source_code import AndroidSourceCodePath, AndroidGoogleSource
+from .utils import android_attrib
 
 
 @dataclass(frozen=True)
@@ -136,7 +138,7 @@ class _AndroidCoreResString:
 
     async def _get_content(self) -> dict[str, str]:
         manifest = await self._source.get_source_code(self._PERMISSION_STRING_MANIFEST, self._refs)
-        tree = etree.fromstring(manifest.encode("utf-8"))
+        tree: _Element = etree.fromstring(manifest.encode("utf-8"))
         return {
             string_element.attrib["name"]: string_element.text
             for string_element in tree.xpath("/resources/string[@name]")
@@ -166,12 +168,8 @@ class _AndroidCoreManifest:
         self._permissions: Optional[dict[str, _RawPermission]] = None
 
     async def _get_content(self) -> tuple[dict[str, _RawPermissionGroup], dict[str, _RawPermission]]:
-        @lru_cache
-        def _android_attrib(key: str) -> str:
-            return f"{{{ANDROID_MANIFEST_NS['android']}}}{key}"
-
         def _get_android_attrib(element, key: str) -> Optional[str]:
-            return element.attrib[_android_attrib(key)] if _android_attrib(key) in element.attrib else None
+            return element.attrib[android_attrib(key)] if android_attrib(key) in element.attrib else None
 
         def _get_comment_info(element) -> PermissionComment:
             prev_element = element.getprevious()
@@ -195,10 +193,10 @@ class _AndroidCoreManifest:
                 )
 
         manifest = await self._source.get_source_code(self._PERMISSION_MANIFEST, self._refs)
-        tree = etree.fromstring(manifest.encode("utf-8"))
+        tree: _Element = etree.fromstring(manifest.encode("utf-8"))
         permission_groups = {
-            e.attrib[_android_attrib("name")]: _RawPermissionGroup(
-                name=e.attrib[_android_attrib("name")],
+            e.attrib[android_attrib("name")]: _RawPermissionGroup(
+                name=e.attrib[android_attrib("name")],
                 description=_get_android_attrib(e, "description"),
                 label=_get_android_attrib(e, "label"),
                 priority=_get_android_attrib(e, "priority"),
@@ -207,8 +205,8 @@ class _AndroidCoreManifest:
             for e in tree.xpath("/manifest/permission-group[@android:name]", namespaces=ANDROID_MANIFEST_NS)
         }
         permissions = {
-            e.attrib[_android_attrib("name")]: _RawPermission(
-                name=e.attrib[_android_attrib("name")],
+            e.attrib[android_attrib("name")]: _RawPermission(
+                name=e.attrib[android_attrib("name")],
                 description=_get_android_attrib(e, "description"),
                 label=_get_android_attrib(e, "label"),
                 group=_get_android_attrib(e, "group"),

@@ -9,6 +9,8 @@ from typing import Optional
 import aiohttp
 from bs4 import BeautifulSoup
 from lxml import etree
+# noinspection PyProtectedMember
+from lxml.etree import _Element
 
 
 @dataclass(frozen=True)
@@ -64,7 +66,7 @@ class AndroidPlatformManifest:
 
     async def _load_project_mappings(self) -> list[AndroidProjectMapping]:
         manifest_file = await self._source.get_file(self._MANIFEST_REPO, self._MANIFEST_REF, self._MANIFEST_PATH)
-        root_node = etree.fromstring(manifest_file.encode("utf-8"))
+        root_node: _Element = etree.fromstring(manifest_file.encode("utf-8"))
         return [
             AndroidProjectMapping(element.attrib["name"], element.attrib["path"])
             for element in root_node.xpath("/manifest/project")
