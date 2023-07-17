@@ -2,7 +2,6 @@ import asyncio
 import os
 import shutil
 import json
-import dataclasses
 import http
 from typing import Optional
 
@@ -10,25 +9,16 @@ import aiohttp
 
 from android_info.consts import ANDROID_MAIN_REFS
 from android_info.versions import AndroidBuildNumbers
-from android_info.permissions import AndroidPermissions
+from android_info.permissions import AndroidFrameworkPermissions
 
 
 async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, refs_api: Optional[tuple[str, int]] = None):
-    android_permissions = AndroidPermissions(client, refs_api[0] if refs_api is not None else ANDROID_MAIN_REFS)
+    android_permissions = AndroidFrameworkPermissions(client, refs_api[0] if refs_api is not None else ANDROID_MAIN_REFS)
 
-    permission_groups = await android_permissions.list_permission_groups()
-    permissions = await android_permissions.list_permissions()
+    permissions = await android_permissions.get_permissions()
 
     with open(os.path.join(output_dir, f"permissions-{refs_api[1] if refs_api is not None else 'REL'}.json"), "w", encoding="utf-8") as f:
-        json.dump(
-            {
-                "permission_groups": {i.name: dataclasses.asdict(i) for i in permission_groups},
-                "permissions": {i.name: dataclasses.asdict(i) for i in permissions},
-            },
-            f,
-            ensure_ascii=False,
-            indent=4,
-        )
+        json.dump(permissions.to_dict(), f, ensure_ascii=False, indent=4)
 
     del android_permissions
 
@@ -37,6 +27,8 @@ async def main():
     async with aiohttp.ClientSession() as client:
         android_builds = AndroidBuildNumbers(client)
 
+        print("Loading versions ...")
+
         output_dir = "outputs"
         if os.path.exists(output_dir):
             shutil.rmtree(output_dir)
@@ -44,11 +36,13 @@ async def main():
 
         api_levels = await android_builds.list_api_levels()
         with open(os.path.join(output_dir, "api_levels.json"), "w", encoding="utf-8") as f:
-            json.dump({i.api: dataclasses.asdict(i) for i in api_levels}, f, ensure_ascii=False, indent=4)
+            json.dump({i.api: i.to_dict() for i in api_levels}, f, ensure_ascii=False, indent=4)
 
         build_versions = await android_builds.list_build_versions()
         with open(os.path.join(output_dir, "build_versions.json"), "w", encoding="utf-8") as f:
-            json.dump({i.tag: dataclasses.asdict(i) for i in build_versions}, f, ensure_ascii=False, indent=4)
+            json.dump({i.tag: i.to_dict() for i in build_versions}, f, ensure_ascii=False, indent=4)
+
+        print("Loading permissions ...")
 
         permissions_output_dir = os.path.join(output_dir, "permissions")
         if not os.path.exists(permissions_output_dir):

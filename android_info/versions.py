@@ -6,6 +6,7 @@ from typing import Optional
 
 import aiohttp
 from bs4 import BeautifulSoup
+from dataclasses_json import DataClassJsonMixin
 
 from .consts import API_LEVEL_MAPPING
 
@@ -47,7 +48,7 @@ class VersionCompare:
 
 
 @dataclass
-class AndroidBuildVersion:
+class AndroidBuildVersion(DataClassJsonMixin):
     tag: str
     name: Optional[str]
     version: str
@@ -103,7 +104,7 @@ class AndroidBuildVersion:
 
 
 @dataclass
-class AndroidAPILevel:
+class AndroidAPILevel(DataClassJsonMixin):
     name: Optional[str]
     version_range: str
     versions: list[str]

@@ -3,6 +3,7 @@ from functools import lru_cache
 from typing import Optional
 
 import aiohttp
+from dataclasses_json import DataClassJsonMixin
 from lxml import etree
 
 from .consts import ANDROID_MANIFEST_NS
@@ -10,7 +11,7 @@ from .source_code import AndroidSourceCodePath, AndroidGoogleSource
 
 
 @dataclass(frozen=True)
-class PermissionComment:
+class PermissionComment(DataClassJsonMixin):
     deprecated: bool
     system_api: bool
     test_api: bool
@@ -18,7 +19,7 @@ class PermissionComment:
 
 
 @dataclass(frozen=True)
-class AndroidPermissionGroup:
+class AndroidPermissionGroup(DataClassJsonMixin):
     name: str
     description: Optional[str]
     label: Optional[str]
@@ -35,7 +36,7 @@ class AndroidPermissionGroup:
 
 
 @dataclass(frozen=True)
-class AndroidPermission:
+class AndroidPermission(DataClassJsonMixin):
     name: str
     description: Optional[str]
     label: Optional[str]
@@ -52,6 +53,18 @@ class AndroidPermission:
         if isinstance(other, AndroidPermission):
             return self.name == other.name
         return False
+
+
+@dataclass(frozen=True)
+class AndroidPermissions(DataClassJsonMixin):
+    groups: dict[str, AndroidPermissionGroup]
+    permissions: dict[str, AndroidPermission]
+
+    async def list_groups(self) -> list[AndroidPermissionGroup]:
+        return [i for _, i in sorted(self.groups.items(), key=lambda x: x[0])]
+
+    async def list_permissions(self) -> list[AndroidPermission]:
+        return [i for _, i in sorted(self.permissions.items(), key=lambda x: x[0])]
 
 
 @dataclass(frozen=True)
@@ -223,13 +236,12 @@ class _AndroidCoreManifest:
         return self._permissions
 
 
-class AndroidPermissions:
+class AndroidFrameworkPermissions:
 
     def __init__(self, client: aiohttp.ClientSession, refs: str):
         self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs)
         self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs)
-        self._permission_groups: Optional[dict[str, AndroidPermissionGroup]] = None
-        self._permissions: Optional[dict[str, AndroidPermission]] = None
+        self._permissions: Optional[AndroidPermissions] = None
 
     async def _parse_raw_text(self, text: Optional[str]) -> Optional[str]:
         if text is None:
@@ -239,7 +251,7 @@ class AndroidPermissions:
         else:
             return text
 
-    async def _get_content(self) -> tuple[dict[str, AndroidPermissionGroup], dict[str, AndroidPermission]]:
+    async def _get_content(self) -> AndroidPermissions:
         permission_groups = {
             k: AndroidPermissionGroup(
                 name=i.name,
@@ -263,24 +275,9 @@ class AndroidPermissions:
             )
             for k, i in (await self._manifest.get_permissions()).items()
         }
-        return permission_groups, permissions
+        return AndroidPermissions(permission_groups, permissions)
 
-    async def _prepare(self):
-        if self._permission_groups is None or self._permissions is None:
-            self._permission_groups, self._permissions = await self._get_content()
-
-    async def get_permission_groups(self) -> dict[str, AndroidPermissionGroup]:
-        await self._prepare()
-        assert self._permission_groups is not None
-        return self._permission_groups
-
-    async def get_permissions(self) -> dict[str, AndroidPermission]:
-        await self._prepare()
-        assert self._permissions is not None
+    async def get_permissions(self) -> AndroidPermissions:
+        if self._permissions is None:
+            self._permissions = await self._get_content()
         return self._permissions
-
-    async def list_permission_groups(self) -> list[AndroidPermissionGroup]:
-        return [i for _, i in sorted((await self.get_permission_groups()).items(), key=lambda x: x[0])]
-
-    async def list_permissions(self) -> list[AndroidPermission]:
-        return [i for _, i in sorted((await self.get_permissions()).items(), key=lambda x: x[0])]
