@@ -4,49 +4,21 @@ from functools import cmp_to_key
 from itertools import zip_longest
 from typing import Optional
 
-import requests
+import aiohttp
 from bs4 import BeautifulSoup
 
-# Manually written due to lack of documentation
-API_LEVEL_MAPPING: dict[int, list[str]] = {
-    1: ["1.0"],
-    2: ["1.1"],
-    3: ["1.5"],
-    4: ["1.6"],
-    5: ["2.0"],
-    6: ["2.0.1"],
-    7: ["2.1"],
-    8: ["2.2", "2.2.1", "2.2.2", "2.2.3"],
-    9: ["2.3", "2.3.1", "2.3.2"],
-    10: ["2.3.3", "2.3.4", "2.3.5", "2.3.6", "2.3.7"],
-    11: ["3.0"],
-    12: ["3.1"],
-    13: ["3.2", "3.2.1", "3.2.2", "3.2.4", "3.2.6"],
-    14: ["4.0.1", "4.0.2"],
-    15: ["4.0.3", "4.0.4"],
-    16: ["4.1.1", "4.1.2"],
-    17: ["4.2", "4.2.1", "4.2.2"],
-    18: ["4.3", "4.3.1"],
-    19: ["4.4", "4.4.1", "4.4.2", "4.4.3", "4.4.4"],
-    20: ["4.4w"],
-    21: ["5.0.0", "5.0.1", "5.0.2", "5.1.0"],
-    22: ["5.1.1"],
-    23: ["6.0.0", "6.0.1"],
-    24: ["7.0.0"],
-    25: ["7.1.0", "7.1.1", "7.1.2"],
-    26: ["8.0.0"],
-    27: ["8.1.0"],
-    28: ["9.0.0"],
-    29: ["10.0.0"],
-    30: ["11.0.0"],
-    31: ["12.0.0"],
-    32: ["12.1.0"],
-    33: ["13.0.0"],
-    34: ["14.0.0"]
-}
+from .consts import API_LEVEL_MAPPING
 
 
 class VersionCompare:
+    _INSTANCE: Optional['VersionCompare'] = None
+
+    @staticmethod
+    def instance() -> 'VersionCompare':
+        if VersionCompare._INSTANCE is None:
+            VersionCompare._INSTANCE = VersionCompare()
+        return VersionCompare._INSTANCE
+
     def __init__(self):
         self._version_pattern: re.Pattern = re.compile(r"(\d+)([a-zA-Z]*)")
 
@@ -85,7 +57,7 @@ class AndroidBuildVersion:
     security_patch_level: Optional[str]
 
     def __post_init__(self):
-        self._version_compare: VersionCompare = VersionCompare()
+        self._version_compare: VersionCompare = VersionCompare.instance()
 
     def match_version(self, version: str) -> bool:
         return self._version_compare.compare(self.version, version) == 0
@@ -134,6 +106,7 @@ class AndroidBuildVersion:
 class AndroidAPILevel:
     name: Optional[str]
     version_range: str
+    versions: list[str]
     api: int
     ndk: Optional[int]
 
@@ -177,16 +150,18 @@ class AndroidBuildNumbers:
     _BS4_PARSER = "lxml"
     _BASE_URL = "https://source.android.com/docs/setup/about/build-numbers"
 
-    def __init__(self):
+    def __init__(self, client: aiohttp.ClientSession):
+        self._client: aiohttp.ClientSession = client
         self._version_tag_regex: re.Pattern = re.compile(r"android(-security)?-(.*)_r(.*)")
         self._api_ndk_regex: re.Pattern = re.compile(r"API level (\d+)(, NDK (\d+))?")
         self._build_versions: Optional[list[AndroidBuildVersion]] = None
         self._api_levels: Optional[list[AndroidAPILevel]] = None
-        self._version_compare: VersionCompare = VersionCompare()
+        self._version_compare: VersionCompare = VersionCompare.instance()
+        self._checked_api_mappings: Optional[dict[int, list[str]]] = None
 
-    def _fetch_docs(self) -> BeautifulSoup:
-        with requests.get(self._BASE_URL) as response:
-            return BeautifulSoup(response.content, self._BS4_PARSER)
+    async def _fetch_docs(self) -> BeautifulSoup:
+        async with self._client.get(self._BASE_URL) as response:
+            return BeautifulSoup(await response.text(), self._BS4_PARSER)
 
     def _get_build_versions(self, soup: BeautifulSoup) -> list[AndroidBuildVersion]:
         def _transform_empty_str(text: str) -> Optional[str]:
@@ -241,7 +216,7 @@ class AndroidBuildNumbers:
                 api_level.ndk = current_ndk
         return api_levels
 
-    def _get_api_levels(self, soup: BeautifulSoup) -> list[AndroidAPILevel]:
+    def _get_api_levels(self, soup: BeautifulSoup, api_level_mappings: dict[int, list[str]]) -> list[AndroidAPILevel]:
         def _parse_codename(codename: str) -> Optional[str]:
             return codename if "no codename" not in codename else None
 
@@ -250,6 +225,7 @@ class AndroidBuildNumbers:
             return AndroidAPILevel(
                 name="KitKat Wear",
                 version_range="4.4w",
+                versions=api_level_mappings[20] if 20 in api_level_mappings else [],
                 api=20,
                 ndk=None
             )
@@ -268,30 +244,50 @@ class AndroidBuildNumbers:
         api_ndk_elements = table_body.select("tr > td:nth-child(3)")
         api_ndk = [_parse_api_ndk(e.text.strip()) for e in api_ndk_elements]
         api_levels = [
-            AndroidAPILevel(name=_parse_codename(e1.text.strip()), version_range=e2.text.strip(), api=api, ndk=ndk)
+            AndroidAPILevel(
+                name=_parse_codename(e1.text.strip()),
+                version_range=e2.text.strip(),
+                versions=api_level_mappings[api] if api in api_level_mappings else [],
+                api=api,
+                ndk=ndk
+            )
             for e1, e2, (api, ndk) in zip(codename_elements, version_elements, api_ndk)
         ]
         api_levels.append(_generate_kitkat_wear())
         return api_levels
 
-    def _prepare(self):
-        if self._build_versions is None or self._build_versions is None:
-            soup = self._fetch_docs()
-            self._build_versions = sorted(self._get_build_versions(soup) + self._get_honeycomb_build_versions(soup))
-            self._api_levels = self._api_level_ndk_fix(self._get_api_levels(soup))
+    async def _list_android_versions(self, build_versions: list[AndroidBuildVersion]) -> list[str]:
+        return sorted(set([i.version for i in build_versions]), key=cmp_to_key(self._version_compare.compare))
 
-    def list_build_versions(self) -> list[AndroidBuildVersion]:
-        self._prepare()
+    async def get_api_mappings(self, build_versions: list[AndroidBuildVersion]) -> dict[int, list[str]]:
+        if self._checked_api_mappings is None:
+            android_versions = await self._list_android_versions(build_versions)
+            exists_versions = set([j for i in API_LEVEL_MAPPING.values() for j in i])
+            missing_versions = set(android_versions) - exists_versions
+            if len(missing_versions) > 0:
+                raise ValueError(f"Missing version: {missing_versions}")
+            self._checked_api_mappings = API_LEVEL_MAPPING
+        return self._checked_api_mappings
+
+    async def _prepare(self):
+        if self._build_versions is None or self._build_versions is None:
+            soup = await self._fetch_docs()
+            self._build_versions = sorted(self._get_build_versions(soup) + self._get_honeycomb_build_versions(soup))
+            api_mappings = await self.get_api_mappings(self._build_versions)
+            self._api_levels = self._api_level_ndk_fix(self._get_api_levels(soup, api_mappings))
+
+    async def list_build_versions(self) -> list[AndroidBuildVersion]:
+        await self._prepare()
         assert self._build_versions is not None
         return self._build_versions
 
-    def list_api_levels(self) -> list[AndroidAPILevel]:
-        self._prepare()
+    async def list_api_levels(self) -> list[AndroidAPILevel]:
+        await self._prepare()
         assert self._api_levels is not None
         return self._api_levels
 
-    def get_build_versions(self, version: str) -> list[AndroidBuildVersion]:
-        self._prepare()
+    async def get_build_versions(self, version: str) -> list[AndroidBuildVersion]:
+        await self._prepare()
         assert self._build_versions is not None
         version = version.strip()
         if len(version) == 0:
@@ -306,44 +302,35 @@ class AndroidBuildNumbers:
         build_versions = sorted(build_versions, reverse=True)
         return build_versions[0]
 
-    def get_latest_build_version(self, version: str, is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
-        build_versions = self.get_build_versions(version)
+    async def get_latest_build_version(self, version: str, is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
+        build_versions = await self.get_build_versions(version)
         return self._get_latest_build_version(build_versions, is_security)
 
-    def get_api_level(self, api: int) -> Optional[AndroidAPILevel]:
-        self._prepare()
+    async def get_api_level(self, api: int) -> Optional[AndroidAPILevel]:
+        await self._prepare()
         assert self._api_levels is not None
         if api <= 0:
             raise ValueError("Non positive API level!")
-        filtered_result = [i for i in self._api_levels if i.api == api]
-        return filtered_result[0] if len(filtered_result) > 0 else None
+        for api_level in self._api_levels:
+            if api_level.api == api:
+                return api_level
+        return None
 
-    def list_android_versions(self) -> list[str]:
-        self._prepare()
+    async def list_android_versions(self) -> list[str]:
+        await self._prepare()
         assert self._build_versions is not None
-        return sorted(set([i.version for i in self._build_versions]), key=cmp_to_key(self._version_compare.compare))
+        return await self._list_android_versions(self._build_versions)
 
-    def get_android_version_api_level(self, version: str) -> AndroidAPILevel:
-        for api, versions in API_LEVEL_MAPPING.items():
-            if version in set(versions):
-                return self.get_api_level(api)
+    async def get_android_version_api_level(self, version: str) -> AndroidAPILevel:
+        for api_level in await self.list_api_levels():
+            if version in set(api_level.versions):
+                return api_level
         raise ValueError(f"Unknown android version: {version}")
 
-    def get_api_build_versions(self, api: int) -> list[AndroidBuildVersion]:
-        if api not in API_LEVEL_MAPPING:
-            raise ValueError(f"Unknown API level: {api}")
-        android_versions = API_LEVEL_MAPPING[api]
-        return [build for version in android_versions for build in self.get_build_versions(version)]
+    async def get_api_build_versions(self, api: int) -> list[AndroidBuildVersion]:
+        api_level = await self.get_api_level(api)
+        return [build for version in api_level.versions for build in (await self.get_build_versions(version))]
 
-    def get_latest_api_build_version(self, api: int, is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
-        build_versions = self.get_api_build_versions(api)
+    async def get_latest_api_build_version(self, api: int, is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
+        build_versions = await self.get_api_build_versions(api)
         return self._get_latest_build_version(build_versions, is_security)
-
-    def get_api_mappings(self, check_missing: bool = True) -> dict[int, list[str]]:
-        if check_missing:
-            android_versions = self.list_android_versions()
-            exists_versions = set([j for i in API_LEVEL_MAPPING.values() for j in i])
-            missing_versions = set(android_versions) - exists_versions
-            if len(missing_versions) > 0:
-                raise ValueError(f"Missing version: {missing_versions}")
-        return API_LEVEL_MAPPING

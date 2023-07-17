@@ -6,11 +6,13 @@ Reference: [Android source docs](https://source.android.com/docs)
 
 ## Daily update
 
-API levels JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/master/outputs/api_levels.json)
+API levels JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/api_levels.json)
 
-API Mappings JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/master/outputs/api_mappings.json)
+Build versions JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/build_versions.json)
 
-Build versions JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/master/outputs/build_versions.json)
+Latest Permissions JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permissions/permissions-REL.json)
+
+*Tips: You can view all available permissions with API level [HERE](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permissions)*
 
 ## Usage
 

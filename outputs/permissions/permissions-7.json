@@ -1,0 +1,2202 @@
+{
+    "permission_groups": {
+        "android.permission-group.ACCOUNTS": {
+            "name": "android.permission-group.ACCOUNTS",
+            "description": "Access the available accounts.",
+            "label": "Your accounts",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.COST_MONEY": {
+            "name": "android.permission-group.COST_MONEY",
+            "description": "Allow applications to do things\n        that can cost you money.",
+            "label": "Services that cost you money",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.DEVELOPMENT_TOOLS": {
+            "name": "android.permission-group.DEVELOPMENT_TOOLS",
+            "description": "Features only needed for\n        application developers.",
+            "label": "Development tools",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.HARDWARE_CONTROLS": {
+            "name": "android.permission-group.HARDWARE_CONTROLS",
+            "description": "Direct access to hardware on\n        the handset.",
+            "label": "Hardware controls",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.LOCATION": {
+            "name": "android.permission-group.LOCATION",
+            "description": "Monitor your physical location",
+            "label": "Your location",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.MESSAGES": {
+            "name": "android.permission-group.MESSAGES",
+            "description": "Read and write your SMS,\n        e-mail, and other messages.",
+            "label": "Your messages",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.NETWORK": {
+            "name": "android.permission-group.NETWORK",
+            "description": "Allow applications to access\n        various network features.",
+            "label": "Network communication",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.PERSONAL_INFO": {
+            "name": "android.permission-group.PERSONAL_INFO",
+            "description": "Direct access to your contacts\n        and calendar stored on the phone.",
+            "label": "Your personal information",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.PHONE_CALLS": {
+            "name": "android.permission-group.PHONE_CALLS",
+            "description": "Monitor, record, and process\n        phone calls.",
+            "label": "Phone calls",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.STORAGE": {
+            "name": "android.permission-group.STORAGE",
+            "description": "Access the SD card.",
+            "label": "Storage",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission-group.SYSTEM_TOOLS": {
+            "name": "android.permission-group.SYSTEM_TOOLS",
+            "description": "Lower-level access and control\n        of the system.",
+            "label": "System tools",
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        }
+    },
+    "permissions": {
+        "android.permission.ACCESS_CHECKIN_PROPERTIES": {
+            "name": "android.permission.ACCESS_CHECKIN_PROPERTIES",
+            "description": "Allows read/write access to\n        properties uploaded by the checkin service.  Not for use by normal\n        applications.",
+            "label": "access checkin properties",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_COARSE_LOCATION": {
+            "name": "android.permission.ACCESS_COARSE_LOCATION",
+            "description": "Access coarse location sources such as the cellular\n        network database to determine an approximate phone location, where available. Malicious\n        applications can use this to determine approximately where you are.",
+            "label": "coarse (network-based) location",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+            "name": "android.permission.ACCESS_FINE_LOCATION",
+            "description": "Access fine location sources such as the\n        Global Positioning System on the phone, where available.\n        Malicious applications can use this to determine where you are, and may\n        consume additional battery power.",
+            "label": "fine (GPS) location",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS": {
+            "name": "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+            "description": "Access extra location provider commands.\n        Malicious applications could use this to interfere with the operation of the GPS\n        or other location sources.",
+            "label": "access extra location provider commands",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_MOCK_LOCATION": {
+            "name": "android.permission.ACCESS_MOCK_LOCATION",
+            "description": "Create mock location sources for testing.\n        Malicious applications can use this to override the location and/or status returned by real\n        location sources such as GPS or Network providers.",
+            "label": "mock location sources for testing",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "name": "android.permission.ACCESS_NETWORK_STATE",
+            "description": "Allows an application to view\n      the state of all networks.",
+            "label": "view network state",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_SURFACE_FLINGER": {
+            "name": "android.permission.ACCESS_SURFACE_FLINGER",
+            "description": "Allows application to use\n        SurfaceFlinger low-level features.",
+            "label": "access SurfaceFlinger",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "name": "android.permission.ACCESS_WIFI_STATE",
+            "description": "Allows an application to view\n      the information about the state of Wi-Fi.",
+            "label": "view Wi-Fi state",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCOUNT_MANAGER": {
+            "name": "android.permission.ACCOUNT_MANAGER",
+            "description": "Allows an\n    application to make calls to AccountAuthenticators",
+            "label": "act as the AccountManagerService",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.AUTHENTICATE_ACCOUNTS": {
+            "name": "android.permission.AUTHENTICATE_ACCOUNTS",
+            "description": "Allows an application\n    to use the account authenticator capabilities of the\n    AccountManager, including creating accounts and getting and\n    setting their passwords.",
+            "label": "act as an account authenticator",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BACKUP": {
+            "name": "android.permission.BACKUP",
+            "description": "Allows the application to control the system\\'s backup and restore mechanism.  Not for use by normal applications.",
+            "label": "control system backup and restore",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.BACKUP_DATA": {
+            "name": "android.permission.BACKUP_DATA",
+            "description": "Allows the application to participate in the system\\'s backup and restore mechanism.",
+            "label": "back up and restore the application\\'s data",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.BATTERY_STATS": {
+            "name": "android.permission.BATTERY_STATS",
+            "description": "Allows the modification of\n        collected battery statistics. Not for use by normal applications.",
+            "label": "modify battery statistics",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BIND_APPWIDGET": {
+            "name": "android.permission.BIND_APPWIDGET",
+            "description": "Allows the application to tell the system\n        which widgets can be used by which application.  With this permission,\n        applications can give access to personal data to other applications.\n        Not for use by normal applications.",
+            "label": "choose widgets",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BIND_INPUT_METHOD": {
+            "name": "android.permission.BIND_INPUT_METHOD",
+            "description": "Allows the holder to bind to the top-level\n        interface of an input method. Should never be needed for normal applications.",
+            "label": "bind to an input method",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BIND_WALLPAPER": {
+            "name": "android.permission.BIND_WALLPAPER",
+            "description": "Allows the holder to bind to the top-level\n        interface of a wallpaper. Should never be needed for normal applications.",
+            "label": "bind to a wallpaper",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.BLUETOOTH": {
+            "name": "android.permission.BLUETOOTH",
+            "description": "Allows an application to view\n      configuration of the local Bluetooth phone, and to make and accept\n      connections with paired devices.",
+            "label": "create Bluetooth connections",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BLUETOOTH_ADMIN": {
+            "name": "android.permission.BLUETOOTH_ADMIN",
+            "description": "Allows an application to configure\n      the local Bluetooth phone, and to discover and pair with remote\n      devices.",
+            "label": "bluetooth administration",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BRICK": {
+            "name": "android.permission.BRICK",
+            "description": "Allows the application to\n        disable the entire phone permanently. This is very dangerous.",
+            "label": "permanently disable phone",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BROADCAST_PACKAGE_REMOVED": {
+            "name": "android.permission.BROADCAST_PACKAGE_REMOVED",
+            "description": "Allows an application to\n        broadcast a notification that an application package has been removed.\n        Malicious applications may use this to kill any other running\n        application.",
+            "label": "send package removed broadcast",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BROADCAST_SMS": {
+            "name": "android.permission.BROADCAST_SMS",
+            "description": "Allows an application to\n        broadcast a notification that an SMS message has been received.\n        Malicious applications may use this to forge incoming SMS messages.",
+            "label": "send SMS-received broadcast",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BROADCAST_STICKY": {
+            "name": "android.permission.BROADCAST_STICKY",
+            "description": "Allows an application to send\n        sticky broadcasts, which remain after the broadcast ends.\n        Malicious applications can make the phone slow or unstable by causing it\n        to use too much memory.",
+            "label": "send sticky broadcast",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.BROADCAST_WAP_PUSH": {
+            "name": "android.permission.BROADCAST_WAP_PUSH",
+            "description": "Allows an application to\n        broadcast a notification that a WAP PUSH message has been received.\n        Malicious applications may use this to forge MMS message receipt or to\n        silently replace the content of any web page with malicious variants.",
+            "label": "send WAP-PUSH-received broadcast",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CALL_PHONE": {
+            "name": "android.permission.CALL_PHONE",
+            "description": "Allows the application to call\n        phone numbers without your intervention. Malicious applications may\n        cause unexpected calls on your phone bill. Note that this does not\n        allow the application to call emergency numbers.",
+            "label": "directly call phone numbers",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CALL_PRIVILEGED": {
+            "name": "android.permission.CALL_PRIVILEGED",
+            "description": "Allows the application to call\n        any phone number, including emergency numbers, without your intervention.\n        Malicious applications may place unnecessary and illegal calls to emergency\n        services.",
+            "label": "directly call any phone numbers",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CAMERA": {
+            "name": "android.permission.CAMERA",
+            "description": "Allows application to take pictures\n        with the camera. This allows the application at any time to collect\n        images the camera is seeing.",
+            "label": "take pictures",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CHANGE_BACKGROUND_DATA_SETTING": {
+            "name": "android.permission.CHANGE_BACKGROUND_DATA_SETTING",
+            "description": "Allows an application to change\n      the background data usage setting.",
+            "label": "change background data usage setting",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.CHANGE_COMPONENT_ENABLED_STATE": {
+            "name": "android.permission.CHANGE_COMPONENT_ENABLED_STATE",
+            "description": "Allows an application to change whether a\n        component of another application is enabled or not. Malicious applications can use this\n        to disable important phone capabilities. Care must be used with permission, as it is\n        possible to get application components into an unusable, inconsistent, or unstable state.\n ",
+            "label": "enable or disable application components",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CHANGE_CONFIGURATION": {
+            "name": "android.permission.CHANGE_CONFIGURATION",
+            "description": "Allows an application to\n        change the current configuration, such as the locale or overall font\n        size.",
+            "label": "change your UI settings",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CHANGE_NETWORK_STATE": {
+            "name": "android.permission.CHANGE_NETWORK_STATE",
+            "description": "Allows an application to change\n      the state network connectivity.",
+            "label": "change network connectivity",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CHANGE_WIFI_MULTICAST_STATE": {
+            "name": "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+            "description": "Allows an application to\n      receive packets not directly addressed to your device.  This can be\n      useful when discovering services offered near by.  It uses more power\n      than the non-multicast mode.",
+            "label": "allow Wi-Fi Multicast\n      reception",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CHANGE_WIFI_STATE": {
+            "name": "android.permission.CHANGE_WIFI_STATE",
+            "description": "Allows an application to connect\n      to and disconnect from Wi-Fi access points, and to make changes to\n      configured Wi-Fi networks.",
+            "label": "change Wi-Fi state",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CLEAR_APP_CACHE": {
+            "name": "android.permission.CLEAR_APP_CACHE",
+            "description": "Allows an application to free phone storage\n        by deleting files in application cache directory. Access is very\n        restricted usually to system process.",
+            "label": "delete all application cache data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CLEAR_APP_USER_DATA": {
+            "name": "android.permission.CLEAR_APP_USER_DATA",
+            "description": "Allows an application to clear user data.",
+            "label": "delete other applications\\' data",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.CONTROL_LOCATION_UPDATES": {
+            "name": "android.permission.CONTROL_LOCATION_UPDATES",
+            "description": "Allows enabling/disabling location\n        update notifications from the radio.  Not for use by normal applications.",
+            "label": "control location update notifications",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.DELETE_CACHE_FILES": {
+            "name": "android.permission.DELETE_CACHE_FILES",
+            "description": "Allows an application to delete\n        cache files.",
+            "label": "delete other applications\\' caches",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.DELETE_PACKAGES": {
+            "name": "android.permission.DELETE_PACKAGES",
+            "description": "Allows an application to delete\n        Android packages. Malicious applications can use this to delete important applications.",
+            "label": "delete applications",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.DEVICE_POWER": {
+            "name": "android.permission.DEVICE_POWER",
+            "description": "Allows the application to turn the\n        phone on or off.",
+            "label": "power phone on or off",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.DIAGNOSTIC": {
+            "name": "android.permission.DIAGNOSTIC",
+            "description": "Allows an application to read and write to\n    any resource owned by the diag group; for example, files in /dev. This could\n    potentially affect system stability and security. This should be ONLY be used\n    for hardware-specific diagnostics by the manufacturer or operator.",
+            "label": "read/write to resources owned by diag",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.DISABLE_KEYGUARD": {
+            "name": "android.permission.DISABLE_KEYGUARD",
+            "description": "Allows an application to disable\n      the keylock and any associated password security. A legitimate example of\n      this is the phone disabling the keylock when receiving an incoming phone call,\n      then re-enabling the keylock when the call is finished.",
+            "label": "disable keylock",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.DUMP": {
+            "name": "android.permission.DUMP",
+            "description": "Allows application to retrieve\n        internal state of the system. Malicious applications may retrieve\n        a wide variety of private and secure information that they should\n        never normally need.",
+            "label": "retrieve system internal state",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.EXPAND_STATUS_BAR": {
+            "name": "android.permission.EXPAND_STATUS_BAR",
+            "description": "Allows application to\n        expand or collapse the status bar.",
+            "label": "expand/collapse status bar",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.FACTORY_TEST": {
+            "name": "android.permission.FACTORY_TEST",
+            "description": "Run as a low-level manufacturer test,\n        allowing complete access to the phone hardware. Only available\n        when a phone is running in manufacturer test mode.",
+            "label": "run in factory test mode",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.FLASHLIGHT": {
+            "name": "android.permission.FLASHLIGHT",
+            "description": "Allows the application to control\n        the flashlight.",
+            "label": "control flashlight",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.FORCE_BACK": {
+            "name": "android.permission.FORCE_BACK",
+            "description": "Allows an application to force any\n        activity that is in the foreground to close and go back.\n        Should never be needed for normal applications.",
+            "label": "force application to close",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.GET_ACCOUNTS": {
+            "name": "android.permission.GET_ACCOUNTS",
+            "description": "Allows an application to get\n      the list of accounts known by the phone.",
+            "label": "discover known accounts",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.GET_PACKAGE_SIZE": {
+            "name": "android.permission.GET_PACKAGE_SIZE",
+            "description": "Allows an application to retrieve\n        its code, data, and cache sizes",
+            "label": "measure application storage space",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.GET_TASKS": {
+            "name": "android.permission.GET_TASKS",
+            "description": "Allows application to retrieve\n        information about currently and recently running tasks. May allow\n        malicious applications to discover private information about other applications.",
+            "label": "retrieve running applications",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.GLOBAL_SEARCH": {
+            "name": "android.permission.GLOBAL_SEARCH",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.GLOBAL_SEARCH_CONTROL": {
+            "name": "android.permission.GLOBAL_SEARCH_CONTROL",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.HARDWARE_TEST": {
+            "name": "android.permission.HARDWARE_TEST",
+            "description": "Allows the application to control\n        various peripherals for the purpose of hardware testing.",
+            "label": "test hardware",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.INJECT_EVENTS": {
+            "name": "android.permission.INJECT_EVENTS",
+            "description": "Allows an application to deliver\n        its own input events (key presses, etc.) to other applications. Malicious\n        applications can use this to take over the phone.",
+            "label": "press keys and control buttons",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.INSTALL_LOCATION_PROVIDER": {
+            "name": "android.permission.INSTALL_LOCATION_PROVIDER",
+            "description": "Create mock location sources for testing.\n        Malicious applications can use this to override the location and/or status returned by real\n        location sources such as GPS or Network providers or monitor and report your location to an external source.",
+            "label": "permission to install a location provider",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.INSTALL_PACKAGES": {
+            "name": "android.permission.INSTALL_PACKAGES",
+            "description": "Allows an application to install new or updated\n        Android packages. Malicious applications can use this to add new applications with arbitrarily\n        powerful permissions.",
+            "label": "directly install applications",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.INTERNAL_SYSTEM_WINDOW": {
+            "name": "android.permission.INTERNAL_SYSTEM_WINDOW",
+            "description": "Allows the creation of\n        windows that are intended to be used by the internal system\n        user interface. Not for use by normal applications.",
+            "label": "display unauthorized windows",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.INTERNET": {
+            "name": "android.permission.INTERNET",
+            "description": "Allows an application to\n      create network sockets.",
+            "label": "full Internet access",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.MANAGE_ACCOUNTS": {
+            "name": "android.permission.MANAGE_ACCOUNTS",
+            "description": "Allows an application to\n    perform operations like adding, and removing accounts and deleting\n    their password.",
+            "label": "manage the accounts list",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.MANAGE_APP_TOKENS": {
+            "name": "android.permission.MANAGE_APP_TOKENS",
+            "description": "Allows applications to\n        create and manage their own tokens, bypassing their normal\n        Z-ordering. Should never be needed for normal applications.",
+            "label": "manage application tokens",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.MASTER_CLEAR": {
+            "name": "android.permission.MASTER_CLEAR",
+            "description": "Allows an application to completely\n        reset the system to its factory settings, erasing all data,\n        configuration, and installed applications.",
+            "label": "reset system to factory defaults",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": null
+        },
+        "android.permission.MODIFY_AUDIO_SETTINGS": {
+            "name": "android.permission.MODIFY_AUDIO_SETTINGS",
+            "description": "Allows application to modify\n        global audio settings such as volume and routing.",
+            "label": "change your audio settings",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.MODIFY_PHONE_STATE": {
+            "name": "android.permission.MODIFY_PHONE_STATE",
+            "description": "Allows the application to control the\n        phone features of the device. An application with this permission can switch\n        networks, turn the phone radio on and off and the like without ever notifying\n        you.",
+            "label": "modify phone state",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.MOUNT_FORMAT_FILESYSTEMS": {
+            "name": "android.permission.MOUNT_FORMAT_FILESYSTEMS",
+            "description": "Allows the application to format removable storage.",
+            "label": "format external storage",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.MOUNT_UNMOUNT_FILESYSTEMS": {
+            "name": "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+            "description": "Allows the application to mount and\n        unmount filesystems for removable storage.",
+            "label": "mount and unmount filesystems",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.PACKAGE_USAGE_STATS": {
+            "name": "android.permission.PACKAGE_USAGE_STATS",
+            "description": "Allows the modification of collected component usage statistics. Not for use by normal applications.",
+            "label": "update component usage statistics",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.PERFORM_CDMA_PROVISIONING": {
+            "name": "android.permission.PERFORM_CDMA_PROVISIONING",
+            "description": "Allows the application to start CDMA provisioning.\n        Malicious applications may unnecessarily start CDMA provisioning",
+            "label": "directly start CDMA phone setup",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.PERSISTENT_ACTIVITY": {
+            "name": "android.permission.PERSISTENT_ACTIVITY",
+            "description": "Allows an application to make\n        parts of itself persistent, so the system can\\'t use it for other\n        applications.",
+            "label": "make application always run",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.PROCESS_OUTGOING_CALLS": {
+            "name": "android.permission.PROCESS_OUTGOING_CALLS",
+            "description": "Allows application to\n        process outgoing calls and change the number to be dialed.  Malicious\n        applications may monitor, redirect, or prevent outgoing calls.",
+            "label": "intercept outgoing calls",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_CALENDAR": {
+            "name": "android.permission.READ_CALENDAR",
+            "description": "Allows an application to read all\n        of the calendar events stored on your phone. Malicious applications\n        can use this to send your calendar events to other people.",
+            "label": "read calendar data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_CONTACTS": {
+            "name": "android.permission.READ_CONTACTS",
+            "description": "Allows an application to read all\n        of the contact (address) data stored on your phone. Malicious applications\n        can use this to send your data to other people.",
+            "label": "read contact data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_FRAME_BUFFER": {
+            "name": "android.permission.READ_FRAME_BUFFER",
+            "description": "Allows application to\n        read the content of the frame buffer.",
+            "label": "read frame buffer",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_INPUT_STATE": {
+            "name": "android.permission.READ_INPUT_STATE",
+            "description": "Allows applications to watch the\n        keys you press even when interacting with another application (such\n        as entering a password). Should never be needed for normal applications.",
+            "label": "record what you type and actions you take",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_LOGS": {
+            "name": "android.permission.READ_LOGS",
+            "description": "Allows an application to read from the\n        system\\'s various log files.  This allows it to discover general\n        information about what you are doing with the phone, but they should\n        not contain any personal or private information.",
+            "label": "read system log files",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_OWNER_DATA": {
+            "name": "android.permission.READ_OWNER_DATA",
+            "description": "Allows an application read the\n        phone owner data stored on your phone. Malicious\n        applications can use this to read phone owner data.",
+            "label": "read owner data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "name": "android.permission.READ_PHONE_STATE",
+            "description": "Allows the application to access the phone\n        features of the device.  An application with this permission can determine the phone\n        number and serial number of this phone, whether a call is active, the number that call\n        is connected to and the like.",
+            "label": "read phone state and identity",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_SMS": {
+            "name": "android.permission.READ_SMS",
+            "description": "Allows application to read\n      SMS messages stored on your phone or SIM card. Malicious applications\n      may read your confidential messages.",
+            "label": "read SMS or MMS",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_SYNC_SETTINGS": {
+            "name": "android.permission.READ_SYNC_SETTINGS",
+            "description": "Allows an application to read the sync settings,\n        such as whether sync is enabled for Contacts.",
+            "label": "read sync settings",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_SYNC_STATS": {
+            "name": "android.permission.READ_SYNC_STATS",
+            "description": "Allows an application to read the sync stats; e.g., the\n        history of syncs that have occurred.",
+            "label": "read sync statistics",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_USER_DICTIONARY": {
+            "name": "android.permission.READ_USER_DICTIONARY",
+            "description": "Allows an application to read any private\n      words, names and phrases that the user may have stored in the user dictionary.",
+            "label": "read user defined dictionary",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.REBOOT": {
+            "name": "android.permission.REBOOT",
+            "description": "Allows the application to\n        force the phone to reboot.",
+            "label": "force phone reboot",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "name": "android.permission.RECEIVE_BOOT_COMPLETED",
+            "description": "Allows an application to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        application to slow down the overall phone by always running.",
+            "label": "automatically start at boot",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.RECEIVE_MMS": {
+            "name": "android.permission.RECEIVE_MMS",
+            "description": "Allows application to receive\n      and process MMS messages. Malicious applications may monitor\n      your messages or delete them without showing them to you.",
+            "label": "receive MMS",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.RECEIVE_SMS": {
+            "name": "android.permission.RECEIVE_SMS",
+            "description": "Allows application to receive\n      and process SMS messages. Malicious applications may monitor\n      your messages or delete them without showing them to you.",
+            "label": "receive SMS",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.RECEIVE_WAP_PUSH": {
+            "name": "android.permission.RECEIVE_WAP_PUSH",
+            "description": "Allows application to receive\n      and process WAP messages. Malicious applications may monitor\n      your messages or delete them without showing them to you.",
+            "label": "receive WAP",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.RECORD_AUDIO": {
+            "name": "android.permission.RECORD_AUDIO",
+            "description": "Allows application to access\n        the audio record path.",
+            "label": "record audio",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.REORDER_TASKS": {
+            "name": "android.permission.REORDER_TASKS",
+            "description": "Allows an application to move\n        tasks to the foreground and background. Malicious applications can force\n        themselves to the front without your control.",
+            "label": "reorder running applications",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.RESTART_PACKAGES": {
+            "name": "android.permission.RESTART_PACKAGES",
+            "description": "Allows an application to\n        forcibly restart other applications.",
+            "label": "restart other applications",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SEND_SMS": {
+            "name": "android.permission.SEND_SMS",
+            "description": "Allows application to send SMS\n      messages. Malicious applications may cost you money by sending\n      messages without your confirmation.",
+            "label": "send SMS messages",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_ACTIVITY_WATCHER": {
+            "name": "android.permission.SET_ACTIVITY_WATCHER",
+            "description": "Allows an application to\n        monitor and control how the system launches activities.\n        Malicious applications may completely compromise the system. This\n        permission is only needed for development, never for normal\n        phone usage.",
+            "label": "monitor and control all application launching",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_ALWAYS_FINISH": {
+            "name": "android.permission.SET_ALWAYS_FINISH",
+            "description": "Allows an application\n        to control whether activities are always finished as soon as they\n        go to the background. Never needed for normal applications.",
+            "label": "make all background applications close",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_ANIMATION_SCALE": {
+            "name": "android.permission.SET_ANIMATION_SCALE",
+            "description": "Allows an application to change\n        the global animation speed (faster or slower animations) at any time.",
+            "label": "modify global animation speed",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_DEBUG_APP": {
+            "name": "android.permission.SET_DEBUG_APP",
+            "description": "Allows an application to turn\n        on debugging for another application. Malicious applications can use this\n        to kill other applications.",
+            "label": "enable application debugging",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_ORIENTATION": {
+            "name": "android.permission.SET_ORIENTATION",
+            "description": "Allows an application to change\n        the rotation of the screen at any time. Should never be needed for\n        normal applications.",
+            "label": "change screen orientation",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_PREFERRED_APPLICATIONS": {
+            "name": "android.permission.SET_PREFERRED_APPLICATIONS",
+            "description": "Allows an application to\n        modify your preferred applications. This can allow malicious applications\n        to silently change the applications that are run, spoofing your\n        existing applications to collect private data from you.",
+            "label": "set preferred applications",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": true,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_PROCESS_LIMIT": {
+            "name": "android.permission.SET_PROCESS_LIMIT",
+            "description": "Allows an application\n        to control the maximum number of processes that will run. Never\n        needed for normal applications.",
+            "label": "limit number of running processes",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_TIME_ZONE": {
+            "name": "android.permission.SET_TIME_ZONE",
+            "description": "Allows an application to change\n        the phone\\'s time zone.",
+            "label": "set time zone",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_WALLPAPER": {
+            "name": "android.permission.SET_WALLPAPER",
+            "description": "Allows the application\n        to set the system wallpaper.",
+            "label": "set wallpaper",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SET_WALLPAPER_COMPONENT": {
+            "name": "android.permission.SET_WALLPAPER_COMPONENT",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.SET_WALLPAPER_HINTS": {
+            "name": "android.permission.SET_WALLPAPER_HINTS",
+            "description": "Allows the application\n        to set the system wallpaper size hints.",
+            "label": "set wallpaper size hints",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SHUTDOWN": {
+            "name": "android.permission.SHUTDOWN",
+            "description": "Puts the activity manager into a shutdown\n        state.  Does not perform a complete shutdown.",
+            "label": "partial shutdown",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.SIGNAL_PERSISTENT_PROCESSES": {
+            "name": "android.permission.SIGNAL_PERSISTENT_PROCESSES",
+            "description": "Allows application to request that the\n        supplied signal be sent to all persistent processes.",
+            "label": "send Linux signals to applications",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.STATUS_BAR": {
+            "name": "android.permission.STATUS_BAR",
+            "description": "Allows application to disable\n        the status bar or add and remove system icons.",
+            "label": "disable or modify status bar",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.STOP_APP_SWITCHES": {
+            "name": "android.permission.STOP_APP_SWITCHES",
+            "description": "Prevents the user from switching to\n        another application.",
+            "label": "prevent app switches",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.SUBSCRIBED_FEEDS_READ": {
+            "name": "android.permission.SUBSCRIBED_FEEDS_READ",
+            "description": "Allows an application to get details about the currently synced feeds.",
+            "label": "read subscribed feeds",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.SUBSCRIBED_FEEDS_WRITE": {
+            "name": "android.permission.SUBSCRIBED_FEEDS_WRITE",
+            "description": "Allows an application to modify\n      your currently synced feeds. This could allow a malicious application to\n      change your synced feeds.",
+            "label": "write subscribed feeds",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": null
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+            "name": "android.permission.SYSTEM_ALERT_WINDOW",
+            "description": "Allows an application to\n        show system alert windows. Malicious applications can take over the\n        entire screen of the phone.",
+            "label": "display system-level alerts",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.UPDATE_DEVICE_STATS": {
+            "name": "android.permission.UPDATE_DEVICE_STATS",
+            "description": "Allows the modification of\n        collected battery statistics. Not for use by normal applications.",
+            "label": "modify battery statistics",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.USE_CREDENTIALS": {
+            "name": "android.permission.USE_CREDENTIALS",
+            "description": "Allows an application to\n    request authentication tokens.",
+            "label": "use the authentication\n    credentials of an account",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.VIBRATE": {
+            "name": "android.permission.VIBRATE",
+            "description": "Allows the application to control\n        the vibrator.",
+            "label": "control vibrator",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WAKE_LOCK": {
+            "name": "android.permission.WAKE_LOCK",
+            "description": "Allows an application to prevent\n        the phone from going to sleep.",
+            "label": "prevent phone from sleeping",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_APN_SETTINGS": {
+            "name": "android.permission.WRITE_APN_SETTINGS",
+            "description": "Allows an application to modify the APN\n        settings, such as Proxy and Port of any APN.",
+            "label": "write Access Point Name settings",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_CALENDAR": {
+            "name": "android.permission.WRITE_CALENDAR",
+            "description": "Allows an application to modify the\n        calendar events stored on your phone. Malicious\n        applications can use this to erase or modify your calendar data.",
+            "label": "write calendar data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_CONTACTS": {
+            "name": "android.permission.WRITE_CONTACTS",
+            "description": "Allows an application to modify the\n        contact (address) data stored on your phone. Malicious\n        applications can use this to erase or modify your contact data.",
+            "label": "write contact data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+            "description": "Allows an application to write to the SD card.",
+            "label": "modify/delete SD card contents",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_GSERVICES": {
+            "name": "android.permission.WRITE_GSERVICES",
+            "description": "Allows an application to modify the\n        Google services map.  Not for use by normal applications.",
+            "label": "modify the Google services map",
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_OWNER_DATA": {
+            "name": "android.permission.WRITE_OWNER_DATA",
+            "description": "Allows an application to modify the\n        phone owner data stored on your phone. Malicious\n        applications can use this to erase or modify owner data.",
+            "label": "write owner data",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_SECURE_SETTINGS": {
+            "name": "android.permission.WRITE_SECURE_SETTINGS",
+            "description": "Allows an application to modify the\n        system\\'s secure settings data. Not for use by normal applications.",
+            "label": "modify secure system settings",
+            "group": null,
+            "protection_levels": [
+                "signatureOrSystem"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_SETTINGS": {
+            "name": "android.permission.WRITE_SETTINGS",
+            "description": "Allows an application to modify the\n        system\\'s settings data. Malicious applications can corrupt your system\\'s\n        configuration.",
+            "label": "modify global system settings",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_SMS": {
+            "name": "android.permission.WRITE_SMS",
+            "description": "Allows application to write\n      to SMS messages stored on your phone or SIM card. Malicious applications\n      may delete your messages.",
+            "label": "edit SMS or MMS",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_SYNC_SETTINGS": {
+            "name": "android.permission.WRITE_SYNC_SETTINGS",
+            "description": "Allows an application to modify the sync\n        settings, such as whether sync is enabled for Contacts.",
+            "label": "write sync settings",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.WRITE_USER_DICTIONARY": {
+            "name": "android.permission.WRITE_USER_DICTIONARY",
+            "description": "Allows an application to write new words into the\n      user dictionary.",
+            "label": "write to user defined dictionary",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "com.android.browser.permission.READ_HISTORY_BOOKMARKS": {
+            "name": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+            "description": "Allows the application to read all\n        the URLs that the Browser has visited, and all of the Browser\\'s bookmarks.",
+            "label": "read Browser\\'s history and bookmarks",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS": {
+            "name": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+            "description": "Allows an application to modify the\n        Browser\\'s history or bookmarks stored on your phone. Malicious applications\n        can use this to erase or modify your Browser\\'s data.",
+            "label": "write Browser\\'s history and bookmarks",
+            "group": null,
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        }
+    }
+}
