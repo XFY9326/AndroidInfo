@@ -60,10 +60,10 @@ class AndroidPermissions(DataClassJsonMixin):
     groups: dict[str, AndroidPermissionGroup]
     permissions: dict[str, AndroidPermission]
 
-    async def list_groups(self) -> list[AndroidPermissionGroup]:
+    def list_groups(self) -> list[AndroidPermissionGroup]:
         return [i for _, i in sorted(self.groups.items(), key=lambda x: x[0])]
 
-    async def list_permissions(self) -> list[AndroidPermission]:
+    def list_permissions(self) -> list[AndroidPermission]:
         return [i for _, i in sorted(self.permissions.items(), key=lambda x: x[0])]
 
 
