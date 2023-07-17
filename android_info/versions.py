@@ -147,7 +147,7 @@ class AndroidAPILevel(DataClassJsonMixin):
         return not self.__lt__(other)
 
 
-class AndroidBuildNumbers:
+class AndroidVersions:
     _BS4_PARSER = "lxml"
     _BASE_URL = "https://source.android.com/docs/setup/about/build-numbers"
 

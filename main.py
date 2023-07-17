@@ -8,7 +8,7 @@ from typing import Optional
 import aiohttp
 
 from android_info.consts import ANDROID_MAIN_REFS
-from android_info.versions import AndroidBuildNumbers
+from android_info.versions import AndroidVersions
 from android_info.permissions import AndroidFrameworkPermissions
 
 
@@ -25,7 +25,7 @@ async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, refs_
 
 async def main():
     async with aiohttp.ClientSession() as client:
-        android_builds = AndroidBuildNumbers(client)
+        android_builds = AndroidVersions(client)
 
         print("Loading versions ...")
 
