@@ -13,6 +13,14 @@ jobs:
       with:
         persist-credentials: false
         fetch-depth: 0
+    - name: Cache Android Platform
+      uses: actions/cache@v1.2.1
+      env:
+        cache-name: cache-platform
+      with:
+        path: |
+          download_tmp/platform
+        key: ${{ runner.os }}-build-${{ env.cache-name }}
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
