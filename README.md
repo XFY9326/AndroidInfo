@@ -4,15 +4,35 @@ Get latest Android info from docs
 
 Reference: [Android source docs](https://source.android.com/docs)
 
-## Daily update
+## Features
 
-API levels JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/api_levels.json)
+- Daily automatically update
+- Without downloading all source codes
+- Full type hint for future development
+- Easy to load from JSON and dump to JSON
+- Contains all details
 
-Build versions JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/build_versions.json)
+## Daily automatically update
 
-Latest Permissions JSON: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permissions/permissions-REL.json)
+### Versions
 
-*Tips: You can view all available permissions with API level [HERE](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permissions)*
+API levels: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/api_levels.json)
+
+Build versions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/build_versions.json)
+
+### Permissions
+
+Latest Permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permissions/permissions-REL.json)
+
+Permissions with  API level: [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permissions)
+
+### API-Permission mappings
+
+API-Permission Mappings (Only support API >= 26): [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permission_mappings)
+
+Latest ContentProviders: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permission_mappings/all_content_providers-REL.json)
+
+Latest ContentProviders with permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permission_mappings/permission_content_providers-REL.json)
 
 ## Usage
 
@@ -21,3 +41,10 @@ python main.py
 ```
 
 Or you can import any script you like in your code
+
+```python
+from android_info.versions import AndroidVersions
+from android_info.permissions import AndroidFrameworkPermissions
+from android_info.platforms import AndroidPlatformAPIPermissions
+from android_info.providers import AndroidProviderManifests
+```

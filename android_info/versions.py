@@ -71,7 +71,7 @@ class AndroidBuildVersion(DataClassJsonMixin):
 class AndroidAPILevel(DataClassJsonMixin):
     name: Optional[str]
     version_range: str
-    versions: list[str]
+    versions: tuple[str]
     api: int
     ndk: Optional[int]
 
@@ -125,7 +125,7 @@ class AndroidVersions:
         self._checked_api_mappings: Optional[dict[int, list[str]]] = None
 
     async def _fetch_docs(self) -> BeautifulSoup:
-        async with self._client.get(self._BASE_URL) as response:
+        async with self._client.get(self._BASE_URL, raise_for_status=True) as response:
             return BeautifulSoup(await response.text(), self._BS4_PARSER)
 
     def _get_build_versions(self, soup: BeautifulSoup) -> list[AndroidBuildVersion]:
@@ -190,7 +190,7 @@ class AndroidVersions:
             return AndroidAPILevel(
                 name="KitKat Wear",
                 version_range="4.4w",
-                versions=api_level_mappings[20] if 20 in api_level_mappings else [],
+                versions=tuple(api_level_mappings[20] if 20 in api_level_mappings else []),
                 api=20,
                 ndk=None
             )
@@ -212,7 +212,7 @@ class AndroidVersions:
             AndroidAPILevel(
                 name=_parse_codename(e1.text.strip()),
                 version_range=e2.text.strip(),
-                versions=api_level_mappings[api] if api in api_level_mappings else [],
+                versions=tuple(api_level_mappings[api] if api in api_level_mappings else []),
                 api=api,
                 ndk=ndk
             )

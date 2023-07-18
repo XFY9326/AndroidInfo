@@ -1,0 +1,5229 @@
+[
+    {
+        "class_name": "android.accessibilityservice.AccessibilityService",
+        "method_name": "getFingerprintGestureController",
+        "method_signature": "()Landroid/accessibilityservice/FingerprintGestureController;",
+        "permissions": [
+            "android.permission.USE_FINGERPRINT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "renameAccount",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "addAccount",
+        "method_signature": "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "confirmCredentials",
+        "method_signature": "(Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "editProperties",
+        "method_signature": "(Ljava/lang/String;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAuthToken",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.USE_CREDENTIALS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAuthToken",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.USE_CREDENTIALS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAuthToken",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.USE_CREDENTIALS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAuthTokenByFeatures",
+        "method_signature": "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "removeAccount",
+        "method_signature": "(Landroid/accounts/Account;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "updateCredentials",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "removeAccount",
+        "method_signature": "(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAccounts",
+        "method_signature": "()[Landroid/accounts/Account;",
+        "permissions": [
+            "android.permission.GET_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAccountsByType",
+        "method_signature": "(Ljava/lang/String;)[Landroid/accounts/Account;",
+        "permissions": [
+            "android.permission.GET_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "addAccountExplicitly",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Z",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "notifyAccountAuthenticated",
+        "method_signature": "(Landroid/accounts/Account;)Z",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "removeAccountExplicitly",
+        "method_signature": "(Landroid/accounts/Account;)Z",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "blockingGetAuthToken",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Z)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.USE_CREDENTIALS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getPassword",
+        "method_signature": "(Landroid/accounts/Account;)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getUserData",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "peekAuthToken",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "addOnAccountsUpdatedListener",
+        "method_signature": "(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z)V",
+        "permissions": [
+            "android.permission.GET_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "clearPassword",
+        "method_signature": "(Landroid/accounts/Account;)V",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "invalidateAuthToken",
+        "method_signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.MANAGE_ACCOUNTS",
+            "android.permission.USE_CREDENTIALS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "setAuthToken",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "setPassword",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "setUserData",
+        "method_signature": "(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.AUTHENTICATE_ACCOUNTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.ActivityManager",
+        "method_name": "dumpPackageState",
+        "method_signature": "(Ljava/io/FileDescriptor;Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.DUMP"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.ActivityManager",
+        "method_name": "killBackgroundProcesses",
+        "method_signature": "(Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.KILL_BACKGROUND_PROCESSES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.ActivityManager",
+        "method_name": "moveTaskToFront",
+        "method_signature": "(II)V",
+        "permissions": [
+            "android.permission.REORDER_TASKS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.ActivityManager",
+        "method_name": "moveTaskToFront",
+        "method_signature": "(IILandroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.REORDER_TASKS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.AlarmManager",
+        "method_name": "setAlarmClock",
+        "method_signature": "(Landroid/app/AlarmManager/AlarmClockInfo;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.SCHEDULE_EXACT_ALARM"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.AlarmManager",
+        "method_name": "setExact",
+        "method_signature": "(IJLandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.SCHEDULE_EXACT_ALARM"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.AlarmManager",
+        "method_name": "setExact",
+        "method_signature": "(IJLjava/lang/String;Landroid/app/AlarmManager/OnAlarmListener;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.SCHEDULE_EXACT_ALARM"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.AlarmManager",
+        "method_name": "setExactAndAllowWhileIdle",
+        "method_signature": "(IJLandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.SCHEDULE_EXACT_ALARM"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.AlarmManager",
+        "method_name": "setTime",
+        "method_signature": "(J)V",
+        "permissions": [
+            "android.permission.SET_TIME"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.AlarmManager",
+        "method_name": "setTimeZone",
+        "method_signature": "(Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.SET_TIME_ZONE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.KeyguardManager",
+        "method_name": "addKeyguardLockedStateListener",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/app/KeyguardManager/KeyguardLockedStateListener;)V",
+        "permissions": [
+            "android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.KeyguardManager",
+        "method_name": "exitKeyguardSecurely",
+        "method_signature": "(Landroid/app/KeyguardManager/OnKeyguardExitResult;)V",
+        "permissions": [
+            "android.permission.DISABLE_KEYGUARD"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.KeyguardManager",
+        "method_name": "removeKeyguardLockedStateListener",
+        "method_signature": "(Landroid/app/KeyguardManager/KeyguardLockedStateListener;)V",
+        "permissions": [
+            "android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.KeyguardManager.KeyguardLock",
+        "method_name": "disableKeyguard",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.DISABLE_KEYGUARD"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.KeyguardManager.KeyguardLock",
+        "method_name": "reenableKeyguard",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.DISABLE_KEYGUARD"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.LocaleManager",
+        "method_name": "getApplicationLocales",
+        "method_signature": "(Ljava/lang/String;)Landroid/os/LocaleList;",
+        "permissions": [
+            "android.permission.READ_APP_SPECIFIC_LOCALES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "getDrawable",
+        "method_signature": "()Landroid/graphics/drawable/Drawable;",
+        "permissions": [
+            "android.permission.READ_EXTERNAL_STORAGE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "getFastDrawable",
+        "method_signature": "()Landroid/graphics/drawable/Drawable;",
+        "permissions": [
+            "android.permission.READ_EXTERNAL_STORAGE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "peekFastDrawable",
+        "method_signature": "()Landroid/graphics/drawable/Drawable;",
+        "permissions": [
+            "android.permission.READ_EXTERNAL_STORAGE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "getWallpaperFile",
+        "method_signature": "(I)Landroid/os/ParcelFileDescriptor;",
+        "permissions": [
+            "android.permission.READ_EXTERNAL_STORAGE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setBitmap",
+        "method_signature": "(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Z)I",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setBitmap",
+        "method_signature": "(Landroid/graphics/Bitmap;Landroid/graphics/Rect;ZI)I",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setResource",
+        "method_signature": "(II)I",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setStream",
+        "method_signature": "(Ljava/io/InputStream;Landroid/graphics/Rect;Z)I",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setStream",
+        "method_signature": "(Ljava/io/InputStream;Landroid/graphics/Rect;ZI)I",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "clear",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "clear",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "clearWallpaper",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setBitmap",
+        "method_signature": "(Landroid/graphics/Bitmap;)V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setDisplayPadding",
+        "method_signature": "(Landroid/graphics/Rect;)V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER_HINTS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setResource",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.WallpaperManager",
+        "method_name": "setStream",
+        "method_signature": "(Ljava/io/InputStream;)V",
+        "permissions": [
+            "android.permission.SET_WALLPAPER"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.admin.DevicePolicyManager",
+        "method_name": "getNearbyAppStreamingPolicy",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_NEARBY_STREAMING_POLICY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.admin.DevicePolicyManager",
+        "method_name": "getNearbyNotificationStreamingPolicy",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_NEARBY_STREAMING_POLICY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.admin.DevicePolicyManager",
+        "method_name": "getPasswordComplexity",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.REQUEST_PASSWORD_COMPLEXITY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.app.job.JobInfo.Builder",
+        "method_name": "setPersisted",
+        "method_signature": "(Z)Landroid/app/job/JobInfo/Builder;",
+        "permissions": [
+            "android.permission.RECEIVE_BOOT_COMPLETED"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothA2dp",
+        "method_name": "isA2dpPlaying",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothA2dp",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothA2dp",
+        "method_name": "getConnectedDevices",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothA2dp",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "([I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "listenUsingInsecureL2capChannel",
+        "method_signature": "()Landroid/bluetooth/BluetoothServerSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "listenUsingInsecureRfcommWithServiceRecord",
+        "method_signature": "(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "listenUsingL2capChannel",
+        "method_signature": "()Landroid/bluetooth/BluetoothServerSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "listenUsingRfcommWithServiceRecord",
+        "method_signature": "(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "cancelDiscovery",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "disable",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "enable",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "isDiscovering",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "setName",
+        "method_signature": "(Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "startDiscovery",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "startLeScan",
+        "method_signature": "(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "startLeScan",
+        "method_signature": "([Ljava/util/UUID;Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "getMaxConnectedAudioDevices",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "getProfileConnectionState",
+        "method_signature": "(I)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "getScanMode",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "getName",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "getDiscoverableTimeout",
+        "method_signature": "()Ljava/time/Duration;",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "getBondedDevices",
+        "method_signature": "()Ljava/util/Set;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothAdapter",
+        "method_name": "stopLeScan",
+        "method_signature": "(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "getBluetoothClass",
+        "method_signature": "()Landroid/bluetooth/BluetoothClass;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "connectGatt",
+        "method_signature": "(Landroid/content/Context;ZLandroid/bluetooth/BluetoothGattCallback;)Landroid/bluetooth/BluetoothGatt;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "connectGatt",
+        "method_signature": "(Landroid/content/Context;ZLandroid/bluetooth/BluetoothGattCallback;I)Landroid/bluetooth/BluetoothGatt;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "connectGatt",
+        "method_signature": "(Landroid/content/Context;ZLandroid/bluetooth/BluetoothGattCallback;II)Landroid/bluetooth/BluetoothGatt;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "connectGatt",
+        "method_signature": "(Landroid/content/Context;ZLandroid/bluetooth/BluetoothGattCallback;IILandroid/os/Handler;)Landroid/bluetooth/BluetoothGatt;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "createInsecureL2capChannel",
+        "method_signature": "(I)Landroid/bluetooth/BluetoothSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "createInsecureRfcommSocketToServiceRecord",
+        "method_signature": "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "createL2capChannel",
+        "method_signature": "(I)Landroid/bluetooth/BluetoothSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "createRfcommSocketToServiceRecord",
+        "method_signature": "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "getUuids",
+        "method_signature": "()[Landroid/os/ParcelUuid;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "createBond",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "fetchUuidsWithSdp",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "setPairingConfirmation",
+        "method_signature": "(Z)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT",
+            "android.permission.BLUETOOTH_PRIVILEGED"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "setPin",
+        "method_signature": "([B)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "getBondState",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "getType",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "setAlias",
+        "method_signature": "(Ljava/lang/String;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "getAlias",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothDevice",
+        "method_name": "getName",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "beginReliableWrite",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "connect",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "discoverServices",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "executeReliableWrite",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "readCharacteristic",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattCharacteristic;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "readDescriptor",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattDescriptor;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "readRemoteRssi",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "requestConnectionPriority",
+        "method_signature": "(I)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "requestMtu",
+        "method_signature": "(I)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "setCharacteristicNotification",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "writeCharacteristic",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattCharacteristic;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "writeDescriptor",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattDescriptor;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "writeCharacteristic",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattCharacteristic;[BI)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "writeDescriptor",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattDescriptor;[B)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "abortReliableWrite",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "abortReliableWrite",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "close",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "disconnect",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "readPhy",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGatt",
+        "method_name": "setPreferredPhy",
+        "method_signature": "(III)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "addService",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattService;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "connect",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Z)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "notifyCharacteristicChanged",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "removeService",
+        "method_signature": "(Landroid/bluetooth/BluetoothGattService;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "sendResponse",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;III[B)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "notifyCharacteristicChanged",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothGattCharacteristic;Z[B)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "cancelConnection",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "clearServices",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "close",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "readPhy",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothGattServer",
+        "method_name": "setPreferredPhy",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;III)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "isAudioConnected",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "isNoiseReductionSupported",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "isVoiceRecognitionSupported",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "sendVendorSpecificResultCode",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "startVoiceRecognition",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT",
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "stopVoiceRecognition",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "getConnectedDevices",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHeadset",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "([I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "getMainChannelFd",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfiguration;)Landroid/os/ParcelFileDescriptor;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "connectChannelToSource",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfiguration;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "disconnectChannel",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHealthAppConfiguration;I)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "registerSinkAppConfiguration",
+        "method_signature": "(Ljava/lang/String;ILandroid/bluetooth/BluetoothHealthCallback;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "unregisterAppConfiguration",
+        "method_signature": "(Landroid/bluetooth/BluetoothHealthAppConfiguration;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "getConnectedDevices",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHealth",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "([I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHearingAid",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHearingAid",
+        "method_name": "getConnectedDevices",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHearingAid",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "([I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "connect",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "disconnect",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "registerApp",
+        "method_signature": "(Landroid/bluetooth/BluetoothHidDeviceAppSdpSettings;Landroid/bluetooth/BluetoothHidDeviceAppQosSettings;Landroid/bluetooth/BluetoothHidDeviceAppQosSettings;Ljava/util/concurrent/Executor;Landroid/bluetooth/BluetoothHidDevice/Callback;)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "replyReport",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;BB[B)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "reportError",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;B)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "sendReport",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;I[B)Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "unregisterApp",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "getConnectedDevices",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothHidDevice",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "([I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothLeAudio",
+        "method_name": "getConnectedGroupLeadDevice",
+        "method_signature": "(I)Landroid/bluetooth/BluetoothDevice;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothLeAudio",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothLeAudio",
+        "method_name": "getGroupId",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothLeAudio",
+        "method_name": "getConnectedDevices",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothLeAudio",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "([I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothManager",
+        "method_name": "openGattServer",
+        "method_signature": "(Landroid/content/Context;Landroid/bluetooth/BluetoothGattServerCallback;)Landroid/bluetooth/BluetoothGattServer;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothManager",
+        "method_name": "getConnectionState",
+        "method_signature": "(Landroid/bluetooth/BluetoothDevice;I)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothManager",
+        "method_name": "getConnectedDevices",
+        "method_signature": "(I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothManager",
+        "method_name": "getDevicesMatchingConnectionStates",
+        "method_signature": "(I[I)Ljava/util/List;",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.BluetoothSocket",
+        "method_name": "connect",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.BLUETOOTH_CONNECT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "enableAdvertising",
+        "method_signature": "(ZII)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "setAdvertisingData",
+        "method_signature": "(Landroid/bluetooth/le/AdvertiseData;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "setAdvertisingParameters",
+        "method_signature": "(Landroid/bluetooth/le/AdvertisingSetParameters;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "setPeriodicAdvertisingData",
+        "method_signature": "(Landroid/bluetooth/le/AdvertiseData;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "setPeriodicAdvertisingEnabled",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "setPeriodicAdvertisingParameters",
+        "method_signature": "(Landroid/bluetooth/le/PeriodicAdvertisingParameters;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.AdvertisingSet",
+        "method_name": "setScanResponseData",
+        "method_signature": "(Landroid/bluetooth/le/AdvertiseData;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "startAdvertising",
+        "method_signature": "(Landroid/bluetooth/le/AdvertiseSettings;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "startAdvertising",
+        "method_signature": "(Landroid/bluetooth/le/AdvertiseSettings;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "startAdvertisingSet",
+        "method_signature": "(Landroid/bluetooth/le/AdvertisingSetParameters;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/PeriodicAdvertisingParameters;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertisingSetCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "startAdvertisingSet",
+        "method_signature": "(Landroid/bluetooth/le/AdvertisingSetParameters;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/PeriodicAdvertisingParameters;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertisingSetCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "startAdvertisingSet",
+        "method_signature": "(Landroid/bluetooth/le/AdvertisingSetParameters;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/PeriodicAdvertisingParameters;Landroid/bluetooth/le/AdvertiseData;IILandroid/bluetooth/le/AdvertisingSetCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "startAdvertisingSet",
+        "method_signature": "(Landroid/bluetooth/le/AdvertisingSetParameters;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/PeriodicAdvertisingParameters;Landroid/bluetooth/le/AdvertiseData;IILandroid/bluetooth/le/AdvertisingSetCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "stopAdvertising",
+        "method_signature": "(Landroid/bluetooth/le/AdvertiseCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeAdvertiser",
+        "method_name": "stopAdvertisingSet",
+        "method_signature": "(Landroid/bluetooth/le/AdvertisingSetCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_ADVERTISE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeScanner",
+        "method_name": "startScan",
+        "method_signature": "(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/app/PendingIntent;)I",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeScanner",
+        "method_name": "flushPendingScanResults",
+        "method_signature": "(Landroid/bluetooth/le/ScanCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeScanner",
+        "method_name": "startScan",
+        "method_signature": "(Landroid/bluetooth/le/ScanCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeScanner",
+        "method_name": "startScan",
+        "method_signature": "(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/bluetooth/le/ScanCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeScanner",
+        "method_name": "stopScan",
+        "method_signature": "(Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.bluetooth.le.BluetoothLeScanner",
+        "method_name": "stopScan",
+        "method_signature": "(Landroid/bluetooth/le/ScanCallback;)V",
+        "permissions": [
+            "android.permission.BLUETOOTH_SCAN"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.companion.AssociationRequest.Builder",
+        "method_name": "setForceConfirmation",
+        "method_signature": "(Z)Landroid/companion/AssociationRequest/Builder;",
+        "permissions": [
+            "android.permission.REQUEST_COMPANION_SELF_MANAGED"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.companion.AssociationRequest.Builder",
+        "method_name": "setSelfManaged",
+        "method_signature": "(Z)Landroid/companion/AssociationRequest/Builder;",
+        "permissions": [
+            "android.permission.REQUEST_COMPANION_SELF_MANAGED"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.companion.CompanionDeviceManager",
+        "method_name": "associate",
+        "method_signature": "(Landroid/companion/AssociationRequest;Landroid/companion/CompanionDeviceManager/Callback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.REQUEST_COMPANION_PROFILE_WATCH",
+            "android.permission.REQUEST_COMPANION_PROFILE_COMPUTER",
+            "android.permission.REQUEST_COMPANION_PROFILE_APP_STREAMING",
+            "android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.companion.CompanionDeviceManager",
+        "method_name": "associate",
+        "method_signature": "(Landroid/companion/AssociationRequest;Ljava/util/concurrent/Executor;Landroid/companion/CompanionDeviceManager/Callback;)V",
+        "permissions": [
+            "android.permission.REQUEST_COMPANION_PROFILE_WATCH",
+            "android.permission.REQUEST_COMPANION_PROFILE_COMPUTER",
+            "android.permission.REQUEST_COMPANION_PROFILE_APP_STREAMING",
+            "android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.companion.CompanionDeviceManager",
+        "method_name": "startObservingDevicePresence",
+        "method_signature": "(Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.companion.CompanionDeviceManager",
+        "method_name": "stopObservingDevicePresence",
+        "method_signature": "(Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "bindServiceAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS",
+            "android.permission.INTERACT_ACROSS_USERS_FULL",
+            "android.permission.INTERACT_ACROSS_PROFILES"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "removeStickyBroadcast",
+        "method_signature": "(Landroid/content/Intent;)V",
+        "permissions": [
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "removeStickyBroadcastAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS",
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendBroadcastAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendBroadcastAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendOrderedBroadcastAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendStickyBroadcast",
+        "method_signature": "(Landroid/content/Intent;)V",
+        "permissions": [
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendStickyBroadcast",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendStickyBroadcastAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS",
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendStickyOrderedBroadcast",
+        "method_signature": "(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.Context",
+        "method_name": "sendStickyOrderedBroadcastAsUser",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_USERS",
+            "android.permission.BROADCAST_STICKY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.CrossProfileApps",
+        "method_name": "startActivity",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/app/Activity;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_PROFILES",
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.content.pm.CrossProfileApps",
+        "method_name": "startActivity",
+        "method_signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/app/Activity;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.INTERACT_ACROSS_PROFILES",
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.content.pm.PackageInstaller",
+        "method_name": "installExistingPackage",
+        "method_signature": "(Ljava/lang/String;ILandroid/content/IntentSender;)V",
+        "permissions": [
+            "android.permission.INSTALL_PACKAGES",
+            "com.android.permission.INSTALL_EXISTING_PACKAGES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageInstaller",
+        "method_name": "uninstall",
+        "method_signature": "(Landroid/content/pm/VersionedPackage;Landroid/content/IntentSender;)V",
+        "permissions": [
+            "android.permission.DELETE_PACKAGES",
+            "android.permission.REQUEST_DELETE_PACKAGES"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.content.pm.PackageInstaller",
+        "method_name": "uninstall",
+        "method_signature": "(Ljava/lang/String;Landroid/content/IntentSender;)V",
+        "permissions": [
+            "android.permission.DELETE_PACKAGES",
+            "android.permission.REQUEST_DELETE_PACKAGES"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.content.pm.PackageInstaller",
+        "method_name": "uninstallExistingPackage",
+        "method_signature": "(Ljava/lang/String;Landroid/content/IntentSender;)V",
+        "permissions": [
+            "android.permission.DELETE_PACKAGES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "addWhitelistedRestrictedPermission",
+        "method_signature": "(Ljava/lang/String;Ljava/lang/String;I)Z",
+        "permissions": [
+            "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "isAutoRevokeWhitelisted",
+        "method_signature": "(Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.WHITELIST_AUTO_REVOKE_PERMISSIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "removeWhitelistedRestrictedPermission",
+        "method_signature": "(Ljava/lang/String;Ljava/lang/String;I)Z",
+        "permissions": [
+            "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "setAutoRevokeWhitelisted",
+        "method_signature": "(Ljava/lang/String;Z)Z",
+        "permissions": [
+            "android.permission.WHITELIST_AUTO_REVOKE_PERMISSIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "getWhitelistedRestrictedPermissions",
+        "method_signature": "(Ljava/lang/String;I)Ljava/util/Set;",
+        "permissions": [
+            "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "setApplicationEnabledSetting",
+        "method_signature": "(Ljava/lang/String;II)V",
+        "permissions": [
+            "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "setComponentEnabledSetting",
+        "method_signature": "(Landroid/content/ComponentName;II)V",
+        "permissions": [
+            "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.content.pm.PackageManager",
+        "method_name": "setComponentEnabledSettings",
+        "method_signature": "(Ljava/util/List;)V",
+        "permissions": [
+            "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricManager",
+        "method_name": "getStrings",
+        "method_signature": "(I)Landroid/hardware/biometrics/BiometricManager/Strings;",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricManager",
+        "method_name": "canAuthenticate",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricManager",
+        "method_name": "canAuthenticate",
+        "method_signature": "(I)I",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricManager.Strings",
+        "method_name": "getButtonLabel",
+        "method_signature": "()Ljava/lang/CharSequence;",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricManager.Strings",
+        "method_name": "getPromptMessage",
+        "method_signature": "()Ljava/lang/CharSequence;",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricManager.Strings",
+        "method_name": "getSettingName",
+        "method_signature": "()Ljava/lang/CharSequence;",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricPrompt",
+        "method_name": "authenticate",
+        "method_signature": "(Landroid/hardware/biometrics/BiometricPrompt/CryptoObject;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.biometrics.BiometricPrompt",
+        "method_name": "authenticate",
+        "method_signature": "(Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.camera2.CameraManager",
+        "method_name": "isConcurrentSessionConfigurationSupported",
+        "method_signature": "(Ljava/util/Map<java/lang/String;Landroid/hardware/camera2/params/SessionConfiguration>;)Z",
+        "permissions": [
+            "android.permission.CAMERA"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.camera2.CameraManager",
+        "method_name": "openCamera",
+        "method_signature": "(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice/StateCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.CAMERA"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.camera2.CameraManager",
+        "method_name": "openCamera",
+        "method_signature": "(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice/StateCallback;)V",
+        "permissions": [
+            "android.permission.CAMERA"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.fingerprint.FingerprintManager",
+        "method_name": "hasEnrolledFingerprints",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.USE_FINGERPRINT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.fingerprint.FingerprintManager",
+        "method_name": "isHardwareDetected",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.USE_FINGERPRINT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.hardware.fingerprint.FingerprintManager",
+        "method_name": "authenticate",
+        "method_signature": "(Landroid/hardware/fingerprint/FingerprintManager/CryptoObject;Landroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager/AuthenticationCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.USE_BIOMETRIC",
+            "android.permission.USE_FINGERPRINT"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "getGpsStatus",
+        "method_signature": "(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "getLastKnownLocation",
+        "method_signature": "(Ljava/lang/String;)Landroid/location/Location;",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "addGpsStatusListener",
+        "method_signature": "(Landroid/location/GpsStatus/Listener;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "addNmeaListener",
+        "method_signature": "(Landroid/location/GpsStatus/NmeaListener;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "addNmeaListener",
+        "method_signature": "(Landroid/location/OnNmeaMessageListener;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "addNmeaListener",
+        "method_signature": "(Landroid/location/OnNmeaMessageListener;Landroid/os/Handler;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "addNmeaListener",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/location/OnNmeaMessageListener;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssMeasurementsCallback",
+        "method_signature": "(Landroid/location/GnssMeasurementRequest;Ljava/util/concurrent/Executor;Landroid/location/GnssMeasurementsEvent/Callback;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssMeasurementsCallback",
+        "method_signature": "(Landroid/location/GnssMeasurementsEvent/Callback;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssMeasurementsCallback",
+        "method_signature": "(Landroid/location/GnssMeasurementsEvent/Callback;Landroid/os/Handler;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssMeasurementsCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/location/GnssMeasurementsEvent/Callback;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssNavigationMessageCallback",
+        "method_signature": "(Landroid/location/GnssNavigationMessage/Callback;Landroid/os/Handler;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssNavigationMessageCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/location/GnssNavigationMessage/Callback;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssStatusCallback",
+        "method_signature": "(Landroid/location/GnssStatus/Callback;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssStatusCallback",
+        "method_signature": "(Landroid/location/GnssStatus/Callback;Landroid/os/Handler;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssStatusCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/location/GnssStatus/Callback;)Z",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "addProximityAlert",
+        "method_signature": "(DDFJLandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "getCurrentLocation",
+        "method_signature": "(Ljava/lang/String;Landroid/location/LocationRequest;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "getCurrentLocation",
+        "method_signature": "(Ljava/lang/String;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeProximityAlert",
+        "method_signature": "(Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeUpdates",
+        "method_signature": "(Landroid/location/LocationListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(Ljava/lang/String;Landroid/location/LocationRequest;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(Ljava/lang/String;Landroid/location/LocationRequest;Ljava/util/concurrent/Executor;Landroid/location/LocationListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(Ljava/lang/String;JFLandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(Ljava/lang/String;JFLandroid/location/LocationListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(Ljava/lang/String;JFLjava/util/concurrent/Executor;Landroid/location/LocationListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(JFLandroid/location/Criteria;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(JFLandroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "method_signature": "(JFLandroid/location/Criteria;Ljava/util/concurrent/Executor;Landroid/location/LocationListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestSingleUpdate",
+        "method_signature": "(Landroid/location/Criteria;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestSingleUpdate",
+        "method_signature": "(Landroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestSingleUpdate",
+        "method_signature": "(Ljava/lang/String;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestSingleUpdate",
+        "method_signature": "(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V",
+        "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.media.AudioManager",
+        "method_name": "setEncodedSurroundMode",
+        "method_signature": "(I)Z",
+        "permissions": [
+            "android.permission.WRITE_SETTINGS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.media.AudioManager",
+        "method_name": "setSurroundFormatEnabled",
+        "method_signature": "(IZ)Z",
+        "permissions": [
+            "android.permission.WRITE_SETTINGS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.media.AudioRecord.Builder",
+        "method_name": "build",
+        "method_signature": "()Landroid/media/AudioRecord;",
+        "permissions": [
+            "android.permission.RECORD_AUDIO"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getLinkProperties",
+        "method_signature": "(Landroid/net/Network;)Landroid/net/LinkProperties;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getActiveNetwork",
+        "method_signature": "()Landroid/net/Network;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkCapabilities",
+        "method_signature": "(Landroid/net/Network;)Landroid/net/NetworkCapabilities;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getActiveNetworkInfo",
+        "method_signature": "()Landroid/net/NetworkInfo;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkInfo",
+        "method_signature": "(Landroid/net/Network;)Landroid/net/NetworkInfo;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkInfo",
+        "method_signature": "(I)Landroid/net/NetworkInfo;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getAllNetworkInfo",
+        "method_signature": "()[Landroid/net/NetworkInfo;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getAllNetworks",
+        "method_signature": "()[Landroid/net/Network;",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "isActiveNetworkMetered",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getMultipathPreference",
+        "method_signature": "(Landroid/net/Network;)I",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkPreference",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerDefaultNetworkCallback",
+        "method_signature": "(Landroid/net/ConnectivityManager/NetworkCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerDefaultNetworkCallback",
+        "method_signature": "(Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerNetworkCallback",
+        "method_signature": "(Landroid/net/NetworkRequest;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerNetworkCallback",
+        "method_signature": "(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerNetworkCallback",
+        "method_signature": "(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.nsd.NsdManager",
+        "method_name": "discoverServices",
+        "method_signature": "(Ljava/lang/String;ILandroid/net/NetworkRequest;Ljava/util/concurrent/Executor;Landroid/net/nsd/NsdManager/DiscoveryListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.vcn.VcnManager",
+        "method_name": "clearVcnConfig",
+        "method_signature": "(Landroid/os/ParcelUuid;)V",
+        "permissions": [
+            "carrier privileges"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.vcn.VcnManager",
+        "method_name": "setVcnConfig",
+        "method_signature": "(Landroid/os/ParcelUuid;Landroid/net/vcn/VcnConfig;)V",
+        "permissions": [
+            "carrier privileges"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getConnectionInfo",
+        "method_signature": "()Landroid/net/wifi/WifiInfo;",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addNetworkPrivileged",
+        "method_signature": "(Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiManager/AddNetworkResult;",
+        "permissions": [
+            "android.permission.NETWORK_SETTINGS",
+            "android.permission.NETWORK_STACK",
+            "android.permission.NETWORK_SETUP_WIZARD",
+            "android.permission.NETWORK_MANAGED_PROVISIONING"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "isAutoWakeupEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "isCarrierNetworkOffloadEnabled",
+        "method_signature": "(IZ)Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "isScanThrottleEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "isWifiPasspointEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removeNonCallerConfiguredNetworks",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.CHANGE_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addNetworkSuggestions",
+        "method_signature": "(Ljava/util/List;)I",
+        "permissions": [
+            "android.permission.CHANGE_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getStaConcurrencyForMultiInternetMode",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removeNetworkSuggestions",
+        "method_signature": "(Ljava/util/List;)I",
+        "permissions": [
+            "android.permission.CHANGE_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removeNetworkSuggestions",
+        "method_signature": "(Ljava/util/List;I)I",
+        "permissions": [
+            "android.permission.CHANGE_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getScanResults",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getCallerConfiguredNetworks",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getConfiguredNetworks",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getNetworkSuggestions",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addSuggestionConnectionStatusListener",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/SuggestionConnectionStatusListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addSuggestionUserApprovalStatusListener",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/SuggestionUserApprovalStatusListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "flushPasspointAnqpCache",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.NETWORK_SETTINGS",
+            "android.permission.NETWORK_MANAGED_PROVISIONING",
+            "android.permission.NETWORK_CARRIER_PROVISIONING"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "registerScanResultsCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/ScanResultsCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "registerSubsystemRestartTrackingCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/SubsystemRestartTrackingCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removeSuggestionConnectionStatusListener",
+        "method_signature": "(Landroid/net/wifi/WifiManager/SuggestionConnectionStatusListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removeSuggestionUserApprovalStatusListener",
+        "method_signature": "(Landroid/net/wifi/WifiManager/SuggestionUserApprovalStatusListener;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "reportCreateInterfaceImpact",
+        "method_signature": "(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer<java/lang/Boolean;Ljava/util/Set;)V",
+        "permissions": [
+            "android.permission.MANAGE_WIFI_INTERFACES",
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "startLocalOnlyHotspot",
+        "method_signature": "(Landroid/net/wifi/WifiManager/LocalOnlyHotspotCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.NEARBY_WIFI_DEVICES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "unregisterScanResultsCallback",
+        "method_signature": "(Landroid/net/wifi/WifiManager/ScanResultsCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "unregisterSubsystemRestartTrackingCallback",
+        "method_signature": "(Landroid/net/wifi/WifiManager/SubsystemRestartTrackingCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "getAvailableAwareResources",
+        "method_signature": "()Landroid/net/wifi/aware/AwareResources;",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "getCharacteristics",
+        "method_signature": "()Landroid/net/wifi/aware/Characteristics;",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "isAvailable",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "isDeviceAttached",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "isInstantCommunicationModeEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "isSetChannelOnDataPathSupported",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "attach",
+        "method_signature": "(Landroid/net/wifi/aware/AttachCallback;Landroid/net/wifi/aware/IdentityChangedListener;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.NEARBY_WIFI_DEVICES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareManager",
+        "method_name": "attach",
+        "method_signature": "(Landroid/net/wifi/aware/AttachCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.CHANGE_WIFI_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareSession",
+        "method_name": "publish",
+        "method_signature": "(Landroid/net/wifi/aware/PublishConfig;Landroid/net/wifi/aware/DiscoverySessionCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.NEARBY_WIFI_DEVICES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.aware.WifiAwareSession",
+        "method_name": "subscribe",
+        "method_signature": "(Landroid/net/wifi/aware/SubscribeConfig;Landroid/net/wifi/aware/DiscoverySessionCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.NEARBY_WIFI_DEVICES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "addExternalApprover",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/MacAddress;Landroid/net/wifi/p2p/WifiP2pManager/ExternalApproverRequestListener;)V",
+        "permissions": [
+            "android.permission.MANAGE_WIFI_NETWORK_SELECTION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "addLocalService",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "connect",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "createGroup",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "createGroup",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "discoverPeers",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "discoverPeersOnSocialChannels",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "discoverPeersOnSpecificFrequency",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;ILandroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "discoverServices",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "removeExternalApprover",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/MacAddress;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.MANAGE_WIFI_NETWORK_SELECTION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "requestDeviceInfo",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/DeviceInfoListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "requestGroupInfo",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/GroupInfoListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "requestPeers",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/PeerListListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "setConnectionRequestResult",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/MacAddress;ILandroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.MANAGE_WIFI_NETWORK_SELECTION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "setConnectionRequestResult",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/MacAddress;ILjava/lang/String;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.MANAGE_WIFI_NETWORK_SELECTION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "setVendorElements",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Ljava/util/List;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.OVERRIDE_WIFI_CONFIG"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.p2p.WifiP2pManager",
+        "method_name": "startListening",
+        "method_signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+        "permissions": [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.net.wifi.rtt.WifiRttManager",
+        "method_name": "startRanging",
+        "method_signature": "(Landroid/net/wifi/rtt/RangingRequest;Ljava/util/concurrent/Executor;Landroid/net/wifi/rtt/RangingResultCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.NEARBY_WIFI_DEVICES"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.nfc.cardemulation.CardEmulation",
+        "method_name": "setOffHostForService",
+        "method_signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.NFC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.nfc.cardemulation.CardEmulation",
+        "method_name": "unsetOffHostForService",
+        "method_signature": "(Landroid/content/ComponentName;)Z",
+        "permissions": [
+            "android.permission.NFC"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.nfc.cardemulation.CardEmulation",
+        "method_name": "getDescriptionForPreferredPaymentService",
+        "method_signature": "()Ljava/lang/CharSequence;",
+        "permissions": [
+            "android.permission.NFC_PREFERRED_PAYMENT_INFO"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.nfc.cardemulation.CardEmulation",
+        "method_name": "getRouteDestinationForPreferredPaymentService",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.NFC_PREFERRED_PAYMENT_INFO"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.nfc.cardemulation.CardEmulation",
+        "method_name": "getAidsForPreferredPaymentService",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.NFC_PREFERRED_PAYMENT_INFO"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Build",
+        "method_name": "getSerial",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.DropBoxManager",
+        "method_name": "getNextEntry",
+        "method_signature": "(Ljava/lang/String;J)Landroid/os/DropBoxManager/Entry;",
+        "permissions": [
+            "android.permission.READ_LOGS",
+            "android.permission.PACKAGE_USAGE_STATS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.PowerManager",
+        "method_name": "reboot",
+        "method_signature": "(Ljava/lang/String;)V",
+        "permissions": [
+            "android.permission.REBOOT"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.RecoverySystem",
+        "method_name": "installPackage",
+        "method_signature": "(Landroid/content/Context;Ljava/io/File;)V",
+        "permissions": [
+            "android.permission.RECOVERY"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "getUserRestrictions",
+        "method_signature": "(Landroid/os/UserHandle;)Landroid/os/Bundle;",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "isUserRunning",
+        "method_signature": "(Landroid/os/UserHandle;)Z",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "isUserRunningOrStopping",
+        "method_signature": "(Landroid/os/UserHandle;)Z",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "isUserUnlocked",
+        "method_signature": "(Landroid/os/UserHandle;)Z",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.INTERACT_ACROSS_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "requestQuietModeEnabled",
+        "method_signature": "(ZLandroid/os/UserHandle;)Z",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.MODIFY_QUIET_MODE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "getUserCount",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.CREATE_USERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "getUserName",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.MANAGE_USERS",
+            "android.permission.CREATE_USERS",
+            "android.permission.QUERY_USERS",
+            "android.permission.GET_ACCOUNTS_PRIVILEGED"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.os.UserManager",
+        "method_name": "setUserRestriction",
+        "method_signature": "(Ljava/lang/String;Z)V",
+        "permissions": [
+            "android.permission.MANAGE_USERS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "cancel",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "(Landroid/os/VibrationEffect;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "(Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "(J)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "(JLandroid/media/AudioAttributes;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "([JI)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.Vibrator",
+        "method_name": "vibrate",
+        "method_signature": "([JILandroid/media/AudioAttributes;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.VibratorManager",
+        "method_name": "cancel",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.VibratorManager",
+        "method_name": "vibrate",
+        "method_signature": "(Landroid/os/CombinedVibration;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.VibratorManager",
+        "method_name": "vibrate",
+        "method_signature": "(Landroid/os/CombinedVibration;Landroid/os/VibrationAttributes;)V",
+        "permissions": [
+            "android.permission.VIBRATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.storage.StorageManager",
+        "method_name": "getManageSpaceActivityIntent",
+        "method_signature": "(Ljava/lang/String;I)Landroid/app/PendingIntent;",
+        "permissions": [
+            "android.permission.MANAGE_EXTERNAL_STORAGE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.os.storage.StorageManager",
+        "method_name": "getStorageVolumesIncludingSharedProfiles",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.MANAGE_EXTERNAL_STORAGE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.security.FileIntegrityManager",
+        "method_name": "isAppSourceCertificateTrusted",
+        "method_signature": "(Ljava/security/cert/X509Certificate;)Z",
+        "permissions": [
+            "android.permission.INSTALL_PACKAGES",
+            "android.permission.REQUEST_INSTALL_PACKAGES"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.security.KeyChain",
+        "method_name": "removeCredentialManagementApp",
+        "method_signature": "(Landroid/content/Context;)Z",
+        "permissions": [
+            "android.permission.MANAGE_CREDENTIAL_MANAGEMENT_APP"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getAdnUriForPhoneAccount",
+        "method_signature": "(Landroid/telecom/PhoneAccountHandle;)Landroid/net/Uri;",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getDefaultOutgoingPhoneAccount",
+        "method_signature": "(Ljava/lang/String;)Landroid/telecom/PhoneAccountHandle;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getUserSelectedOutgoingPhoneAccount",
+        "method_signature": "()Landroid/telecom/PhoneAccountHandle;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "endCall",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ANSWER_PHONE_CALLS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "handleMmi",
+        "method_signature": "(Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "handleMmi",
+        "method_signature": "(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)Z",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "isInCall",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "isInManagedCall",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "isTtySupported",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "isVoiceMailNumber",
+        "method_signature": "(Landroid/telecom/PhoneAccountHandle;Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getLine1Number",
+        "method_signature": "(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_SMS",
+            "android.permission.READ_PHONE_NUMBERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getVoiceMailNumber",
+        "method_signature": "(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getCallCapablePhoneAccounts",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getOwnSelfManagedPhoneAccounts",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.MANAGE_OWN_CALLS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "getSelfManagedPhoneAccounts",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "acceptRingingCall",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.ANSWER_PHONE_CALLS",
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "acceptRingingCall",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.ANSWER_PHONE_CALLS",
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "cancelMissedCallsNotification",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "placeCall",
+        "method_signature": "(Landroid/net/Uri;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.CALL_PHONE",
+            "android.permission.MANAGE_OWN_CALLS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "showInCallScreen",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "silenceRinger",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telecom.TelecomManager",
+        "method_name": "startConference",
+        "method_signature": "(Ljava/util/List;Landroid/os/Bundle;)V",
+        "permissions": [
+            "android.permission.CALL_PHONE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.CarrierConfigManager",
+        "method_name": "getConfig",
+        "method_signature": "()Landroid/os/PersistableBundle;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.CarrierConfigManager",
+        "method_name": "getConfigByComponentForSubId",
+        "method_signature": "(Ljava/lang/String;I)Landroid/os/PersistableBundle;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.CarrierConfigManager",
+        "method_name": "getConfigForSubId",
+        "method_signature": "(I)Landroid/os/PersistableBundle;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.CarrierConfigManager",
+        "method_name": "notifyConfigChangedForSubId",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onActiveDataSubscriptionIdChanged",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onBarringInfoChanged",
+        "method_signature": "(Landroid/telephony/BarringInfo;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onCallDisconnectCauseChanged",
+        "method_signature": "(II)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onCallForwardingIndicatorChanged",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onCallStateChanged",
+        "method_signature": "(ILjava/lang/String;)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onCellInfoChanged",
+        "method_signature": "(Ljava/util/List;)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onCellLocationChanged",
+        "method_signature": "(Landroid/telephony/CellLocation;)V",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onDisplayInfoChanged",
+        "method_signature": "(Landroid/telephony/TelephonyDisplayInfo;)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onEmergencyNumberListChanged",
+        "method_signature": "(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onImsCallDisconnectCauseChanged",
+        "method_signature": "(Landroid/telephony/ims/ImsReasonInfo;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onMessageWaitingIndicatorChanged",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onPreciseDataConnectionStateChanged",
+        "method_signature": "(Landroid/telephony/PreciseDataConnectionState;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.PhoneStateListener",
+        "method_name": "onRegistrationFailed",
+        "method_signature": "(Landroid/telephony/CellIdentity;Ljava/lang/String;III)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ServiceState",
+        "method_name": "getCdmaNetworkId",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ServiceState",
+        "method_name": "getCdmaSystemId",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ServiceState",
+        "method_name": "getOperatorAlphaLong",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ServiceState",
+        "method_name": "getOperatorAlphaShort",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ServiceState",
+        "method_name": "getOperatorNumeric",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.SmsManager",
+        "method_name": "setSmscAddress",
+        "method_signature": "(Ljava/lang/String;)Z",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SmsManager",
+        "method_name": "getSmsCapacityOnIcc",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.SmsManager",
+        "method_name": "getSmscAddress",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SmsManager",
+        "method_name": "getSmsMessagesForFinancialApp",
+        "method_signature": "(Landroid/os/Bundle;Ljava/util/concurrent/Executor;Landroid/telephony/SmsManager/FinancialSmsCallback;)V",
+        "permissions": [
+            "android.permission.SMS_FINANCIAL_TRANSACTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SmsManager",
+        "method_name": "sendTextMessageWithoutPersisting",
+        "method_signature": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE",
+            "android.permission.SEND_SMS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "createSubscriptionGroup",
+        "method_signature": "(Ljava/util/List;)Landroid/os/ParcelUuid;",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getActiveSubscriptionInfo",
+        "method_signature": "(I)Landroid/telephony/SubscriptionInfo;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getActiveSubscriptionInfoForSimSlotIndex",
+        "method_signature": "(I)Landroid/telephony/SubscriptionInfo;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "isActiveSubscriptionId",
+        "method_signature": "(I)Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "setOpportunistic",
+        "method_signature": "(ZI)Z",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getActiveSubscriptionInfoCount",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getPhoneNumber",
+        "method_signature": "(I)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_NUMBERS",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "carrier privileges"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getPhoneNumber",
+        "method_signature": "(II)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_NUMBERS",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "carrier privileges"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getActiveSubscriptionInfoList",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getOpportunisticSubscriptions",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "getSubscriptionsInGroup",
+        "method_signature": "(Landroid/os/ParcelUuid;)Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "addSubscriptionsIntoGroup",
+        "method_signature": "(Ljava/util/List;Landroid/os/ParcelUuid;)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "removeSubscriptionsFromGroup",
+        "method_signature": "(Ljava/util/List;Landroid/os/ParcelUuid;)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "setCarrierPhoneNumber",
+        "method_signature": "(ILjava/lang/String;)V",
+        "permissions": [
+            "carrier privileges"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "setDeviceToDeviceStatusSharingContacts",
+        "method_signature": "(ILjava/util/List;)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "setDeviceToDeviceStatusSharingPreference",
+        "method_signature": "(II)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.SubscriptionManager",
+        "method_name": "switchToSubscription",
+        "method_signature": "(ILandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.ActiveDataSubscriptionIdListener",
+        "method_name": "onActiveDataSubscriptionIdChanged",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.BarringInfoListener",
+        "method_name": "onBarringInfoChanged",
+        "method_signature": "(Landroid/telephony/BarringInfo;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.CallDisconnectCauseListener",
+        "method_name": "onCallDisconnectCauseChanged",
+        "method_signature": "(II)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.CallForwardingIndicatorListener",
+        "method_name": "onCallForwardingIndicatorChanged",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.CallStateListener",
+        "method_name": "onCallStateChanged",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.CellInfoListener",
+        "method_name": "onCellInfoChanged",
+        "method_signature": "(Ljava/util/List;)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.CellLocationListener",
+        "method_name": "onCellLocationChanged",
+        "method_signature": "(Landroid/telephony/CellLocation;)V",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.EmergencyNumberListListener",
+        "method_name": "onEmergencyNumberListChanged",
+        "method_signature": "(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.ImsCallDisconnectCauseListener",
+        "method_name": "onImsCallDisconnectCauseChanged",
+        "method_signature": "(Landroid/telephony/ims/ImsReasonInfo;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.MessageWaitingIndicatorListener",
+        "method_name": "onMessageWaitingIndicatorChanged",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.PhysicalChannelConfigListener",
+        "method_name": "onPhysicalChannelConfigChanged",
+        "method_signature": "(Ljava/util/List;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.PreciseDataConnectionStateListener",
+        "method_name": "onPreciseDataConnectionStateChanged",
+        "method_signature": "(Landroid/telephony/PreciseDataConnectionState;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyCallback.RegistrationFailedListener",
+        "method_name": "onRegistrationFailed",
+        "method_signature": "(Landroid/telephony/CellIdentity;Ljava/lang/String;III)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getCarrierConfig",
+        "method_signature": "()Landroid/os/PersistableBundle;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getPhoneAccountHandle",
+        "method_signature": "()Landroid/telecom/PhoneAccountHandle;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getCellLocation",
+        "method_signature": "()Landroid/telephony/CellLocation;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "requestNetworkScan",
+        "method_signature": "(Landroid/telephony/NetworkScanRequest;Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyScanManager/NetworkScanCallback;)Landroid/telephony/NetworkScan;",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "requestNetworkScan",
+        "method_signature": "(ILandroid/telephony/NetworkScanRequest;Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyScanManager/NetworkScanCallback;)Landroid/telephony/NetworkScan;",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE",
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getServiceState",
+        "method_signature": "()Landroid/telephony/ServiceState;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getServiceState",
+        "method_signature": "(I)Landroid/telephony/ServiceState;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "doesSwitchMultiSimConfigTriggerReboot",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isDataConnectionAllowed",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isDataEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.MODIFY_PHONE_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isDataEnabledForReason",
+        "method_signature": "(I)Z",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.MODIFY_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isDataRoamingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isManualNetworkSelectionAllowed",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isModemEnabledForSlot",
+        "method_signature": "(I)Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setNetworkSelectionModeManual",
+        "method_signature": "(Ljava/lang/String;Z)Z",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setNetworkSelectionModeManual",
+        "method_signature": "(Ljava/lang/String;ZI)Z",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getCallComposerStatus",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getCallState",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getCallStateForSubscription",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getDataNetworkType",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getNetworkSelectionMode",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getNetworkType",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getPreferredOpportunisticDataSubscription",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getSubscriptionId",
+        "method_signature": "(Landroid/telecom/PhoneAccountHandle;)I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getVoiceNetworkType",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "isMultiSimSupported",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setForbiddenPlmns",
+        "method_signature": "(Ljava/util/List;)I",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getDeviceId",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getDeviceId",
+        "method_signature": "(I)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getDeviceSoftwareVersion",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_BASIC_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getGroupIdLevel1",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getImei",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getImei",
+        "method_signature": "(I)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getLine1Number",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.READ_SMS",
+            "android.permission.READ_PHONE_NUMBERS"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getManualNetworkSelectionPlmn",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getMeid",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getMeid",
+        "method_signature": "(I)Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getNai",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getSimSerialNumber",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getSubscriberId",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getVisualVoicemailPackageName",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getVoiceMailAlphaTag",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getVoiceMailNumber",
+        "method_signature": "()Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getForbiddenPlmns",
+        "method_signature": "()[Ljava/lang/String;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getAllCellInfo",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getUiccCardsInfo",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getEquivalentHomePlmns",
+        "method_signature": "()Ljava/util/List;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getEmergencyNumberList",
+        "method_signature": "()Ljava/util/Map;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getEmergencyNumberList",
+        "method_signature": "(I)Ljava/util/Map;",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getAllowedNetworkTypesForReason",
+        "method_signature": "(I)J",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getSupportedRadioAccessFamily",
+        "method_signature": "()J",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "clearSignalStrengthUpdateRequest",
+        "method_signature": "(Landroid/telephony/SignalStrengthUpdateRequest;)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "getNetworkSlicingConfiguration",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "rebootModem",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "requestCellInfoUpdate",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyManager/CellInfoCallback;)V",
+        "permissions": [
+            "android.permission.ACCESS_FINE_LOCATION"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "sendUssdRequest",
+        "method_signature": "(Ljava/lang/String;Landroid/telephony/TelephonyManager/UssdResponseCallback;Landroid/os/Handler;)V",
+        "permissions": [
+            "android.permission.CALL_PHONE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setAllowedNetworkTypesForReason",
+        "method_signature": "(IJ)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setCallComposerStatus",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setDataEnabled",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setDataEnabledForReason",
+        "method_signature": "(IZ)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setNetworkSelectionModeAutomatic",
+        "method_signature": "()V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "setSignalStrengthUpdateRequest",
+        "method_signature": "(Landroid/telephony/SignalStrengthUpdateRequest;)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.TelephonyManager",
+        "method_name": "switchMultiSimConfig",
+        "method_signature": "(I)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.euicc.EuiccManager",
+        "method_name": "deleteSubscription",
+        "method_signature": "(ILandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.euicc.EuiccManager",
+        "method_name": "downloadSubscription",
+        "method_signature": "(Landroid/telephony/euicc/DownloadableSubscription;ZLandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.euicc.EuiccManager",
+        "method_name": "switchToSubscription",
+        "method_signature": "(ILandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.euicc.EuiccManager",
+        "method_name": "switchToSubscription",
+        "method_signature": "(IILandroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.euicc.EuiccManager",
+        "method_name": "updateSubscriptionNickname",
+        "method_signature": "(ILjava/lang/String;Landroid/app/PendingIntent;)V",
+        "permissions": [
+            "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "isAdvancedCallingSettingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "isCrossSimCallingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "isTtyOverVolteEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "isVoWiFiRoamingSettingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "isVoWiFiSettingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "isVtSettingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "getVoWiFiModeSetting",
+        "method_signature": "()I",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "getRegistrationTransportType",
+        "method_signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "registerImsRegistrationCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "registerImsStateCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/ImsStateCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "registerMmTelCapabilityCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/ImsMmTelManager/CapabilityCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "unregisterImsRegistrationCallback",
+        "method_signature": "(Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsMmTelManager",
+        "method_name": "unregisterMmTelCapabilityCallback",
+        "method_signature": "(Landroid/telephony/ims/ImsMmTelManager/CapabilityCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsRcsManager",
+        "method_name": "getRegistrationState",
+        "method_signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ImsRcsManager",
+        "method_name": "getRegistrationTransportType",
+        "method_signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ImsRcsManager",
+        "method_name": "registerImsRegistrationCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ImsRcsManager",
+        "method_name": "registerImsStateCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/ImsStateCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE",
+            "android.permission.READ_PRIVILEGED_PHONE_STATE",
+            "android.permission.ACCESS_RCS_USER_CAPABILITY_EXCHANGE"
+        ],
+        "any_of": true
+    },
+    {
+        "class_name": "android.telephony.ims.ImsRcsManager",
+        "method_name": "unregisterImsRegistrationCallback",
+        "method_signature": "(Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "getProvisioningStatusForCapability",
+        "method_signature": "(II)Z",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "getRcsProvisioningStatusForCapability",
+        "method_signature": "(II)Z",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "isProvisioningRequiredForCapability",
+        "method_signature": "(II)Z",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "isRcsProvisioningRequiredForCapability",
+        "method_signature": "(II)Z",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "registerFeatureProvisioningChangedCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/ProvisioningManager/FeatureProvisioningCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRECISE_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "setProvisioningStatusForCapability",
+        "method_signature": "(IIZ)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.ProvisioningManager",
+        "method_name": "setRcsProvisioningStatusForCapability",
+        "method_signature": "(IIZ)V",
+        "permissions": [
+            "android.permission.MODIFY_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.RcsUceAdapter",
+        "method_name": "isUceSettingEnabled",
+        "method_signature": "()Z",
+        "permissions": [
+            "android.permission.READ_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.RegistrationManager",
+        "method_name": "getRegistrationState",
+        "method_signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.RegistrationManager",
+        "method_name": "getRegistrationTransportType",
+        "method_signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.RegistrationManager",
+        "method_name": "registerImsRegistrationCallback",
+        "method_signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.telephony.ims.RegistrationManager",
+        "method_name": "unregisterImsRegistrationCallback",
+        "method_signature": "(Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
+        "permissions": [
+            "android.permission.READ_PRIVILEGED_PHONE_STATE"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.util.StatsLog",
+        "method_name": "logBinaryPushStateChanged",
+        "method_signature": "(Ljava/lang/String;JII[J)Z",
+        "permissions": [
+            "android.permission.DUMP",
+            "android.permission.PACKAGE_USAGE_STATS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.view.Window",
+        "method_name": "setHideOverlayWindows",
+        "method_signature": "(Z)V",
+        "permissions": [
+            "android.permission.HIDE_OVERLAY_WINDOWS"
+        ],
+        "any_of": false
+    },
+    {
+        "class_name": "android.view.inputmethod.InputMethodManager",
+        "method_name": "setCurrentInputMethodSubtype",
+        "method_signature": "(Landroid/view/inputmethod/InputMethodSubtype;)Z",
+        "permissions": [
+            "android.permission.WRITE_SECURE_SETTINGS"
+        ],
+        "any_of": false
+    }
+]

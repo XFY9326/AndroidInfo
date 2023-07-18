@@ -43,8 +43,8 @@ class AndroidPermission(DataClassJsonMixin):
     description: Optional[str]
     label: Optional[str]
     group: Optional[AndroidPermissionGroup]
-    protection_levels: list[str]
-    permission_flags: list[str]
+    protection_levels: tuple[str]
+    permission_flags: tuple[str]
     priority: Optional[int]
     comment: PermissionComment
 
@@ -101,18 +101,18 @@ class _RawPermission:
     comment: PermissionComment
 
     @staticmethod
-    def _divide(text: Optional[str], symbol: str = "|") -> list[str]:
+    def _divide(text: Optional[str], symbol: str = "|") -> tuple[str]:
         if text is None:
-            return []
+            return tuple()
         elif symbol in text:
-            return text.split(symbol)
+            return tuple(text.split(symbol))
         else:
-            return [text]
+            return tuple([text])
 
-    def get_protection_levels(self) -> list[str]:
+    def get_protection_levels(self) -> tuple[str]:
         return self._divide(self.protection_level)
 
-    def get_permission_flags(self) -> list[str]:
+    def get_permission_flags(self) -> tuple[str]:
         return self._divide(self.permission_flags)
 
     def get_priority(self) -> Optional[int]:

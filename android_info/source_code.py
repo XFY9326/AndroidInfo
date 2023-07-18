@@ -1,4 +1,5 @@
 import asyncio
+import http
 import json
 import random
 import urllib.parse
@@ -36,9 +37,16 @@ class AndroidGoogleSource:
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
 
-    def _build_url(self, project: str, refs: str, path: str):
-        project, refs, path = project.lstrip("/ "), refs.lstrip("/ "), path.lstrip("/ ")
-        return f"{self._BASE_URL}/{project}/+/{refs}/{path}"
+    def _build_url(self, project: str, refs: Optional[str] = None, path: Optional[str] = None):
+        project = project.lstrip("/ ")
+        url = f"{self._BASE_URL}/{project}"
+        if refs is not None:
+            refs = refs.lstrip("/ ")
+            url += f"/+/{refs}"
+            if path is not None:
+                path = path.lstrip("/ ")
+                url += f"/{path}"
+        return url
 
     async def get_content(self, url: str) -> str:
         async with self._client.get(url, raise_for_status=True) as response:
@@ -47,6 +55,10 @@ class AndroidGoogleSource:
         file_element = soup.find("table", {"class": "FileContents"})
         line_elements = file_element.find_all("td", {"id": True})
         return "\n".join([i.text for i in line_elements])
+
+    async def exists(self, project: str, refs: Optional[str] = None) -> bool:
+        async with self._client.head(self._build_url(project, refs)) as response:
+            return response.status != http.HTTPStatus.NOT_FOUND
 
     async def get_file(self, project: str, refs: str, path: str) -> str:
         return await self.get_content(self._build_url(project, refs, path))
@@ -87,7 +99,7 @@ class AndroidSourceCodeQuery:
     _API_KEY = "AIzaSyD1ZDuAdU_IZqa3Wscr053WydRT7FoJdmQ"
 
     _DEFAULT_QUERY_PAGE_NUM = 100
-    _REQUEST_DELAY = 0.2
+    _REQUEST_DELAY = 1
 
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
@@ -215,5 +227,5 @@ class AndroidSourceCodeQuery:
                 raise ValueError(f"Unknown project path: {file_path}")
         return result
 
-    async def get_source_code(self, code_path: AndroidSourceCodePath, refs: str) -> str:
-        return await self._source.get_source_code(code_path, refs)
+    async def get_source(self) -> AndroidGoogleSource:
+        return self._source
