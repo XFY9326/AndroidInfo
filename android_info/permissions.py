@@ -1,6 +1,8 @@
+import os.path
 from dataclasses import dataclass
 from typing import Optional
 
+import aiofiles
 import aiohttp
 from dataclasses_json import DataClassJsonMixin
 from lxml import etree
@@ -131,13 +133,33 @@ class _AndroidCoreResString:
     _ID_START = "@string/"
     _PERMISSION_STRING_MANIFEST = AndroidSourceCodePath("platform/frameworks/base", "core/res/res/values/strings.xml")
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, tmp_dir: Optional[str], use_tmp: bool = False):
         self._source: AndroidGoogleSource = AndroidGoogleSource(client)
         self._refs = refs
+        self._tmp_dir: Optional[str] = tmp_dir
+        self._use_tmp: bool = use_tmp
         self._res_strings: Optional[dict[str, str]] = None
 
+    async def _get_source_code(self) -> str:
+        local_path = os.path.join(
+            self._tmp_dir,
+            self._refs.replace("/", "_"),
+            os.path.basename(self._PERMISSION_STRING_MANIFEST.path)
+        )
+        if self._tmp_dir is not None and self._use_tmp and os.path.isfile(local_path):
+            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
+                return await f.read()
+        else:
+            res_strings = await self._source.get_source_code(self._PERMISSION_STRING_MANIFEST, self._refs)
+            if self._tmp_dir is not None:
+                if not os.path.isdir(os.path.dirname(local_path)):
+                    os.makedirs(os.path.dirname(local_path))
+                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
+                    await f.write(res_strings)
+            return res_strings
+
     async def _get_content(self) -> dict[str, str]:
-        manifest = await self._source.get_source_code(self._PERMISSION_STRING_MANIFEST, self._refs)
+        manifest = await self._get_source_code()
         tree: _Element = etree.fromstring(manifest.encode("utf-8"))
         return {
             string_element.attrib["name"]: string_element.text
@@ -161,11 +183,31 @@ class _AndroidCoreResString:
 class _AndroidCoreManifest:
     _PERMISSION_MANIFEST = AndroidSourceCodePath("platform/frameworks/base", "core/res/AndroidManifest.xml")
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, tmp_dir: Optional[str], use_tmp: bool = False):
         self._source: AndroidGoogleSource = AndroidGoogleSource(client)
         self._refs = refs
+        self._tmp_dir: Optional[str] = tmp_dir
+        self._use_tmp: bool = use_tmp
         self._permission_groups: Optional[dict[str, _RawPermissionGroup]] = None
         self._permissions: Optional[dict[str, _RawPermission]] = None
+
+    async def _get_source_code(self) -> str:
+        local_path = os.path.join(
+            self._tmp_dir,
+            self._refs.replace("/", "_"),
+            os.path.basename(self._PERMISSION_MANIFEST.path)
+        )
+        if self._tmp_dir is not None and self._use_tmp and os.path.isfile(local_path):
+            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
+                return await f.read()
+        else:
+            android_manifest = await self._source.get_source_code(self._PERMISSION_MANIFEST, self._refs)
+            if self._tmp_dir is not None:
+                if not os.path.isdir(os.path.dirname(local_path)):
+                    os.makedirs(os.path.dirname(local_path))
+                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
+                    await f.write(android_manifest)
+            return android_manifest
 
     async def _get_content(self) -> tuple[dict[str, _RawPermissionGroup], dict[str, _RawPermission]]:
         def _get_android_attrib(element, key: str) -> Optional[str]:
@@ -192,7 +234,7 @@ class _AndroidCoreManifest:
                     hide=False
                 )
 
-        manifest = await self._source.get_source_code(self._PERMISSION_MANIFEST, self._refs)
+        manifest = await self._get_source_code()
         tree: _Element = etree.fromstring(manifest.encode("utf-8"))
         permission_groups = {
             e.attrib[android_attrib("name")]: _RawPermissionGroup(
@@ -236,9 +278,9 @@ class _AndroidCoreManifest:
 
 class AndroidFrameworkPermissions:
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str):
-        self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs)
-        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs)
+    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: Optional[str] = None, use_tmp: bool = False):
+        self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs, permissions_tmp_dir, use_tmp)
+        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, use_tmp)
         self._permissions: Optional[AndroidPermissions] = None
 
     async def _parse_raw_text(self, text: Optional[str]) -> Optional[str]:

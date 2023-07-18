@@ -157,22 +157,22 @@ class AndroidProviderManifests:
         else:
             return os.path.isfile(self._get_manifest_tmp_path(code_path, refs))
 
-    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, use_tmp: bool = True) -> list[AndroidProvider]:
+    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, use_tmp: bool = False) -> list[AndroidProvider]:
         local_path = self._get_manifest_tmp_path(code_path, refs)
         if use_tmp and self._manifest_tmp_dir is not None and os.path.isfile(local_path):
-            async with aiofiles.open(local_path, "r") as f:
+            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
                 manifest_content = await f.read()
         else:
             manifest_content = await (await self._query.get_source()).get_source_code(code_path, refs)
             if self._manifest_tmp_dir is not None:
                 if not os.path.isdir(os.path.dirname(local_path)):
                     os.makedirs(os.path.dirname(local_path))
-                async with aiofiles.open(local_path, "w") as f:
+                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
                     await f.write(manifest_content)
 
         return self.get_providers(manifest_content)
 
-    async def get_all_android_providers(self, refs: str, use_tmp: bool = True) -> list[AndroidProvider]:
+    async def get_all_android_providers(self, refs: str, use_tmp: bool = False) -> list[AndroidProvider]:
         provider_path_dict = await self.get_latest_provider_manifest_path()
         result: set[AndroidProvider] = set()
         for project, provider_path_list in provider_path_dict.items():
@@ -199,6 +199,6 @@ class AndroidProviderManifests:
                         await asyncio.sleep(self._REQUEST_DELAY)
         return sorted(result, key=lambda x: (x.package, x.name))
 
-    async def get_all_android_permission_providers(self, refs: str, use_tmp: bool = True) -> list[AndroidProvider]:
+    async def get_all_android_permission_providers(self, refs: str, use_tmp: bool = False) -> list[AndroidProvider]:
         providers = await self.get_all_android_providers(refs, use_tmp)
         return [p for p in providers if p.need_permission()]
