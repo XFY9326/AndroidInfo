@@ -13,16 +13,6 @@ jobs:
       with:
         persist-credentials: false
         fetch-depth: 0
-    - name: Cache download tmp
-      uses: husarnet/cache@v2.always
-      env:
-        cache-name: cache-android-info
-      with:
-        path: |
-          download_tmp/platform
-        key: ${{ runner.os }}-${{ env.cache-name }}
-        restore-keys: |
-          ${{ runner.os }}-${{ env.cache-name }}-
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
