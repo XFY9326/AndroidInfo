@@ -52,7 +52,7 @@ async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, api_l
 
 
 async def dump_api_permission_mappings(client: aiohttp.ClientSession, output_dir: str, api_levels: list[AndroidAPILevel]):
-    tmp_dir = os.path.join("download", "platform")
+    tmp_dir = os.path.join("download_tmp", "platform")
     if not os.path.exists(tmp_dir):
         os.makedirs(tmp_dir)
 
@@ -75,7 +75,7 @@ async def dump_api_permission_mappings(client: aiohttp.ClientSession, output_dir
 
 
 async def dump_content_provider_permissions(client: aiohttp.ClientSession, output_dir: str):
-    tmp_dir = os.path.join("download", "manifest")
+    tmp_dir = os.path.join("download_tmp", "manifest")
     if not os.path.exists(tmp_dir):
         os.makedirs(tmp_dir)
 
