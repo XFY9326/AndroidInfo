@@ -1,9 +1,9 @@
 name: Automatic update
 
 on:
-  schedule:
-    - cron: "0 1 * * *"
   workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
 
 jobs:
   Update:
@@ -22,10 +22,8 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Update outputs
-      id: run
       run: python main.py
     - name: Push updates
-      if: steps.run.outputs.status == 'success' && !cancelled()
       uses: GuillaumeFalourd/git-commit-push@v1.3
       with:
         commit_message: Automatic update commit
