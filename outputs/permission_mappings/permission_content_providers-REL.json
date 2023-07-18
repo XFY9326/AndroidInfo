@@ -12,19 +12,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.tv.frameworkpackagestubs",
-        "name": "com.android.browser.provider.BrowserProvider2",
-        "authorities": [
-            "com.android.browser",
-            "browser"
-        ],
-        "exported": true,
-        "read_permission": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
-        "write_permission": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
-        "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.car.settings",
         "name": "com.android.car.settings.search.CarSettingsSearchIndexablesProvider",
         "authorities": [
@@ -34,6 +21,18 @@
         "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.cellbroadcastreceiver",
+        "name": "com.android.cellbroadcastreceiver.LegacyCellBroadcastContentProvider",
+        "authorities": [
+            "cellbroadcast-legacy"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CELL_BROADCASTS",
+        "write_permission": null,
+        "has_uri_permission": false,
         "grant_uri_permissions": []
     },
     {
@@ -58,18 +57,6 @@
         "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.cellbroadcastreceiver",
-        "name": "com.android.cellbroadcastreceiver.LegacyCellBroadcastContentProvider",
-        "authorities": [
-            "cellbroadcast-legacy"
-        ],
-        "exported": true,
-        "read_permission": "android.permission.READ_CELL_BROADCASTS",
-        "write_permission": null,
-        "has_uri_permission": false,
         "grant_uri_permissions": []
     },
     {
@@ -165,6 +152,18 @@
         "exported": true,
         "read_permission": "com.android.gallery3d.permission.GALLERY_PROVIDER",
         "write_permission": "com.android.gallery3d.permission.GALLERY_PROVIDER",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.launcher3",
+        "name": "com.android.quickstep.LauncherSearchIndexablesProvider",
+        "authorities": [
+            "com.android.launcher3"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
         "grant_uri_permissions": []
     },
@@ -391,18 +390,6 @@
         ]
     },
     {
-        "package": "com.android.launcher3",
-        "name": "com.android.quickstep.LauncherSearchIndexablesProvider",
-        "authorities": [
-            "com.android.launcher3"
-        ],
-        "exported": true,
-        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
-        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.service.ims.presence",
         "name": "com.android.service.ims.presence.EABProvider",
         "authorities": [
@@ -520,6 +507,19 @@
         "read_permission": "android.permission.MANAGE_DOCUMENTS",
         "write_permission": "android.permission.MANAGE_DOCUMENTS",
         "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.tv.frameworkpackagestubs",
+        "name": "com.android.browser.provider.BrowserProvider2",
+        "authorities": [
+            "com.android.browser",
+            "browser"
+        ],
+        "exported": true,
+        "read_permission": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+        "write_permission": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+        "has_uri_permission": false,
         "grant_uri_permissions": []
     }
 ]

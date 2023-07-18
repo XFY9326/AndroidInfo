@@ -197,7 +197,7 @@ class AndroidProviderManifests:
                             raise
                     if not load_tmp and i != len(provider_path_list) - 1:
                         await asyncio.sleep(self._REQUEST_DELAY)
-        return sorted(result, key=lambda x: x.name)
+        return sorted(result, key=lambda x: (x.package, x.name))
 
     async def get_all_android_permission_providers(self, refs: str, use_tmp: bool = True) -> list[AndroidProvider]:
         providers = await self.get_all_android_providers(refs, use_tmp)

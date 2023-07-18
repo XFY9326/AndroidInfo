@@ -1,109 +1,25 @@
 [
     {
-        "package": "com.android.dialer.app",
-        "name": "android.support.v4.content.FileProvider",
+        "package": "android",
+        "name": "com.android.server.textclassifier.IconsContentProvider",
         "authorities": [
-            "com.android.dialer.files"
+            "com.android.textclassifier.icons"
         ],
-        "exported": false,
+        "exported": true,
         "read_permission": null,
         "write_permission": null,
-        "has_uri_permission": true,
+        "has_uri_permission": false,
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.captiveportallogin",
-        "name": "androidx.core.content.FileProvider",
+        "package": "com.android.angle",
+        "name": "com.android.angle.common.SearchProvider",
         "authorities": [
-            "com.android.captiveportallogin.fileprovider"
+            "com.android.angle"
         ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.googlecode.android_scripting",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.googlecode.android_scripting.provider.telephonytestprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.launcher3",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.launcher3.overview.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.emergency",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.emergency.files"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.traceur",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.traceur.files"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.car.developeroptions",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.car.developeroptions"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.egg",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.egg.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.systemui",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.systemui.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
         "grant_uri_permissions": []
     },
@@ -116,90 +32,6 @@
         "exported": false,
         "read_permission": null,
         "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.tv.settings",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.settings.files"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.car.settings",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.settings.files"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.settings",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.settings.files"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.gallery3d",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.gallery3d.provider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.nfc",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.google.android.nfc.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.shell",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.shell"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.angle",
-        "name": "com.android.angle.common.SearchProvider",
-        "authorities": [
-            "com.android.angle"
-        ],
-        "exported": true,
-        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
-        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
         "grant_uri_permissions": []
     },
@@ -253,16 +85,39 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.tv.frameworkpackagestubs",
-        "name": "com.android.browser.provider.BrowserProvider2",
+        "package": "com.android.captiveportallogin",
+        "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.browser",
-            "browser"
+            "com.android.captiveportallogin.fileprovider"
         ],
-        "exported": true,
-        "read_permission": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
-        "write_permission": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
-        "has_uri_permission": false,
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.car.developeroptions",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.car.developeroptions"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.car.settings",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.settings.files"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
         "grant_uri_permissions": []
     },
     {
@@ -290,6 +145,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.cellbroadcastreceiver",
+        "name": "com.android.cellbroadcastreceiver.LegacyCellBroadcastContentProvider",
+        "authorities": [
+            "cellbroadcast-legacy"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CELL_BROADCASTS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.cellbroadcastreceiver.module",
         "name": "com.android.cellbroadcastreceiver.CellBroadcastContentProvider",
         "authorities": [
@@ -314,18 +181,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.cellbroadcastreceiver",
-        "name": "com.android.cellbroadcastreceiver.LegacyCellBroadcastContentProvider",
-        "authorities": [
-            "cellbroadcast-legacy"
-        ],
-        "exported": true,
-        "read_permission": "android.permission.READ_CELL_BROADCASTS",
-        "write_permission": null,
-        "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.cellbroadcastservice",
         "name": "com.android.cellbroadcastservice.CellBroadcastProvider",
         "authorities": [
@@ -335,6 +190,18 @@
         "read_permission": "android.permission.READ_CELL_BROADCASTS",
         "write_permission": null,
         "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.dialer.app",
+        "name": "android.support.v4.content.FileProvider",
+        "authorities": [
+            "com.android.dialer.files"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
         "grant_uri_permissions": []
     },
     {
@@ -358,6 +225,30 @@
         "exported": true,
         "read_permission": "android.permission.MANAGE_DOCUMENTS",
         "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.egg",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.egg.fileprovider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.emergency",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.emergency.files"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
         "has_uri_permission": true,
         "grant_uri_permissions": []
     },
@@ -399,6 +290,18 @@
     },
     {
         "package": "com.android.gallery3d",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.gallery3d.provider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.gallery3d",
         "name": "com.android.gallery3d.filtershow.provider.SharedImageProvider",
         "authorities": [
             "com.android.gallery3d.filtershow.provider.SharedImageProvider"
@@ -434,14 +337,26 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.systemui",
-        "name": "com.android.keyguard.clock.ClockOptionsProvider",
+        "package": "com.android.launcher3",
+        "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.keyguard.clock"
+            "com.android.launcher3.overview.fileprovider"
         ],
         "exported": false,
         "read_permission": null,
         "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.launcher3",
+        "name": "com.android.quickstep.LauncherSearchIndexablesProvider",
+        "authorities": [
+            "com.android.launcher3"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
         "grant_uri_permissions": []
     },
@@ -478,6 +393,18 @@
         "exported": true,
         "read_permission": "android.permission.MANAGE_DOCUMENTS",
         "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.nfc",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.google.android.nfc.fileprovider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
         "has_uri_permission": true,
         "grant_uri_permissions": []
     },
@@ -821,30 +748,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.launcher3",
-        "name": "com.android.quickstep.LauncherSearchIndexablesProvider",
-        "authorities": [
-            "com.android.launcher3"
-        ],
-        "exported": true,
-        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
-        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "android",
-        "name": "com.android.server.textclassifier.IconsContentProvider",
-        "authorities": [
-            "com.android.textclassifier.icons"
-        ],
-        "exported": true,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.service.ims.presence",
         "name": "com.android.service.ims.presence.EABProvider",
         "authorities": [
@@ -854,6 +757,18 @@
         "read_permission": "com.android.rcs.eab.permission.READ_WRITE_EAB",
         "write_permission": "com.android.rcs.eab.permission.READ_WRITE_EAB",
         "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.settings.files"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
         "grant_uri_permissions": []
     },
     {
@@ -943,6 +858,18 @@
     },
     {
         "package": "com.android.shell",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.shell"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.shell",
         "name": "com.android.shell.BugreportStorageProvider",
         "authorities": [
             "com.android.shell.documents"
@@ -958,6 +885,30 @@
         "name": "com.android.shell.HeapDumpProvider",
         "authorities": [
             "com.android.shell.heapdump"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.systemui",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.systemui.fileprovider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.systemui",
+        "name": "com.android.keyguard.clock.ClockOptionsProvider",
+        "authorities": [
+            "com.android.keyguard.clock"
         ],
         "exported": false,
         "read_permission": null,
@@ -1003,6 +954,18 @@
     },
     {
         "package": "com.android.traceur",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.traceur.files"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.traceur",
         "name": "com.android.traceur.SearchProvider",
         "authorities": [
             "com.android.traceur"
@@ -1035,6 +998,31 @@
         "read_permission": null,
         "write_permission": null,
         "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.tv.frameworkpackagestubs",
+        "name": "com.android.browser.provider.BrowserProvider2",
+        "authorities": [
+            "com.android.browser",
+            "browser"
+        ],
+        "exported": true,
+        "read_permission": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+        "write_permission": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.tv.settings",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.settings.files"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
         "grant_uri_permissions": []
     },
     {
@@ -1071,6 +1059,18 @@
         "read_permission": null,
         "write_permission": null,
         "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.googlecode.android_scripting",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.googlecode.android_scripting.provider.telephonytestprovider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
         "grant_uri_permissions": []
     },
     {
