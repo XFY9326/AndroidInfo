@@ -1,13 +1,14 @@
 import abc
+import dataclasses
 import os.path
 import platform
 import re
 import zipfile
-from dataclasses import dataclass
 from functools import lru_cache
 from io import BytesIO
 
 import aiohttp
+import dataclasses_json
 from dataclasses_json import DataClassJsonMixin
 from lxml import etree
 # noinspection PyProtectedMember
@@ -17,13 +18,17 @@ from .consts import JVM_BASIC_SIGNATURE_MAPPING
 from .repository import AndroidRepository
 
 
-@dataclass(frozen=True)
-class JvmAPI(abc.ABC):
+@dataclasses.dataclass(frozen=True)
+class _JvmAPI(abc.ABC):
     class_name: str
 
+    @abc.abstractmethod
+    def to_android_api(self) -> 'AndroidAPI':
+        raise NotImplementedError
 
-@dataclass(frozen=True)
-class JvmMethod(JvmAPI, DataClassJsonMixin):
+
+@dataclasses.dataclass(frozen=True)
+class _JvmMethod(_JvmAPI):
     name: str
     args: tuple[str]
     return_value: str
@@ -51,27 +56,74 @@ class JvmMethod(JvmAPI, DataClassJsonMixin):
         return_signature = self._jvm_type_to_signature(self.return_value)
         return f"({''.join(args_signatures)}){return_signature}"
 
+    def to_android_api(self) -> 'AndroidAPIMethod':
+        return AndroidAPIMethod(
+            class_name=self.class_name,
+            name=self.name,
+            signature=self.signature,
+        )
 
-@dataclass(frozen=True)
-class JvmField(JvmAPI, DataClassJsonMixin):
-    field_name: str
+
+@dataclasses.dataclass(frozen=True)
+class _JvmField(_JvmAPI):
+    name: str
 
     def __repr__(self) -> str:
-        return f"{self.class_name} {self.field_name}"
+        return f"{self.class_name} {self.name}"
+
+    def to_android_api(self) -> 'AndroidAPIField':
+        return AndroidAPIField(
+            class_name=self.class_name,
+            name=self.name,
+        )
 
 
-@dataclass(frozen=True)
-class AndroidAPIPermission(DataClassJsonMixin):
-    api: JvmAPI
+@dataclasses.dataclass(frozen=True)
+class _JvmAPIPermission:
+    api: _JvmAPI
     permissions: tuple[str]
     any_of: bool
 
+    def to_android_api(self) -> 'AndroidAPIPermission':
+        return AndroidAPIPermission(
+            api=self.api.to_android_api(),
+            permissions=self.permissions,
+            any_of=self.any_of,
+        )
 
-@dataclass(frozen=True)
-class AndroidMethodPermission(DataClassJsonMixin):
+
+@dataclasses.dataclass(frozen=True)
+class AndroidAPI(DataClassJsonMixin):
     class_name: str
-    method_name: str
-    method_signature: str
+    name: str
+    api_type: str = dataclasses.field(init=False, default="unknown", metadata=dataclasses_json.config(field_name="type"))
+
+    @staticmethod
+    def api_type_decoder(content: any) -> 'AndroidAPI':
+        if isinstance(content, dict) and "type" in content:
+            if content["type"] == "method":
+                return AndroidAPIMethod.from_dict(content)
+            elif content["type"] == "field":
+                return AndroidAPIField.from_dict(content)
+            elif content["type"] == "unknown":
+                return AndroidAPI.from_dict(content)
+        raise NotImplementedError(f"Unsupported api type: {content}")
+
+
+@dataclasses.dataclass(frozen=True)
+class AndroidAPIMethod(AndroidAPI, DataClassJsonMixin):
+    signature: str
+    api_type: str = dataclasses.field(init=False, default="method", metadata=dataclasses_json.config(field_name="type"))
+
+
+@dataclasses.dataclass(frozen=True)
+class AndroidAPIField(AndroidAPI, DataClassJsonMixin):
+    api_type: str = dataclasses.field(init=False, default="field", metadata=dataclasses_json.config(field_name="type"))
+
+
+@dataclasses.dataclass(frozen=True)
+class AndroidAPIPermission(DataClassJsonMixin):
+    api: AndroidAPI = dataclasses.field(metadata=dataclasses_json.config(decoder=AndroidAPI.api_type_decoder))
     permissions: tuple[str]
     any_of: bool
 
@@ -125,15 +177,15 @@ class AndroidPlatformAPIPermissions:
         else:
             return await self._download_platform_zip(archive_name)
 
-    def _build_android_api_permission(self, name: str, permissions: list[str], any_of: bool) -> AndroidAPIPermission:
+    def _build_android_api_permission(self, name: str, permissions: list[str], any_of: bool) -> _JvmAPIPermission:
         method_matcher = self._method_name_pattern.fullmatch(name)
         if method_matcher is None:
             field_matcher = self._field_name_pattern.fullmatch(name)
             if field_matcher is not None:
-                return AndroidAPIPermission(
-                    api=JvmField(
+                return _JvmAPIPermission(
+                    api=_JvmField(
                         class_name=field_matcher.group(1),
-                        field_name=field_matcher.group(2),
+                        name=field_matcher.group(2),
                     ),
                     permissions=tuple(permissions),
                     any_of=any_of
@@ -144,8 +196,8 @@ class AndroidPlatformAPIPermissions:
                 for i in (method_matcher.group(4).split(",") if "," in method_matcher.group(4) else [method_matcher.group(4)])
                 if len(i.strip()) > 0
             ]
-            return AndroidAPIPermission(
-                api=JvmMethod(
+            return _JvmAPIPermission(
+                api=_JvmMethod(
                     class_name=method_matcher.group(1),
                     name=method_matcher.group(3),
                     args=tuple(method_args),
@@ -156,10 +208,10 @@ class AndroidPlatformAPIPermissions:
             )
         raise ValueError(f"Unknown jvm api format: {name}")
 
-    def _extract_permission_annotations(self, xml_bytes: bytes) -> list[AndroidAPIPermission]:
+    def _extract_permission_annotations(self, xml_bytes: bytes) -> list[_JvmAPIPermission]:
         tree: _Element = etree.fromstring(xml_bytes, parser=etree.XMLParser(recover=True))
         method_elements: list[_Element] = tree.xpath(self._ANNOTATION_ITEM_XPATH)
-        result: list[AndroidAPIPermission] = []
+        result: list[_JvmAPIPermission] = []
         if method_elements is not None:
             for method_element in method_elements:
                 method_name = method_element.attrib["name"]
@@ -179,7 +231,7 @@ class AndroidPlatformAPIPermissions:
         if api < 26:
             raise ValueError("Only support API level >= 26")
         platform_zip_path = await self._get_platform_zip_path(api)
-        result: set[AndroidAPIPermission] = set()
+        result: set[_JvmAPIPermission] = set()
         with zipfile.ZipFile(platform_zip_path) as p_f:
             annotation_zip_file = next(filter(lambda x: self._annotation_pattern.fullmatch(x.filename), p_f.infolist()))
             with zipfile.ZipFile(BytesIO(p_f.read(annotation_zip_file))) as a_f:
@@ -187,18 +239,4 @@ class AndroidPlatformAPIPermissions:
                     if os.path.basename(annotation_file.filename) == "annotations.xml":
                         xml_bytes = a_f.read(annotation_file.filename)
                         result.update(self._extract_permission_annotations(xml_bytes))
-        return sorted(result, key=lambda x: repr(x))
-
-    async def get_method_permissions(self, api: int) -> list[AndroidMethodPermission]:
-        api_permissions = await self.get_api_permissions(api)
-        return [
-            AndroidMethodPermission(
-                class_name=i.api.class_name,
-                method_name=i.api.name,
-                method_signature=i.api.signature,
-                permissions=i.permissions,
-                any_of=i.any_of
-            )
-            for i in api_permissions
-            if isinstance(i.api, JvmMethod)
-        ]
+        return [i.to_android_api() for i in sorted(result, key=lambda x: repr(x))]
