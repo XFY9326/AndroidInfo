@@ -3,7 +3,7 @@ name: Automatic update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '30 0 * * *'
 
 jobs:
   Update:
@@ -13,14 +13,16 @@ jobs:
       with:
         persist-credentials: false
         fetch-depth: 0
-    - name: Cache Android Platform
-      uses: actions/cache@v1.2.1
+    - name: Cache download tmp
+      uses: husarnet/cache@v2.always
       env:
-        cache-name: cache-platform
+        cache-name: cache-android-info
       with:
         path: |
           download_tmp/platform
-        key: ${{ runner.os }}-build-${{ env.cache-name }}
+        key: ${{ runner.os }}-${{ env.cache-name }}
+        restore-keys: |
+          ${{ runner.os }}-${{ env.cache-name }}-
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
