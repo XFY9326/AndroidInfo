@@ -12,34 +12,10 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.captiveportallogin",
+        "package": "com.android.nfc",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.captiveportallogin.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.googlecode.android_scripting",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.googlecode.android_scripting.provider.telephonytestprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.launcher3",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.launcher3.overview.fileprovider"
+            "com.google.android.nfc.fileprovider"
         ],
         "exported": false,
         "read_permission": null,
@@ -60,10 +36,10 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.traceur",
+        "package": "com.android.systemui",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.traceur.files"
+            "com.android.systemui.fileprovider"
         ],
         "exported": false,
         "read_permission": null,
@@ -84,34 +60,58 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.egg",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.egg.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.systemui",
-        "name": "androidx.core.content.FileProvider",
-        "authorities": [
-            "com.android.systemui.fileprovider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.apps.tag",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
             "com.android.apps.tag.provider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.captiveportallogin",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.captiveportallogin.fileprovider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.gallery3d",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.gallery3d.provider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.shell",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.shell"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.settings.files"
         ],
         "exported": false,
         "read_permission": null,
@@ -144,10 +144,10 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.settings",
+        "package": "com.googlecode.android_scripting",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.settings.files"
+            "com.googlecode.android_scripting.provider.telephonytestprovider"
         ],
         "exported": false,
         "read_permission": null,
@@ -156,10 +156,10 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.gallery3d",
+        "package": "com.android.traceur",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.gallery3d.provider"
+            "com.android.traceur.files"
         ],
         "exported": false,
         "read_permission": null,
@@ -168,10 +168,10 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.nfc",
+        "package": "com.android.egg",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.google.android.nfc.fileprovider"
+            "com.android.egg.fileprovider"
         ],
         "exported": false,
         "read_permission": null,
@@ -180,10 +180,10 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.shell",
+        "package": "com.android.launcher3",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
-            "com.android.shell"
+            "com.android.launcher3.overview.fileprovider"
         ],
         "exported": false,
         "read_permission": null,
