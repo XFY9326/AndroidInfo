@@ -119,12 +119,15 @@ async def main():
         with open(os.path.join(output_dir, "build_versions.json"), "w", encoding="utf-8") as f:
             json.dump({i.tag: i.to_dict() for i in build_versions}, f, ensure_ascii=False, indent=4)
 
+        print()
         print("Loading permissions ...")
         await dump_permissions(client, output_dir, api_levels, android_versions)
 
+        print()
         print("Loading API-Permission mappings ...")
         await dump_api_permission_mappings(client, output_dir, api_levels)
 
+        print()
         print("Loading ContentProvider permissions ...")
         await dump_content_provider_permissions(client, output_dir)
 

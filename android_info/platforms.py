@@ -39,7 +39,7 @@ class _JvmMethod(_JvmAPI):
     @staticmethod
     @lru_cache
     def _jvm_type_to_signature(type_name: str) -> str:
-        is_array = "[]" in type_name
+        is_array = type_name.endswith("[]")
         # noinspection RegExpRedundantEscape
         type_name = re.sub(r"<.*>|\[\]", "", type_name)
         if type_name in JVM_BASIC_SIGNATURE_MAPPING:
@@ -60,6 +60,8 @@ class _JvmMethod(_JvmAPI):
         return AndroidAPIMethod(
             class_name=self.class_name,
             name=self.name,
+            args=self.args,
+            return_value=self.return_value,
             signature=self.signature,
         )
 
@@ -112,6 +114,8 @@ class AndroidAPI(DataClassJsonMixin):
 
 @dataclasses.dataclass(frozen=True)
 class AndroidAPIMethod(AndroidAPI, DataClassJsonMixin):
+    args: tuple[str]
+    return_value: str
     signature: str
     api_type: str = dataclasses.field(init=False, default="method", metadata=dataclasses_json.config(field_name="type"))
 
