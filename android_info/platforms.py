@@ -56,6 +56,11 @@ class _JvmMethod(_JvmAPI):
         return_signature = self._jvm_type_to_signature(self.return_value)
         return f"({''.join(args_signatures)}){return_signature}"
 
+    @property
+    def dalvik_invoke(self) -> str:
+        class_signature = self._jvm_type_to_signature(self.class_name)
+        return f"{class_signature}->{self.name}{self.signature}"
+
     def to_android_api(self) -> 'AndroidAPIMethod':
         return AndroidAPIMethod(
             class_name=self.class_name,
@@ -63,6 +68,7 @@ class _JvmMethod(_JvmAPI):
             args=self.args,
             return_value=self.return_value,
             signature=self.signature,
+            dalvik_invoke=self.dalvik_invoke
         )
 
 
@@ -117,6 +123,7 @@ class AndroidAPIMethod(AndroidAPI, DataClassJsonMixin):
     args: tuple[str]
     return_value: str
     signature: str
+    dalvik_invoke: str
     api_type: str = dataclasses.field(init=False, default="method", metadata=dataclasses_json.config(field_name="type"))
 
 
