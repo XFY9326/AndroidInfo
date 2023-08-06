@@ -6,7 +6,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.accessibilityservice.FingerprintGestureController",
-            "signature": "()Landroid/accessibilityservice/FingerprintGestureController;"
+            "signature": "()Landroid/accessibilityservice/FingerprintGestureController;",
+            "dalvik_invoke": "Landroid/accessibilityservice/AccessibilityService;->getFingerprintGestureController()Landroid/accessibilityservice/FingerprintGestureController;"
         },
         "permissions": [
             "android.permission.USE_FINGERPRINT"
@@ -20,7 +21,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.accounts.Account[]",
-            "signature": "()[Landroid/accounts/Account;"
+            "signature": "()[Landroid/accounts/Account;",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;"
         },
         "permissions": [
             "android.permission.GET_ACCOUNTS"
@@ -36,7 +38,8 @@
                 "java.lang.String"
             ],
             "return_value": "android.accounts.Account[]",
-            "signature": "(Ljava/lang/String;)[Landroid/accounts/Account;"
+            "signature": "(Ljava/lang/String;)[Landroid/accounts/Account;",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;"
         },
         "permissions": [
             "android.permission.GET_ACCOUNTS"
@@ -54,7 +57,8 @@
                 "android.os.Bundle"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Z"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Z",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->addAccountExplicitly(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Z"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -70,7 +74,8 @@
                 "android.accounts.Account"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/accounts/Account;)Z"
+            "signature": "(Landroid/accounts/Account;)Z",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->notifyAccountAuthenticated(Landroid/accounts/Account;)Z"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -86,7 +91,8 @@
                 "android.accounts.Account"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/accounts/Account;)Z"
+            "signature": "(Landroid/accounts/Account;)Z",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->removeAccountExplicitly(Landroid/accounts/Account;)Z"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -104,7 +110,8 @@
                 "boolean"
             ],
             "return_value": "java.lang.String",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Z)Ljava/lang/String;"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Z)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->blockingGetAuthToken(Landroid/accounts/Account;Ljava/lang/String;Z)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.USE_CREDENTIALS"
@@ -120,7 +127,8 @@
                 "android.accounts.Account"
             ],
             "return_value": "java.lang.String",
-            "signature": "(Landroid/accounts/Account;)Ljava/lang/String;"
+            "signature": "(Landroid/accounts/Account;)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->getPassword(Landroid/accounts/Account;)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -137,7 +145,8 @@
                 "java.lang.String"
             ],
             "return_value": "java.lang.String",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->getUserData(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -154,7 +163,8 @@
                 "java.lang.String"
             ],
             "return_value": "java.lang.String",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->peekAuthToken(Landroid/accounts/Account;Ljava/lang/String;)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -172,7 +182,8 @@
                 "boolean"
             ],
             "return_value": "void",
-            "signature": "(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z)V"
+            "signature": "(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z)V",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->addOnAccountsUpdatedListener(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z)V"
         },
         "permissions": [
             "android.permission.GET_ACCOUNTS"
@@ -188,7 +199,8 @@
                 "android.accounts.Account"
             ],
             "return_value": "void",
-            "signature": "(Landroid/accounts/Account;)V"
+            "signature": "(Landroid/accounts/Account;)V",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->clearPassword(Landroid/accounts/Account;)V"
         },
         "permissions": [
             "android.permission.MANAGE_ACCOUNTS"
@@ -205,7 +217,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Ljava/lang/String;)V"
+            "signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->invalidateAuthToken(Ljava/lang/String;Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.MANAGE_ACCOUNTS",
@@ -224,7 +237,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->setAuthToken(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -241,7 +255,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;)V"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->setPassword(Landroid/accounts/Account;Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -259,7 +274,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V"
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/accounts/AccountManager;->setUserData(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.AUTHENTICATE_ACCOUNTS"
@@ -276,7 +292,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Ljava/io/FileDescriptor;Ljava/lang/String;)V"
+            "signature": "(Ljava/io/FileDescriptor;Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/app/ActivityManager;->dumpPackageState(Ljava/io/FileDescriptor;Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.DUMP"
@@ -292,7 +309,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;)V"
+            "signature": "(Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/app/ActivityManager;->killBackgroundProcesses(Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.KILL_BACKGROUND_PROCESSES"
@@ -309,7 +327,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(II)V"
+            "signature": "(II)V",
+            "dalvik_invoke": "Landroid/app/ActivityManager;->moveTaskToFront(II)V"
         },
         "permissions": [
             "android.permission.REORDER_TASKS"
@@ -327,7 +346,8 @@
                 "android.os.Bundle"
             ],
             "return_value": "void",
-            "signature": "(IILandroid/os/Bundle;)V"
+            "signature": "(IILandroid/os/Bundle;)V",
+            "dalvik_invoke": "Landroid/app/ActivityManager;->moveTaskToFront(IILandroid/os/Bundle;)V"
         },
         "permissions": [
             "android.permission.REORDER_TASKS"
@@ -343,7 +363,8 @@
                 "long"
             ],
             "return_value": "void",
-            "signature": "(J)V"
+            "signature": "(J)V",
+            "dalvik_invoke": "Landroid/app/AlarmManager;->setTime(J)V"
         },
         "permissions": [
             "android.permission.SET_TIME"
@@ -359,7 +380,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;)V"
+            "signature": "(Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/app/AlarmManager;->setTimeZone(Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.SET_TIME_ZONE"
@@ -375,7 +397,8 @@
                 "android.app.KeyguardManager.OnKeyguardExitResult"
             ],
             "return_value": "void",
-            "signature": "(Landroid/app/KeyguardManager/OnKeyguardExitResult;)V"
+            "signature": "(Landroid/app/KeyguardManager/OnKeyguardExitResult;)V",
+            "dalvik_invoke": "Landroid/app/KeyguardManager;->exitKeyguardSecurely(Landroid/app/KeyguardManager/OnKeyguardExitResult;)V"
         },
         "permissions": [
             "android.permission.DISABLE_KEYGUARD"
@@ -389,7 +412,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/app/KeyguardManager/KeyguardLock;->disableKeyguard()V"
         },
         "permissions": [
             "android.permission.DISABLE_KEYGUARD"
@@ -403,7 +427,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/app/KeyguardManager/KeyguardLock;->reenableKeyguard()V"
         },
         "permissions": [
             "android.permission.DISABLE_KEYGUARD"
@@ -417,7 +442,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.graphics.drawable.Drawable",
-            "signature": "()Landroid/graphics/drawable/Drawable;"
+            "signature": "()Landroid/graphics/drawable/Drawable;",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->getFastDrawable()Landroid/graphics/drawable/Drawable;"
         },
         "permissions": [
             "android.permission.READ_EXTERNAL_STORAGE"
@@ -431,7 +457,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.graphics.drawable.Drawable",
-            "signature": "()Landroid/graphics/drawable/Drawable;"
+            "signature": "()Landroid/graphics/drawable/Drawable;",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->peekFastDrawable()Landroid/graphics/drawable/Drawable;"
         },
         "permissions": [
             "android.permission.READ_EXTERNAL_STORAGE"
@@ -447,7 +474,8 @@
                 "int"
             ],
             "return_value": "android.os.ParcelFileDescriptor",
-            "signature": "(I)Landroid/os/ParcelFileDescriptor;"
+            "signature": "(I)Landroid/os/ParcelFileDescriptor;",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->getWallpaperFile(I)Landroid/os/ParcelFileDescriptor;"
         },
         "permissions": [
             "android.permission.READ_EXTERNAL_STORAGE"
@@ -465,7 +493,8 @@
                 "boolean"
             ],
             "return_value": "int",
-            "signature": "(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Z)I"
+            "signature": "(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Z)I",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Z)I"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -484,7 +513,8 @@
                 "int"
             ],
             "return_value": "int",
-            "signature": "(Landroid/graphics/Bitmap;Landroid/graphics/Rect;ZI)I"
+            "signature": "(Landroid/graphics/Bitmap;Landroid/graphics/Rect;ZI)I",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;ZI)I"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -501,7 +531,8 @@
                 "int"
             ],
             "return_value": "int",
-            "signature": "(II)I"
+            "signature": "(II)I",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setResource(II)I"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -519,7 +550,8 @@
                 "boolean"
             ],
             "return_value": "int",
-            "signature": "(Ljava/io/InputStream;Landroid/graphics/Rect;Z)I"
+            "signature": "(Ljava/io/InputStream;Landroid/graphics/Rect;Z)I",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setStream(Ljava/io/InputStream;Landroid/graphics/Rect;Z)I"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -538,7 +570,8 @@
                 "int"
             ],
             "return_value": "int",
-            "signature": "(Ljava/io/InputStream;Landroid/graphics/Rect;ZI)I"
+            "signature": "(Ljava/io/InputStream;Landroid/graphics/Rect;ZI)I",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setStream(Ljava/io/InputStream;Landroid/graphics/Rect;ZI)I"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -552,7 +585,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->clear()V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -568,7 +602,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(I)V"
+            "signature": "(I)V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->clear(I)V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -582,7 +617,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->clearWallpaper()V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -598,7 +634,8 @@
                 "android.graphics.Bitmap"
             ],
             "return_value": "void",
-            "signature": "(Landroid/graphics/Bitmap;)V"
+            "signature": "(Landroid/graphics/Bitmap;)V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setBitmap(Landroid/graphics/Bitmap;)V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -614,7 +651,8 @@
                 "android.graphics.Rect"
             ],
             "return_value": "void",
-            "signature": "(Landroid/graphics/Rect;)V"
+            "signature": "(Landroid/graphics/Rect;)V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setDisplayPadding(Landroid/graphics/Rect;)V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER_HINTS"
@@ -630,7 +668,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(I)V"
+            "signature": "(I)V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setResource(I)V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -646,7 +685,8 @@
                 "java.io.InputStream"
             ],
             "return_value": "void",
-            "signature": "(Ljava/io/InputStream;)V"
+            "signature": "(Ljava/io/InputStream;)V",
+            "dalvik_invoke": "Landroid/app/WallpaperManager;->setStream(Ljava/io/InputStream;)V"
         },
         "permissions": [
             "android.permission.SET_WALLPAPER"
@@ -671,7 +711,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/app/admin/DevicePolicyManager;->getPasswordComplexity()I"
         },
         "permissions": [
             "android.permission.REQUEST_PASSWORD_COMPLEXITY"
@@ -687,7 +728,8 @@
                 "boolean"
             ],
             "return_value": "android.app.job.JobInfo.Builder",
-            "signature": "(Z)Landroid/app/job/JobInfo/Builder;"
+            "signature": "(Z)Landroid/app/job/JobInfo/Builder;",
+            "dalvik_invoke": "Landroid/app/job/JobInfo/Builder;->setPersisted(Z)Landroid/app/job/JobInfo/Builder;"
         },
         "permissions": [
             "android.permission.RECEIVE_BOOT_COMPLETED"
@@ -701,7 +743,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.bluetooth.BluetoothServerSocket",
-            "signature": "()Landroid/bluetooth/BluetoothServerSocket;"
+            "signature": "()Landroid/bluetooth/BluetoothServerSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->listenUsingInsecureL2capChannel()Landroid/bluetooth/BluetoothServerSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -718,7 +761,8 @@
                 "java.util.UUID"
             ],
             "return_value": "android.bluetooth.BluetoothServerSocket",
-            "signature": "(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;"
+            "signature": "(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->listenUsingInsecureRfcommWithServiceRecord(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -732,7 +776,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.bluetooth.BluetoothServerSocket",
-            "signature": "()Landroid/bluetooth/BluetoothServerSocket;"
+            "signature": "()Landroid/bluetooth/BluetoothServerSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->listenUsingL2capChannel()Landroid/bluetooth/BluetoothServerSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -749,7 +794,8 @@
                 "java.util.UUID"
             ],
             "return_value": "android.bluetooth.BluetoothServerSocket",
-            "signature": "(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;"
+            "signature": "(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->listenUsingRfcommWithServiceRecord(Ljava/lang/String;Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -763,7 +809,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->cancelDiscovery()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -777,7 +824,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->disable()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -791,7 +839,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->enable()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -805,7 +854,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->isDiscovering()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -819,7 +869,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -835,7 +886,8 @@
                 "java.lang.String"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;)Z"
+            "signature": "(Ljava/lang/String;)Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->setName(Ljava/lang/String;)Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -849,7 +901,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->startDiscovery()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -865,7 +918,8 @@
                 "android.bluetooth.BluetoothAdapter.LeScanCallback"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z"
+            "signature": "(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->startLeScan(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -882,7 +936,8 @@
                 "android.bluetooth.BluetoothAdapter.LeScanCallback"
             ],
             "return_value": "boolean",
-            "signature": "([Ljava/util/UUID;Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z"
+            "signature": "([Ljava/util/UUID;Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->startLeScan([Ljava/util/UUID;Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -898,7 +953,8 @@
                 "int"
             ],
             "return_value": "int",
-            "signature": "(I)I"
+            "signature": "(I)I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->getProfileConnectionState(I)I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -912,7 +968,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->getScanMode()I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -926,7 +983,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->getState()I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -940,7 +998,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->getAddress()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -954,7 +1013,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.Set<android.bluetooth.BluetoothDevice>",
-            "signature": "()Ljava/util/Set;"
+            "signature": "()Ljava/util/Set;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->getBondedDevices()Ljava/util/Set;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -970,7 +1030,8 @@
                 "android.bluetooth.BluetoothAdapter.LeScanCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)V"
+            "signature": "(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)V",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothAdapter;->stopLeScan(Landroid/bluetooth/BluetoothAdapter/LeScanCallback;)V"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -984,7 +1045,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.bluetooth.BluetoothClass",
-            "signature": "()Landroid/bluetooth/BluetoothClass;"
+            "signature": "()Landroid/bluetooth/BluetoothClass;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1000,7 +1062,8 @@
                 "int"
             ],
             "return_value": "android.bluetooth.BluetoothSocket",
-            "signature": "(I)Landroid/bluetooth/BluetoothSocket;"
+            "signature": "(I)Landroid/bluetooth/BluetoothSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->createInsecureL2capChannel(I)Landroid/bluetooth/BluetoothSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1016,7 +1079,8 @@
                 "java.util.UUID"
             ],
             "return_value": "android.bluetooth.BluetoothSocket",
-            "signature": "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;"
+            "signature": "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->createInsecureRfcommSocketToServiceRecord(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1032,7 +1096,8 @@
                 "int"
             ],
             "return_value": "android.bluetooth.BluetoothSocket",
-            "signature": "(I)Landroid/bluetooth/BluetoothSocket;"
+            "signature": "(I)Landroid/bluetooth/BluetoothSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->createL2capChannel(I)Landroid/bluetooth/BluetoothSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1048,7 +1113,8 @@
                 "java.util.UUID"
             ],
             "return_value": "android.bluetooth.BluetoothSocket",
-            "signature": "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;"
+            "signature": "(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->createRfcommSocketToServiceRecord(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1062,7 +1128,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.os.ParcelUuid[]",
-            "signature": "()[Landroid/os/ParcelUuid;"
+            "signature": "()[Landroid/os/ParcelUuid;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->getUuids()[Landroid/os/ParcelUuid;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1076,7 +1143,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->createBond()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -1090,7 +1158,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->fetchUuidsWithSdp()Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1106,7 +1175,8 @@
                 "boolean"
             ],
             "return_value": "boolean",
-            "signature": "(Z)Z"
+            "signature": "(Z)Z",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->setPairingConfirmation(Z)Z"
         },
         "permissions": [
             "android.permission.BLUETOOTH_PRIVILEGED"
@@ -1120,7 +1190,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->getBondState()I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1134,7 +1205,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->getType()I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1148,7 +1220,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1165,7 +1238,8 @@
                 "int"
             ],
             "return_value": "int",
-            "signature": "(Landroid/bluetooth/BluetoothDevice;I)I"
+            "signature": "(Landroid/bluetooth/BluetoothDevice;I)I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothManager;->getConnectionState(Landroid/bluetooth/BluetoothDevice;I)I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1181,7 +1255,8 @@
                 "int"
             ],
             "return_value": "java.util.List<android.bluetooth.BluetoothDevice>",
-            "signature": "(I)Ljava/util/List;"
+            "signature": "(I)Ljava/util/List;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothManager;->getConnectedDevices(I)Ljava/util/List;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1198,7 +1273,8 @@
                 "int[]"
             ],
             "return_value": "java.util.List<android.bluetooth.BluetoothDevice>",
-            "signature": "(I[I)Ljava/util/List;"
+            "signature": "(I[I)Ljava/util/List;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothManager;->getDevicesMatchingConnectionStates(I[I)Ljava/util/List;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1214,7 +1290,8 @@
                 "android.bluetooth.BluetoothDevice"
             ],
             "return_value": "int",
-            "signature": "(Landroid/bluetooth/BluetoothDevice;)I"
+            "signature": "(Landroid/bluetooth/BluetoothDevice;)I",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothProfile;->getConnectionState(Landroid/bluetooth/BluetoothDevice;)I"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1228,7 +1305,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.bluetooth.BluetoothDevice>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothProfile;->getConnectedDevices()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1244,7 +1322,8 @@
                 "int[]"
             ],
             "return_value": "java.util.List<android.bluetooth.BluetoothDevice>",
-            "signature": "([I)Ljava/util/List;"
+            "signature": "([I)Ljava/util/List;",
+            "dalvik_invoke": "Landroid/bluetooth/BluetoothProfile;->getDevicesMatchingConnectionStates([I)Ljava/util/List;"
         },
         "permissions": [
             "android.permission.BLUETOOTH"
@@ -1260,7 +1339,8 @@
                 "android.bluetooth.le.ScanCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/bluetooth/le/ScanCallback;)V"
+            "signature": "(Landroid/bluetooth/le/ScanCallback;)V",
+            "dalvik_invoke": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Landroid/bluetooth/le/ScanCallback;)V"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -1276,7 +1356,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/app/PendingIntent;)V"
+            "signature": "(Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/bluetooth/le/BluetoothLeScanner;->stopScan(Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -1292,7 +1373,8 @@
                 "android.bluetooth.le.ScanCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/bluetooth/le/ScanCallback;)V"
+            "signature": "(Landroid/bluetooth/le/ScanCallback;)V",
+            "dalvik_invoke": "Landroid/bluetooth/le/BluetoothLeScanner;->stopScan(Landroid/bluetooth/le/ScanCallback;)V"
         },
         "permissions": [
             "android.permission.BLUETOOTH_ADMIN"
@@ -1308,7 +1390,8 @@
                 "android.content.Intent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;)V"
+            "signature": "(Landroid/content/Intent;)V",
+            "dalvik_invoke": "Landroid/content/Context;->removeStickyBroadcast(Landroid/content/Intent;)V"
         },
         "permissions": [
             "android.permission.BROADCAST_STICKY"
@@ -1325,7 +1408,8 @@
                 "android.os.UserHandle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V"
+            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V",
+            "dalvik_invoke": "Landroid/content/Context;->removeStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V"
         },
         "permissions": [
             "android.permission.INTERACT_ACROSS_USERS",
@@ -1343,7 +1427,8 @@
                 "android.os.UserHandle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V"
+            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V"
         },
         "permissions": [
             "android.permission.INTERACT_ACROSS_USERS"
@@ -1361,7 +1446,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V"
+            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.INTERACT_ACROSS_USERS"
@@ -1384,7 +1470,8 @@
                 "android.os.Bundle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V"
+            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V"
         },
         "permissions": [
             "android.permission.INTERACT_ACROSS_USERS"
@@ -1400,7 +1487,8 @@
                 "android.content.Intent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;)V"
+            "signature": "(Landroid/content/Intent;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendStickyBroadcast(Landroid/content/Intent;)V"
         },
         "permissions": [
             "android.permission.BROADCAST_STICKY"
@@ -1417,7 +1505,8 @@
                 "android.os.UserHandle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V"
+            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V"
         },
         "permissions": [
             "android.permission.INTERACT_ACROSS_USERS",
@@ -1439,7 +1528,8 @@
                 "android.os.Bundle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V"
+            "signature": "(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendStickyOrderedBroadcast(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V"
         },
         "permissions": [
             "android.permission.BROADCAST_STICKY"
@@ -1461,7 +1551,8 @@
                 "android.os.Bundle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V"
+            "signature": "(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V",
+            "dalvik_invoke": "Landroid/content/Context;->sendStickyOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V"
         },
         "permissions": [
             "android.permission.INTERACT_ACROSS_USERS",
@@ -1491,7 +1582,8 @@
                 "android.content.IntentSender"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;ILandroid/content/IntentSender;)V"
+            "signature": "(Ljava/lang/String;ILandroid/content/IntentSender;)V",
+            "dalvik_invoke": "Landroid/content/pm/PackageInstaller;->installExistingPackage(Ljava/lang/String;ILandroid/content/IntentSender;)V"
         },
         "permissions": [
             "android.permission.INSTALL_PACKAGES",
@@ -1509,7 +1601,8 @@
                 "android.content.IntentSender"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/pm/VersionedPackage;Landroid/content/IntentSender;)V"
+            "signature": "(Landroid/content/pm/VersionedPackage;Landroid/content/IntentSender;)V",
+            "dalvik_invoke": "Landroid/content/pm/PackageInstaller;->uninstall(Landroid/content/pm/VersionedPackage;Landroid/content/IntentSender;)V"
         },
         "permissions": [
             "android.permission.DELETE_PACKAGES",
@@ -1527,7 +1620,8 @@
                 "android.content.IntentSender"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Landroid/content/IntentSender;)V"
+            "signature": "(Ljava/lang/String;Landroid/content/IntentSender;)V",
+            "dalvik_invoke": "Landroid/content/pm/PackageInstaller;->uninstall(Ljava/lang/String;Landroid/content/IntentSender;)V"
         },
         "permissions": [
             "android.permission.DELETE_PACKAGES",
@@ -1546,7 +1640,8 @@
                 "int"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;Ljava/lang/String;I)Z"
+            "signature": "(Ljava/lang/String;Ljava/lang/String;I)Z",
+            "dalvik_invoke": "Landroid/content/pm/PackageManager;->addWhitelistedRestrictedPermission(Ljava/lang/String;Ljava/lang/String;I)Z"
         },
         "permissions": [
             "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
@@ -1564,7 +1659,8 @@
                 "int"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;Ljava/lang/String;I)Z"
+            "signature": "(Ljava/lang/String;Ljava/lang/String;I)Z",
+            "dalvik_invoke": "Landroid/content/pm/PackageManager;->removeWhitelistedRestrictedPermission(Ljava/lang/String;Ljava/lang/String;I)Z"
         },
         "permissions": [
             "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
@@ -1581,7 +1677,8 @@
                 "int"
             ],
             "return_value": "java.util.Set<java.lang.String>",
-            "signature": "(Ljava/lang/String;I)Ljava/util/Set;"
+            "signature": "(Ljava/lang/String;I)Ljava/util/Set;",
+            "dalvik_invoke": "Landroid/content/pm/PackageManager;->getWhitelistedRestrictedPermissions(Ljava/lang/String;I)Ljava/util/Set;"
         },
         "permissions": [
             "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
@@ -1599,7 +1696,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;II)V"
+            "signature": "(Ljava/lang/String;II)V",
+            "dalvik_invoke": "Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V"
         },
         "permissions": [
             "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
@@ -1617,7 +1715,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/ComponentName;II)V"
+            "signature": "(Landroid/content/ComponentName;II)V",
+            "dalvik_invoke": "Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V"
         },
         "permissions": [
             "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
@@ -1631,7 +1730,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/hardware/biometrics/BiometricManager;->canAuthenticate()I"
         },
         "permissions": [
             "android.permission.USE_BIOMETRIC"
@@ -1650,7 +1750,8 @@
                 "android.hardware.biometrics.BiometricPrompt.AuthenticationCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/hardware/biometrics/BiometricPrompt/CryptoObject;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V"
+            "signature": "(Landroid/hardware/biometrics/BiometricPrompt/CryptoObject;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V",
+            "dalvik_invoke": "Landroid/hardware/biometrics/BiometricPrompt;->authenticate(Landroid/hardware/biometrics/BiometricPrompt/CryptoObject;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V"
         },
         "permissions": [
             "android.permission.USE_BIOMETRIC"
@@ -1668,7 +1769,8 @@
                 "android.hardware.biometrics.BiometricPrompt.AuthenticationCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V"
+            "signature": "(Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V",
+            "dalvik_invoke": "Landroid/hardware/biometrics/BiometricPrompt;->authenticate(Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Landroid/hardware/biometrics/BiometricPrompt/AuthenticationCallback;)V"
         },
         "permissions": [
             "android.permission.USE_BIOMETRIC"
@@ -1686,7 +1788,8 @@
                 "android.os.Handler"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice/StateCallback;Landroid/os/Handler;)V"
+            "signature": "(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice/StateCallback;Landroid/os/Handler;)V",
+            "dalvik_invoke": "Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice/StateCallback;Landroid/os/Handler;)V"
         },
         "permissions": [
             "android.permission.CAMERA"
@@ -1704,7 +1807,8 @@
                 "android.hardware.camera2.CameraDevice.StateCallback"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice/StateCallback;)V"
+            "signature": "(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice/StateCallback;)V",
+            "dalvik_invoke": "Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice/StateCallback;)V"
         },
         "permissions": [
             "android.permission.CAMERA"
@@ -1718,7 +1822,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints()Z"
         },
         "permissions": [
             "android.permission.USE_FINGERPRINT"
@@ -1732,7 +1837,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/hardware/fingerprint/FingerprintManager;->isHardwareDetected()Z"
         },
         "permissions": [
             "android.permission.USE_FINGERPRINT"
@@ -1752,7 +1858,8 @@
                 "android.os.Handler"
             ],
             "return_value": "void",
-            "signature": "(Landroid/hardware/fingerprint/FingerprintManager/CryptoObject;Landroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager/AuthenticationCallback;Landroid/os/Handler;)V"
+            "signature": "(Landroid/hardware/fingerprint/FingerprintManager/CryptoObject;Landroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager/AuthenticationCallback;Landroid/os/Handler;)V",
+            "dalvik_invoke": "Landroid/hardware/fingerprint/FingerprintManager;->authenticate(Landroid/hardware/fingerprint/FingerprintManager/CryptoObject;Landroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager/AuthenticationCallback;Landroid/os/Handler;)V"
         },
         "permissions": [
             "android.permission.USE_BIOMETRIC",
@@ -1769,7 +1876,8 @@
                 "android.location.GpsStatus"
             ],
             "return_value": "android.location.GpsStatus",
-            "signature": "(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;"
+            "signature": "(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;",
+            "dalvik_invoke": "Landroid/location/LocationManager;->getGpsStatus(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1785,7 +1893,8 @@
                 "java.lang.String"
             ],
             "return_value": "android.location.Location",
-            "signature": "(Ljava/lang/String;)Landroid/location/Location;"
+            "signature": "(Ljava/lang/String;)Landroid/location/Location;",
+            "dalvik_invoke": "Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -1802,7 +1911,8 @@
                 "android.location.GpsStatus.Listener"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/GpsStatus/Listener;)Z"
+            "signature": "(Landroid/location/GpsStatus/Listener;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->addGpsStatusListener(Landroid/location/GpsStatus/Listener;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1818,7 +1928,8 @@
                 "android.location.OnNmeaMessageListener"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/OnNmeaMessageListener;)Z"
+            "signature": "(Landroid/location/OnNmeaMessageListener;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->addNmeaListener(Landroid/location/OnNmeaMessageListener;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1835,7 +1946,8 @@
                 "android.os.Handler"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/OnNmeaMessageListener;Landroid/os/Handler;)Z"
+            "signature": "(Landroid/location/OnNmeaMessageListener;Landroid/os/Handler;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->addNmeaListener(Landroid/location/OnNmeaMessageListener;Landroid/os/Handler;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1851,7 +1963,8 @@
                 "android.location.GnssMeasurementsEvent.Callback"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/GnssMeasurementsEvent/Callback;)Z"
+            "signature": "(Landroid/location/GnssMeasurementsEvent/Callback;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->registerGnssMeasurementsCallback(Landroid/location/GnssMeasurementsEvent/Callback;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1868,7 +1981,8 @@
                 "android.os.Handler"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/GnssMeasurementsEvent/Callback;Landroid/os/Handler;)Z"
+            "signature": "(Landroid/location/GnssMeasurementsEvent/Callback;Landroid/os/Handler;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->registerGnssMeasurementsCallback(Landroid/location/GnssMeasurementsEvent/Callback;Landroid/os/Handler;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1885,7 +1999,8 @@
                 "android.os.Handler"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/GnssNavigationMessage/Callback;Landroid/os/Handler;)Z"
+            "signature": "(Landroid/location/GnssNavigationMessage/Callback;Landroid/os/Handler;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->registerGnssNavigationMessageCallback(Landroid/location/GnssNavigationMessage/Callback;Landroid/os/Handler;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1901,7 +2016,8 @@
                 "android.location.GnssStatus.Callback"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/GnssStatus/Callback;)Z"
+            "signature": "(Landroid/location/GnssStatus/Callback;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->registerGnssStatusCallback(Landroid/location/GnssStatus/Callback;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1918,7 +2034,8 @@
                 "android.os.Handler"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/location/GnssStatus/Callback;Landroid/os/Handler;)Z"
+            "signature": "(Landroid/location/GnssStatus/Callback;Landroid/os/Handler;)Z",
+            "dalvik_invoke": "Landroid/location/LocationManager;->registerGnssStatusCallback(Landroid/location/GnssStatus/Callback;Landroid/os/Handler;)Z"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -1938,7 +2055,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(DDFJLandroid/app/PendingIntent;)V"
+            "signature": "(DDFJLandroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->addProximityAlert(DDFJLandroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -1955,7 +2073,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/app/PendingIntent;)V"
+            "signature": "(Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->removeProximityAlert(Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -1972,7 +2091,8 @@
                 "android.location.LocationListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/location/LocationListener;)V"
+            "signature": "(Landroid/location/LocationListener;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -1992,7 +2112,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;JFLandroid/app/PendingIntent;)V"
+            "signature": "(Ljava/lang/String;JFLandroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2012,7 +2133,8 @@
                 "android.location.LocationListener"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;JFLandroid/location/LocationListener;)V"
+            "signature": "(Ljava/lang/String;JFLandroid/location/LocationListener;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2033,7 +2155,8 @@
                 "android.os.Looper"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V"
+            "signature": "(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2053,7 +2176,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(JFLandroid/location/Criteria;Landroid/app/PendingIntent;)V"
+            "signature": "(JFLandroid/location/Criteria;Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestLocationUpdates(JFLandroid/location/Criteria;Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2074,7 +2198,8 @@
                 "android.os.Looper"
             ],
             "return_value": "void",
-            "signature": "(JFLandroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V"
+            "signature": "(JFLandroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestLocationUpdates(JFLandroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2092,7 +2217,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/location/Criteria;Landroid/app/PendingIntent;)V"
+            "signature": "(Landroid/location/Criteria;Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestSingleUpdate(Landroid/location/Criteria;Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2111,7 +2237,8 @@
                 "android.os.Looper"
             ],
             "return_value": "void",
-            "signature": "(Landroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V"
+            "signature": "(Landroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestSingleUpdate(Landroid/location/Criteria;Landroid/location/LocationListener;Landroid/os/Looper;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2129,7 +2256,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Landroid/app/PendingIntent;)V"
+            "signature": "(Ljava/lang/String;Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestSingleUpdate(Ljava/lang/String;Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2148,7 +2276,8 @@
                 "android.os.Looper"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V"
+            "signature": "(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V",
+            "dalvik_invoke": "Landroid/location/LocationManager;->requestSingleUpdate(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V"
         },
         "permissions": [
             "android.permission.ACCESS_COARSE_LOCATION",
@@ -2165,7 +2294,8 @@
                 "android.net.Network"
             ],
             "return_value": "android.net.LinkProperties",
-            "signature": "(Landroid/net/Network;)Landroid/net/LinkProperties;"
+            "signature": "(Landroid/net/Network;)Landroid/net/LinkProperties;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getLinkProperties(Landroid/net/Network;)Landroid/net/LinkProperties;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2179,7 +2309,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.net.Network",
-            "signature": "()Landroid/net/Network;"
+            "signature": "()Landroid/net/Network;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2195,7 +2326,8 @@
                 "android.net.Network"
             ],
             "return_value": "android.net.NetworkCapabilities",
-            "signature": "(Landroid/net/Network;)Landroid/net/NetworkCapabilities;"
+            "signature": "(Landroid/net/Network;)Landroid/net/NetworkCapabilities;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2209,7 +2341,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.net.NetworkInfo",
-            "signature": "()Landroid/net/NetworkInfo;"
+            "signature": "()Landroid/net/NetworkInfo;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2225,7 +2358,8 @@
                 "android.net.Network"
             ],
             "return_value": "android.net.NetworkInfo",
-            "signature": "(Landroid/net/Network;)Landroid/net/NetworkInfo;"
+            "signature": "(Landroid/net/Network;)Landroid/net/NetworkInfo;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getNetworkInfo(Landroid/net/Network;)Landroid/net/NetworkInfo;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2241,7 +2375,8 @@
                 "int"
             ],
             "return_value": "android.net.NetworkInfo",
-            "signature": "(I)Landroid/net/NetworkInfo;"
+            "signature": "(I)Landroid/net/NetworkInfo;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2255,7 +2390,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.net.NetworkInfo[]",
-            "signature": "()[Landroid/net/NetworkInfo;"
+            "signature": "()[Landroid/net/NetworkInfo;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2269,7 +2405,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.net.Network[]",
-            "signature": "()[Landroid/net/Network;"
+            "signature": "()[Landroid/net/Network;",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getAllNetworks()[Landroid/net/Network;"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2283,7 +2420,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2299,7 +2437,8 @@
                 "android.net.Network"
             ],
             "return_value": "int",
-            "signature": "(Landroid/net/Network;)I"
+            "signature": "(Landroid/net/Network;)I",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getMultipathPreference(Landroid/net/Network;)I"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2313,7 +2452,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->getNetworkPreference()I"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2329,7 +2469,8 @@
                 "android.net.ConnectivityManager.NetworkCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/ConnectivityManager/NetworkCallback;)V"
+            "signature": "(Landroid/net/ConnectivityManager/NetworkCallback;)V",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager/NetworkCallback;)V"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2346,7 +2487,8 @@
                 "android.os.Handler"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V"
+            "signature": "(Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2363,7 +2505,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/NetworkRequest;Landroid/app/PendingIntent;)V"
+            "signature": "(Landroid/net/NetworkRequest;Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->registerNetworkCallback(Landroid/net/NetworkRequest;Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2380,7 +2523,8 @@
                 "android.net.ConnectivityManager.NetworkCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;)V"
+            "signature": "(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;)V",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->registerNetworkCallback(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;)V"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2398,7 +2542,8 @@
                 "android.os.Handler"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V"
+            "signature": "(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V",
+            "dalvik_invoke": "Landroid/net/ConnectivityManager;->registerNetworkCallback(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager/NetworkCallback;Landroid/os/Handler;)V"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE"
@@ -2412,7 +2557,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.net.wifi.WifiConfiguration>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/net/wifi/WifiManager;->getConfiguredNetworks()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION",
@@ -2427,7 +2573,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.net.wifi.hotspot2.PasspointConfiguration>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/net/wifi/WifiManager;->getPasspointConfigurations()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.NETWORK_SETTINGS",
@@ -2444,7 +2591,8 @@
                 "java.lang.String"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;)V"
+            "signature": "(Ljava/lang/String;)V",
+            "dalvik_invoke": "Landroid/net/wifi/WifiManager;->removePasspointConfiguration(Ljava/lang/String;)V"
         },
         "permissions": [
             "android.permission.NETWORK_SETTINGS"
@@ -2462,7 +2610,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.ActionListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->addLocalService(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/nsd/WifiP2pServiceInfo;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2480,7 +2629,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.ActionListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->connect(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2498,7 +2648,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.ActionListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->createGroup(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pConfig;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2515,7 +2666,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.ActionListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->createGroup(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2532,7 +2684,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.ActionListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->discoverPeers(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2549,7 +2702,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.ActionListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->discoverServices(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2566,7 +2720,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.DeviceInfoListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/DeviceInfoListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/DeviceInfoListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->requestDeviceInfo(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/DeviceInfoListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2583,7 +2738,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.GroupInfoListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/GroupInfoListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/GroupInfoListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->requestGroupInfo(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/GroupInfoListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2600,7 +2756,8 @@
                 "android.net.wifi.p2p.WifiP2pManager.PeerListListener"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/PeerListListener;)V"
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/PeerListListener;)V",
+            "dalvik_invoke": "Landroid/net/wifi/p2p/WifiP2pManager;->requestPeers(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/PeerListListener;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -2618,7 +2775,8 @@
                 "android.net.wifi.rtt.RangingResultCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/wifi/rtt/RangingRequest;Ljava/util/concurrent/Executor;Landroid/net/wifi/rtt/RangingResultCallback;)V"
+            "signature": "(Landroid/net/wifi/rtt/RangingRequest;Ljava/util/concurrent/Executor;Landroid/net/wifi/rtt/RangingResultCallback;)V",
+            "dalvik_invoke": "Landroid/net/wifi/rtt/WifiRttManager;->startRanging(Landroid/net/wifi/rtt/RangingRequest;Ljava/util/concurrent/Executor;Landroid/net/wifi/rtt/RangingResultCallback;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION",
@@ -2648,7 +2806,8 @@
                 "java.lang.String"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z"
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_invoke": "Landroid/nfc/cardemulation/CardEmulation;->setOffHostForService(Landroid/content/ComponentName;Ljava/lang/String;)Z"
         },
         "permissions": [
             "android.permission.NFC"
@@ -2664,7 +2823,8 @@
                 "android.content.ComponentName"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/content/ComponentName;)Z"
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_invoke": "Landroid/nfc/cardemulation/CardEmulation;->unsetOffHostForService(Landroid/content/ComponentName;)Z"
         },
         "permissions": [
             "android.permission.NFC"
@@ -2678,7 +2838,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/os/Build;->getSerial()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -2695,7 +2856,8 @@
                 "long"
             ],
             "return_value": "android.os.DropBoxManager.Entry",
-            "signature": "(Ljava/lang/String;J)Landroid/os/DropBoxManager/Entry;"
+            "signature": "(Ljava/lang/String;J)Landroid/os/DropBoxManager/Entry;",
+            "dalvik_invoke": "Landroid/os/DropBoxManager;->getNextEntry(Ljava/lang/String;J)Landroid/os/DropBoxManager/Entry;"
         },
         "permissions": [
             "android.permission.READ_LOGS",
@@ -2713,7 +2875,8 @@
                 "java.io.File"
             ],
             "return_value": "void",
-            "signature": "(Landroid/content/Context;Ljava/io/File;)V"
+            "signature": "(Landroid/content/Context;Ljava/io/File;)V",
+            "dalvik_invoke": "Landroid/os/RecoverySystem;->installPackage(Landroid/content/Context;Ljava/io/File;)V"
         },
         "permissions": [
             "android.permission.RECOVERY"
@@ -2727,7 +2890,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->cancel()V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2743,7 +2907,8 @@
                 "android.os.VibrationEffect"
             ],
             "return_value": "void",
-            "signature": "(Landroid/os/VibrationEffect;)V"
+            "signature": "(Landroid/os/VibrationEffect;)V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->vibrate(Landroid/os/VibrationEffect;)V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2760,7 +2925,8 @@
                 "android.media.AudioAttributes"
             ],
             "return_value": "void",
-            "signature": "(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V"
+            "signature": "(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2776,7 +2942,8 @@
                 "long"
             ],
             "return_value": "void",
-            "signature": "(J)V"
+            "signature": "(J)V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->vibrate(J)V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2793,7 +2960,8 @@
                 "android.media.AudioAttributes"
             ],
             "return_value": "void",
-            "signature": "(JLandroid/media/AudioAttributes;)V"
+            "signature": "(JLandroid/media/AudioAttributes;)V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->vibrate(JLandroid/media/AudioAttributes;)V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2810,7 +2978,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "([JI)V"
+            "signature": "([JI)V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->vibrate([JI)V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2828,7 +2997,8 @@
                 "android.media.AudioAttributes"
             ],
             "return_value": "void",
-            "signature": "([JILandroid/media/AudioAttributes;)V"
+            "signature": "([JILandroid/media/AudioAttributes;)V",
+            "dalvik_invoke": "Landroid/os/Vibrator;->vibrate([JILandroid/media/AudioAttributes;)V"
         },
         "permissions": [
             "android.permission.VIBRATE"
@@ -2844,7 +3014,8 @@
                 "android.telecom.PhoneAccountHandle"
             ],
             "return_value": "android.net.Uri",
-            "signature": "(Landroid/telecom/PhoneAccountHandle;)Landroid/net/Uri;"
+            "signature": "(Landroid/telecom/PhoneAccountHandle;)Landroid/net/Uri;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getAdnUriForPhoneAccount(Landroid/telecom/PhoneAccountHandle;)Landroid/net/Uri;"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -2860,7 +3031,8 @@
                 "java.lang.String"
             ],
             "return_value": "android.telecom.PhoneAccountHandle",
-            "signature": "(Ljava/lang/String;)Landroid/telecom/PhoneAccountHandle;"
+            "signature": "(Ljava/lang/String;)Landroid/telecom/PhoneAccountHandle;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getDefaultOutgoingPhoneAccount(Ljava/lang/String;)Landroid/telecom/PhoneAccountHandle;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -2874,7 +3046,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.telecom.PhoneAccountHandle",
-            "signature": "()Landroid/telecom/PhoneAccountHandle;"
+            "signature": "()Landroid/telecom/PhoneAccountHandle;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getUserSelectedOutgoingPhoneAccount()Landroid/telecom/PhoneAccountHandle;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -2888,7 +3061,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->endCall()Z"
         },
         "permissions": [
             "android.permission.ANSWER_PHONE_CALLS"
@@ -2904,7 +3078,8 @@
                 "java.lang.String"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;)Z"
+            "signature": "(Ljava/lang/String;)Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->handleMmi(Ljava/lang/String;)Z"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -2921,7 +3096,8 @@
                 "android.telecom.PhoneAccountHandle"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)Z"
+            "signature": "(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->handleMmi(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)Z"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -2935,7 +3111,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->isInCall()Z"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -2949,7 +3126,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->isInManagedCall()Z"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -2963,7 +3141,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->isTtySupported()Z"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE",
@@ -2981,7 +3160,8 @@
                 "java.lang.String"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/telecom/PhoneAccountHandle;Ljava/lang/String;)Z"
+            "signature": "(Landroid/telecom/PhoneAccountHandle;Ljava/lang/String;)Z",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->isVoiceMailNumber(Landroid/telecom/PhoneAccountHandle;Ljava/lang/String;)Z"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -2997,7 +3177,8 @@
                 "android.telecom.PhoneAccountHandle"
             ],
             "return_value": "java.lang.String",
-            "signature": "(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;"
+            "signature": "(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getLine1Number(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3013,7 +3194,8 @@
                 "android.telecom.PhoneAccountHandle"
             ],
             "return_value": "java.lang.String",
-            "signature": "(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;"
+            "signature": "(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getVoiceMailNumber(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3027,7 +3209,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.telecom.PhoneAccountHandle>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getCallCapablePhoneAccounts()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3041,7 +3224,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.telecom.PhoneAccountHandle>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->getSelfManagedPhoneAccounts()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3055,7 +3239,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->acceptRingingCall()V"
         },
         "permissions": [
             "android.permission.ANSWER_PHONE_CALLS",
@@ -3072,7 +3257,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(I)V"
+            "signature": "(I)V",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->acceptRingingCall(I)V"
         },
         "permissions": [
             "android.permission.ANSWER_PHONE_CALLS",
@@ -3087,7 +3273,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->cancelMissedCallsNotification()V"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3104,7 +3291,8 @@
                 "android.os.Bundle"
             ],
             "return_value": "void",
-            "signature": "(Landroid/net/Uri;Landroid/os/Bundle;)V"
+            "signature": "(Landroid/net/Uri;Landroid/os/Bundle;)V",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->placeCall(Landroid/net/Uri;Landroid/os/Bundle;)V"
         },
         "permissions": [
             "android.permission.CALL_PHONE",
@@ -3121,7 +3309,8 @@
                 "boolean"
             ],
             "return_value": "void",
-            "signature": "(Z)V"
+            "signature": "(Z)V",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->showInCallScreen(Z)V"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3135,7 +3324,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/telecom/TelecomManager;->silenceRinger()V"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3153,7 +3343,8 @@
                 "android.telephony.SmsManager.FinancialSmsCallback"
             ],
             "return_value": "void",
-            "signature": "(Landroid/os/Bundle;Ljava/util/concurrent/Executor;Landroid/telephony/SmsManager/FinancialSmsCallback;)V"
+            "signature": "(Landroid/os/Bundle;Ljava/util/concurrent/Executor;Landroid/telephony/SmsManager/FinancialSmsCallback;)V",
+            "dalvik_invoke": "Landroid/telephony/SmsManager;->getSmsMessagesForFinancialApp(Landroid/os/Bundle;Ljava/util/concurrent/Executor;Landroid/telephony/SmsManager/FinancialSmsCallback;)V"
         },
         "permissions": [
             "android.permission.SMS_FINANCIAL_TRANSACTIONS"
@@ -3173,7 +3364,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V"
+            "signature": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/telephony/SmsManager;->sendTextMessageWithoutPersisting(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE",
@@ -3190,7 +3382,8 @@
                 "int"
             ],
             "return_value": "android.telephony.SubscriptionInfo",
-            "signature": "(I)Landroid/telephony/SubscriptionInfo;"
+            "signature": "(I)Landroid/telephony/SubscriptionInfo;",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfo(I)Landroid/telephony/SubscriptionInfo;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3206,7 +3399,8 @@
                 "int"
             ],
             "return_value": "android.telephony.SubscriptionInfo",
-            "signature": "(I)Landroid/telephony/SubscriptionInfo;"
+            "signature": "(I)Landroid/telephony/SubscriptionInfo;",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoForSimSlotIndex(I)Landroid/telephony/SubscriptionInfo;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3222,7 +3416,8 @@
                 "int"
             ],
             "return_value": "boolean",
-            "signature": "(I)Z"
+            "signature": "(I)Z",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->isActiveSubscriptionId(I)Z"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3239,7 +3434,8 @@
                 "int"
             ],
             "return_value": "boolean",
-            "signature": "(ZI)Z"
+            "signature": "(ZI)Z",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->setOpportunistic(ZI)Z"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3253,7 +3449,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoCount()I"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3267,7 +3464,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.telephony.SubscriptionInfo>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoList()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3281,7 +3479,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.telephony.SubscriptionInfo>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->getOpportunisticSubscriptions()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3297,7 +3496,8 @@
                 "android.os.ParcelUuid"
             ],
             "return_value": "java.util.List<android.telephony.SubscriptionInfo>",
-            "signature": "(Landroid/os/ParcelUuid;)Ljava/util/List;"
+            "signature": "(Landroid/os/ParcelUuid;)Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->getSubscriptionsInGroup(Landroid/os/ParcelUuid;)Ljava/util/List;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3314,7 +3514,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(ILandroid/app/PendingIntent;)V"
+            "signature": "(ILandroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/telephony/SubscriptionManager;->switchToSubscription(ILandroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
@@ -3339,7 +3540,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.os.PersistableBundle",
-            "signature": "()Landroid/os/PersistableBundle;"
+            "signature": "()Landroid/os/PersistableBundle;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getCarrierConfig()Landroid/os/PersistableBundle;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3353,7 +3555,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.telephony.CellLocation",
-            "signature": "()Landroid/telephony/CellLocation;"
+            "signature": "()Landroid/telephony/CellLocation;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getCellLocation()Landroid/telephony/CellLocation;"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -3371,7 +3574,8 @@
                 "android.telephony.TelephonyScanManager.NetworkScanCallback"
             ],
             "return_value": "android.telephony.NetworkScan",
-            "signature": "(Landroid/telephony/NetworkScanRequest;Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyScanManager/NetworkScanCallback;)Landroid/telephony/NetworkScan;"
+            "signature": "(Landroid/telephony/NetworkScanRequest;Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyScanManager/NetworkScanCallback;)Landroid/telephony/NetworkScan;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->requestNetworkScan(Landroid/telephony/NetworkScanRequest;Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyScanManager/NetworkScanCallback;)Landroid/telephony/NetworkScan;"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE",
@@ -3386,7 +3590,8 @@
             "type": "method",
             "args": [],
             "return_value": "android.telephony.ServiceState",
-            "signature": "()Landroid/telephony/ServiceState;"
+            "signature": "()Landroid/telephony/ServiceState;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getServiceState()Landroid/telephony/ServiceState;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE",
@@ -3401,7 +3606,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->doesSwitchMultiSimConfigTriggerReboot()Z"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3415,7 +3621,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->isDataEnabled()Z"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE",
@@ -3430,7 +3637,8 @@
             "type": "method",
             "args": [],
             "return_value": "boolean",
-            "signature": "()Z"
+            "signature": "()Z",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->isDataRoamingEnabled()Z"
         },
         "permissions": [
             "android.permission.ACCESS_NETWORK_STATE",
@@ -3448,7 +3656,8 @@
                 "boolean"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;Z)Z"
+            "signature": "(Ljava/lang/String;Z)Z",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->setNetworkSelectionModeManual(Ljava/lang/String;Z)Z"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3462,7 +3671,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getDataNetworkType()I"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3476,7 +3686,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getPreferredOpportunisticDataSubscription()I"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE",
@@ -3491,7 +3702,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getVoiceNetworkType()I"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3505,7 +3717,8 @@
             "type": "method",
             "args": [],
             "return_value": "int",
-            "signature": "()I"
+            "signature": "()I",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->isMultiSimSupported()I"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3519,7 +3732,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3535,7 +3749,8 @@
                 "int"
             ],
             "return_value": "java.lang.String",
-            "signature": "(I)Ljava/lang/String;"
+            "signature": "(I)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3549,7 +3764,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getDeviceSoftwareVersion()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3563,7 +3779,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getGroupIdLevel1()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3577,7 +3794,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getImei()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3593,7 +3811,8 @@
                 "int"
             ],
             "return_value": "java.lang.String",
-            "signature": "(I)Ljava/lang/String;"
+            "signature": "(I)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getImei(I)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3607,7 +3826,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE",
@@ -3623,7 +3843,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getMeid()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3639,7 +3860,8 @@
                 "int"
             ],
             "return_value": "java.lang.String",
-            "signature": "(I)Ljava/lang/String;"
+            "signature": "(I)Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getMeid(I)Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3653,7 +3875,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getNai()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3667,7 +3890,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3681,7 +3905,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3695,7 +3920,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getVisualVoicemailPackageName()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3709,7 +3935,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getVoiceMailAlphaTag()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3723,7 +3950,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String",
-            "signature": "()Ljava/lang/String;"
+            "signature": "()Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getVoiceMailNumber()Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3737,7 +3965,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.lang.String[]",
-            "signature": "()[Ljava/lang/String;"
+            "signature": "()[Ljava/lang/String;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getForbiddenPlmns()[Ljava/lang/String;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3751,7 +3980,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.telephony.CellInfo>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getAllCellInfo()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -3765,7 +3995,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.telephony.UiccCardInfo>",
-            "signature": "()Ljava/util/List;"
+            "signature": "()Ljava/util/List;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getUiccCardsInfo()Ljava/util/List;"
         },
         "permissions": [
             "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -3779,7 +4010,8 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>",
-            "signature": "()Ljava/util/Map;"
+            "signature": "()Ljava/util/Map;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getEmergencyNumberList()Ljava/util/Map;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3795,7 +4027,8 @@
                 "int"
             ],
             "return_value": "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>",
-            "signature": "(I)Ljava/util/Map;"
+            "signature": "(I)Ljava/util/Map;",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->getEmergencyNumberList(I)Ljava/util/Map;"
         },
         "permissions": [
             "android.permission.READ_PHONE_STATE"
@@ -3812,7 +4045,8 @@
                 "android.telephony.TelephonyManager.CellInfoCallback"
             ],
             "return_value": "void",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyManager/CellInfoCallback;)V"
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyManager/CellInfoCallback;)V",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->requestCellInfoUpdate(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyManager/CellInfoCallback;)V"
         },
         "permissions": [
             "android.permission.ACCESS_FINE_LOCATION"
@@ -3830,7 +4064,8 @@
                 "android.os.Handler"
             ],
             "return_value": "void",
-            "signature": "(Ljava/lang/String;Landroid/telephony/TelephonyManager/UssdResponseCallback;Landroid/os/Handler;)V"
+            "signature": "(Ljava/lang/String;Landroid/telephony/TelephonyManager/UssdResponseCallback;Landroid/os/Handler;)V",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->sendUssdRequest(Ljava/lang/String;Landroid/telephony/TelephonyManager/UssdResponseCallback;Landroid/os/Handler;)V"
         },
         "permissions": [
             "android.permission.CALL_PHONE"
@@ -3846,7 +4081,8 @@
                 "boolean"
             ],
             "return_value": "void",
-            "signature": "(Z)V"
+            "signature": "(Z)V",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3860,7 +4096,8 @@
             "type": "method",
             "args": [],
             "return_value": "void",
-            "signature": "()V"
+            "signature": "()V",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->setNetworkSelectionModeAutomatic()V"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3876,7 +4113,8 @@
                 "int"
             ],
             "return_value": "void",
-            "signature": "(I)V"
+            "signature": "(I)V",
+            "dalvik_invoke": "Landroid/telephony/TelephonyManager;->switchMultiSimConfig(I)V"
         },
         "permissions": [
             "android.permission.MODIFY_PHONE_STATE"
@@ -3893,7 +4131,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(ILandroid/app/PendingIntent;)V"
+            "signature": "(ILandroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/telephony/euicc/EuiccManager;->deleteSubscription(ILandroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
@@ -3911,7 +4150,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(Landroid/telephony/euicc/DownloadableSubscription;ZLandroid/app/PendingIntent;)V"
+            "signature": "(Landroid/telephony/euicc/DownloadableSubscription;ZLandroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/telephony/euicc/EuiccManager;->downloadSubscription(Landroid/telephony/euicc/DownloadableSubscription;ZLandroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
@@ -3928,7 +4168,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(ILandroid/app/PendingIntent;)V"
+            "signature": "(ILandroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/telephony/euicc/EuiccManager;->switchToSubscription(ILandroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
@@ -3946,7 +4187,8 @@
                 "android.app.PendingIntent"
             ],
             "return_value": "void",
-            "signature": "(ILjava/lang/String;Landroid/app/PendingIntent;)V"
+            "signature": "(ILjava/lang/String;Landroid/app/PendingIntent;)V",
+            "dalvik_invoke": "Landroid/telephony/euicc/EuiccManager;->updateSubscriptionNickname(ILjava/lang/String;Landroid/app/PendingIntent;)V"
         },
         "permissions": [
             "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
@@ -3966,7 +4208,8 @@
                 "long[]"
             ],
             "return_value": "boolean",
-            "signature": "(Ljava/lang/String;JII[J)Z"
+            "signature": "(Ljava/lang/String;JII[J)Z",
+            "dalvik_invoke": "Landroid/util/StatsLog;->logBinaryPushStateChanged(Ljava/lang/String;JII[J)Z"
         },
         "permissions": [
             "android.permission.DUMP",
@@ -3983,7 +4226,8 @@
                 "android.view.inputmethod.InputMethodSubtype"
             ],
             "return_value": "boolean",
-            "signature": "(Landroid/view/inputmethod/InputMethodSubtype;)Z"
+            "signature": "(Landroid/view/inputmethod/InputMethodSubtype;)Z",
+            "dalvik_invoke": "Landroid/view/inputmethod/InputMethodManager;->setCurrentInputMethodSubtype(Landroid/view/inputmethod/InputMethodSubtype;)Z"
         },
         "permissions": [
             "android.permission.WRITE_SECURE_SETTINGS"
