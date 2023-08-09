@@ -5930,6 +5930,15 @@
         "build_id": "10115417",
         "security_patch_level": "2020-09-05"
     },
+    "android-security-11.0.0_r70": {
+        "tag": "android-security-11.0.0_r70",
+        "name": "Android11",
+        "version": "11.0.0",
+        "revision": "70",
+        "is_security": true,
+        "build_id": "10286620",
+        "security_patch_level": "2020-09-05"
+    },
     "android-12.0.0_r1": {
         "tag": "android-12.0.0_r1",
         "name": "Android12",
@@ -6335,6 +6344,15 @@
         "build_id": "10187388",
         "security_patch_level": "2021-10-05"
     },
+    "android-security-12.0.0_r50": {
+        "tag": "android-security-12.0.0_r50",
+        "name": "Android12",
+        "version": "12.0.0",
+        "revision": "50",
+        "is_security": true,
+        "build_id": "10286622",
+        "security_patch_level": "2021-10-05"
+    },
     "android-12.1.0_r1": {
         "tag": "android-12.1.0_r1",
         "name": "Android12L",
@@ -6712,6 +6730,15 @@
         "is_security": false,
         "build_id": "TP1A.221005.003",
         "security_patch_level": "2022-10-05"
+    },
+    "android-security-13.0.0_r8": {
+        "tag": "android-security-13.0.0_r8",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "8",
+        "is_security": true,
+        "build_id": "10286630",
+        "security_patch_level": "2022-08-05"
     },
     "android-13.0.0_r9": {
         "tag": "android-13.0.0_r9",
@@ -7216,5 +7243,77 @@
         "is_security": false,
         "build_id": "TQ3C.230705.001.C2",
         "security_patch_level": "2023-07-05"
+    },
+    "android-13.0.0_r67": {
+        "tag": "android-13.0.0_r67",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "67",
+        "is_security": false,
+        "build_id": "TQ3A.230805.001",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r68": {
+        "tag": "android-13.0.0_r68",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "68",
+        "is_security": false,
+        "build_id": "TQ3A.230805.001.A1",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r69": {
+        "tag": "android-13.0.0_r69",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "69",
+        "is_security": false,
+        "build_id": "TQ3A.230805.001.A2",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r70": {
+        "tag": "android-13.0.0_r70",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "70",
+        "is_security": false,
+        "build_id": "TQ3A.230805.001.A3",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r71": {
+        "tag": "android-13.0.0_r71",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "71",
+        "is_security": false,
+        "build_id": "TQ3A.230805.001.B1",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r72": {
+        "tag": "android-13.0.0_r72",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "72",
+        "is_security": false,
+        "build_id": "TQ3C.230805.001.A3",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r73": {
+        "tag": "android-13.0.0_r73",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "73",
+        "is_security": false,
+        "build_id": "TQ3C.230805.001.A4",
+        "security_patch_level": "2023-08-05"
+    },
+    "android-13.0.0_r74": {
+        "tag": "android-13.0.0_r74",
+        "name": "Android13",
+        "version": "13.0.0",
+        "revision": "74",
+        "is_security": false,
+        "build_id": "TQ3C.230805.001.B2",
+        "security_patch_level": "2023-08-05"
     }
 }
