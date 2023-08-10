@@ -91,7 +91,7 @@ class AndroidRepository:
             raise FileNotFoundError(f"Output dir not found: {output_dir}")
         tmp_file_path = os.path.join(output_dir, f"{archive_name}.tmp")
         target_file_path = os.path.join(output_dir, archive_name)
-        async with self._client.get(self._get_archive_dl_url(archive_name), raise_for_status=True) as response:
+        async with self._client.get(self._get_archive_dl_url(archive_name)) as response:
             async with aiofiles.open(tmp_file_path, "wb") as f:
                 async for chunk in response.content.iter_chunked(self._DOWNLOAD_CHUNK_SIZE):
                     await f.write(chunk)

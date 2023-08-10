@@ -36,6 +36,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.bedstead.harrier",
+        "name": "com.android.bedstead.harrier.BedsteadRunResultsProvider",
+        "authorities": [
+            "com.android.bedstead.harrier.BedsteadRunResultsProvider"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.bluetooth",
         "name": "com.android.bluetooth.avrcpcontroller.AvrcpCoverArtProvider",
         "authorities": [
@@ -188,6 +200,30 @@
         ],
         "exported": true,
         "read_permission": "android.permission.READ_CELL_BROADCASTS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.contacts",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "@string/contacts_file_provider_authority"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.contacts",
+        "name": "com.android.contacts.sdn.SdnProvider",
+        "authorities": [
+            "@string/contacts_sdn_provider_authority"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.BIND_DIRECTORY_SEARCH",
         "write_permission": null,
         "has_uri_permission": false,
         "grant_uri_permissions": []
@@ -481,6 +517,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.phone.testapps.embmsdownload",
+        "name": "android.telephony.mbms.MbmsTempFileProvider",
+        "authorities": [
+            "com.android.phone.testapps.embmsdownload"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.providers.blockednumber",
         "name": "com.android.providers.blockednumber.BlockedNumberProvider",
         "authorities": [
@@ -501,6 +549,84 @@
         "exported": true,
         "read_permission": "android.permission.READ_CALENDAR",
         "write_permission": "android.permission.WRITE_CALENDAR",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.CallComposerLocationProvider",
+        "authorities": [
+            "call_composer_locations"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALL_LOG",
+        "write_permission": "android.permission.WRITE_CALL_LOG",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.CallLogProvider",
+        "authorities": [
+            "call_log"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALL_LOG",
+        "write_permission": "android.permission.WRITE_CALL_LOG",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.ContactsProvider2",
+        "authorities": [
+            "contacts",
+            "com.android.contacts"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": [
+            {
+                "type": "pathPattern",
+                "path": ".*"
+            }
+        ]
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.ShadowCallLogProvider",
+        "authorities": [
+            "call_log_shadow"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.INTERACT_ACROSS_USERS",
+        "write_permission": "android.permission.INTERACT_ACROSS_USERS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.VoicemailContentProvider",
+        "authorities": [
+            "com.android.voicemail"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.debug.DumpFileProvider",
+        "authorities": [
+            "com.android.contacts.dumpfile"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
         "has_uri_permission": false,
         "grant_uri_permissions": []
     },
@@ -1050,6 +1176,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.example.android.justforus",
+        "name": "com.example.android.justforus.AssetProvider",
+        "authorities": [
+            "com.example.android.justforus"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.google.android.tv.hotwordmic",
         "name": "com.google.android.tv.hotwordmic.HotwordMicToggleProvider",
         "authorities": [
@@ -1080,6 +1218,18 @@
             "com.googlecode.android_scripting.facade.telephony.MmsFileProvider"
         ],
         "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.mobileer.oboetester",
+        "name": "android.support.v4.content.FileProvider",
+        "authorities": [
+            "com.mobileer.oboetester.provider"
+        ],
+        "exported": false,
         "read_permission": null,
         "write_permission": null,
         "has_uri_permission": true,

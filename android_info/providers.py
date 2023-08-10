@@ -10,6 +10,7 @@ from dataclasses_json import DataClassJsonMixin
 from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
+from tqdm import tqdm
 
 from .consts import ANDROID_MANIFEST_NS
 from .source_code import AndroidSourceCodePath, AndroidSourceCodeQuery
@@ -33,6 +34,15 @@ class AndroidProvider(DataClassJsonMixin):
     has_uri_permission: bool
     grant_uri_permissions: tuple[AndroidUriPermission]
 
+    @property
+    def all_permissions(self) -> list[str]:
+        result = []
+        if self.read_permission is not None:
+            result.append(self.read_permission)
+        if self.write_permission is not None:
+            result.append(self.write_permission)
+        return result
+
     def need_permission(self) -> bool:
         return self.read_permission is not None or self.write_permission is not None
 
@@ -49,8 +59,8 @@ class AndroidProviderManifests:
     # noinspection SpellCheckingInspection
     _QUERY_STRING = "lang:xml file:AndroidManifest.xml " + \
                     "content:<provider content:android\\:authorities " + \
-                    "(content:android\\:exported=\"true\" OR content:android\\:grantUriPermissions=\"true\")" + \
-                    "-path:sample -path:samples -path:example -path:developers -path:cts -path:test -path:prebuilts -path:tools"
+                    "(content:android\\:exported=\"true\" OR content:android\\:grantUriPermissions=\"true\") " + \
+                    "-path:sample/ -path:samples/ -path:example/ -path:test/ -path:tests/ -path:cts/apps/ -path:prebuilts/ -path:tools/"
 
     _REQUEST_DELAY = 1
 
@@ -157,9 +167,9 @@ class AndroidProviderManifests:
         else:
             return os.path.isfile(self._get_manifest_tmp_path(code_path, refs))
 
-    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, use_tmp: bool = False) -> list[AndroidProvider]:
+    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
         local_path = self._get_manifest_tmp_path(code_path, refs)
-        if use_tmp and self._manifest_tmp_dir is not None and os.path.isfile(local_path):
+        if load_cache and self._manifest_tmp_dir is not None and os.path.isfile(local_path):
             async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
                 manifest_content = await f.read()
         else:
@@ -172,33 +182,37 @@ class AndroidProviderManifests:
 
         return self.get_providers(manifest_content)
 
-    async def get_all_android_providers(self, refs: str, use_tmp: bool = False) -> list[AndroidProvider]:
+    async def get_all_android_providers(self, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
         provider_path_dict = await self.get_latest_provider_manifest_path()
         result: set[AndroidProvider] = set()
-        for project, provider_path_list in provider_path_dict.items():
-            for i, provider_path in enumerate(provider_path_list):
-                load_tmp = use_tmp and self._has_manifest_tmp(provider_path, refs)
-                if not load_tmp and not await (await self._query.get_source()).exists(project, refs):
-                    await asyncio.sleep(self._REQUEST_DELAY / 2)
-                    break
-                fetch_success = False
-                while not fetch_success:
-                    try:
-                        providers = await self.get_providers_from_manifest(provider_path, refs, use_tmp)
-                        result.update(providers)
-                        fetch_success = True
-                    except aiohttp.ClientResponseError as e:
-                        if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
-                            print("\nToo many requests! Sleep 20 seconds ...\n")
-                            await asyncio.sleep(20)
-                        elif e.status == http.HTTPStatus.NOT_FOUND:
+        with tqdm(desc=refs, total=sum([len(i) for i in provider_path_dict.values()])) as pbar:
+            for project, provider_path_list in provider_path_dict.items():
+                for i, provider_path in enumerate(provider_path_list):
+                    has_cache = load_cache and self._has_manifest_tmp(provider_path, refs)
+                    if not has_cache and not await (await self._query.get_source()).exists(project, refs):
+                        await asyncio.sleep(self._REQUEST_DELAY / 2)
+                        break
+                    fetch_success = False
+                    while not fetch_success:
+                        try:
+                            pbar.set_postfix_str("Fetching")
+                            providers = await self.get_providers_from_manifest(provider_path, refs, load_cache)
+                            result.update(providers)
                             fetch_success = True
-                        else:
-                            raise
-                    if not load_tmp and i != len(provider_path_list) - 1:
-                        await asyncio.sleep(self._REQUEST_DELAY)
+                            pbar.update(1)
+                        except aiohttp.ClientResponseError as e:
+                            if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
+                                pbar.set_postfix_str("Sleep 20 seconds")
+                                await asyncio.sleep(20)
+                            elif e.status == http.HTTPStatus.NOT_FOUND:
+                                fetch_success = True
+                            else:
+                                raise
+                        if not has_cache and i != len(provider_path_list) - 1:
+                            pbar.set_postfix_str(f"Delay {self._REQUEST_DELAY} seconds")
+                            await asyncio.sleep(self._REQUEST_DELAY)
         return sorted(result, key=lambda x: (x.package, x.name))
 
-    async def get_all_android_permission_providers(self, refs: str, use_tmp: bool = False) -> list[AndroidProvider]:
-        providers = await self.get_all_android_providers(refs, use_tmp)
+    @staticmethod
+    def filter_permission_providers(providers: list[AndroidProvider]) -> list[AndroidProvider]:
         return [p for p in providers if p.need_permission()]

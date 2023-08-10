@@ -8355,6 +8355,23 @@
                 "hide": true
             }
         },
+        "android.permission.READ_DREAM_SUPPRESSION": {
+            "name": "android.permission.READ_DREAM_SUPPRESSION",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.ACCESS_CACHE_FILESYSTEM": {
             "name": "android.permission.ACCESS_CACHE_FILESYSTEM",
             "description": null,
@@ -10468,23 +10485,6 @@
                 "hide": true
             }
         },
-        "android.permission.ALLOW_SLIPPERY_TOUCHES": {
-            "name": "android.permission.ALLOW_SLIPPERY_TOUCHES",
-            "description": null,
-            "label": null,
-            "group": null,
-            "protection_levels": [
-                "signature"
-            ],
-            "permission_flags": [],
-            "priority": 0,
-            "comment": {
-                "deprecated": false,
-                "system_api": false,
-                "test_api": false,
-                "hide": true
-            }
-        },
         "android.permission.ASSOCIATE_INPUT_DEVICE_TO_DISPLAY_BY_PORT": {
             "name": "android.permission.ASSOCIATE_INPUT_DEVICE_TO_DISPLAY_BY_PORT",
             "description": null,
@@ -10605,6 +10605,23 @@
             "comment": {
                 "deprecated": false,
                 "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.INPUT_CONSUMER": {
+            "name": "android.permission.INPUT_CONSUMER",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
                 "test_api": false,
                 "hide": true
             }

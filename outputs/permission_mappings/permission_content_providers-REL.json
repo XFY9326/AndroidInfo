@@ -72,6 +72,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.contacts",
+        "name": "com.android.contacts.sdn.SdnProvider",
+        "authorities": [
+            "@string/contacts_sdn_provider_authority"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.BIND_DIRECTORY_SEARCH",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.dialer.preferredsim.impl",
         "name": "com.android.dialer.preferredsim.impl.PreferredSimFallbackProvider",
         "authorities": [
@@ -248,6 +260,60 @@
         "exported": true,
         "read_permission": "android.permission.READ_CALENDAR",
         "write_permission": "android.permission.WRITE_CALENDAR",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.CallComposerLocationProvider",
+        "authorities": [
+            "call_composer_locations"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALL_LOG",
+        "write_permission": "android.permission.WRITE_CALL_LOG",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.CallLogProvider",
+        "authorities": [
+            "call_log"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALL_LOG",
+        "write_permission": "android.permission.WRITE_CALL_LOG",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.ContactsProvider2",
+        "authorities": [
+            "contacts",
+            "com.android.contacts"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": [
+            {
+                "type": "pathPattern",
+                "path": ".*"
+            }
+        ]
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.ShadowCallLogProvider",
+        "authorities": [
+            "call_log_shadow"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.INTERACT_ACROSS_USERS",
+        "write_permission": "android.permission.INTERACT_ACROSS_USERS",
         "has_uri_permission": false,
         "grant_uri_permissions": []
     },

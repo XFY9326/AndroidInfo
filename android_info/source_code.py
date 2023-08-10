@@ -1,17 +1,20 @@
 import asyncio
 import http
 import json
+import os
 import random
 import urllib.parse
 from dataclasses import dataclass
 from io import StringIO
 from typing import Optional
 
+import aiofiles
 import aiohttp
 from bs4 import BeautifulSoup
 from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
+from tqdm import tqdm
 
 
 @dataclass(frozen=True)
@@ -28,6 +31,34 @@ class AndroidSourceCodePath:
 class AndroidProjectMapping:
     name: str
     path: str
+
+
+class AndroidRemoteSourceCode:
+    def __init__(self, client: aiohttp.ClientSession, source_code_path: AndroidSourceCodePath, download_dir: Optional[str]):
+        self._source: AndroidGoogleSource = AndroidGoogleSource(client)
+        self._download_dir: Optional[str] = download_dir
+        self._source_code_path: AndroidSourceCodePath = source_code_path
+
+    async def get_content(self, refs: str, load_cache: bool = False) -> str:
+        if self._download_dir is not None:
+            local_path = os.path.join(
+                self._download_dir,
+                refs.replace("/", "_"),
+                os.path.basename(self._source_code_path.path)
+            )
+            if load_cache and os.path.isfile(local_path):
+                async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
+                    return await f.read()
+            else:
+                file_content = await self._source.get_source_code(self._source_code_path, refs)
+                if self._download_dir is not None:
+                    if not os.path.isdir(os.path.dirname(local_path)):
+                        os.makedirs(os.path.dirname(local_path))
+                    async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
+                        await f.write(file_content)
+                return file_content
+        else:
+            return await self._source.get_source_code(self._source_code_path, refs)
 
 
 class AndroidGoogleSource:
@@ -49,7 +80,7 @@ class AndroidGoogleSource:
         return url
 
     async def get_content(self, url: str) -> str:
-        async with self._client.get(url, raise_for_status=True) as response:
+        async with self._client.get(url) as response:
             html_content = await response.text()
         soup = BeautifulSoup(html_content, self._BS4_PARSER)
         file_element = soup.find("table", {"class": "FileContents"})
@@ -191,22 +222,29 @@ class AndroidSourceCodeQuery:
         result: list[dict] = list()
         is_first_batch = True
         next_page_token: Optional[str] = None
-        while is_first_batch or next_page_token is not None:
-            if is_first_batch:
-                is_first_batch = False
-            batch = self._generate_random_batch()
-            url = self._get_api_url(batch)
-            query_config["nextPageToken"] = next_page_token
-            content = self._build_query_content(batch, query_config)
-            async with self._client.post(url, data=content, headers={
-                "Content-Type": "text/plain",
-                "Referer": "https://cs.android.com/"
-            }, raise_for_status=True) as response:
-                query_result = self._parse_query_result(await response.text())
-                result.append(query_result)
-                next_page_token = query_result.setdefault("nextPageToken", None)
-                if next_page_token is not None:
-                    await asyncio.sleep(self._REQUEST_DELAY)
+        with tqdm(desc="Code query", total=1) as pbar:
+            while is_first_batch or next_page_token is not None:
+                if is_first_batch:
+                    is_first_batch = False
+                batch = self._generate_random_batch()
+                url = self._get_api_url(batch)
+                query_config["nextPageToken"] = next_page_token
+                content = self._build_query_content(batch, query_config)
+                async with self._client.post(url, data=content, headers={
+                    "Content-Type": "text/plain",
+                    "Referer": "https://cs.android.com/"
+                }) as response:
+                    query_result = self._parse_query_result(await response.text())
+                    result.append(query_result)
+                    next_page_token = query_result.setdefault("nextPageToken", None)
+                    total_query_results = int(query_result["estimatedResultCount"])
+                    if pbar.total != total_query_results:
+                        last_pos = pbar.pos
+                        pbar.reset(total_query_results)
+                        pbar.update(last_pos)
+                    pbar.update(len(query_result["searchResults"]))
+                    if next_page_token is not None:
+                        await asyncio.sleep(self._REQUEST_DELAY)
         return result
 
     async def extract_source_code_path(self, query_results: list[dict]) -> list[AndroidSourceCodePath]:

@@ -11959,24 +11959,6 @@
                 "hide": true
             }
         },
-        "android.permission.ALLOW_SLIPPERY_TOUCHES": {
-            "name": "android.permission.ALLOW_SLIPPERY_TOUCHES",
-            "description": null,
-            "label": null,
-            "group": null,
-            "protection_levels": [
-                "signature",
-                "recents"
-            ],
-            "permission_flags": [],
-            "priority": 0,
-            "comment": {
-                "deprecated": false,
-                "system_api": false,
-                "test_api": false,
-                "hide": true
-            }
-        },
         "android.permission.ASSOCIATE_INPUT_DEVICE_TO_DISPLAY": {
             "name": "android.permission.ASSOCIATE_INPUT_DEVICE_TO_DISPLAY",
             "description": null,

@@ -1,7 +1,7 @@
 import re
 from dataclasses import dataclass
 from functools import cmp_to_key
-from typing import Optional
+from typing import Optional, Union
 
 import aiohttp
 from bs4 import BeautifulSoup
@@ -11,24 +11,31 @@ from .consts import API_LEVEL_MAPPING
 from .utils import VersionCompare
 
 
-@dataclass
-class AndroidBuildVersion(DataClassJsonMixin):
+@dataclass(frozen=True)
+class AndroidBuildTag(DataClassJsonMixin):
     tag: str
-    name: Optional[str]
     version: str
     revision: str
     is_security: bool
-    build_id: str
-    security_patch_level: Optional[str]
 
-    def __post_init__(self):
-        self._version_compare: VersionCompare = VersionCompare.instance()
+    @staticmethod
+    def parse(tag: str) -> 'AndroidBuildTag':
+        matcher = re.match(r"android(-security)?-(.*)_r(.*)", tag)
+        if matcher is not None:
+            return AndroidBuildTag(
+                tag=matcher.group(0),
+                version=matcher.group(2),
+                revision=matcher.group(3),
+                is_security=matcher.group(1) is not None,
+            )
+        else:
+            raise ValueError(f"Not a valid android build tag: {tag}")
 
     def match_version(self, version: str) -> bool:
-        return self._version_compare.compare(self.version, version) == 0
+        return VersionCompare.instance().compare(self.version, version) == 0
 
     def compare_version(self, version: str) -> int:
-        return self._version_compare.compare(self.version, version)
+        return VersionCompare.instance().compare(self.version, version)
 
     def __str__(self) -> str:
         return self.tag
@@ -38,25 +45,25 @@ class AndroidBuildVersion(DataClassJsonMixin):
         return f"{self.version}_{self.revision}"
 
     def __eq__(self, o: object) -> bool:
-        if isinstance(o, AndroidBuildVersion):
-            return self._version_compare.compare(self.short_version, o.short_version) == 0
+        if isinstance(o, AndroidBuildTag):
+            return VersionCompare.instance().compare(self.short_version, o.short_version) == 0
         return False
 
     def __ne__(self, o: object) -> bool:
         return not self.__eq__(o)
 
     def __hash__(self) -> int:
-        return hash(self.name)
+        return hash(self.tag)
 
     def __lt__(self, other: object) -> bool:
-        if isinstance(other, AndroidBuildVersion):
-            return self._version_compare.compare(self.short_version, other.short_version) < 0
+        if isinstance(other, AndroidBuildTag):
+            return VersionCompare.instance().compare(self.short_version, other.short_version) < 0
         else:
             raise NotImplementedError
 
     def __le__(self, other: object) -> bool:
-        if isinstance(other, AndroidBuildVersion):
-            return self._version_compare.compare(self.short_version, other.short_version) <= 0
+        if isinstance(other, AndroidBuildTag):
+            return VersionCompare.instance().compare(self.short_version, other.short_version) <= 0
         else:
             raise NotImplementedError
 
@@ -65,6 +72,36 @@ class AndroidBuildVersion(DataClassJsonMixin):
 
     def __ge__(self, other: object) -> bool:
         return not self.__lt__(other)
+
+
+@dataclass(frozen=True)
+class AndroidBuildVersion(AndroidBuildTag):
+    name: Optional[str]
+    build_id: str
+    security_patch_level: Optional[str]
+
+    @staticmethod
+    def from_tag(
+            tag: Union[str, AndroidBuildTag],
+            build_id: str,
+            name: Optional[str] = None,
+            security_patch_level: Optional[str] = None
+    ) -> 'AndroidBuildVersion':
+        if isinstance(tag, str):
+            build_tag = AndroidBuildTag.parse(tag)
+        elif isinstance(tag, AndroidBuildTag):
+            build_tag = tag
+        else:
+            raise TypeError("Tag type error!")
+        return AndroidBuildVersion(
+            tag=build_tag.tag,
+            version=build_tag.version,
+            revision=build_tag.revision,
+            is_security=build_tag.is_security,
+            name=name,
+            build_id=build_id,
+            security_patch_level=security_patch_level
+        )
 
 
 @dataclass
@@ -117,18 +154,18 @@ class AndroidVersions:
 
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
-        self._version_tag_regex: re.Pattern = re.compile(r"android(-security)?-(.*)_r(.*)")
-        self._api_ndk_regex: re.Pattern = re.compile(r"API level (\d+)(, NDK (\d+))?")
+        self._regex_api_ndk: re.Pattern = re.compile(r"API level (\d+)(, NDK (\d+))?")
         self._build_versions: Optional[list[AndroidBuildVersion]] = None
         self._api_levels: Optional[list[AndroidAPILevel]] = None
         self._version_compare: VersionCompare = VersionCompare.instance()
         self._checked_api_mappings: Optional[dict[int, list[str]]] = None
 
     async def _fetch_docs(self) -> BeautifulSoup:
-        async with self._client.get(self._BASE_URL, raise_for_status=True) as response:
+        async with self._client.get(self._BASE_URL) as response:
             return BeautifulSoup(await response.text(), self._BS4_PARSER)
 
-    def _get_build_versions(self, soup: BeautifulSoup) -> list[AndroidBuildVersion]:
+    @staticmethod
+    def _get_build_versions(soup: BeautifulSoup) -> list[AndroidBuildVersion]:
         def _transform_empty_str(text: str) -> Optional[str]:
             return text if len(text) > 0 else None
 
@@ -137,37 +174,32 @@ class AndroidVersions:
         tag_elements = table_body.select("tr > td:nth-child(2)")
         name_elements = table_body.select("tr > td:nth-child(3)")
         security_patch_elements = table_body.select("tr > td:nth-child(5)")
-        tag_matchers = [self._version_tag_regex.match(i.text.strip()) for i in tag_elements]
+        tags = [i.text.strip() for i in tag_elements]
         return [
-            AndroidBuildVersion(
-                tag=matcher.group(0),
+            AndroidBuildVersion.from_tag(
+                tag=tag,
                 name=_transform_empty_str(e2.text.strip()),
-                version=matcher.group(2),
-                revision=matcher.group(3),
-                is_security=matcher.group(1) is not None,
                 build_id=e3.text.strip(),
                 security_patch_level=_transform_empty_str(e4.text.strip()),
             )
-            for matcher, e2, e3, e4 in zip(tag_matchers, name_elements, build_id_elements, security_patch_elements)
+            for tag, e2, e3, e4 in zip(tags, name_elements, build_id_elements, security_patch_elements)
         ]
 
-    def _get_honeycomb_build_versions(self, soup: BeautifulSoup) -> list[AndroidBuildVersion]:
+    @staticmethod
+    def _get_honeycomb_build_versions(soup: BeautifulSoup) -> list[AndroidBuildVersion]:
         section_title = soup.find(id="honeycomb-gpl-modules")
         table_body = section_title.find_next("tbody")
         build_id_elements = table_body.select("tr > td:nth-child(1)")
         tag_elements = table_body.select("tr > td:nth-child(2)")
-        tag_matchers = [self._version_tag_regex.match(i.text.strip()) for i in tag_elements]
+        tags = [i.text.strip() for i in tag_elements]
         return [
-            AndroidBuildVersion(
-                tag=matcher.group(0),
+            AndroidBuildVersion.from_tag(
+                tag=tag,
                 name="Honeycomb",
-                version=matcher.group(2),
-                revision=matcher.group(3),
-                is_security=matcher.group(1) is not None,
                 build_id=e2.text.strip(),
                 security_patch_level=None,
             )
-            for matcher, e2 in zip(tag_matchers, build_id_elements)
+            for tag, e2 in zip(tags, build_id_elements)
         ]
 
     @staticmethod
@@ -196,7 +228,7 @@ class AndroidVersions:
             )
 
         def _parse_api_ndk(api_ndk_text: str) -> tuple[int, Optional[int]]:
-            matcher = self._api_ndk_regex.match(api_ndk_text)
+            matcher = self._regex_api_ndk.match(api_ndk_text)
             api_level = int(matcher.group(1))
             ndk_level = matcher.group(3)
             ndk_level = int(ndk_level) if ndk_level is not None else None

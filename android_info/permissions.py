@@ -1,8 +1,6 @@
-import os.path
 from dataclasses import dataclass
 from typing import Optional
 
-import aiofiles
 import aiohttp
 from dataclasses_json import DataClassJsonMixin
 from lxml import etree
@@ -10,7 +8,7 @@ from lxml import etree
 from lxml.etree import _Element
 
 from .consts import ANDROID_MANIFEST_NS
-from .source_code import AndroidSourceCodePath, AndroidGoogleSource
+from .source_code import AndroidRemoteSourceCode, AndroidSourceCodePath
 from .utils import android_attrib
 
 
@@ -129,37 +127,18 @@ class _RawPermission:
         return False
 
 
-class _AndroidCoreResString:
+class _AndroidCoreResString(AndroidRemoteSourceCode):
     _ID_START = "@string/"
     _PERMISSION_STRING_MANIFEST = AndroidSourceCodePath("platform/frameworks/base", "core/res/res/values/strings.xml")
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, tmp_dir: Optional[str], use_tmp: bool = False):
-        self._source: AndroidGoogleSource = AndroidGoogleSource(client)
-        self._refs = refs
-        self._tmp_dir: Optional[str] = tmp_dir
-        self._use_tmp: bool = use_tmp
+    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: Optional[str], load_cache: bool = False):
+        super().__init__(client, self._PERMISSION_STRING_MANIFEST, download_dir)
+        self._refs: str = refs
+        self._load_cache: bool = load_cache
         self._res_strings: Optional[dict[str, str]] = None
 
-    async def _get_source_code(self) -> str:
-        local_path = os.path.join(
-            self._tmp_dir,
-            self._refs.replace("/", "_"),
-            os.path.basename(self._PERMISSION_STRING_MANIFEST.path)
-        )
-        if self._tmp_dir is not None and self._use_tmp and os.path.isfile(local_path):
-            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
-                return await f.read()
-        else:
-            res_strings = await self._source.get_source_code(self._PERMISSION_STRING_MANIFEST, self._refs)
-            if self._tmp_dir is not None:
-                if not os.path.isdir(os.path.dirname(local_path)):
-                    os.makedirs(os.path.dirname(local_path))
-                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
-                    await f.write(res_strings)
-            return res_strings
-
     async def _get_content(self) -> dict[str, str]:
-        manifest = await self._get_source_code()
+        manifest = await self.get_content(self._refs, self._load_cache)
         tree: _Element = etree.fromstring(manifest.encode("utf-8"))
         return {
             string_element.attrib["name"]: string_element.text
@@ -180,34 +159,15 @@ class _AndroidCoreResString:
         raise ValueError(f"Unknown string res id: {res_id}")
 
 
-class _AndroidCoreManifest:
+class _AndroidCoreManifest(AndroidRemoteSourceCode):
     _PERMISSION_MANIFEST = AndroidSourceCodePath("platform/frameworks/base", "core/res/AndroidManifest.xml")
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, tmp_dir: Optional[str], use_tmp: bool = False):
-        self._source: AndroidGoogleSource = AndroidGoogleSource(client)
-        self._refs = refs
-        self._tmp_dir: Optional[str] = tmp_dir
-        self._use_tmp: bool = use_tmp
+    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: Optional[str], load_cache: bool = False):
+        super().__init__(client, self._PERMISSION_MANIFEST, download_dir)
+        self._refs: str = refs
+        self._load_cache: bool = load_cache
         self._permission_groups: Optional[dict[str, _RawPermissionGroup]] = None
         self._permissions: Optional[dict[str, _RawPermission]] = None
-
-    async def _get_source_code(self) -> str:
-        local_path = os.path.join(
-            self._tmp_dir,
-            self._refs.replace("/", "_"),
-            os.path.basename(self._PERMISSION_MANIFEST.path)
-        )
-        if self._tmp_dir is not None and self._use_tmp and os.path.isfile(local_path):
-            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
-                return await f.read()
-        else:
-            android_manifest = await self._source.get_source_code(self._PERMISSION_MANIFEST, self._refs)
-            if self._tmp_dir is not None:
-                if not os.path.isdir(os.path.dirname(local_path)):
-                    os.makedirs(os.path.dirname(local_path))
-                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
-                    await f.write(android_manifest)
-            return android_manifest
 
     async def _get_content(self) -> tuple[dict[str, _RawPermissionGroup], dict[str, _RawPermission]]:
         def _get_android_attrib(element, key: str) -> Optional[str]:
@@ -234,7 +194,7 @@ class _AndroidCoreManifest:
                     hide=False
                 )
 
-        manifest = await self._get_source_code()
+        manifest = await self.get_content(self._refs, self._load_cache)
         tree: _Element = etree.fromstring(manifest.encode("utf-8"))
         permission_groups = {
             e.attrib[android_attrib("name")]: _RawPermissionGroup(
@@ -278,9 +238,9 @@ class _AndroidCoreManifest:
 
 class AndroidFrameworkPermissions:
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: Optional[str] = None, use_tmp: bool = False):
-        self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs, permissions_tmp_dir, use_tmp)
-        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, use_tmp)
+    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: Optional[str] = None, load_cache: bool = False):
+        self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs, permissions_tmp_dir, load_cache)
+        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, load_cache)
         self._permissions: Optional[AndroidPermissions] = None
 
     async def _parse_raw_text(self, text: Optional[str]) -> Optional[str]:

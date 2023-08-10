@@ -12,7 +12,7 @@ from android_info.consts import ANDROID_MAIN_REFS
 from android_info.permissions import AndroidFrameworkPermissions
 from android_info.platforms import AndroidPlatformAPIPermissions
 from android_info.providers import AndroidProviderManifests
-from android_info.versions import AndroidVersions, AndroidAPILevel
+from android_info.versions import AndroidVersions, AndroidAPILevel, AndroidBuildTag
 
 USE_TMP = False
 
@@ -21,12 +21,37 @@ def filter_available_api_levels(api_levels: list[AndroidAPILevel]) -> list[Andro
     return [i for i in api_levels if i.api >= 4 and i.api != 11 and i.api != 12 and i.api != 20]
 
 
+async def remove_old_ref_versions_tmp(refs: str, tmp_dir: str):
+    if refs.startswith("refs"):
+        return
+    # noinspection PyBroadException
+    try:
+        current_tag = AndroidBuildTag.parse(refs)
+    except:
+        return
+    version_tags = [i for i in os.listdir(tmp_dir) if not i.startswith("refs")]
+    for t in version_tags:
+        # noinspection PyBroadException
+        try:
+            tag = AndroidBuildTag.parse(t)
+            if tag.version == current_tag.version and tag.revision < current_tag.revision:
+                await aioshutil.rmtree(os.path.join(tmp_dir, tag.tag), ignore_errors=True)
+        except:
+            pass
+
+
 async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, tmp_dir: str, refs_api: Optional[tuple[str, int]] = None):
-    android_permissions = AndroidFrameworkPermissions(client, refs_api[0] if refs_api is not None else ANDROID_MAIN_REFS, tmp_dir, USE_TMP)
+    use_tmp = USE_TMP if refs_api is not None else False
+    refs = refs_api[0] if refs_api is not None else ANDROID_MAIN_REFS
+    if refs_api is not None:
+        await remove_old_ref_versions_tmp(refs, tmp_dir)
+
+    android_permissions = AndroidFrameworkPermissions(client, refs, tmp_dir, use_tmp)
 
     permissions = await android_permissions.get_permissions()
 
-    with open(os.path.join(output_dir, f"permissions-{refs_api[1] if refs_api is not None else 'REL'}.json"), "w", encoding="utf-8") as f:
+    tmp_file_name = f"permissions-{refs_api[1] if refs_api is not None else 'REL'}.json"
+    with open(os.path.join(output_dir, tmp_file_name), "w", encoding="utf-8") as f:
         json.dump(permissions.to_dict(), f, ensure_ascii=False, indent=4)
 
     del android_permissions
@@ -45,23 +70,26 @@ async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, api_l
     await dump_ref_permissions(client, permissions_output_dir, tmp_dir)
 
     # Dump all API levels version
-    for api_level in tqdm(filter_available_api_levels(api_levels)):
-        for version in reversed(api_level.versions):
-            latest_build_version = await android_versions.get_latest_build_version(version)
-            if latest_build_version is not None:
-                try:
-                    await dump_ref_permissions(client, permissions_output_dir, tmp_dir, (latest_build_version.tag, api_level.api))
-                    break
-                except aiohttp.ClientResponseError as e:
-                    if e.status != http.HTTPStatus.NOT_FOUND:
-                        raise
+    filtered_api_levels = filter_available_api_levels(api_levels)
+    with tqdm(desc="Permissions", total=len(filtered_api_levels)) as pbar:
+        for api_level in filtered_api_levels:
+            pbar.set_postfix_str(f"API {api_level.api}")
+            for version in reversed(api_level.versions):
+                latest_build_version = await android_versions.get_latest_build_version(version, False)
+                if latest_build_version is not None:
+                    try:
+                        await dump_ref_permissions(client, permissions_output_dir, tmp_dir, (latest_build_version.tag, api_level.api))
+                        break
+                    except aiohttp.ClientResponseError as e:
+                        if e.status != http.HTTPStatus.NOT_FOUND:
+                            raise
+            pbar.update(1)
 
 
 async def dump_api_permission_mappings(client: aiohttp.ClientSession, output_dir: str, api_levels: list[AndroidAPILevel]):
     tmp_dir = os.path.join("download_tmp", "platform")
-    if os.path.exists(tmp_dir):
-        await aioshutil.rmtree(tmp_dir)
-    os.makedirs(tmp_dir)
+    if not os.path.exists(tmp_dir):
+        os.makedirs(tmp_dir)
 
     permissions_mapping_dir = os.path.join(output_dir, "permission_mappings")
     if not os.path.exists(permissions_mapping_dir):
@@ -70,15 +98,19 @@ async def dump_api_permission_mappings(client: aiohttp.ClientSession, output_dir
     platform_api = AndroidPlatformAPIPermissions(client, tmp_dir)
 
     # Only support API level >= 26
-    for api_level in tqdm([i for i in filter_available_api_levels(api_levels) if i.api >= 26]):
-        try:
-            api_permissions = await platform_api.get_api_permissions(api_level.api)
-        except aiohttp.ClientResponseError as e:
-            if e.status != http.HTTPStatus.NOT_FOUND.value:
-                raise
-        else:
-            with open(os.path.join(permissions_mapping_dir, f"sdk-{api_level.api}.json"), "w", encoding="utf-8") as f:
-                json.dump([i.to_dict() for i in api_permissions], f, ensure_ascii=False, indent=4)
+    filtered_api_levels = [i for i in filter_available_api_levels(api_levels) if i.api >= 26]
+    with tqdm(desc="API-Permission Mappings", total=len(filtered_api_levels)) as pbar:
+        for api_level in filtered_api_levels:
+            pbar.set_postfix_str(f"API {api_level.api}")
+            try:
+                api_permissions = await platform_api.get_api_permissions(api_level.api)
+            except aiohttp.ClientResponseError as e:
+                if e.status != http.HTTPStatus.NOT_FOUND.value:
+                    raise
+            else:
+                with open(os.path.join(permissions_mapping_dir, f"sdk-{api_level.api}.json"), "w", encoding="utf-8") as f:
+                    json.dump([i.to_dict() for i in api_permissions], f, ensure_ascii=False, indent=4)
+            pbar.update(1)
 
 
 async def dump_content_provider_permissions(client: aiohttp.ClientSession, output_dir: str):
@@ -92,8 +124,8 @@ async def dump_content_provider_permissions(client: aiohttp.ClientSession, outpu
 
     provider_manifests = AndroidProviderManifests(client, tmp_dir)
 
-    providers = await provider_manifests.get_all_android_providers(ANDROID_MAIN_REFS, USE_TMP)
-    permission_providers = await provider_manifests.get_all_android_permission_providers(ANDROID_MAIN_REFS)
+    providers = await provider_manifests.get_all_android_providers(ANDROID_MAIN_REFS, False)
+    permission_providers = provider_manifests.filter_permission_providers(providers)
     with open(os.path.join(permissions_mapping_dir, "all_content_providers-REL.json"), "w", encoding="utf-8") as f:
         json.dump([i.to_dict() for i in providers], f, ensure_ascii=False, indent=4)
     with open(os.path.join(permissions_mapping_dir, "permission_content_providers-REL.json"), "w", encoding="utf-8") as f:
@@ -106,7 +138,7 @@ async def main():
         await aioshutil.rmtree(output_dir)
     os.makedirs(output_dir)
 
-    async with aiohttp.ClientSession() as client:
+    async with aiohttp.ClientSession(raise_for_status=True) as client:
         print("Loading versions ...")
 
         android_versions = AndroidVersions(client)
