@@ -60,7 +60,8 @@ class AndroidProviderManifests:
     _QUERY_STRING = "lang:xml file:AndroidManifest.xml " + \
                     "content:<provider content:android\\:authorities " + \
                     "(content:android\\:exported=\"true\" OR content:android\\:grantUriPermissions=\"true\") " + \
-                    "-path:sample/ -path:samples/ -path:example/ -path:test/ -path:tests/ -path:cts/apps/ -path:prebuilts/ -path:tools/"
+                    "-path:sample/ -path:samples/ -path:example/ -path:test/ -path:tests/ -path:demos/ " + \
+                    "-path:cts/apps/ -path:cts/common/ -path:prebuilts/ -path:tools/"
 
     _REQUEST_DELAY = 1
 

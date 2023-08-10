@@ -36,18 +36,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.bedstead.harrier",
-        "name": "com.android.bedstead.harrier.BedsteadRunResultsProvider",
-        "authorities": [
-            "com.android.bedstead.harrier.BedsteadRunResultsProvider"
-        ],
-        "exported": true,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.bluetooth",
         "name": "com.android.bluetooth.avrcpcontroller.AvrcpCoverArtProvider",
         "authorities": [
@@ -1173,18 +1161,6 @@
         "read_permission": null,
         "write_permission": null,
         "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.example.android.justforus",
-        "name": "com.example.android.justforus.AssetProvider",
-        "authorities": [
-            "com.example.android.justforus"
-        ],
-        "exported": true,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
         "grant_uri_permissions": []
     },
     {
