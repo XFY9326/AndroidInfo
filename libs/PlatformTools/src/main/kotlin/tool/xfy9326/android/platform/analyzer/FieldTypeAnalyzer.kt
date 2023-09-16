@@ -17,8 +17,9 @@ import kotlin.jvm.optionals.getOrNull
 
 object FieldTypeAnalyzer {
     private const val SRC_DIR = "src"
+    private const val ENTRY_DIV = "/"
 
-    private fun ZipFile.getSrcEntry(field: ClassField): ZipEntry? = getEntry(SRC_DIR + "/" + field.className.javaSourceFilePath)
+    private fun ZipFile.getSrcEntry(field: ClassField): ZipEntry? = getEntry(SRC_DIR + ENTRY_DIV + field.className.javaSourceFilePath)
 
     private fun List<ClassField>.buildClassIndex() = buildMap<String, MutableList<ClassField>> {
         for (field in this@buildClassIndex) {
@@ -81,7 +82,6 @@ object FieldTypeAnalyzer {
                             ClassFile(DataInputStream(androidJarStream)) to f.buildNameIndex()
                         }
                     }.flatMap { (classFile, classFields) ->
-
                         classFile.fields.asSequence().filterNotNull().mapNotNull {
                             classFields[it.getName()]?.let { f ->
                                 f to SignatureAttribute.toFieldSignature(it.descriptor).jvmTypeName()

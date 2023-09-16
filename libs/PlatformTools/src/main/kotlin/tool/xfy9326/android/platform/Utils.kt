@@ -26,7 +26,6 @@ fun ZipFile.getAndroidJarEntry(): ZipEntry = "android-.*/android.jar".toRegex().
     }
 }
 
-
 fun ZipFile.openAndroidInputStream(): InputStream = getInputStream(getAndroidJarEntry())
 
 fun ZipFile.openAndroidJarInputStream(): JarInputStream = JarInputStream(openAndroidInputStream())

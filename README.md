@@ -51,5 +51,5 @@ from android_info.providers import AndroidProviderManifests
 
 ## Jar libs
 
-'libs/AndroidPlatformTools' -> platform_tools.jar (Require JDK 17 to compile, JDK 11 to run)
+'libs/PlatformTools' -> platform_tools.jar (Require JDK 17 to compile, JDK 11 to run)
 
