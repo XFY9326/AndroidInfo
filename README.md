@@ -24,15 +24,17 @@ Build versions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outpu
 
 Latest Permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permissions/permissions-REL.json)
 
-Permissions with  API level: [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permissions)
+Permissions with API level: [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permissions)
 
 ### API-Permission mappings
 
 API-Permission Mappings (Only support API >= 26): [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permission_mappings)
 
-Latest ContentProviders: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permission_mappings/all_content_providers-REL.json)
+Latest ContentProviders: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/providers/all_providers.json)
 
-Latest ContentProviders with permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permission_mappings/permission_content_providers-REL.json)
+Latest ContentProviders authority classes: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/providers/authority_classes.json)
+
+Latest ContentProviders with permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/providers/permission_providers.json)
 
 ## Usage
 
