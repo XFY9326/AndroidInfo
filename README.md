@@ -37,7 +37,7 @@ Latest ContentProviders with permissions: [Download](https://github.com/XFY9326/
 ## Usage
 
 ```shell
-python main.py
+python3 main/main.py
 ```
 
 Or you can import any script you like in your code
@@ -48,3 +48,8 @@ from android_info.permissions import AndroidFrameworkPermissions
 from android_info.platforms import AndroidPlatformAPIPermissions
 from android_info.providers import AndroidProviderManifests
 ```
+
+## Jar libs
+
+'libs/AndroidPlatformTools' -> platform_tools.jar (Require JDK 17 to compile, JDK 11 to run)
+

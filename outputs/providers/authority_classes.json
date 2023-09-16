@@ -1,0 +1,269 @@
+{
+    "service-state": {
+        "authority": "service-state",
+        "names": [
+            "android.provider.Telephony$ServiceStateTable"
+        ],
+        "related_names": [
+        ]
+    },
+    "settings": {
+        "authority": "settings",
+        "names": [
+            "android.provider.Settings"
+        ],
+        "related_names": [
+            "android.provider.Settings$Global",
+            "android.provider.Settings$NameValueTable",
+            "android.provider.Settings$Panel",
+            "android.provider.Settings$Secure",
+            "android.provider.Settings$SettingNotFoundException",
+            "android.provider.Settings$System"
+        ]
+    },
+    "call_composer_locations": {
+        "authority": "call_composer_locations",
+        "names": [
+            "android.provider.CallLog$Locations"
+        ],
+        "related_names": [
+        ]
+    },
+    "com.android.calendar": {
+        "authority": "com.android.calendar",
+        "names": [
+            "android.provider.CalendarContract"
+        ],
+        "related_names": [
+            "android.provider.CalendarContract$Attendees",
+            "android.provider.CalendarContract$AttendeesColumns",
+            "android.provider.CalendarContract$CalendarAlerts",
+            "android.provider.CalendarContract$CalendarAlertsColumns",
+            "android.provider.CalendarContract$CalendarCache",
+            "android.provider.CalendarContract$CalendarCacheColumns",
+            "android.provider.CalendarContract$CalendarColumns",
+            "android.provider.CalendarContract$CalendarEntity",
+            "android.provider.CalendarContract$CalendarSyncColumns",
+            "android.provider.CalendarContract$Calendars",
+            "android.provider.CalendarContract$Colors",
+            "android.provider.CalendarContract$ColorsColumns",
+            "android.provider.CalendarContract$EventDays",
+            "android.provider.CalendarContract$EventDaysColumns",
+            "android.provider.CalendarContract$Events",
+            "android.provider.CalendarContract$EventsColumns",
+            "android.provider.CalendarContract$EventsEntity",
+            "android.provider.CalendarContract$ExtendedProperties",
+            "android.provider.CalendarContract$ExtendedPropertiesColumns",
+            "android.provider.CalendarContract$Instances",
+            "android.provider.CalendarContract$Reminders",
+            "android.provider.CalendarContract$RemindersColumns",
+            "android.provider.CalendarContract$SyncColumns",
+            "android.provider.CalendarContract$SyncState"
+        ]
+    },
+    "user_dictionary": {
+        "authority": "user_dictionary",
+        "names": [
+            "android.provider.UserDictionary"
+        ],
+        "related_names": [
+            "android.provider.UserDictionary$Words"
+        ]
+    },
+    "com.android.simphonebook": {
+        "authority": "com.android.simphonebook",
+        "names": [
+            "android.provider.SimPhonebookContract"
+        ],
+        "related_names": [
+            "android.provider.SimPhonebookContract$ElementaryFiles",
+            "android.provider.SimPhonebookContract$SimRecords"
+        ]
+    },
+    "media": {
+        "authority": "media",
+        "names": [
+            "android.provider.MediaStore"
+        ],
+        "related_names": [
+            "android.provider.MediaStore$Audio",
+            "android.provider.MediaStore$Audio$AlbumColumns",
+            "android.provider.MediaStore$Audio$Albums",
+            "android.provider.MediaStore$Audio$ArtistColumns",
+            "android.provider.MediaStore$Audio$Artists",
+            "android.provider.MediaStore$Audio$Artists$Albums",
+            "android.provider.MediaStore$Audio$AudioColumns",
+            "android.provider.MediaStore$Audio$Genres",
+            "android.provider.MediaStore$Audio$Genres$Members",
+            "android.provider.MediaStore$Audio$GenresColumns",
+            "android.provider.MediaStore$Audio$Media",
+            "android.provider.MediaStore$Audio$Playlists",
+            "android.provider.MediaStore$Audio$Playlists$Members",
+            "android.provider.MediaStore$Audio$PlaylistsColumns",
+            "android.provider.MediaStore$Audio$Radio",
+            "android.provider.MediaStore$DownloadColumns",
+            "android.provider.MediaStore$Downloads",
+            "android.provider.MediaStore$Files",
+            "android.provider.MediaStore$Files$FileColumns",
+            "android.provider.MediaStore$Images",
+            "android.provider.MediaStore$Images$ImageColumns",
+            "android.provider.MediaStore$Images$Media",
+            "android.provider.MediaStore$Images$Thumbnails",
+            "android.provider.MediaStore$MediaColumns",
+            "android.provider.MediaStore$PickerMediaColumns",
+            "android.provider.MediaStore$Video",
+            "android.provider.MediaStore$Video$Media",
+            "android.provider.MediaStore$Video$Thumbnails",
+            "android.provider.MediaStore$Video$VideoColumns"
+        ]
+    },
+    "contacts": {
+        "authority": "contacts",
+        "names": [
+            "android.provider.Contacts"
+        ],
+        "related_names": [
+            "android.provider.Contacts$ContactMethods",
+            "android.provider.Contacts$ContactMethodsColumns",
+            "android.provider.Contacts$Extensions",
+            "android.provider.Contacts$ExtensionsColumns",
+            "android.provider.Contacts$GroupMembership",
+            "android.provider.Contacts$Groups",
+            "android.provider.Contacts$GroupsColumns",
+            "android.provider.Contacts$Intents",
+            "android.provider.Contacts$Intents$Insert",
+            "android.provider.Contacts$Intents$UI",
+            "android.provider.Contacts$OrganizationColumns",
+            "android.provider.Contacts$Organizations",
+            "android.provider.Contacts$People",
+            "android.provider.Contacts$People$ContactMethods",
+            "android.provider.Contacts$People$Extensions",
+            "android.provider.Contacts$People$Phones",
+            "android.provider.Contacts$PeopleColumns",
+            "android.provider.Contacts$Phones",
+            "android.provider.Contacts$PhonesColumns",
+            "android.provider.Contacts$Photos",
+            "android.provider.Contacts$PhotosColumns",
+            "android.provider.Contacts$PresenceColumns",
+            "android.provider.Contacts$Settings",
+            "android.provider.Contacts$SettingsColumns"
+        ]
+    },
+    "com.android.blockednumber": {
+        "authority": "com.android.blockednumber",
+        "names": [
+            "android.provider.BlockedNumberContract"
+        ],
+        "related_names": [
+            "android.provider.BlockedNumberContract$BlockedNumbers"
+        ]
+    },
+    "android.settings.slices": {
+        "authority": "android.settings.slices",
+        "names": [
+            "android.provider.SettingsSlicesContract"
+        ],
+        "related_names": [
+        ]
+    },
+    "com.android.voicemail": {
+        "authority": "com.android.voicemail",
+        "names": [
+            "android.provider.VoicemailContract"
+        ],
+        "related_names": [
+            "android.provider.VoicemailContract$Status",
+            "android.provider.VoicemailContract$Voicemails"
+        ]
+    },
+    "com.android.contacts": {
+        "authority": "com.android.contacts",
+        "names": [
+            "android.provider.ContactsContract"
+        ],
+        "related_names": [
+            "android.provider.ContactsContract$1",
+            "android.provider.ContactsContract$AggregationExceptions",
+            "android.provider.ContactsContract$BaseSyncColumns",
+            "android.provider.ContactsContract$CommonDataKinds",
+            "android.provider.ContactsContract$CommonDataKinds$BaseTypes",
+            "android.provider.ContactsContract$CommonDataKinds$Callable",
+            "android.provider.ContactsContract$CommonDataKinds$CommonColumns",
+            "android.provider.ContactsContract$CommonDataKinds$Contactables",
+            "android.provider.ContactsContract$CommonDataKinds$Email",
+            "android.provider.ContactsContract$CommonDataKinds$Event",
+            "android.provider.ContactsContract$CommonDataKinds$GroupMembership",
+            "android.provider.ContactsContract$CommonDataKinds$Identity",
+            "android.provider.ContactsContract$CommonDataKinds$Im",
+            "android.provider.ContactsContract$CommonDataKinds$Nickname",
+            "android.provider.ContactsContract$CommonDataKinds$Note",
+            "android.provider.ContactsContract$CommonDataKinds$Organization",
+            "android.provider.ContactsContract$CommonDataKinds$Phone",
+            "android.provider.ContactsContract$CommonDataKinds$Photo",
+            "android.provider.ContactsContract$CommonDataKinds$Relation",
+            "android.provider.ContactsContract$CommonDataKinds$SipAddress",
+            "android.provider.ContactsContract$CommonDataKinds$StructuredName",
+            "android.provider.ContactsContract$CommonDataKinds$StructuredPostal",
+            "android.provider.ContactsContract$CommonDataKinds$Website",
+            "android.provider.ContactsContract$ContactNameColumns",
+            "android.provider.ContactsContract$ContactOptionsColumns",
+            "android.provider.ContactsContract$ContactStatusColumns",
+            "android.provider.ContactsContract$Contacts",
+            "android.provider.ContactsContract$Contacts$AggregationSuggestions",
+            "android.provider.ContactsContract$Contacts$AggregationSuggestions$Builder",
+            "android.provider.ContactsContract$Contacts$Data",
+            "android.provider.ContactsContract$Contacts$Entity",
+            "android.provider.ContactsContract$Contacts$Photo",
+            "android.provider.ContactsContract$ContactsColumns",
+            "android.provider.ContactsContract$Data",
+            "android.provider.ContactsContract$DataColumns",
+            "android.provider.ContactsContract$DataColumnsWithJoins",
+            "android.provider.ContactsContract$DataUsageFeedback",
+            "android.provider.ContactsContract$DataUsageStatColumns",
+            "android.provider.ContactsContract$DeletedContacts",
+            "android.provider.ContactsContract$DeletedContactsColumns",
+            "android.provider.ContactsContract$Directory",
+            "android.provider.ContactsContract$DisplayNameSources",
+            "android.provider.ContactsContract$DisplayPhoto",
+            "android.provider.ContactsContract$FullNameStyle",
+            "android.provider.ContactsContract$Groups",
+            "android.provider.ContactsContract$GroupsColumns",
+            "android.provider.ContactsContract$Intents",
+            "android.provider.ContactsContract$Intents$Insert",
+            "android.provider.ContactsContract$PhoneLookup",
+            "android.provider.ContactsContract$PhoneLookupColumns",
+            "android.provider.ContactsContract$PhoneticNameStyle",
+            "android.provider.ContactsContract$PinnedPositions",
+            "android.provider.ContactsContract$Presence",
+            "android.provider.ContactsContract$PresenceColumns",
+            "android.provider.ContactsContract$Profile",
+            "android.provider.ContactsContract$ProfileSyncState",
+            "android.provider.ContactsContract$ProviderStatus",
+            "android.provider.ContactsContract$QuickContact",
+            "android.provider.ContactsContract$RawContacts",
+            "android.provider.ContactsContract$RawContacts$Data",
+            "android.provider.ContactsContract$RawContacts$DisplayPhoto",
+            "android.provider.ContactsContract$RawContacts$Entity",
+            "android.provider.ContactsContract$RawContactsColumns",
+            "android.provider.ContactsContract$RawContactsEntity",
+            "android.provider.ContactsContract$SearchSnippets",
+            "android.provider.ContactsContract$Settings",
+            "android.provider.ContactsContract$SettingsColumns",
+            "android.provider.ContactsContract$SimAccount",
+            "android.provider.ContactsContract$SimContacts",
+            "android.provider.ContactsContract$StatusColumns",
+            "android.provider.ContactsContract$StatusUpdates",
+            "android.provider.ContactsContract$SyncColumns",
+            "android.provider.ContactsContract$SyncState"
+        ]
+    },
+    "call_log": {
+        "authority": "call_log",
+        "names": [
+            "android.provider.CallLog"
+        ],
+        "related_names": [
+            "android.provider.CallLog$Calls"
+        ]
+    }
+}

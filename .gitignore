@@ -81,4 +81,4 @@ dmypy.json
 cython_debug/
 
 # Download platform tmp
-download_tmp/platform/
+download_tmp/

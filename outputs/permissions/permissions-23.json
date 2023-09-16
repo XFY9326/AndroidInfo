@@ -50,7 +50,7 @@
         },
         "android.permission-group.LOCATION": {
             "name": "android.permission-group.LOCATION",
-            "description": "access this device\\'s location",
+            "description": "access this device's location",
             "label": "Location",
             "priority": 400,
             "comment": {
@@ -112,9 +112,9 @@
     "permissions": {
         "android.permission.READ_CONTACTS": {
             "name": "android.permission.READ_CONTACTS",
-            "description": "Allows the app to\n      read data about your contacts stored on your phone, including the\n      frequency with which you\\'ve called, emailed, or communicated in other ways\n      with specific individuals. This permission allows apps to save your\n      contact data, and malicious apps may share contact data without your\n      knowledge.",
+            "description": "Allows the app to read data about your contacts stored on your phone, including the frequency with which you've called, emailed, or communicated in other ways with specific individuals. This permission allows apps to save your contact data, and malicious apps may share contact data without your knowledge.",
             "label": "read your contacts",
-            "group": null,
+            "group": "android.permission-group.CONTACTS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -129,9 +129,9 @@
         },
         "android.permission.WRITE_CONTACTS": {
             "name": "android.permission.WRITE_CONTACTS",
-            "description": "Allows the app to\n    modify the data about your contacts stored on your phone, including the\n    frequency with which you\\'ve called, emailed, or communicated in other ways\n    with specific contacts. This permission allows apps to delete contact\n    data.",
+            "description": "Allows the app to modify the data about your contacts stored on your phone, including the frequency with which you've called, emailed, or communicated in other ways with specific contacts. This permission allows apps to delete contact data.",
             "label": "modify your contacts",
-            "group": null,
+            "group": "android.permission-group.CONTACTS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -146,9 +146,9 @@
         },
         "android.permission.READ_CALENDAR": {
             "name": "android.permission.READ_CALENDAR",
-            "description": "Allows the app to\n       read all calendar events stored on your phone, including those of friends\n       or co-workers. This may allow the app to share or save your calendar data,\n       regardless of confidentiality or sensitivity.",
+            "description": "Allows the app to read all calendar events stored on your phone, including those of friends or co-workers. This may allow the app to share or save your calendar data, regardless of confidentiality or sensitivity.",
             "label": "read calendar events plus confidential information",
-            "group": null,
+            "group": "android.permission-group.CALENDAR",
             "protection_levels": [
                 "dangerous"
             ],
@@ -163,9 +163,9 @@
         },
         "android.permission.WRITE_CALENDAR": {
             "name": "android.permission.WRITE_CALENDAR",
-            "description": "Allows the app to\n        add, remove, change events that you can modify on your phone, including\n        those of friends or co-workers. This may allow the app to send messages\n        that appear to come from calendar owners, or modify events without the\n        owners\\' knowledge.",
-            "label": "add or modify calendar events and send email to guests without owners\\' knowledge",
-            "group": null,
+            "description": "Allows the app to add, remove, change events that you can modify on your phone, including those of friends or co-workers. This may allow the app to send messages that appear to come from calendar owners, or modify events without the owners' knowledge.",
+            "label": "add or modify calendar events and send email to guests without owners' knowledge",
+            "group": "android.permission-group.CALENDAR",
             "protection_levels": [
                 "dangerous"
             ],
@@ -180,9 +180,9 @@
         },
         "android.permission.SEND_SMS": {
             "name": "android.permission.SEND_SMS",
-            "description": "Allows the app to send SMS messages.\n     This may result in unexpected charges. Malicious apps may cost you money by\n     sending messages without your confirmation.",
+            "description": "Allows the app to send SMS messages. This may result in unexpected charges. Malicious apps may cost you money by sending messages without your confirmation.",
             "label": "send and view SMS messages",
-            "group": null,
+            "group": "android.permission-group.SMS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -199,9 +199,9 @@
         },
         "android.permission.RECEIVE_SMS": {
             "name": "android.permission.RECEIVE_SMS",
-            "description": "Allows the app to receive and process SMS\n      messages. This means the app could monitor or delete messages sent to your\n      device without showing them to you.",
+            "description": "Allows the app to receive and process SMS messages. This means the app could monitor or delete messages sent to your device without showing them to you.",
             "label": "receive text messages (SMS)",
-            "group": null,
+            "group": "android.permission-group.SMS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -216,9 +216,9 @@
         },
         "android.permission.READ_SMS": {
             "name": "android.permission.READ_SMS",
-            "description": "Allows the app to read SMS\n      messages stored on your phone or SIM card. This allows the app to read all\n      SMS messages, regardless of content or confidentiality.",
+            "description": "Allows the app to read SMS messages stored on your phone or SIM card. This allows the app to read all SMS messages, regardless of content or confidentiality.",
             "label": "read your text messages (SMS or MMS)",
-            "group": null,
+            "group": "android.permission-group.SMS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -233,9 +233,9 @@
         },
         "android.permission.RECEIVE_WAP_PUSH": {
             "name": "android.permission.RECEIVE_WAP_PUSH",
-            "description": "Allows the app to receive and process\n     WAP messages.  This permission includes the ability to monitor or delete\n     messages sent to you without showing them to you.",
+            "description": "Allows the app to receive and process WAP messages. This permission includes the ability to monitor or delete messages sent to you without showing them to you.",
             "label": "receive text messages (WAP)",
-            "group": null,
+            "group": "android.permission-group.SMS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -250,9 +250,9 @@
         },
         "android.permission.RECEIVE_MMS": {
             "name": "android.permission.RECEIVE_MMS",
-            "description": "Allows the app to receive and process MMS\n      messages. This means the app could monitor or delete messages sent to your\n      device without showing them to you.",
+            "description": "Allows the app to receive and process MMS messages. This means the app could monitor or delete messages sent to your device without showing them to you.",
             "label": "receive text messages (MMS)",
-            "group": null,
+            "group": "android.permission-group.SMS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -267,9 +267,9 @@
         },
         "android.permission.READ_CELL_BROADCASTS": {
             "name": "android.permission.READ_CELL_BROADCASTS",
-            "description": "Allows the app to read\n        cell broadcast messages received by your device. Cell broadcast alerts\n        are delivered in some locations to warn you of emergency situations.\n        Malicious apps may interfere with the performance or operation of your\n        device when an emergency cell broadcast is received.",
+            "description": "Allows the app to read cell broadcast messages received by your device. Cell broadcast alerts are delivered in some locations to warn you of emergency situations. Malicious apps may interfere with the performance or operation of your device when an emergency cell broadcast is received.",
             "label": "read cell broadcast messages",
-            "group": null,
+            "group": "android.permission-group.SMS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -286,7 +286,7 @@
             "name": "android.permission.READ_EXTERNAL_STORAGE",
             "description": "Allows the app to read the contents of your SD card.",
             "label": "read the contents of your SD card",
-            "group": null,
+            "group": "android.permission-group.STORAGE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -303,7 +303,7 @@
             "name": "android.permission.WRITE_EXTERNAL_STORAGE",
             "description": "Allows the app to write to the SD card.",
             "label": "modify or delete the contents of your SD card",
-            "group": null,
+            "group": "android.permission-group.STORAGE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -318,9 +318,9 @@
         },
         "android.permission.ACCESS_FINE_LOCATION": {
             "name": "android.permission.ACCESS_FINE_LOCATION",
-            "description": "Allows the app to get your\n      precise location using the Global Positioning System (GPS) or network\n      location sources such as cell towers and Wi-Fi. These location services\n      must be turned on and available to your device for the app to use them.\n      Apps may use this to determine where you are, and may consume additional\n      battery power.",
-            "label": "precise location (GPS and\n      network-based)",
-            "group": null,
+            "description": "Allows the app to get your precise location using the Global Positioning System (GPS) or network location sources such as cell towers and Wi-Fi. These location services must be turned on and available to your device for the app to use them. Apps may use this to determine where you are, and may consume additional battery power.",
+            "label": "precise location (GPS and network-based)",
+            "group": "android.permission-group.LOCATION",
             "protection_levels": [
                 "dangerous"
             ],
@@ -335,9 +335,9 @@
         },
         "android.permission.ACCESS_COARSE_LOCATION": {
             "name": "android.permission.ACCESS_COARSE_LOCATION",
-            "description": "Allows the app to get your\n      approximate location. This location is derived by location services using\n      network location sources such as cell towers and Wi-Fi. These location\n      services must be turned on and available to your device for the app to\n      use them. Apps may use this to determine approximately where you\n      are.",
-            "label": "approximate location\n      (network-based)",
-            "group": null,
+            "description": "Allows the app to get your approximate location. This location is derived by location services using network location sources such as cell towers and Wi-Fi. These location services must be turned on and available to your device for the app to use them. Apps may use this to determine approximately where you are.",
+            "label": "approximate location (network-based)",
+            "group": "android.permission-group.LOCATION",
             "protection_levels": [
                 "dangerous"
             ],
@@ -352,9 +352,9 @@
         },
         "android.permission.READ_PHONE_STATE": {
             "name": "android.permission.READ_PHONE_STATE",
-            "description": "Allows the app to access the phone\n      features of the device.  This permission allows the app to determine the\n      phone number and device IDs, whether a call is active, and the remote number\n      connected by a call.",
+            "description": "Allows the app to access the phone features of the device. This permission allows the app to determine the phone number and device IDs, whether a call is active, and the remote number connected by a call.",
             "label": "read phone status and identity",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -369,9 +369,9 @@
         },
         "android.permission.CALL_PHONE": {
             "name": "android.permission.CALL_PHONE",
-            "description": "Allows the app to call phone numbers\n      without your intervention. This may result in unexpected charges or calls.\n      Note that this doesn\\'t allow the app to call emergency numbers.\n      Malicious apps may cost you money by making calls without your\n      confirmation.",
+            "description": "Allows the app to call phone numbers without your intervention. This may result in unexpected charges or calls. Note that this doesn't allow the app to call emergency numbers. Malicious apps may cost you money by making calls without your confirmation.",
             "label": "directly call phone numbers",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -390,7 +390,7 @@
             "name": "android.permission.ACCESS_IMS_CALL_SERVICE",
             "description": "Allows the app to use the IMS service to make calls without your intervention.",
             "label": "access IMS call service",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "signature",
                 "system"
@@ -406,9 +406,9 @@
         },
         "android.permission.READ_CALL_LOG": {
             "name": "android.permission.READ_CALL_LOG",
-            "description": "Allows the app to read\n      your phone\\'s call log, including data about incoming and outgoing calls.\n      This permission allows apps to save your call log data, and malicious apps\n      may share call log data without your knowledge.",
+            "description": "Allows the app to read your phone's call log, including data about incoming and outgoing calls. This permission allows apps to save your call log data, and malicious apps may share call log data without your knowledge.",
             "label": "read call log",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -423,9 +423,9 @@
         },
         "android.permission.WRITE_CALL_LOG": {
             "name": "android.permission.WRITE_CALL_LOG",
-            "description": "Allows the app to modify your phone\\'s call log, including data about incoming and outgoing calls.\n        Malicious apps may use this to erase or modify your call log.",
+            "description": "Allows the app to modify your phone's call log, including data about incoming and outgoing calls. Malicious apps may use this to erase or modify your call log.",
             "label": "write call log",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -440,9 +440,9 @@
         },
         "com.android.voicemail.permission.ADD_VOICEMAIL": {
             "name": "com.android.voicemail.permission.ADD_VOICEMAIL",
-            "description": "Allows the app to add messages\n      to your voicemail inbox.",
+            "description": "Allows the app to add messages to your voicemail inbox.",
             "label": "add voicemail",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -459,7 +459,7 @@
             "name": "android.permission.USE_SIP",
             "description": "Allows the app to make and receive SIP calls.",
             "label": "make/receive SIP calls",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -474,9 +474,9 @@
         },
         "android.permission.PROCESS_OUTGOING_CALLS": {
             "name": "android.permission.PROCESS_OUTGOING_CALLS",
-            "description": "Allows the app to see the\n        number being dialed during an outgoing call with the option to redirect\n        the call to a different number or abort the call altogether.",
+            "description": "Allows the app to see the number being dialed during an outgoing call with the option to redirect the call to a different number or abort the call altogether.",
             "label": "reroute outgoing calls",
-            "group": null,
+            "group": "android.permission-group.PHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -491,9 +491,9 @@
         },
         "android.permission.RECORD_AUDIO": {
             "name": "android.permission.RECORD_AUDIO",
-            "description": "Allows the app to record audio with the\n      microphone.  This permission allows the app to record audio at any time\n      without your confirmation.",
+            "description": "Allows the app to record audio with the microphone. This permission allows the app to record audio at any time without your confirmation.",
             "label": "record audio",
-            "group": null,
+            "group": "android.permission-group.MICROPHONE",
             "protection_levels": [
                 "dangerous"
             ],
@@ -508,9 +508,9 @@
         },
         "android.permission.CAMERA": {
             "name": "android.permission.CAMERA",
-            "description": "Allows the app to take pictures and videos\n      with the camera.  This permission allows the app to use the camera at any\n      time without your confirmation.",
+            "description": "Allows the app to take pictures and videos with the camera. This permission allows the app to use the camera at any time without your confirmation.",
             "label": "take pictures and videos",
-            "group": null,
+            "group": "android.permission-group.CAMERA",
             "protection_levels": [
                 "dangerous"
             ],
@@ -525,9 +525,9 @@
         },
         "android.permission.BODY_SENSORS": {
             "name": "android.permission.BODY_SENSORS",
-            "description": "Allows the app to access data from sensors\n    that monitor your physical condition, such as your heart rate.",
-            "label": "body sensors (like heart rate monitors)\n ",
-            "group": null,
+            "description": "Allows the app to access data from sensors that monitor your physical condition, such as your heart rate.",
+            "label": "body sensors (like heart rate monitors)",
+            "group": "android.permission-group.SENSORS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -544,7 +544,7 @@
             "name": "android.permission.USE_FINGERPRINT",
             "description": "Allows the app to use fingerprint hardware for authentication",
             "label": "use fingerprint hardware",
-            "group": null,
+            "group": "android.permission-group.SENSORS",
             "protection_levels": [
                 "normal"
             ],
@@ -915,7 +915,7 @@
         },
         "com.android.alarm.permission.SET_ALARM": {
             "name": "com.android.alarm.permission.SET_ALARM",
-            "description": "Allows the app to set an alarm in\n        an installed alarm clock app. Some alarm clock apps may\n        not implement this feature.",
+            "description": "Allows the app to set an alarm in an installed alarm clock app. Some alarm clock apps may not implement this feature.",
             "label": "set an alarm",
             "group": null,
             "protection_levels": [
@@ -968,7 +968,7 @@
         },
         "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS": {
             "name": "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
-            "description": "Allows the app to access\n        extra location provider commands.  This may allow the app to interfere\n        with the operation of the GPS or other location sources.",
+            "description": "Allows the app to access extra location provider commands. This may allow the app to interfere with the operation of the GPS or other location sources.",
             "label": "access extra location provider commands",
             "group": null,
             "protection_levels": [
@@ -1056,7 +1056,7 @@
         },
         "android.permission.INTERNET": {
             "name": "android.permission.INTERNET",
-            "description": "Allows the app to create\n     network sockets and use custom network protocols. The browser and other\n     applications provide means to send data to the internet, so this\n     permission is not required to send data to the internet.",
+            "description": "Allows the app to create network sockets and use custom network protocols. The browser and other applications provide means to send data to the internet, so this permission is not required to send data to the internet.",
             "label": "full network access",
             "group": null,
             "protection_levels": [
@@ -1073,7 +1073,7 @@
         },
         "android.permission.ACCESS_NETWORK_STATE": {
             "name": "android.permission.ACCESS_NETWORK_STATE",
-            "description": "Allows the app to view\n      information about network connections such as which networks exist and are\n      connected.",
+            "description": "Allows the app to view information about network connections such as which networks exist and are connected.",
             "label": "view network connections",
             "group": null,
             "protection_levels": [
@@ -1090,7 +1090,7 @@
         },
         "android.permission.ACCESS_WIFI_STATE": {
             "name": "android.permission.ACCESS_WIFI_STATE",
-            "description": "Allows the app to view information\n      about Wi-Fi networking, such as whether Wi-Fi is enabled and name of\n      connected Wi-Fi devices.",
+            "description": "Allows the app to view information about Wi-Fi networking, such as whether Wi-Fi is enabled and name of connected Wi-Fi devices.",
             "label": "view Wi-Fi connections",
             "group": null,
             "protection_levels": [
@@ -1107,7 +1107,7 @@
         },
         "android.permission.CHANGE_WIFI_STATE": {
             "name": "android.permission.CHANGE_WIFI_STATE",
-            "description": "Allows the app to connect to and\n      disconnect from Wi-Fi access points and to make changes to device\n      configuration for Wi-Fi networks.",
+            "description": "Allows the app to connect to and disconnect from Wi-Fi access points and to make changes to device configuration for Wi-Fi networks.",
             "label": "connect and disconnect from Wi-Fi",
             "group": null,
             "protection_levels": [
@@ -1178,7 +1178,7 @@
         },
         "android.permission.ACCESS_WIMAX_STATE": {
             "name": "android.permission.ACCESS_WIMAX_STATE",
-            "description": "Allows the app to determine whether\n     WiMAX is enabled and information about any WiMAX networks that are\n     connected. ",
+            "description": "Allows the app to determine whether WiMAX is enabled and information about any WiMAX networks that are connected.",
             "label": "connect and disconnect from WiMAX",
             "group": null,
             "protection_levels": [
@@ -1195,7 +1195,7 @@
         },
         "android.permission.CHANGE_WIMAX_STATE": {
             "name": "android.permission.CHANGE_WIMAX_STATE",
-            "description": "Allows the app to\n      connect the phone to and disconnect the phone from WiMAX networks.",
+            "description": "Allows the app to connect the phone to and disconnect the phone from WiMAX networks.",
             "label": "Change WiMAX state",
             "group": null,
             "protection_levels": [
@@ -1230,7 +1230,7 @@
         },
         "android.permission.BLUETOOTH": {
             "name": "android.permission.BLUETOOTH",
-            "description": "Allows the app to view the\n      configuration of the Bluetooth on the phone, and to make and accept\n      connections with paired devices.",
+            "description": "Allows the app to view the configuration of the Bluetooth on the phone, and to make and accept connections with paired devices.",
             "label": "pair with Bluetooth devices",
             "group": null,
             "protection_levels": [
@@ -1247,7 +1247,7 @@
         },
         "android.permission.BLUETOOTH_ADMIN": {
             "name": "android.permission.BLUETOOTH_ADMIN",
-            "description": "Allows the app to configure\n      the local Bluetooth phone, and to discover and pair with remote devices.",
+            "description": "Allows the app to configure the local Bluetooth phone, and to discover and pair with remote devices.",
             "label": "access Bluetooth settings",
             "group": null,
             "protection_levels": [
@@ -1316,7 +1316,7 @@
         },
         "android.permission.NFC": {
             "name": "android.permission.NFC",
-            "description": "Allows the app to communicate\n      with Near Field Communication (NFC) tags, cards, and readers.",
+            "description": "Allows the app to communicate with Near Field Communication (NFC) tags, cards, and readers.",
             "label": "control Near Field Communication",
             "group": null,
             "protection_levels": [
@@ -1423,9 +1423,9 @@
         },
         "android.permission.GET_ACCOUNTS": {
             "name": "android.permission.GET_ACCOUNTS",
-            "description": "Allows the app to get\n      the list of accounts known by the phone.  This may include any accounts\n      created by applications you have installed.",
+            "description": "Allows the app to get the list of accounts known by the phone. This may include any accounts created by applications you have installed.",
             "label": "find accounts on the device",
-            "group": null,
+            "group": "android.permission-group.CONTACTS",
             "protection_levels": [
                 "dangerous"
             ],
@@ -1457,7 +1457,7 @@
         },
         "android.permission.CHANGE_WIFI_MULTICAST_STATE": {
             "name": "android.permission.CHANGE_WIFI_MULTICAST_STATE",
-            "description": "Allows the app to receive\n      packets sent to all devices on a Wi-Fi network using multicast addresses,\n      not just your phone.  It uses more power than the non-multicast mode.",
+            "description": "Allows the app to receive packets sent to all devices on a Wi-Fi network using multicast addresses, not just your phone. It uses more power than the non-multicast mode.",
             "label": "allow Wi-Fi Multicast reception",
             "group": null,
             "protection_levels": [
@@ -1525,7 +1525,7 @@
         },
         "android.permission.TRANSMIT_IR": {
             "name": "android.permission.TRANSMIT_IR",
-            "description": "Allows the app to use the phone\\'s infrared transmitter.",
+            "description": "Allows the app to use the phone's infrared transmitter.",
             "label": "transmit infrared",
             "group": null,
             "protection_levels": [
@@ -2039,7 +2039,7 @@
         },
         "android.permission.DISABLE_KEYGUARD": {
             "name": "android.permission.DISABLE_KEYGUARD",
-            "description": "Allows the app to disable the\n      keylock and any associated password security.  For example, the phone\n      disables the keylock when receiving an incoming phone call, then\n      re-enables the keylock when the call is finished.",
+            "description": "Allows the app to disable the keylock and any associated password security. For example, the phone disables the keylock when receiving an incoming phone call, then re-enables the keylock when the call is finished.",
             "label": "disable your screen lock",
             "group": null,
             "protection_levels": [
@@ -2056,7 +2056,7 @@
         },
         "android.permission.GET_TASKS": {
             "name": "android.permission.GET_TASKS",
-            "description": "Allows the app to retrieve information\n       about currently and recently running tasks.  This may allow the app to\n       discover information about which applications are used on the device.",
+            "description": "Allows the app to retrieve information about currently and recently running tasks. This may allow the app to discover information about which applications are used on the device.",
             "label": "retrieve running apps",
             "group": null,
             "protection_levels": [
@@ -2215,7 +2215,7 @@
         },
         "android.permission.REORDER_TASKS": {
             "name": "android.permission.REORDER_TASKS",
-            "description": "Allows the app to move tasks to the\n      foreground and background.  The app may do this without your input.",
+            "description": "Allows the app to move tasks to the foreground and background. The app may do this without your input.",
             "label": "reorder running apps",
             "group": null,
             "protection_levels": [
@@ -2284,7 +2284,7 @@
         },
         "android.permission.RESTART_PACKAGES": {
             "name": "android.permission.RESTART_PACKAGES",
-            "description": "Allows the app to end\n      background processes of other apps.  This may cause other apps to stop\n      running.",
+            "description": "Allows the app to end background processes of other apps. This may cause other apps to stop running.",
             "label": "close other apps",
             "group": null,
             "protection_levels": [
@@ -2301,7 +2301,7 @@
         },
         "android.permission.KILL_BACKGROUND_PROCESSES": {
             "name": "android.permission.KILL_BACKGROUND_PROCESSES",
-            "description": "Allows the app to end\n      background processes of other apps.  This may cause other apps to stop\n      running.",
+            "description": "Allows the app to end background processes of other apps. This may cause other apps to stop running.",
             "label": "close other apps",
             "group": null,
             "protection_levels": [
@@ -2336,7 +2336,7 @@
         },
         "android.permission.SYSTEM_ALERT_WINDOW": {
             "name": "android.permission.SYSTEM_ALERT_WINDOW",
-            "description": "Allows the app to draw on top of other\n        applications or parts of the user interface.  They may interfere with your\n        use of the interface in any application, or change what you think you are\n        seeing in other applications.",
+            "description": "Allows the app to draw on top of other applications or parts of the user interface. They may interfere with your use of the interface in any application, or change what you think you are seeing in other applications.",
             "label": "draw over other apps",
             "group": null,
             "protection_levels": [
@@ -2409,7 +2409,7 @@
         },
         "android.permission.SET_TIME_ZONE": {
             "name": "android.permission.SET_TIME_ZONE",
-            "description": "Allows the app to change the phone\\'s time zone.",
+            "description": "Allows the app to change the phone's time zone.",
             "label": "set time zone",
             "group": null,
             "protection_levels": [
@@ -2443,7 +2443,7 @@
         },
         "com.android.launcher.permission.INSTALL_SHORTCUT": {
             "name": "com.android.launcher.permission.INSTALL_SHORTCUT",
-            "description": "Allows an application to add\n        Homescreen shortcuts without user intervention.",
+            "description": "Allows an application to add Homescreen shortcuts without user intervention.",
             "label": "install shortcuts",
             "group": null,
             "protection_levels": [
@@ -2460,7 +2460,7 @@
         },
         "com.android.launcher.permission.UNINSTALL_SHORTCUT": {
             "name": "com.android.launcher.permission.UNINSTALL_SHORTCUT",
-            "description": "Allows the application to remove\n        Homescreen shortcuts without user intervention.",
+            "description": "Allows the application to remove Homescreen shortcuts without user intervention.",
             "label": "uninstall shortcuts",
             "group": null,
             "protection_levels": [
@@ -2494,7 +2494,7 @@
         },
         "android.permission.WRITE_SYNC_SETTINGS": {
             "name": "android.permission.WRITE_SYNC_SETTINGS",
-            "description": "Allows an app to modify the sync settings for an account.  For example, this can be used to enable sync of the People app with an account.",
+            "description": "Allows an app to modify the sync settings for an account. For example, this can be used to enable sync of the People app with an account.",
             "label": "toggle sync on and off",
             "group": null,
             "protection_levels": [
@@ -2511,7 +2511,7 @@
         },
         "android.permission.READ_SYNC_STATS": {
             "name": "android.permission.READ_SYNC_STATS",
-            "description": "Allows an app to read the sync stats for an account, including the history of sync events and how much data is synced. ",
+            "description": "Allows an app to read the sync stats for an account, including the history of sync events and how much data is synced.",
             "label": "read sync statistics",
             "group": null,
             "protection_levels": [
@@ -2564,7 +2564,7 @@
         },
         "android.permission.WRITE_SETTINGS": {
             "name": "android.permission.WRITE_SETTINGS",
-            "description": "Allows the app to modify the\n        system\\'s settings data. Malicious apps may corrupt your system\\'s\n        configuration.",
+            "description": "Allows the app to modify the system's settings data. Malicious apps may corrupt your system's configuration.",
             "label": "modify system settings",
             "group": null,
             "protection_levels": [
@@ -2657,7 +2657,7 @@
         },
         "android.permission.PERSISTENT_ACTIVITY": {
             "name": "android.permission.PERSISTENT_ACTIVITY",
-            "description": "Allows the app to make parts of itself persistent in memory.  This can limit memory available to other apps slowing down the phone.",
+            "description": "Allows the app to make parts of itself persistent in memory. This can limit memory available to other apps slowing down the phone.",
             "label": "make app always run",
             "group": null,
             "protection_levels": [
@@ -2708,7 +2708,7 @@
         },
         "android.permission.RECEIVE_BOOT_COMPLETED": {
             "name": "android.permission.RECEIVE_BOOT_COMPLETED",
-            "description": "Allows the app to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        app to slow down the overall phone by always running.",
+            "description": "Allows the app to have itself started as soon as the system has finished booting. This can make it take longer to start the phone and allow the app to slow down the overall phone by always running.",
             "label": "run at startup",
             "group": null,
             "protection_levels": [
@@ -2725,7 +2725,7 @@
         },
         "android.permission.BROADCAST_STICKY": {
             "name": "android.permission.BROADCAST_STICKY",
-            "description": "Allows the app to\n    send sticky broadcasts, which remain after the broadcast ends. Excessive\n    use may make the phone slow or unstable by causing it to use too\n    much memory.",
+            "description": "Allows the app to send sticky broadcasts, which remain after the broadcast ends. Excessive use may make the phone slow or unstable by causing it to use too much memory.",
             "label": "send sticky broadcast",
             "group": null,
             "protection_levels": [

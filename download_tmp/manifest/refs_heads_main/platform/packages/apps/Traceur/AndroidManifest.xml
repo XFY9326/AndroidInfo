@@ -50,6 +50,12 @@
  <!-- Used to check that the current user is an admin user. -->
  <uses-permission android:name="android.permission.QUERY_USERS" />
 
+ <!-- Used to control IME Winscope tracing (not yet migrated to perfetto). -->
+ <uses-permission android:name="android.permission.CONTROL_UI_TRACING" />
+
+ <!-- Used to control view capture Winscope tracing (not yet migrated to perfetto). -->
+ <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
  <!-- Declare Android TV support. -->
  <uses-feature android:name="android.software.leanback"
  android:required="false"/>
@@ -67,7 +73,7 @@
  android:description="@string/record_system_activity"
  android:label="@string/system_tracing"
  android:theme="@style/Theme.SubSettingsBase"
- android:launchMode="singleTask"
+ android:launchMode="singleTop"
  android:exported="true">
  <intent-filter>
  <action android:name="android.intent.action.MAIN"/>
@@ -95,7 +101,7 @@
  android:description="@string/record_system_activity"
  android:label="@string/system_tracing"
  android:theme="@style/TvTheme"
- android:launchMode="singleTask"
+ android:launchMode="singleTop"
  android:exported="true">
  <intent-filter>
  <action android:name="android.intent.action.MAIN"/>

@@ -1,0 +1,591 @@
+[
+    {
+        "package": "com.android.angle",
+        "name": "com.android.angle.common.SearchProvider",
+        "authorities": [
+            "com.android.angle"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.car.settings",
+        "name": "com.android.car.settings.search.CarSettingsSearchIndexablesProvider",
+        "authorities": [
+            "com.android.car.settings"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.cellbroadcastreceiver",
+        "name": "com.android.cellbroadcastreceiver.LegacyCellBroadcastContentProvider",
+        "authorities": [
+            "cellbroadcast-legacy"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CELL_BROADCASTS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.cellbroadcastreceiver.module",
+        "name": "com.android.cellbroadcastreceiver.CellBroadcastContentProvider",
+        "authorities": [
+            "cellbroadcasts-app"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CELL_BROADCASTS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.cellbroadcastreceiver.module",
+        "name": "com.android.cellbroadcastreceiver.CellBroadcastSearchIndexableProvider",
+        "authorities": [
+            "com.android.cellbroadcastreceiver"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.cellbroadcastservice",
+        "name": "com.android.cellbroadcastservice.CellBroadcastProvider",
+        "authorities": [
+            "cellbroadcasts"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CELL_BROADCASTS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.contacts",
+        "name": "com.android.contacts.sdn.SdnProvider",
+        "authorities": [
+            "@string/contacts_sdn_provider_authority"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.BIND_DIRECTORY_SEARCH",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.dialer.preferredsim.impl",
+        "name": "com.android.dialer.preferredsim.impl.PreferredSimFallbackProvider",
+        "authorities": [
+            "com.android.dialer.preferredsimfallback"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.documentsui",
+        "name": "com.android.documentsui.archives.ArchivesProvider",
+        "authorities": [
+            "com.android.documentsui.archives"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.emergency",
+        "name": "com.android.emergency.EmergencySearchIndexablesProvider",
+        "authorities": [
+            "com.android.emergency"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.externalstorage",
+        "name": "com.android.externalstorage.ExternalStorageProvider",
+        "authorities": [
+            "com.android.externalstorage.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.externalstorage",
+        "name": "com.android.externalstorage.TestDocumentsProvider",
+        "authorities": [
+            "com.example.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.gallery3d",
+        "name": "com.android.gallery3d.filtershow.provider.SharedImageProvider",
+        "authorities": [
+            "com.android.gallery3d.filtershow.provider.SharedImageProvider"
+        ],
+        "exported": false,
+        "read_permission": "com.android.gallery3d.filtershow.permission.READ",
+        "write_permission": "com.android.gallery3d.filtershow.permission.WRITE",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.gallery3d",
+        "name": "com.android.gallery3d.provider.GalleryProvider",
+        "authorities": [
+            "com.android.gallery3d.provider"
+        ],
+        "exported": true,
+        "read_permission": "com.android.gallery3d.permission.GALLERY_PROVIDER",
+        "write_permission": "com.android.gallery3d.permission.GALLERY_PROVIDER",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.launcher3",
+        "name": "com.android.quickstep.LauncherSearchIndexablesProvider",
+        "authorities": [
+            "com.android.launcher3"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.mtp",
+        "name": "com.android.mtp.MtpDocumentsProvider",
+        "authorities": [
+            "com.android.mtp.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.permissioncontroller",
+        "name": "com.android.permissioncontroller.permission.service.PermissionSearchIndexablesProvider",
+        "authorities": [
+            "com.android.permissioncontroller"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.permissioncontroller",
+        "name": "com.android.permissioncontroller.role.service.RoleSearchIndexablesProvider",
+        "authorities": [
+            "com.android.permissioncontroller.role"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.phone",
+        "name": "com.android.phone.IccProvider",
+        "authorities": [
+            "icc"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.phone",
+        "name": "com.android.phone.ServiceStateProvider",
+        "authorities": [
+            "service-state"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": "android.permission.MODIFY_PHONE_STATE",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.phone",
+        "name": "com.android.phone.SimPhonebookProvider",
+        "authorities": [
+            "com.android.simphonebook"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.calendar",
+        "name": "com.android.providers.calendar.CalendarProvider2",
+        "authorities": [
+            "com.android.calendar"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALENDAR",
+        "write_permission": "android.permission.WRITE_CALENDAR",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.CallComposerLocationProvider",
+        "authorities": [
+            "call_composer_locations"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALL_LOG",
+        "write_permission": "android.permission.WRITE_CALL_LOG",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.CallLogProvider",
+        "authorities": [
+            "call_log"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CALL_LOG",
+        "write_permission": "android.permission.WRITE_CALL_LOG",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.ContactsProvider2",
+        "authorities": [
+            "contacts",
+            "com.android.contacts"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": [
+            {
+                "type": "pathPattern",
+                "path": ".*"
+            }
+        ]
+    },
+    {
+        "package": "com.android.providers.contacts",
+        "name": "com.android.providers.contacts.ShadowCallLogProvider",
+        "authorities": [
+            "call_log_shadow"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.INTERACT_ACROSS_USERS",
+        "write_permission": "android.permission.INTERACT_ACROSS_USERS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.downloads",
+        "name": "com.android.providers.downloads.DownloadStorageProvider",
+        "authorities": [
+            "com.android.providers.downloads.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.media",
+        "name": "com.android.providers.media.LegacyMediaProvider",
+        "authorities": [
+            "media_legacy"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.WRITE_MEDIA_STORAGE",
+        "write_permission": "android.permission.WRITE_MEDIA_STORAGE",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.media.module",
+        "name": "com.android.providers.media.MediaDocumentsProvider",
+        "authorities": [
+            "com.android.providers.media.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.telephony",
+        "name": "com.android.providers.telephony.CarrierProvider",
+        "authorities": [
+            "carrier_information"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": "android.permission.MODIFY_PHONE_STATE",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.telephony",
+        "name": "com.android.providers.telephony.HbpcdLookupProvider",
+        "authorities": [
+            "hbpcd_lookup"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": "android.permission.MODIFY_PHONE_STATE",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.telephony",
+        "name": "com.android.providers.telephony.MmsProvider",
+        "authorities": [
+            "mms"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SMS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": [
+            {
+                "type": "pathPrefix",
+                "path": "/part/"
+            },
+            {
+                "type": "pathPrefix",
+                "path": "/drm/"
+            }
+        ]
+    },
+    {
+        "package": "com.android.providers.telephony",
+        "name": "com.android.providers.telephony.MmsSmsProvider",
+        "authorities": [
+            "mms-sms"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SMS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.telephony",
+        "name": "com.android.providers.telephony.SmsChangesProvider",
+        "authorities": [
+            "sms-changes"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SMS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.telephony",
+        "name": "com.android.providers.telephony.SmsProvider",
+        "authorities": [
+            "sms"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SMS",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.tv",
+        "name": "com.android.providers.tv.TvProvider",
+        "authorities": [
+            "android.media.tv"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": "com.android.providers.tv.permission.WRITE_EPG_DATA",
+        "has_uri_permission": false,
+        "grant_uri_permissions": [
+            {
+                "type": "pathPattern",
+                "path": "/channel"
+            },
+            {
+                "type": "pathPattern",
+                "path": "/program"
+            }
+        ]
+    },
+    {
+        "package": "com.android.service.ims.presence",
+        "name": "com.android.service.ims.presence.EABProvider",
+        "authorities": [
+            "com.android.rcs.eab"
+        ],
+        "exported": true,
+        "read_permission": "com.android.rcs.eab.permission.READ_WRITE_EAB",
+        "write_permission": "com.android.rcs.eab.permission.READ_WRITE_EAB",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
+        "name": "com.android.settings.emergency.EmergencyActionContentProvider",
+        "authorities": [
+            "com.android.settings.emergency"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.CALL_PRIVILEGED",
+        "write_permission": "android.permission.CALL_PRIVILEGED",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
+        "name": "com.android.settings.homepage.contextualcards.CardContentProvider",
+        "authorities": [
+            "com.android.settings.homepage.CardContentProvider"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.WRITE_SETTINGS_HOMEPAGE_DATA",
+        "write_permission": "android.permission.WRITE_SETTINGS_HOMEPAGE_DATA",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
+        "name": "com.android.settings.homepage.contextualcards.SettingsContextualCardProvider",
+        "authorities": [
+            "com.android.settings.homepage.contextualcards"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.WRITE_SETTINGS_HOMEPAGE_DATA",
+        "write_permission": "android.permission.WRITE_SETTINGS_HOMEPAGE_DATA",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
+        "name": "com.android.settings.search.SettingsSearchIndexablesProvider",
+        "authorities": [
+            "com.android.settings"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.shell",
+        "name": "com.android.shell.BugreportStorageProvider",
+        "authorities": [
+            "com.android.shell.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.systemui",
+        "name": "com.android.systemui.keyguard.CustomizationProvider",
+        "authorities": [
+            "com.android.systemui.customization"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.CUSTOMIZE_SYSTEM_UI",
+        "write_permission": "android.permission.CUSTOMIZE_SYSTEM_UI",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.systemui",
+        "name": "com.android.systemui.people.PeopleProvider",
+        "authorities": [
+            "com.android.systemui.people.PeopleProvider"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.GET_PEOPLE_TILE_PREVIEW",
+        "write_permission": "android.permission.GET_PEOPLE_TILE_PREVIEW",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.traceur",
+        "name": "com.android.traceur.SearchProvider",
+        "authorities": [
+            "com.android.traceur"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.traceur",
+        "name": "com.android.traceur.StorageProvider",
+        "authorities": [
+            "com.android.traceur.documents"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.MANAGE_DOCUMENTS",
+        "write_permission": "android.permission.MANAGE_DOCUMENTS",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.tv.frameworkpackagestubs",
+        "name": "com.android.browser.provider.BrowserProvider2",
+        "authorities": [
+            "com.android.browser",
+            "browser"
+        ],
+        "exported": true,
+        "read_permission": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+        "write_permission": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    }
+]
