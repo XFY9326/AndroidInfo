@@ -175,7 +175,7 @@ async def main():
         if not await aiofiles.os.path.exists(output_dir):
             await aiofiles.os.makedirs(output_dir)
 
-    download_tmp_dir =  os.path.join(".", "download_tmp")
+    download_tmp_dir = os.path.join(".", "download_tmp")
 
     platform_download_dir = os.path.join(download_tmp_dir, "platform")
     if not await aiofiles.os.path.exists(platform_download_dir):
