@@ -574,6 +574,416 @@
     },
     {
         "api": {
+            "class_name": "android.adservices.adid.AdIdManager",
+            "name": "getAdId",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adid/AdId;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/adid/AdIdManager;->getAdId(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adid/AdId;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<android.adservices.adid.AdId",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_AD_ID"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.adselection.AdSelectionManager",
+            "name": "reportImpression",
+            "signature": "(Landroid/adservices/adselection/ReportImpressionRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/AdSelectionManager;->reportImpression(Landroid/adservices/adselection/ReportImpressionRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.adselection.ReportImpressionRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.adselection.AdSelectionManager",
+            "name": "selectAds",
+            "signature": "(Landroid/adservices/adselection/AdSelectionConfig;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adselection/AdSelectionOutcome;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/AdSelectionManager;->selectAds(Landroid/adservices/adselection/AdSelectionConfig;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adselection/AdSelectionOutcome;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.adselection.AdSelectionConfig",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<android.adservices.adselection.AdSelectionOutcome",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.adselection.TestAdSelectionManager",
+            "name": "overrideAdSelectionConfigRemoteInfo",
+            "signature": "(Landroid/adservices/adselection/AddAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->overrideAdSelectionConfigRemoteInfo(Landroid/adservices/adselection/AddAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.adselection.AddAdSelectionOverrideRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.adselection.TestAdSelectionManager",
+            "name": "removeAdSelectionConfigRemoteInfoOverride",
+            "signature": "(Landroid/adservices/adselection/RemoveAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->removeAdSelectionConfigRemoteInfoOverride(Landroid/adservices/adselection/RemoveAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.adselection.RemoveAdSelectionOverrideRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.adselection.TestAdSelectionManager",
+            "name": "resetAllAdSelectionConfigRemoteOverrides",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->resetAllAdSelectionConfigRemoteOverrides(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.customaudience.CustomAudienceManager",
+            "name": "joinCustomAudience",
+            "signature": "(Landroid/adservices/customaudience/JoinCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/CustomAudienceManager;->joinCustomAudience(Landroid/adservices/customaudience/JoinCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.customaudience.JoinCustomAudienceRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.customaudience.CustomAudienceManager",
+            "name": "leaveCustomAudience",
+            "signature": "(Landroid/adservices/customaudience/LeaveCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/CustomAudienceManager;->leaveCustomAudience(Landroid/adservices/customaudience/LeaveCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.customaudience.LeaveCustomAudienceRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.customaudience.TestCustomAudienceManager",
+            "name": "overrideCustomAudienceRemoteInfo",
+            "signature": "(Landroid/adservices/customaudience/AddCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->overrideCustomAudienceRemoteInfo(Landroid/adservices/customaudience/AddCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.customaudience.AddCustomAudienceOverrideRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.customaudience.TestCustomAudienceManager",
+            "name": "removeCustomAudienceRemoteInfoOverride",
+            "signature": "(Landroid/adservices/customaudience/RemoveCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->removeCustomAudienceRemoteInfoOverride(Landroid/adservices/customaudience/RemoveCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.customaudience.RemoveCustomAudienceOverrideRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.customaudience.TestCustomAudienceManager",
+            "name": "resetAllCustomAudienceOverrides",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->resetAllCustomAudienceOverrides(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.measurement.MeasurementManager",
+            "name": "getMeasurementApiStatus",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Integer;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->getMeasurementApiStatus(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Integer;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Integer",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.measurement.MeasurementManager",
+            "name": "registerSource",
+            "signature": "(Landroid/net/Uri;Landroid/view/InputEvent;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerSource(Landroid/net/Uri;Landroid/view/InputEvent;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.net.Uri",
+                "android.view.InputEvent",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.measurement.MeasurementManager",
+            "name": "registerTrigger",
+            "signature": "(Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerTrigger(Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.net.Uri",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.measurement.MeasurementManager",
+            "name": "registerWebSource",
+            "signature": "(Landroid/adservices/measurement/WebSourceRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerWebSource(Landroid/adservices/measurement/WebSourceRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.measurement.WebSourceRegistrationRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.measurement.MeasurementManager",
+            "name": "registerWebTrigger",
+            "signature": "(Landroid/adservices/measurement/WebTriggerRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerWebTrigger(Landroid/adservices/measurement/WebTriggerRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.measurement.WebTriggerRegistrationRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Object",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.adservices.topics.TopicsManager",
+            "name": "getTopics",
+            "signature": "(Landroid/adservices/topics/GetTopicsRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/topics/GetTopicsResponse;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/adservices/topics/TopicsManager;->getTopics(Landroid/adservices/topics/GetTopicsRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/topics/GetTopicsResponse;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "android.adservices.topics.GetTopicsRequest",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<android.adservices.topics.GetTopicsResponse",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_ADSERVICES_TOPICS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.Activity",
+            "name": "registerScreenCaptureCallback",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/app/Activity/ScreenCaptureCallback;)V",
+            "dalvik_descriptor": "Landroid/app/Activity;->registerScreenCaptureCallback(Ljava/util/concurrent/Executor;Landroid/app/Activity/ScreenCaptureCallback;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.app.Activity.ScreenCaptureCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.DETECT_SCREEN_CAPTURE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.Activity",
+            "name": "unregisterScreenCaptureCallback",
+            "signature": "(Landroid/app/Activity/ScreenCaptureCallback;)V",
+            "dalvik_descriptor": "Landroid/app/Activity;->unregisterScreenCaptureCallback(Landroid/app/Activity/ScreenCaptureCallback;)V",
+            "type": "method",
+            "args": [
+                "android.app.Activity.ScreenCaptureCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.DETECT_SCREEN_CAPTURE"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.app.ActivityManager",
             "name": "dumpPackageState",
             "signature": "(Ljava/io/FileDescriptor;Ljava/lang/String;)V",
@@ -683,29 +1093,6 @@
                 "int",
                 "long",
                 "android.app.PendingIntent"
-            ],
-            "return_value": "void"
-        },
-        "permission_groups": [
-            {
-                "conditional": true,
-                "value": "android.permission.SCHEDULE_EXACT_ALARM"
-            }
-        ]
-    },
-    {
-        "api": {
-            "class_name": "android.app.AlarmManager",
-            "name": "setExact",
-            "signature": "(IJLjava/lang/String;Landroid/app/AlarmManager/OnAlarmListener;Landroid/os/Handler;)V",
-            "dalvik_descriptor": "Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager/OnAlarmListener;Landroid/os/Handler;)V",
-            "type": "method",
-            "args": [
-                "int",
-                "long",
-                "java.lang.String",
-                "android.app.AlarmManager.OnAlarmListener",
-                "android.os.Handler"
             ],
             "return_value": "void"
         },
@@ -888,6 +1275,46 @@
     },
     {
         "api": {
+            "class_name": "android.app.Notification$MediaStyle",
+            "name": "setRemotePlaybackInfo",
+            "signature": "(Ljava/lang/CharSequence;ILandroid/app/PendingIntent;)Landroid/app/Notification/MediaStyle;",
+            "dalvik_descriptor": "Landroid/app/Notification$MediaStyle;->setRemotePlaybackInfo(Ljava/lang/CharSequence;ILandroid/app/PendingIntent;)Landroid/app/Notification/MediaStyle;",
+            "type": "method",
+            "args": [
+                "java.lang.CharSequence",
+                "int",
+                "android.app.PendingIntent"
+            ],
+            "return_value": "android.app.Notification.MediaStyle"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MEDIA_CONTENT_CONTROL"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.StatusBarManager",
+            "name": "canLaunchCaptureContentActivityForNote",
+            "signature": "(Landroid/app/Activity;)Z",
+            "dalvik_descriptor": "Landroid/app/StatusBarManager;->canLaunchCaptureContentActivityForNote(Landroid/app/Activity;)Z",
+            "type": "method",
+            "args": [
+                "android.app.Activity"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.app.WallpaperManager",
             "name": "getDrawable",
             "signature": "()Landroid/graphics/drawable/Drawable;",
@@ -899,7 +1326,32 @@
         "permission_groups": [
             {
                 "conditional": false,
-                "value": "android.permission.READ_EXTERNAL_STORAGE"
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.WallpaperManager",
+            "name": "getDrawable",
+            "signature": "(I)Landroid/graphics/drawable/Drawable;",
+            "dalvik_descriptor": "Landroid/app/WallpaperManager;->getDrawable(I)Landroid/graphics/drawable/Drawable;",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "android.graphics.drawable.Drawable"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
             }
         ]
     },
@@ -916,7 +1368,74 @@
         "permission_groups": [
             {
                 "conditional": false,
-                "value": "android.permission.READ_EXTERNAL_STORAGE"
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.WallpaperManager",
+            "name": "getFastDrawable",
+            "signature": "(I)Landroid/graphics/drawable/Drawable;",
+            "dalvik_descriptor": "Landroid/app/WallpaperManager;->getFastDrawable(I)Landroid/graphics/drawable/Drawable;",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "android.graphics.drawable.Drawable"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.WallpaperManager",
+            "name": "peekDrawable",
+            "signature": "()Landroid/graphics/drawable/Drawable;",
+            "dalvik_descriptor": "Landroid/app/WallpaperManager;->peekDrawable()Landroid/graphics/drawable/Drawable;",
+            "type": "method",
+            "args": [],
+            "return_value": "android.graphics.drawable.Drawable"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.WallpaperManager",
+            "name": "peekDrawable",
+            "signature": "(I)Landroid/graphics/drawable/Drawable;",
+            "dalvik_descriptor": "Landroid/app/WallpaperManager;->peekDrawable(I)Landroid/graphics/drawable/Drawable;",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "android.graphics.drawable.Drawable"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
             }
         ]
     },
@@ -933,7 +1452,32 @@
         "permission_groups": [
             {
                 "conditional": false,
-                "value": "android.permission.READ_EXTERNAL_STORAGE"
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.WallpaperManager",
+            "name": "peekFastDrawable",
+            "signature": "(I)Landroid/graphics/drawable/Drawable;",
+            "dalvik_descriptor": "Landroid/app/WallpaperManager;->peekFastDrawable(I)Landroid/graphics/drawable/Drawable;",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "android.graphics.drawable.Drawable"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
             }
         ]
     },
@@ -952,7 +1496,10 @@
         "permission_groups": [
             {
                 "conditional": false,
-                "value": "android.permission.READ_EXTERNAL_STORAGE"
+                "any_of": [
+                    "android.permission.MANAGE_EXTERNAL_STORAGE",
+                    "android.permission.READ_WALLPAPER_INTERNAL"
+                ]
             }
         ]
     },
@@ -1210,6 +1757,647 @@
     {
         "api": {
             "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getFactoryResetProtectionPolicy",
+            "signature": "(Landroid/content/ComponentName;)Landroid/app/admin/FactoryResetProtectionPolicy;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getFactoryResetProtectionPolicy(Landroid/content/ComponentName;)Landroid/app/admin/FactoryResetProtectionPolicy;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "android.app.admin.FactoryResetProtectionPolicy"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_FACTORY_RESET"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getWifiSsidPolicy",
+            "signature": "()Landroid/app/admin/WifiSsidPolicy;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getWifiSsidPolicy()Landroid/app/admin/WifiSsidPolicy;",
+            "type": "method",
+            "args": [],
+            "return_value": "android.app.admin.WifiSsidPolicy"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIFI"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "generateKeyPair",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Landroid/security/keystore/KeyGenParameterSpec;I)Landroid/security/AttestedKeyPair;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->generateKeyPair(Landroid/content/ComponentName;Ljava/lang/String;Landroid/security/keystore/KeyGenParameterSpec;I)Landroid/security/AttestedKeyPair;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "android.security.keystore.KeyGenParameterSpec",
+                "int"
+            ],
+            "return_value": "android.security.AttestedKeyPair"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "addCrossProfileWidgetProvider",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->addCrossProfileWidgetProvider(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PROFILE_INTERACTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "clearResetPasswordToken",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->clearResetPasswordToken(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_RESET_PASSWORD"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getAutoTimeEnabled",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getAutoTimeEnabled(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "any_of": [
+                    "android.permission.SET_TIME",
+                    "android.permission.QUERY_ADMIN_POLICY"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getAutoTimeZoneEnabled",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getAutoTimeZoneEnabled(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "any_of": [
+                    "android.permission.SET_TIME_ZONE",
+                    "android.permission.QUERY_ADMIN_POLICY"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getCameraDisabled",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getCameraDisabled(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CAMERA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "hasKeyPair",
+            "signature": "(Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->hasKeyPair(Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "hasLockdownAdminConfiguredNetworks",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->hasLockdownAdminConfiguredNetworks(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIFI"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "installKeyPair",
+            "signature": "(Landroid/content/ComponentName;Ljava/security/PrivateKey;Ljava/security/cert/Certificate;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->installKeyPair(Landroid/content/ComponentName;Ljava/security/PrivateKey;Ljava/security/cert/Certificate;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.security.PrivateKey",
+                "java.security.cert.Certificate",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "installKeyPair",
+            "signature": "(Landroid/content/ComponentName;Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;Z)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->installKeyPair(Landroid/content/ComponentName;Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;Z)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.security.PrivateKey",
+                "java.security.cert.Certificate[]",
+                "java.lang.String",
+                "boolean"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "installKeyPair",
+            "signature": "(Landroid/content/ComponentName;Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;I)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->installKeyPair(Landroid/content/ComponentName;Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;I)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.security.PrivateKey",
+                "java.security.cert.Certificate[]",
+                "java.lang.String",
+                "int"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "isActivePasswordSufficient",
+            "signature": "()Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->isActivePasswordSufficient()Z",
+            "type": "method",
+            "args": [],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "isApplicationHidden",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->isApplicationHidden(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PACKAGE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "isPackageSuspended",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->isPackageSuspended(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PACKAGE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "isResetPasswordTokenActive",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->isResetPasswordTokenActive(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_RESET_PASSWORD"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "isSecurityLoggingEnabled",
+            "signature": "(Landroid/content/ComponentName;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->isSecurityLoggingEnabled(Landroid/content/ComponentName;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SECURITY_LOGGING"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "removeCrossProfileWidgetProvider",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->removeCrossProfileWidgetProvider(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PROFILE_INTERACTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "removeKeyPair",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->removeKeyPair(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "resetPasswordWithToken",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;[BI)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->resetPasswordWithToken(Landroid/content/ComponentName;Ljava/lang/String;[BI)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "byte[]",
+                "int"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_RESET_PASSWORD"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setApplicationHidden",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Z)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setApplicationHidden(Landroid/content/ComponentName;Ljava/lang/String;Z)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "boolean"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PACKAGE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setKeyPairCertificate",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Ljava/util/List;Z)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setKeyPairCertificate(Landroid/content/ComponentName;Ljava/lang/String;Ljava/util/List;Z)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "java.util.List<java.security.cert.Certificate>",
+                "boolean"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setPermissionGrantState",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;I)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setPermissionGrantState(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;I)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "java.lang.String",
+                "int"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setPermittedInputMethods",
+            "signature": "(Landroid/content/ComponentName;Ljava/util/List;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setPermittedInputMethods(Landroid/content/ComponentName;Ljava/util/List;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.util.List<java.lang.String>"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_INPUT_METHODS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setResetPasswordToken",
+            "signature": "(Landroid/content/ComponentName;[B)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setResetPasswordToken(Landroid/content/ComponentName;[B)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "byte[]"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_RESET_PASSWORD"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setStatusBarDisabled",
+            "signature": "(Landroid/content/ComponentName;Z)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setStatusBarDisabled(Landroid/content/ComponentName;Z)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_STATUS_BAR"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setTime",
+            "signature": "(Landroid/content/ComponentName;J)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setTime(Landroid/content/ComponentName;J)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "long"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.SET_TIME"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setTimeZone",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setTimeZone(Landroid/content/ComponentName;Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.SET_TIME_ZONE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getCurrentFailedPasswordAttempts",
+            "signature": "()I",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getCurrentFailedPasswordAttempts()I",
+            "type": "method",
+            "args": [],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getLockTaskFeatures",
+            "signature": "(Landroid/content/ComponentName;)I",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getLockTaskFeatures(Landroid/content/ComponentName;)I",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getMtePolicy",
+            "signature": "()I",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getMtePolicy()I",
+            "type": "method",
+            "args": [],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_MTE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
             "name": "getNearbyAppStreamingPolicy",
             "signature": "()I",
             "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getNearbyAppStreamingPolicy()I",
@@ -1253,8 +2441,977 @@
         },
         "permission_groups": [
             {
-                "conditional": false,
-                "value": "android.permission.REQUEST_PASSWORD_COMPLEXITY"
+                "conditional": true,
+                "any_of": [
+                    "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS",
+                    "android.permission.REQUEST_PASSWORD_COMPLEXITY"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getPermissionGrantState",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;)I",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getPermissionGrantState(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;)I",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "java.lang.String"
+            ],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getRequiredPasswordComplexity",
+            "signature": "()I",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getRequiredPasswordComplexity()I",
+            "type": "method",
+            "args": [],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getOrganizationName",
+            "signature": "(Landroid/content/ComponentName;)Ljava/lang/CharSequence;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getOrganizationName(Landroid/content/ComponentName;)Ljava/lang/CharSequence;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.lang.CharSequence"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_ORGANIZATION_IDENTITY"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getShortSupportMessage",
+            "signature": "(Landroid/content/ComponentName;)Ljava/lang/CharSequence;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getShortSupportMessage(Landroid/content/ComponentName;)Ljava/lang/CharSequence;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.lang.CharSequence"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SUPPORT_MESSAGE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getLockTaskPackages",
+            "signature": "(Landroid/content/ComponentName;)[Ljava/lang/String;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getLockTaskPackages(Landroid/content/ComponentName;)[Ljava/lang/String;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.lang.String[]"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setPackagesSuspended",
+            "signature": "(Landroid/content/ComponentName;[Ljava/lang/String;Z)[Ljava/lang/String;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setPackagesSuspended(Landroid/content/ComponentName;[Ljava/lang/String;Z)[Ljava/lang/String;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String[]",
+                "boolean"
+            ],
+            "return_value": "java.lang.String[]"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PACKAGE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "retrievePreRebootSecurityLogs",
+            "signature": "(Landroid/content/ComponentName;)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->retrievePreRebootSecurityLogs(Landroid/content/ComponentName;)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.util.List<android.app.admin.SecurityLog.SecurityEvent>"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SECURITY_LOGGING"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "retrieveSecurityLogs",
+            "signature": "(Landroid/content/ComponentName;)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->retrieveSecurityLogs(Landroid/content/ComponentName;)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.util.List<android.app.admin.SecurityLog.SecurityEvent>"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SECURITY_LOGGING"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getCrossProfileWidgetProviders",
+            "signature": "(Landroid/content/ComponentName;)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getCrossProfileWidgetProviders(Landroid/content/ComponentName;)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.util.List<java.lang.String>"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PROFILE_INTERACTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getPermittedInputMethods",
+            "signature": "(Landroid/content/ComponentName;)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getPermittedInputMethods(Landroid/content/ComponentName;)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.util.List<java.lang.String>"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_INPUT_METHODS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "getUserControlDisabledPackages",
+            "signature": "(Landroid/content/ComponentName;)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->getUserControlDisabledPackages(Landroid/content/ComponentName;)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "java.util.List<java.lang.String>"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_APPS_CONTROL"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "addCrossProfileIntentFilter",
+            "signature": "(Landroid/content/ComponentName;Landroid/content/IntentFilter;I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->addCrossProfileIntentFilter(Landroid/content/ComponentName;Landroid/content/IntentFilter;I)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "android.content.IntentFilter",
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PROFILE_INTERACTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "addPersistentPreferredActivity",
+            "signature": "(Landroid/content/ComponentName;Landroid/content/IntentFilter;Landroid/content/ComponentName;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->addPersistentPreferredActivity(Landroid/content/ComponentName;Landroid/content/IntentFilter;Landroid/content/ComponentName;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "android.content.IntentFilter",
+                "android.content.ComponentName"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "clearCrossProfileIntentFilters",
+            "signature": "(Landroid/content/ComponentName;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->clearCrossProfileIntentFilters(Landroid/content/ComponentName;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_PROFILE_INTERACTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "clearPackagePersistentPreferredActivities",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->clearPackagePersistentPreferredActivities(Landroid/content/ComponentName;Ljava/lang/String;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "installSystemUpdate",
+            "signature": "(Landroid/content/ComponentName;Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/app/admin/DevicePolicyManager/InstallSystemUpdateCallback;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->installSystemUpdate(Landroid/content/ComponentName;Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/app/admin/DevicePolicyManager/InstallSystemUpdateCallback;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "android.net.Uri",
+                "java.util.concurrent.Executor",
+                "android.app.admin.DevicePolicyManager.InstallSystemUpdateCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SYSTEM_UPDATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "lockNow",
+            "signature": "()V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->lockNow()V",
+            "type": "method",
+            "args": [],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "lockNow",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->lockNow(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setAccountManagementDisabled",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setAccountManagementDisabled(Landroid/content/ComponentName;Ljava/lang/String;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_ACCOUNT_MANAGEMENT"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setAutoTimeEnabled",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setAutoTimeEnabled(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.SET_TIME"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setAutoTimeZoneEnabled",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setAutoTimeZoneEnabled(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.SET_TIME_ZONE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setCameraDisabled",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setCameraDisabled(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_CAMERA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setCommonCriteriaModeEnabled",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setCommonCriteriaModeEnabled(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_COMMON_CRITERIA_MODE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setConfiguredNetworksLockdownState",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setConfiguredNetworksLockdownState(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIFI"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setDefaultSmsApplication",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setDefaultSmsApplication(Landroid/content/ComponentName;Ljava/lang/String;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_DEFAULT_SMS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setFactoryResetProtectionPolicy",
+            "signature": "(Landroid/content/ComponentName;Landroid/app/admin/FactoryResetProtectionPolicy;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setFactoryResetProtectionPolicy(Landroid/content/ComponentName;Landroid/app/admin/FactoryResetProtectionPolicy;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "android.app.admin.FactoryResetProtectionPolicy"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_FACTORY_RESET"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setKeyguardDisabledFeatures",
+            "signature": "(Landroid/content/ComponentName;I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setKeyguardDisabledFeatures(Landroid/content/ComponentName;I)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_KEYGUARD"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setLockTaskFeatures",
+            "signature": "(Landroid/content/ComponentName;I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setLockTaskFeatures(Landroid/content/ComponentName;I)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setLockTaskPackages",
+            "signature": "(Landroid/content/ComponentName;[Ljava/lang/String;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setLockTaskPackages(Landroid/content/ComponentName;[Ljava/lang/String;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String[]"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setMaximumFailedPasswordsForWipe",
+            "signature": "(Landroid/content/ComponentName;I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setMaximumFailedPasswordsForWipe(Landroid/content/ComponentName;I)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIPE_DATA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setMaximumTimeToLock",
+            "signature": "(Landroid/content/ComponentName;J)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setMaximumTimeToLock(Landroid/content/ComponentName;J)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "long"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setMinimumRequiredWifiSecurityLevel",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setMinimumRequiredWifiSecurityLevel(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIFI"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setMtePolicy",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setMtePolicy(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_MTE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setOrganizationName",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/CharSequence;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setOrganizationName(Landroid/content/ComponentName;Ljava/lang/CharSequence;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.CharSequence"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_ORGANIZATION_IDENTITY"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setPasswordExpirationTimeout",
+            "signature": "(Landroid/content/ComponentName;J)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setPasswordExpirationTimeout(Landroid/content/ComponentName;J)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "long"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setRequiredPasswordComplexity",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setRequiredPasswordComplexity(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setRequiredStrongAuthTimeout",
+            "signature": "(Landroid/content/ComponentName;J)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setRequiredStrongAuthTimeout(Landroid/content/ComponentName;J)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "long"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setScreenCaptureDisabled",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setScreenCaptureDisabled(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SCREEN_CAPTURE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setSecurityLoggingEnabled",
+            "signature": "(Landroid/content/ComponentName;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setSecurityLoggingEnabled(Landroid/content/ComponentName;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SECURITY_LOGGING"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setShortSupportMessage",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/CharSequence;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setShortSupportMessage(Landroid/content/ComponentName;Ljava/lang/CharSequence;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.CharSequence"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SUPPORT_MESSAGE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setSystemUpdatePolicy",
+            "signature": "(Landroid/content/ComponentName;Landroid/app/admin/SystemUpdatePolicy;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setSystemUpdatePolicy(Landroid/content/ComponentName;Landroid/app/admin/SystemUpdatePolicy;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "android.app.admin.SystemUpdatePolicy"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_SYSTEM_UPDATES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setTrustAgentConfiguration",
+            "signature": "(Landroid/content/ComponentName;Landroid/content/ComponentName;Landroid/os/PersistableBundle;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setTrustAgentConfiguration(Landroid/content/ComponentName;Landroid/content/ComponentName;Landroid/os/PersistableBundle;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "android.content.ComponentName",
+                "android.os.PersistableBundle"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_KEYGUARD"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setUninstallBlocked",
+            "signature": "(Landroid/content/ComponentName;Ljava/lang/String;Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setUninstallBlocked(Landroid/content/ComponentName;Ljava/lang/String;Z)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.lang.String",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_APPS_CONTROL"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setUsbDataSignalingEnabled",
+            "signature": "(Z)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setUsbDataSignalingEnabled(Z)V",
+            "type": "method",
+            "args": [
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_USB_DATA_SIGNALLING"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setUserControlDisabledPackages",
+            "signature": "(Landroid/content/ComponentName;Ljava/util/List;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setUserControlDisabledPackages(Landroid/content/ComponentName;Ljava/util/List;)V",
+            "type": "method",
+            "args": [
+                "android.content.ComponentName",
+                "java.util.List<java.lang.String>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_APPS_CONTROL"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "setWifiSsidPolicy",
+            "signature": "(Landroid/app/admin/WifiSsidPolicy;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->setWifiSsidPolicy(Landroid/app/admin/WifiSsidPolicy;)V",
+            "type": "method",
+            "args": [
+                "android.app.admin.WifiSsidPolicy"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIFI"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "wipeData",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->wipeData(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIPE_DATA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "wipeData",
+            "signature": "(ILjava/lang/CharSequence;)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->wipeData(ILjava/lang/CharSequence;)V",
+            "type": "method",
+            "args": [
+                "int",
+                "java.lang.CharSequence"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIPE_DATA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.admin.DevicePolicyManager",
+            "name": "wipeDevice",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/app/admin/DevicePolicyManager;->wipeDevice(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.MANAGE_DEVICE_POLICY_WIPE_DATA"
             }
         ]
     },
@@ -1274,6 +3431,25 @@
             {
                 "conditional": false,
                 "value": "android.permission.RECEIVE_BOOT_COMPLETED"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.app.job.JobInfo$Builder",
+            "name": "setUserInitiated",
+            "signature": "(Z)Landroid/app/job/JobInfo/Builder;",
+            "dalvik_descriptor": "Landroid/app/job/JobInfo$Builder;->setUserInitiated(Z)Landroid/app/job/JobInfo/Builder;",
+            "type": "method",
+            "args": [
+                "boolean"
+            ],
+            "return_value": "android.app.job.JobInfo.Builder"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.RUN_USER_INITIATED_JOBS"
             }
         ]
     },
@@ -4311,6 +6487,38 @@
     },
     {
         "api": {
+            "class_name": "android.companion.AssociationRequest",
+            "name": "DEVICE_PROFILE_GLASSES",
+            "signature": "Ljava/lang/String;",
+            "dalvik_descriptor": "Landroid/companion/AssociationRequest;->DEVICE_PROFILE_GLASSES:Ljava/lang/String;",
+            "type": "field",
+            "field_type": "java.lang.String"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.REQUEST_COMPANION_PROFILE_GLASSES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.companion.AssociationRequest",
+            "name": "DEVICE_PROFILE_NEARBY_DEVICE_STREAMING",
+            "signature": "Ljava/lang/String;",
+            "dalvik_descriptor": "Landroid/companion/AssociationRequest;->DEVICE_PROFILE_NEARBY_DEVICE_STREAMING:Ljava/lang/String;",
+            "type": "field",
+            "field_type": "java.lang.String"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.REQUEST_COMPANION_PROFILE_NEARBY_DEVICE_STREAMING"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.companion.AssociationRequest$Builder",
             "name": "setForceConfirmation",
             "signature": "(Z)Landroid/companion/AssociationRequest/Builder;",
@@ -4402,6 +6610,46 @@
     {
         "api": {
             "class_name": "android.companion.CompanionDeviceManager",
+            "name": "attachSystemDataTransport",
+            "signature": "(ILjava/io/InputStream;Ljava/io/OutputStream;)V",
+            "dalvik_descriptor": "Landroid/companion/CompanionDeviceManager;->attachSystemDataTransport(ILjava/io/InputStream;Ljava/io/OutputStream;)V",
+            "type": "method",
+            "args": [
+                "int",
+                "java.io.InputStream",
+                "java.io.OutputStream"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.DELIVER_COMPANION_MESSAGES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.companion.CompanionDeviceManager",
+            "name": "detachSystemDataTransport",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/companion/CompanionDeviceManager;->detachSystemDataTransport(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.DELIVER_COMPANION_MESSAGES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.companion.CompanionDeviceManager",
             "name": "startObservingDevicePresence",
             "signature": "(Ljava/lang/String;)V",
             "dalvik_descriptor": "Landroid/companion/CompanionDeviceManager;->startObservingDevicePresence(Ljava/lang/String;)V",
@@ -4434,6 +6682,72 @@
             {
                 "conditional": false,
                 "value": "android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.companion.CompanionDeviceService",
+            "name": "attachSystemDataTransport",
+            "signature": "(ILjava/io/InputStream;Ljava/io/OutputStream;)V",
+            "dalvik_descriptor": "Landroid/companion/CompanionDeviceService;->attachSystemDataTransport(ILjava/io/InputStream;Ljava/io/OutputStream;)V",
+            "type": "method",
+            "args": [
+                "int",
+                "java.io.InputStream",
+                "java.io.OutputStream"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.DELIVER_COMPANION_MESSAGES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.companion.CompanionDeviceService",
+            "name": "detachSystemDataTransport",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/companion/CompanionDeviceService;->detachSystemDataTransport(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.DELIVER_COMPANION_MESSAGES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.Context",
+            "name": "bindServiceAsUser",
+            "signature": "(Landroid/content/Intent;Landroid/content/ServiceConnection;Landroid/content/Context/BindServiceFlags;Landroid/os/UserHandle;)Z",
+            "dalvik_descriptor": "Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;Landroid/content/Context/BindServiceFlags;Landroid/os/UserHandle;)Z",
+            "type": "method",
+            "args": [
+                "android.content.Intent",
+                "android.content.ServiceConnection",
+                "android.content.Context.BindServiceFlags",
+                "android.os.UserHandle"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "any_of": [
+                    "android.permission.INTERACT_ACROSS_USERS",
+                    "android.permission.INTERACT_ACROSS_USERS_FULL",
+                    "android.permission.INTERACT_ACROSS_PROFILES"
+                ]
             }
         ]
     },
@@ -4705,6 +7019,22 @@
     {
         "api": {
             "class_name": "android.content.Intent",
+            "name": "ACTION_LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE",
+            "signature": "Ljava/lang/String;",
+            "dalvik_descriptor": "Landroid/content/Intent;->ACTION_LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE:Ljava/lang/String;",
+            "type": "field",
+            "field_type": "java.lang.String"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.Intent",
             "name": "ACTION_VIEW_PERMISSION_USAGE",
             "signature": "Ljava/lang/String;",
             "dalvik_descriptor": "Landroid/content/Intent;->ACTION_VIEW_PERMISSION_USAGE:Ljava/lang/String;",
@@ -4834,6 +7164,30 @@
         "api": {
             "class_name": "android.content.pm.PackageInstaller",
             "name": "uninstall",
+            "signature": "(Landroid/content/pm/VersionedPackage;ILandroid/content/IntentSender;)V",
+            "dalvik_descriptor": "Landroid/content/pm/PackageInstaller;->uninstall(Landroid/content/pm/VersionedPackage;ILandroid/content/IntentSender;)V",
+            "type": "method",
+            "args": [
+                "android.content.pm.VersionedPackage",
+                "int",
+                "android.content.IntentSender"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.DELETE_PACKAGES",
+                    "android.permission.REQUEST_DELETE_PACKAGES"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.PackageInstaller",
+            "name": "uninstall",
             "signature": "(Ljava/lang/String;Landroid/content/IntentSender;)V",
             "dalvik_descriptor": "Landroid/content/pm/PackageInstaller;->uninstall(Ljava/lang/String;Landroid/content/IntentSender;)V",
             "type": "method",
@@ -4870,6 +7224,45 @@
             {
                 "conditional": false,
                 "value": "android.permission.DELETE_PACKAGES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.PackageInstaller$SessionParams",
+            "name": "setPermissionState",
+            "signature": "(Ljava/lang/String;I)Landroid/content/pm/PackageInstaller/SessionParams;",
+            "dalvik_descriptor": "Landroid/content/pm/PackageInstaller$SessionParams;->setPermissionState(Ljava/lang/String;I)Landroid/content/pm/PackageInstaller/SessionParams;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "int"
+            ],
+            "return_value": "android.content.pm.PackageInstaller.SessionParams"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.PackageInstaller$SessionParams",
+            "name": "setRequestUpdateOwnership",
+            "signature": "(Z)V",
+            "dalvik_descriptor": "Landroid/content/pm/PackageInstaller$SessionParams;->setRequestUpdateOwnership(Z)V",
+            "type": "method",
+            "args": [
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ENFORCE_UPDATE_OWNERSHIP"
             }
         ]
     },
@@ -5032,6 +7425,415 @@
             {
                 "conditional": true,
                 "value": "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_CAMERA",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_CAMERA:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "all_of": [
+                    "android.permission.FOREGROUND_SERVICE_CAMERA"
+                ],
+                "any_of": [
+                    "android.permission.CAMERA"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "all_of": [
+                    "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"
+                ],
+                "any_of": [
+                    "android.permission.BLUETOOTH_ADVERTISE",
+                    "android.permission.BLUETOOTH_CONNECT",
+                    "android.permission.BLUETOOTH_SCAN",
+                    "android.permission.CHANGE_NETWORK_STATE",
+                    "android.permission.CHANGE_WIFI_STATE",
+                    "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+                    "android.permission.NFC",
+                    "android.permission.TRANSMIT_IR",
+                    "android.permission.UWB_RANGING"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_DATA_SYNC",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_DATA_SYNC:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_HEALTH",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_HEALTH:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "all_of": [
+                    "android.permission.FOREGROUND_SERVICE_HEALTH"
+                ],
+                "any_of": [
+                    "android.permission.ACTIVITY_RECOGNITION",
+                    "android.permission.BODY_SENSORS",
+                    "android.permission.HIGH_SAMPLING_RATE_SENSORS"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_LOCATION",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_LOCATION:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "all_of": [
+                    "android.permission.FOREGROUND_SERVICE_LOCATION"
+                ],
+                "any_of": [
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_MICROPHONE",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_MICROPHONE:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "all_of": [
+                    "android.permission.FOREGROUND_SERVICE_MICROPHONE"
+                ],
+                "any_of": [
+                    "android.permission.CAPTURE_AUDIO_OUTPUT",
+                    "android.permission.RECORD_AUDIO"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_PHONE_CALL",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_PHONE_CALL:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "all_of": [
+                    "android.permission.FOREGROUND_SERVICE_PHONE_CALL"
+                ],
+                "any_of": [
+                    "android.permission.MANAGE_OWN_CALLS"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_REMOTE_MESSAGING",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_REMOTE_MESSAGING:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_SPECIAL_USE",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_SPECIAL_USE:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.content.pm.ServiceInfo",
+            "name": "FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/content/pm/ServiceInfo;->FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.credentials.CreateCredentialRequest$Builder",
+            "name": "setOrigin",
+            "signature": "(Ljava/lang/String;)Landroid/credentials/CreateCredentialRequest/Builder;",
+            "dalvik_descriptor": "Landroid/credentials/CreateCredentialRequest$Builder;->setOrigin(Ljava/lang/String;)Landroid/credentials/CreateCredentialRequest/Builder;",
+            "type": "method",
+            "args": [
+                "java.lang.String"
+            ],
+            "return_value": "android.credentials.CreateCredentialRequest.Builder"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.credentials.GetCredentialRequest$Builder",
+            "name": "setOrigin",
+            "signature": "(Ljava/lang/String;)Landroid/credentials/GetCredentialRequest/Builder;",
+            "dalvik_descriptor": "Landroid/credentials/GetCredentialRequest$Builder;->setOrigin(Ljava/lang/String;)Landroid/credentials/GetCredentialRequest/Builder;",
+            "type": "method",
+            "args": [
+                "java.lang.String"
+            ],
+            "return_value": "android.credentials.GetCredentialRequest.Builder"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.credentials.PrepareGetCredentialResponse",
+            "name": "hasAuthenticationResults",
+            "signature": "()Z",
+            "dalvik_descriptor": "Landroid/credentials/PrepareGetCredentialResponse;->hasAuthenticationResults()Z",
+            "type": "method",
+            "args": [],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.credentials.PrepareGetCredentialResponse",
+            "name": "hasCredentialResults",
+            "signature": "(Ljava/lang/String;)Z",
+            "dalvik_descriptor": "Landroid/credentials/PrepareGetCredentialResponse;->hasCredentialResults(Ljava/lang/String;)Z",
+            "type": "method",
+            "args": [
+                "java.lang.String"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.credentials.PrepareGetCredentialResponse",
+            "name": "hasRemoteResults",
+            "signature": "()Z",
+            "dalvik_descriptor": "Landroid/credentials/PrepareGetCredentialResponse;->hasRemoteResults()Z",
+            "type": "method",
+            "args": [],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.devicelock.DeviceLockManager",
+            "name": "getDeviceId",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/devicelock/DeviceId;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->getDeviceId(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/devicelock/DeviceId;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<android.devicelock.DeviceId",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_DEVICE_LOCK_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.devicelock.DeviceLockManager",
+            "name": "isDeviceLocked",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Boolean;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->isDeviceLocked(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Boolean;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Boolean",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_DEVICE_LOCK_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.devicelock.DeviceLockManager",
+            "name": "lockDevice",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->lockDevice(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Void",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_DEVICE_LOCK_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.devicelock.DeviceLockManager",
+            "name": "unlockDevice",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->unlockDevice(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<java.lang.Void",
+                "java.lang.Exception>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_DEVICE_LOCK_STATE"
             }
         ]
     },
@@ -6069,6 +8871,26 @@
     {
         "api": {
             "class_name": "android.media.AudioManager",
+            "name": "clearPreferredMixerAttributes",
+            "signature": "(Landroid/media/AudioAttributes;Landroid/media/AudioDeviceInfo;)Z",
+            "dalvik_descriptor": "Landroid/media/AudioManager;->clearPreferredMixerAttributes(Landroid/media/AudioAttributes;Landroid/media/AudioDeviceInfo;)Z",
+            "type": "method",
+            "args": [
+                "android.media.AudioAttributes",
+                "android.media.AudioDeviceInfo"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_AUDIO_SETTINGS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.media.AudioManager",
             "name": "setEncodedSurroundMode",
             "signature": "(I)Z",
             "dalvik_descriptor": "Landroid/media/AudioManager;->setEncodedSurroundMode(I)Z",
@@ -6082,6 +8904,27 @@
             {
                 "conditional": false,
                 "value": "android.permission.WRITE_SETTINGS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.media.AudioManager",
+            "name": "setPreferredMixerAttributes",
+            "signature": "(Landroid/media/AudioAttributes;Landroid/media/AudioDeviceInfo;Landroid/media/AudioMixerAttributes;)Z",
+            "dalvik_descriptor": "Landroid/media/AudioManager;->setPreferredMixerAttributes(Landroid/media/AudioAttributes;Landroid/media/AudioDeviceInfo;Landroid/media/AudioMixerAttributes;)Z",
+            "type": "method",
+            "args": [
+                "android.media.AudioAttributes",
+                "android.media.AudioDeviceInfo",
+                "android.media.AudioMixerAttributes"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_AUDIO_SETTINGS"
             }
         ]
     },
@@ -6750,6 +9593,46 @@
     {
         "api": {
             "class_name": "android.net.wifi.WifiManager",
+            "name": "getAllowedChannels",
+            "signature": "(II)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->getAllowedChannels(II)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "int",
+                "int"
+            ],
+            "return_value": "java.util.List<android.net.wifi.WifiAvailableChannel>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.NEARBY_WIFI_DEVICES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
+            "name": "getUsableChannels",
+            "signature": "(II)Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->getUsableChannels(II)Ljava/util/List;",
+            "type": "method",
+            "args": [
+                "int",
+                "int"
+            ],
+            "return_value": "java.util.List<android.net.wifi.WifiAvailableChannel>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.NEARBY_WIFI_DEVICES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
             "name": "getCallerConfiguredNetworks",
             "signature": "()Ljava/util/List;",
             "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->getCallerConfiguredNetworks()Ljava/util/List;",
@@ -6793,6 +9676,26 @@
             "type": "method",
             "args": [],
             "return_value": "java.util.List<android.net.wifi.WifiNetworkSuggestion>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
+            "name": "addLocalOnlyConnectionFailureListener",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/LocalOnlyConnectionFailureListener;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->addLocalOnlyConnectionFailureListener(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/LocalOnlyConnectionFailureListener;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener"
+            ],
+            "return_value": "void"
         },
         "permission_groups": [
             {
@@ -6868,6 +9771,26 @@
     {
         "api": {
             "class_name": "android.net.wifi.WifiManager",
+            "name": "getChannelData",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->getChannelData(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.util.List<android.os.Bundle>>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.NEARBY_WIFI_DEVICES"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
             "name": "registerScanResultsCallback",
             "signature": "(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/ScanResultsCallback;)V",
             "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->registerScanResultsCallback(Ljava/util/concurrent/Executor;Landroid/net/wifi/WifiManager/ScanResultsCallback;)V",
@@ -6895,6 +9818,25 @@
             "args": [
                 "java.util.concurrent.Executor",
                 "android.net.wifi.WifiManager.SubsystemRestartTrackingCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
+            "name": "removeLocalOnlyConnectionFailureListener",
+            "signature": "(Landroid/net/wifi/WifiManager/LocalOnlyConnectionFailureListener;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->removeLocalOnlyConnectionFailureListener(Landroid/net/wifi/WifiManager/LocalOnlyConnectionFailureListener;)V",
+            "type": "method",
+            "args": [
+                "android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener"
             ],
             "return_value": "void"
         },
@@ -7200,6 +10142,101 @@
     },
     {
         "api": {
+            "class_name": "android.net.wifi.aware.WifiAwareManager",
+            "name": "getPairedDevices",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/aware/WifiAwareManager;->getPairedDevices(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.util.List<java.lang.String>>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.aware.WifiAwareManager",
+            "name": "isOpportunisticModeEnabled",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/aware/WifiAwareManager;->isOpportunisticModeEnabled(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Boolean>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.aware.WifiAwareManager",
+            "name": "removePairedDevice",
+            "signature": "(Ljava/lang/String;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/aware/WifiAwareManager;->removePairedDevice(Ljava/lang/String;)V",
+            "type": "method",
+            "args": [
+                "java.lang.String"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CHANGE_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.aware.WifiAwareManager",
+            "name": "resetPairedDevices",
+            "signature": "()V",
+            "dalvik_descriptor": "Landroid/net/wifi/aware/WifiAwareManager;->resetPairedDevices()V",
+            "type": "method",
+            "args": [],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CHANGE_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.aware.WifiAwareManager",
+            "name": "setOpportunisticModeEnabled",
+            "signature": "(Z)V",
+            "dalvik_descriptor": "Landroid/net/wifi/aware/WifiAwareManager;->setOpportunisticModeEnabled(Z)V",
+            "type": "method",
+            "args": [
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CHANGE_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.net.wifi.aware.WifiAwareSession",
             "name": "publish",
             "signature": "(Landroid/net/wifi/aware/PublishConfig;Landroid/net/wifi/aware/DiscoverySessionCallback;Landroid/os/Handler;)V",
@@ -7462,6 +10499,30 @@
     {
         "api": {
             "class_name": "android.net.wifi.p2p.WifiP2pManager",
+            "name": "getListenState",
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/p2p/WifiP2pManager;->getListenState(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "android.net.wifi.p2p.WifiP2pManager.Channel",
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "all_of": [
+                    "android.permission.NEARBY_WIFI_DEVICES",
+                    "android.permission.ACCESS_FINE_LOCATION"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.p2p.WifiP2pManager",
             "name": "removeExternalApprover",
             "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/MacAddress;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
             "dalvik_descriptor": "Landroid/net/wifi/p2p/WifiP2pManager;->removeExternalApprover(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/MacAddress;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
@@ -7621,6 +10682,27 @@
     {
         "api": {
             "class_name": "android.net.wifi.p2p.WifiP2pManager",
+            "name": "setWfdInfo",
+            "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pWfdInfo;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/p2p/WifiP2pManager;->setWfdInfo(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pWfdInfo;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
+            "type": "method",
+            "args": [
+                "android.net.wifi.p2p.WifiP2pManager.Channel",
+                "android.net.wifi.p2p.WifiP2pWfdInfo",
+                "android.net.wifi.p2p.WifiP2pManager.ActionListener"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CONFIGURE_WIFI_DISPLAY"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.p2p.WifiP2pManager",
             "name": "startListening",
             "signature": "(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
             "dalvik_descriptor": "Landroid/net/wifi/p2p/WifiP2pManager;->startListening(Landroid/net/wifi/p2p/WifiP2pManager/Channel;Landroid/net/wifi/p2p/WifiP2pManager/ActionListener;)V",
@@ -7638,6 +10720,23 @@
                     "android.permission.NEARBY_WIFI_DEVICES",
                     "android.permission.ACCESS_FINE_LOCATION"
                 ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.rtt.WifiRttManager",
+            "name": "getRttCharacteristics",
+            "signature": "()Landroid/os/Bundle;",
+            "dalvik_descriptor": "Landroid/net/wifi/rtt/WifiRttManager;->getRttCharacteristics()Landroid/os/Bundle;",
+            "type": "method",
+            "args": [],
+            "return_value": "android.os.Bundle"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_WIFI_STATE"
             }
         ]
     },
@@ -7826,6 +10925,22 @@
                     "android.permission.READ_LOGS",
                     "android.permission.PACKAGE_USAGE_STATS"
                 ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.os.PowerManager",
+            "name": "ACQUIRE_CAUSES_WAKEUP",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/os/PowerManager;->ACQUIRE_CAUSES_WAKEUP:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": true,
+                "value": "android.permission.TURN_SCREEN_ON"
             }
         ]
     },
@@ -8349,6 +11464,44 @@
     },
     {
         "api": {
+            "class_name": "android.service.credentials.BeginCreateCredentialResponse$Builder",
+            "name": "setRemoteCreateEntry",
+            "signature": "(Landroid/service/credentials/RemoteEntry;)Landroid/service/credentials/BeginCreateCredentialResponse/Builder;",
+            "dalvik_descriptor": "Landroid/service/credentials/BeginCreateCredentialResponse$Builder;->setRemoteCreateEntry(Landroid/service/credentials/RemoteEntry;)Landroid/service/credentials/BeginCreateCredentialResponse/Builder;",
+            "type": "method",
+            "args": [
+                "android.service.credentials.RemoteEntry"
+            ],
+            "return_value": "android.service.credentials.BeginCreateCredentialResponse.Builder"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.PROVIDE_REMOTE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.service.credentials.BeginGetCredentialResponse$Builder",
+            "name": "setRemoteCredentialEntry",
+            "signature": "(Landroid/service/credentials/RemoteEntry;)Landroid/service/credentials/BeginGetCredentialResponse/Builder;",
+            "dalvik_descriptor": "Landroid/service/credentials/BeginGetCredentialResponse$Builder;->setRemoteCredentialEntry(Landroid/service/credentials/RemoteEntry;)Landroid/service/credentials/BeginGetCredentialResponse/Builder;",
+            "type": "method",
+            "args": [
+                "android.service.credentials.RemoteEntry"
+            ],
+            "return_value": "android.service.credentials.BeginGetCredentialResponse.Builder"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.PROVIDE_REMOTE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.telecom.TelecomManager",
             "name": "getAdnUriForPhoneAccount",
             "signature": "(Landroid/telecom/PhoneAccountHandle;)Landroid/net/Uri;",
@@ -8670,6 +11823,30 @@
     {
         "api": {
             "class_name": "android.telecom.TelecomManager",
+            "name": "addCall",
+            "signature": "(Landroid/telecom/CallAttributes;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telecom/CallControl;Landroid/telecom/CallException>;Landroid/telecom/CallControlCallback;Landroid/telecom/CallEventCallback;)V",
+            "dalvik_descriptor": "Landroid/telecom/TelecomManager;->addCall(Landroid/telecom/CallAttributes;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telecom/CallControl;Landroid/telecom/CallException>;Landroid/telecom/CallControlCallback;Landroid/telecom/CallEventCallback;)V",
+            "type": "method",
+            "args": [
+                "android.telecom.CallAttributes",
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<android.telecom.CallControl",
+                "android.telecom.CallException>",
+                "android.telecom.CallControlCallback",
+                "android.telecom.CallEventCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_OWN_CALLS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telecom.TelecomManager",
             "name": "cancelMissedCallsNotification",
             "signature": "()V",
             "dalvik_descriptor": "Landroid/telecom/TelecomManager;->cancelMissedCallsNotification()V",
@@ -8783,6 +11960,28 @@
     {
         "api": {
             "class_name": "android.telephony.CarrierConfigManager",
+            "name": "getConfig",
+            "signature": "(Ljava/lang/String///;)Landroid/os/PersistableBundle;",
+            "dalvik_descriptor": "Landroid/telephony/CarrierConfigManager;->getConfig(Ljava/lang/String///;)Landroid/os/PersistableBundle;",
+            "type": "method",
+            "args": [
+                "java.lang.String..."
+            ],
+            "return_value": "android.os.PersistableBundle"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.READ_PHONE_STATE",
+                    "carrier privileges"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.CarrierConfigManager",
             "name": "getConfigByComponentForSubId",
             "signature": "(Ljava/lang/String;I)Landroid/os/PersistableBundle;",
             "dalvik_descriptor": "Landroid/telephony/CarrierConfigManager;->getConfigByComponentForSubId(Ljava/lang/String;I)Landroid/os/PersistableBundle;",
@@ -8816,6 +12015,29 @@
             {
                 "conditional": false,
                 "value": "android.permission.READ_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.CarrierConfigManager",
+            "name": "getConfigForSubId",
+            "signature": "(ILjava/lang/String///;)Landroid/os/PersistableBundle;",
+            "dalvik_descriptor": "Landroid/telephony/CarrierConfigManager;->getConfigForSubId(ILjava/lang/String///;)Landroid/os/PersistableBundle;",
+            "type": "method",
+            "args": [
+                "int",
+                "java.lang.String..."
+            ],
+            "return_value": "android.os.PersistableBundle"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.READ_PHONE_STATE",
+                    "carrier privileges"
+                ]
             }
         ]
     },
@@ -9669,6 +12891,26 @@
     {
         "api": {
             "class_name": "android.telephony.SubscriptionManager",
+            "name": "getAllSubscriptionInfoList",
+            "signature": "()Ljava/util/List;",
+            "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->getAllSubscriptionInfoList()Ljava/util/List;",
+            "type": "method",
+            "args": [],
+            "return_value": "java.util.List<android.telephony.SubscriptionInfo>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.READ_PHONE_STATE",
+                    "carrier privileges"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.SubscriptionManager",
             "name": "getOpportunisticSubscriptions",
             "signature": "()Ljava/util/List;",
             "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->getOpportunisticSubscriptions()Ljava/util/List;",
@@ -10194,8 +13436,7 @@
             {
                 "conditional": false,
                 "all_of": [
-                    "android.permission.MODIFY_PHONE_STATE",
-                    "android.permission.ACCESS_FINE_LOCATION"
+                    "android.permission.MODIFY_PHONE_STATE"
                 ]
             }
         ]
@@ -10387,6 +13628,25 @@
                     "android.permission.READ_PHONE_STATE",
                     "android.permission.READ_PRIVILEGED_PHONE_STATE"
                 ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "isPremiumCapabilityAvailableForPurchase",
+            "signature": "(I)Z",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->isPremiumCapabilityAvailableForPurchase(I)Z",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_BASIC_PHONE_STATE"
             }
         ]
     },
@@ -11081,6 +14341,26 @@
     {
         "api": {
             "class_name": "android.telephony.TelephonyManager",
+            "name": "getCarrierRestrictionStatus",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getCarrierRestrictionStatus(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
             "name": "getNetworkSlicingConfiguration",
             "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
             "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getNetworkSlicingConfiguration(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
@@ -11096,6 +14376,30 @@
             {
                 "conditional": false,
                 "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "purchasePremiumCapability",
+            "signature": "(ILjava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->purchasePremiumCapability(ILjava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "int",
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "all_of": [
+                    "android.permission.READ_BASIC_PHONE_STATE",
+                    "android.permission.INTERNET"
+                ]
             }
         ]
     },

@@ -96,18 +96,24 @@ class _RawField(_RawAPI):
 
 @dataclasses.dataclass(frozen=True)
 class _RawAPIPermissionGroup:
-    permissions: list[str]
-    any_of: bool
     conditional: bool
+    value: Optional[str]
+    all_of: Optional[list[str]]
+    any_of: Optional[list[str]]
 
     def __hash__(self):
-        return hash(tuple(sorted(self.permissions))) + hash(self.any_of) + hash(self.conditional)
+        hash_code = hash(self.value) if self.value is not None else 0
+        hash_code += hash(tuple(sorted(self.all_of))) if self.all_of is not None else 0
+        hash_code += hash(tuple(sorted(self.any_of))) if self.any_of is not None else 0
+        hash_code += hash(self.conditional)
+        return hash_code
 
     def to_android_api(self) -> 'APIPermissionGroup':
         return APIPermissionGroup(
-            permissions=self.permissions,
-            any_of=self.any_of,
-            conditional=self.conditional
+            conditional=self.conditional,
+            value=self.value,
+            all_of=self.all_of,
+            any_of=self.any_of
         )
 
 
@@ -159,9 +165,10 @@ class AndroidAPIField(AndroidAPI, DataClassJsonMixin):
 
 @dataclasses.dataclass(frozen=True)
 class APIPermissionGroup(DataClassJsonMixin):
-    permissions: list[str]
-    any_of: bool
     conditional: bool
+    value: Optional[str] = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    all_of: Optional[list[str]] = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    any_of: Optional[list[str]] = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
 
 
 @dataclasses.dataclass(frozen=True)
@@ -337,20 +344,32 @@ class AndroidPlatformAPIPermissions:
                     api_permission_groups = []
                     for annotation_element in annotation_elements:
                         val_permission_elements: list[_Element] = annotation_element.xpath(self._ANNOTATION_ITEM_ANNOTATION_VAL_PERMISSION_XPATH)
+                        conditional_elements = annotation_element.xpath(self._ANNOTATION_ITEM_ANNOTATION_VAL_CONDITIONAL_XPATH)
+                        conditional = conditional_elements is not None and len(conditional_elements) > 0
                         if val_permission_elements is not None:
-                            if len(val_permission_elements) != 1:
-                                raise ValueError(f"Multiple permission annotation definition in {method_name}")
-                            permissions_text: str = val_permission_elements[0].attrib["val"].strip("{} ")
-                            permissions = [
-                                p.strip().strip("\"")
-                                for p in (permissions_text.split(",") if "," in permissions_text else [permissions_text])
-                            ]
-                            any_of = val_permission_elements[0].attrib["name"] == "anyOf"
-                            conditional_elements = annotation_element.xpath(self._ANNOTATION_ITEM_ANNOTATION_VAL_CONDITIONAL_XPATH)
+                            value: Optional[str] = None
+                            all_of: Optional[list[str]] = None
+                            any_of: Optional[list[str]] = None
+
+                            for val_permission_element in val_permission_elements:
+                                permissions_text: str = val_permission_element.attrib["val"].strip("{} ")
+                                permissions = [
+                                    p.strip().strip("\"")
+                                    for p in (permissions_text.split(",") if "," in permissions_text else [permissions_text])
+                                ]
+                                group_type = val_permission_element.attrib["name"]
+                                if group_type == "allOf":
+                                    all_of = permissions
+                                elif group_type == "anyOf":
+                                    any_of = permissions
+                                elif group_type == "value":
+                                    value = permissions[0]
+
                             api_permission_groups.append(_RawAPIPermissionGroup(
-                                permissions=permissions,
-                                any_of=any_of,
-                                conditional=conditional_elements is not None and len(conditional_elements) > 0
+                                conditional=conditional,
+                                value=value,
+                                all_of=all_of,
+                                any_of=any_of
                             ))
                     api_permission = self._build_android_api_permission(method_name, api_permission_groups, class_names)
                     result.append(api_permission)

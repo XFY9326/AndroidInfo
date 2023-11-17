@@ -6,13 +6,12 @@ Reference: [Android source docs](https://source.android.com/docs)
 
 ## Features
 
-- Daily automatically update
 - Without downloading all source codes
 - Full type hint for future development
 - Easy to load from JSON and dump to JSON
 - Contains all details
 
-## Daily automatically update
+## Data
 
 ### Versions
 

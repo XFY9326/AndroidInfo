@@ -18,6 +18,7 @@ from android_info.versions import AndroidVersions, AndroidAPILevel, AndroidBuild
 
 USE_TMP = False
 REMOVE_OLD_OUTPUTS = True
+USE_SYSTEM_PROXY = True
 
 DUMP_PERMISSIONS = True
 DUMP_API_PERMISSION_MAPPINGS = True
@@ -185,7 +186,7 @@ async def main():
     if not await aiofiles.os.path.exists(sources_download_dir):
         await aiofiles.os.makedirs(sources_download_dir)
 
-    async with aiohttp.ClientSession(raise_for_status=True) as client:
+    async with aiohttp.ClientSession(trust_env=USE_SYSTEM_PROXY, raise_for_status=True) as client:
         print("Loading versions ...")
 
         android_versions = AndroidVersions(client)

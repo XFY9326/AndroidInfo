@@ -182,7 +182,6 @@
             "android.provider.ContactsContract"
         ],
         "related_names": [
-            "android.provider.ContactsContract$1",
             "android.provider.ContactsContract$AggregationExceptions",
             "android.provider.ContactsContract$BaseSyncColumns",
             "android.provider.ContactsContract$CommonDataKinds",

@@ -168,6 +168,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.healthconnect.controller",
+        "name": "com.android.healthconnect.controller.searchindexables.HealthConnectSearchIndexablesProvider",
+        "authorities": [
+            "com.android.healthconnect.controller"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.launcher3",
         "name": "com.android.quickstep.LauncherSearchIndexablesProvider",
         "authorities": [
@@ -208,6 +220,18 @@
         "name": "com.android.permissioncontroller.role.service.RoleSearchIndexablesProvider",
         "authorities": [
             "com.android.permissioncontroller.role"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.permissioncontroller",
+        "name": "com.android.permissioncontroller.safetycenter.service.SafetyCenterSearchIndexablesProvider",
+        "authorities": [
+            "com.android.permissioncontroller.safetycenter"
         ],
         "exported": true,
         "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
@@ -481,6 +505,18 @@
     },
     {
         "package": "com.android.settings",
+        "name": "com.android.settings.fuelgauge.batteryusage.BatteryUsageContentProvider",
+        "authorities": [
+            "com.android.settings.battery.usage.provider"
+        ],
+        "exported": true,
+        "read_permission": "com.android.settings.BATTERY_DATA",
+        "write_permission": "com.android.settings.BATTERY_DATA",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
         "name": "com.android.settings.homepage.contextualcards.CardContentProvider",
         "authorities": [
             "com.android.settings.homepage.CardContentProvider"
@@ -508,6 +544,18 @@
         "name": "com.android.settings.search.SettingsSearchIndexablesProvider",
         "authorities": [
             "com.android.settings"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settingslib.spa.gallery",
+        "name": "com.android.settingslib.spa.search.SpaSearchProvider",
+        "authorities": [
+            "com.android.spa.gallery.search.provider"
         ],
         "exported": true,
         "read_permission": "android.permission.READ_SEARCH_INDEXABLES",

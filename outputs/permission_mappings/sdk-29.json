@@ -11,11 +11,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_FINGERPRINT"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_FINGERPRINT"
             }
         ]
     },
@@ -31,11 +28,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.GET_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.GET_ACCOUNTS"
             }
         ]
     },
@@ -53,11 +47,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.GET_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.GET_ACCOUNTS"
             }
         ]
     },
@@ -77,11 +68,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -99,11 +87,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -121,11 +106,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -145,11 +127,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_CREDENTIALS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
             }
         ]
     },
@@ -167,11 +146,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -190,11 +166,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -213,11 +186,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -237,11 +207,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.GET_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.GET_ACCOUNTS"
             }
         ]
     },
@@ -259,11 +226,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MANAGE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
             }
         ]
     },
@@ -282,12 +246,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.MANAGE_ACCOUNTS",
                     "android.permission.USE_CREDENTIALS"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -307,11 +270,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -330,11 +290,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -354,11 +311,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.AUTHENTICATE_ACCOUNTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
             }
         ]
     },
@@ -377,11 +331,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.DUMP"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.DUMP"
             }
         ]
     },
@@ -399,11 +350,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.KILL_BACKGROUND_PROCESSES"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.KILL_BACKGROUND_PROCESSES"
             }
         ]
     },
@@ -422,11 +370,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.REORDER_TASKS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.REORDER_TASKS"
             }
         ]
     },
@@ -446,11 +391,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.REORDER_TASKS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.REORDER_TASKS"
             }
         ]
     },
@@ -468,11 +410,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_TIME"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_TIME"
             }
         ]
     },
@@ -490,11 +429,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_TIME_ZONE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_TIME_ZONE"
             }
         ]
     },
@@ -512,11 +448,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.DISABLE_KEYGUARD"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.DISABLE_KEYGUARD"
             }
         ]
     },
@@ -532,11 +465,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.DISABLE_KEYGUARD"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.DISABLE_KEYGUARD"
             }
         ]
     },
@@ -552,11 +482,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.DISABLE_KEYGUARD"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.DISABLE_KEYGUARD"
             }
         ]
     },
@@ -572,11 +499,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_EXTERNAL_STORAGE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_EXTERNAL_STORAGE"
             }
         ]
     },
@@ -592,11 +516,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_EXTERNAL_STORAGE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_EXTERNAL_STORAGE"
             }
         ]
     },
@@ -614,11 +535,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_EXTERNAL_STORAGE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_EXTERNAL_STORAGE"
             }
         ]
     },
@@ -638,11 +556,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -663,11 +578,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -686,11 +598,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -710,11 +619,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -735,11 +641,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -755,11 +658,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -777,11 +677,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -797,11 +694,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -819,11 +713,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -841,11 +732,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER_HINTS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER_HINTS"
             }
         ]
     },
@@ -863,11 +751,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -885,11 +770,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SET_WALLPAPER"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SET_WALLPAPER"
             }
         ]
     },
@@ -904,11 +786,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.REQUEST_PASSWORD_COMPLEXITY"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.REQUEST_PASSWORD_COMPLEXITY"
             }
         ]
     },
@@ -924,11 +803,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.REQUEST_PASSWORD_COMPLEXITY"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.REQUEST_PASSWORD_COMPLEXITY"
             }
         ]
     },
@@ -946,11 +822,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.RECEIVE_BOOT_COMPLETED"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.RECEIVE_BOOT_COMPLETED"
             }
         ]
     },
@@ -966,11 +839,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -989,11 +859,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1009,11 +876,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1032,11 +896,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1052,11 +913,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1072,11 +930,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1092,11 +947,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1112,11 +964,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1132,11 +981,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1154,11 +1000,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1174,11 +1017,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1196,11 +1036,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1219,11 +1056,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1241,11 +1075,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1261,11 +1092,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1281,11 +1109,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1301,11 +1126,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1321,11 +1143,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1343,11 +1162,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1363,11 +1179,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1385,11 +1198,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1407,11 +1217,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1429,11 +1236,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1451,11 +1255,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1471,11 +1272,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1491,11 +1289,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1511,11 +1306,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1533,11 +1325,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_PRIVILEGED"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_PRIVILEGED"
             }
         ]
     },
@@ -1553,11 +1342,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1573,11 +1359,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1593,11 +1376,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1616,11 +1396,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1638,11 +1415,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1661,11 +1435,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1683,11 +1454,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1703,11 +1471,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1725,11 +1490,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH"
             }
         ]
     },
@@ -1747,11 +1509,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1769,11 +1528,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1791,11 +1547,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BLUETOOTH_ADMIN"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
             }
         ]
     },
@@ -1813,11 +1566,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BROADCAST_STICKY"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BROADCAST_STICKY"
             }
         ]
     },
@@ -1836,12 +1586,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.INTERACT_ACROSS_USERS",
                     "android.permission.BROADCAST_STICKY"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -1860,11 +1609,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.INTERACT_ACROSS_USERS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.INTERACT_ACROSS_USERS"
             }
         ]
     },
@@ -1884,11 +1630,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.INTERACT_ACROSS_USERS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.INTERACT_ACROSS_USERS"
             }
         ]
     },
@@ -1913,11 +1656,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.INTERACT_ACROSS_USERS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.INTERACT_ACROSS_USERS"
             }
         ]
     },
@@ -1935,11 +1675,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BROADCAST_STICKY"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BROADCAST_STICKY"
             }
         ]
     },
@@ -1958,12 +1695,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.INTERACT_ACROSS_USERS",
                     "android.permission.BROADCAST_STICKY"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -1986,11 +1722,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.BROADCAST_STICKY"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.BROADCAST_STICKY"
             }
         ]
     },
@@ -2014,12 +1747,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.INTERACT_ACROSS_USERS",
                     "android.permission.BROADCAST_STICKY"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2034,11 +1766,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.START_VIEW_PERMISSION_USAGE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.START_VIEW_PERMISSION_USAGE"
             }
         ]
     },
@@ -2058,12 +1787,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.INSTALL_PACKAGES",
                     "com.android.permission.INSTALL_EXISTING_PACKAGES"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2082,12 +1810,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.DELETE_PACKAGES",
                     "android.permission.REQUEST_DELETE_PACKAGES"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2106,12 +1833,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.DELETE_PACKAGES",
                     "android.permission.REQUEST_DELETE_PACKAGES"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2131,11 +1857,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
-                ],
-                "any_of": false,
-                "conditional": true
+                "conditional": true,
+                "value": "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
             }
         ]
     },
@@ -2155,11 +1878,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
-                ],
-                "any_of": false,
-                "conditional": true
+                "conditional": true,
+                "value": "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
             }
         ]
     },
@@ -2178,11 +1898,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
-                ],
-                "any_of": false,
-                "conditional": true
+                "conditional": true,
+                "value": "android.permission.WHITELIST_RESTRICTED_PERMISSIONS"
             }
         ]
     },
@@ -2202,11 +1919,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
-                ],
-                "any_of": false,
-                "conditional": true
+                "conditional": true,
+                "value": "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
             }
         ]
     },
@@ -2226,11 +1940,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
-                ],
-                "any_of": false,
-                "conditional": true
+                "conditional": true,
+                "value": "android.permission.CHANGE_COMPONENT_ENABLED_STATE"
             }
         ]
     },
@@ -2246,11 +1957,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_BIOMETRIC"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_BIOMETRIC"
             }
         ]
     },
@@ -2271,11 +1979,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_BIOMETRIC"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_BIOMETRIC"
             }
         ]
     },
@@ -2295,11 +2000,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_BIOMETRIC"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_BIOMETRIC"
             }
         ]
     },
@@ -2319,11 +2021,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.CAMERA"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.CAMERA"
             }
         ]
     },
@@ -2343,11 +2042,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.CAMERA"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.CAMERA"
             }
         ]
     },
@@ -2363,11 +2059,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_FINGERPRINT"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_FINGERPRINT"
             }
         ]
     },
@@ -2383,11 +2076,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.USE_FINGERPRINT"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.USE_FINGERPRINT"
             }
         ]
     },
@@ -2409,12 +2099,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.USE_BIOMETRIC",
                     "android.permission.USE_FINGERPRINT"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2432,11 +2121,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2454,12 +2140,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2477,11 +2162,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2499,11 +2181,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2522,11 +2201,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2544,11 +2220,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2567,11 +2240,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2590,11 +2260,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2612,11 +2279,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2635,11 +2299,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -2661,12 +2322,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2684,12 +2344,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2707,12 +2366,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2733,12 +2391,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2759,12 +2416,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2786,12 +2442,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2812,12 +2467,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2839,12 +2493,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2863,12 +2516,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2888,12 +2540,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2912,12 +2563,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2937,12 +2587,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -2960,11 +2609,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -2980,11 +2626,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3002,11 +2645,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3022,11 +2662,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3044,11 +2681,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3066,11 +2700,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3086,11 +2717,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3106,11 +2734,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3126,11 +2751,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3148,11 +2770,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3168,11 +2787,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3190,11 +2806,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3213,11 +2826,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3236,11 +2846,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3259,11 +2866,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3283,11 +2887,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_NETWORK_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_NETWORK_STATE"
             }
         ]
     },
@@ -3303,12 +2904,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.ACCESS_FINE_LOCATION",
                     "android.permission.ACCESS_WIFI_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -3324,12 +2924,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.NETWORK_SETTINGS",
                     "android.permission.NETWORK_SETUP_WIZARD"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -3347,11 +2946,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.NETWORK_SETTINGS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.NETWORK_SETTINGS"
             }
         ]
     },
@@ -3371,11 +2967,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3395,11 +2988,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3419,11 +3009,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3442,11 +3029,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3465,11 +3049,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3488,11 +3069,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3511,11 +3089,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3534,11 +3109,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3557,11 +3129,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -3581,13 +3150,12 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.ACCESS_FINE_LOCATION",
                     "android.permission.CHANGE_WIFI_STATE",
                     "android.permission.ACCESS_WIFI_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -3602,11 +3170,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.NFC_TRANSACTION_EVENT"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.NFC_TRANSACTION_EVENT"
             }
         ]
     },
@@ -3625,11 +3190,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.NFC"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.NFC"
             }
         ]
     },
@@ -3647,11 +3209,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.NFC"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.NFC"
             }
         ]
     },
@@ -3667,11 +3226,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -3690,12 +3246,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.READ_LOGS",
                     "android.permission.PACKAGE_USAGE_STATS"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -3714,11 +3269,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.RECOVERY"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.RECOVERY"
             }
         ]
     },
@@ -3734,11 +3286,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3756,11 +3305,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3779,11 +3325,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3801,11 +3344,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3824,11 +3364,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3847,11 +3384,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3871,11 +3405,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.VIBRATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.VIBRATE"
             }
         ]
     },
@@ -3893,11 +3424,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -3915,11 +3443,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -3935,11 +3460,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -3955,11 +3477,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ANSWER_PHONE_CALLS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ANSWER_PHONE_CALLS"
             }
         ]
     },
@@ -3977,11 +3496,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -4000,11 +3516,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -4020,11 +3533,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4040,11 +3550,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4060,12 +3567,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.READ_PRIVILEGED_PHONE_STATE",
                     "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4084,11 +3590,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4106,11 +3609,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4128,11 +3628,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4148,11 +3645,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4168,11 +3662,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4188,12 +3679,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ANSWER_PHONE_CALLS",
                     "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4211,12 +3701,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ANSWER_PHONE_CALLS",
                     "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4232,11 +3721,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -4255,12 +3741,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.CALL_PHONE",
                     "android.permission.MANAGE_OWN_CALLS"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4278,11 +3763,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4298,11 +3780,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -4322,11 +3801,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.SMS_FINANCIAL_TRANSACTIONS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.SMS_FINANCIAL_TRANSACTIONS"
             }
         ]
     },
@@ -4348,12 +3824,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.MODIFY_PHONE_STATE",
                     "android.permission.SEND_SMS"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4371,11 +3846,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4393,11 +3865,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4415,11 +3884,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4438,11 +3904,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -4458,11 +3921,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4478,11 +3938,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4498,11 +3955,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4520,11 +3974,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4543,11 +3994,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
             }
         ]
     },
@@ -4562,11 +4010,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4582,11 +4027,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4602,11 +4044,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -4626,12 +4065,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.MODIFY_PHONE_STATE",
                     "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4647,12 +4085,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.READ_PHONE_STATE",
                     "android.permission.ACCESS_COARSE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4668,11 +4105,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4688,12 +4122,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_NETWORK_STATE",
                     "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4709,12 +4142,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.ACCESS_NETWORK_STATE",
                     "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4733,11 +4165,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -4753,11 +4182,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4773,12 +4199,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.READ_PRIVILEGED_PHONE_STATE",
                     "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4794,11 +4219,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4814,11 +4236,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4834,11 +4253,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -4856,11 +4272,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -4876,11 +4289,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4896,11 +4306,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -4916,11 +4323,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -4938,11 +4342,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -4958,13 +4359,12 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "any_of": [
                     "android.permission.READ_PHONE_STATE",
                     "android.permission.READ_SMS",
                     "android.permission.READ_PHONE_NUMBERS"
-                ],
-                "any_of": true,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -4980,11 +4380,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -5002,11 +4399,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -5022,11 +4416,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5042,11 +4433,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -5062,11 +4450,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -5082,11 +4467,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5102,11 +4484,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5122,11 +4501,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5142,11 +4518,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5162,11 +4535,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -5182,11 +4552,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PRIVILEGED_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },
@@ -5202,11 +4569,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5224,11 +4588,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.READ_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -5247,11 +4608,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.ACCESS_FINE_LOCATION"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
             }
         ]
     },
@@ -5271,11 +4629,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.CALL_PHONE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.CALL_PHONE"
             }
         ]
     },
@@ -5293,11 +4648,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -5313,11 +4665,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -5335,11 +4684,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.MODIFY_PHONE_STATE"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
             }
         ]
     },
@@ -5358,11 +4704,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
             }
         ]
     },
@@ -5382,11 +4725,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
             }
         ]
     },
@@ -5405,11 +4745,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
             }
         ]
     },
@@ -5429,11 +4766,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"
             }
         ]
     },
@@ -5455,12 +4789,11 @@
         },
         "permission_groups": [
             {
-                "permissions": [
+                "conditional": false,
+                "all_of": [
                     "android.permission.DUMP",
                     "android.permission.PACKAGE_USAGE_STATS"
-                ],
-                "any_of": false,
-                "conditional": false
+                ]
             }
         ]
     },
@@ -5478,11 +4811,8 @@
         },
         "permission_groups": [
             {
-                "permissions": [
-                    "android.permission.WRITE_SECURE_SETTINGS"
-                ],
-                "any_of": false,
-                "conditional": false
+                "conditional": false,
+                "value": "android.permission.WRITE_SECURE_SETTINGS"
             }
         ]
     }

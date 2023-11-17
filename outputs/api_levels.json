@@ -324,5 +324,14 @@
         ],
         "api": 33,
         "ndk": 8
+    },
+    "34": {
+        "name": "Android14",
+        "version_range": "14",
+        "versions": [
+            "14.0.0"
+        ],
+        "api": 34,
+        "ndk": 8
     }
 }
