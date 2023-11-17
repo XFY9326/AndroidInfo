@@ -29,6 +29,8 @@ Permissions with API level: [View](https://github.com/XFY9326/AndroidInfo/tree/m
 
 API-Permission Mappings (Only support API >= 26): [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permission_mappings)
 
+**Attention: This data is not complete, please use it with caution.**
+
 Latest ContentProviders: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/providers/all_providers.json)
 
 Latest ContentProviders authority classes: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/providers/authority_classes.json)
