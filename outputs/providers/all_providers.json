@@ -1080,18 +1080,6 @@
     },
     {
         "package": "com.android.systemui",
-        "name": "com.android.keyguard.clock.ClockOptionsProvider",
-        "authorities": [
-            "com.android.keyguard.clock"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.systemui",
         "name": "com.android.systemui.keyguard.CustomizationProvider",
         "authorities": [
             "com.android.systemui.customization"
@@ -1228,6 +1216,18 @@
         "name": "com.android.tv.settings.name.SuggestionContentProvider",
         "authorities": [
             "com.android.tv.settings.name"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.chassis.car.ui.plugin",
+        "name": "com.android.car.ui.plugin.PluginNameProvider",
+        "authorities": [
+            "com.android.car.ui.plugin"
         ],
         "exported": true,
         "read_permission": null,

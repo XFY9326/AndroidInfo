@@ -1,184 +1,121 @@
 {
-    "1": {
-        "name": null,
-        "version_range": "1.0",
+    "34": {
+        "name": "Android14",
+        "version_range": "14",
         "versions": [
-            "1.0"
+            "14.0.0"
         ],
-        "api": 1,
-        "ndk": null
+        "api": 34
     },
-    "2": {
-        "name": null,
-        "version_range": "1.1",
+    "33": {
+        "name": "Android13",
+        "version_range": "13",
         "versions": [
-            "1.1"
+            "13.0.0"
         ],
-        "api": 2,
-        "ndk": null
+        "api": 33
     },
-    "3": {
-        "name": "Cupcake",
-        "version_range": "1.5",
+    "32": {
+        "name": "Android12L",
+        "version_range": "12",
         "versions": [
-            "1.5"
+            "12.1.0"
         ],
-        "api": 3,
-        "ndk": 1
+        "api": 32
     },
-    "4": {
-        "name": "Donut",
-        "version_range": "1.6",
+    "31": {
+        "name": "Android12",
+        "version_range": "12",
         "versions": [
-            "1.6"
+            "12.0.0"
         ],
-        "api": 4,
-        "ndk": 2
+        "api": 31
     },
-    "5": {
-        "name": "Eclair",
-        "version_range": "2.0",
+    "30": {
+        "name": "Android11",
+        "version_range": "11",
         "versions": [
-            "2.0"
+            "11.0.0"
         ],
-        "api": 5,
-        "ndk": 2
+        "api": 30
     },
-    "6": {
-        "name": "Eclair",
-        "version_range": "2.0.1",
+    "29": {
+        "name": "Android10",
+        "version_range": "10",
         "versions": [
-            "2.0.1"
+            "10.0.0"
         ],
-        "api": 6,
-        "ndk": 2
+        "api": 29
     },
-    "7": {
-        "name": "Eclair",
-        "version_range": "2.1",
+    "28": {
+        "name": "Pie",
+        "version_range": "9",
         "versions": [
-            "2.1"
+            "9.0.0"
         ],
-        "api": 7,
-        "ndk": 3
+        "api": 28
     },
-    "8": {
-        "name": "Froyo",
-        "version_range": "2.2.x",
+    "27": {
+        "name": "Oreo",
+        "version_range": "8.1.0",
         "versions": [
-            "2.2",
-            "2.2.1",
-            "2.2.2",
-            "2.2.3"
+            "8.1.0"
         ],
-        "api": 8,
-        "ndk": 4
+        "api": 27
     },
-    "9": {
-        "name": "Gingerbread",
-        "version_range": "2.3 - 2.3.2",
+    "26": {
+        "name": "Oreo",
+        "version_range": "8.0.0",
         "versions": [
-            "2.3",
-            "2.3.1",
-            "2.3.2"
+            "8.0.0"
         ],
-        "api": 9,
-        "ndk": 5
+        "api": 26
     },
-    "10": {
-        "name": "Gingerbread",
-        "version_range": "2.3.3 - 2.3.7",
+    "25": {
+        "name": "Nougat",
+        "version_range": "7.1",
         "versions": [
-            "2.3.3",
-            "2.3.4",
-            "2.3.5",
-            "2.3.6",
-            "2.3.7"
+            "7.1.0",
+            "7.1.1",
+            "7.1.2"
         ],
-        "api": 10,
-        "ndk": 5
+        "api": 25
     },
-    "11": {
-        "name": "Honeycomb",
-        "version_range": "3.0",
+    "24": {
+        "name": "Nougat",
+        "version_range": "7.0",
         "versions": [
-            "3.0"
+            "7.0.0"
         ],
-        "api": 11,
-        "ndk": 5
+        "api": 24
     },
-    "12": {
-        "name": "Honeycomb",
-        "version_range": "3.1",
+    "23": {
+        "name": "Marshmallow",
+        "version_range": "6.0",
         "versions": [
-            "3.1"
+            "6.0.0",
+            "6.0.1"
         ],
-        "api": 12,
-        "ndk": 6
+        "api": 23
     },
-    "13": {
-        "name": "Honeycomb",
-        "version_range": "3.2.x",
+    "22": {
+        "name": "Lollipop",
+        "version_range": "5.1",
         "versions": [
-            "3.2",
-            "3.2.1",
-            "3.2.2",
-            "3.2.4",
-            "3.2.6"
+            "5.1.1"
         ],
-        "api": 13,
-        "ndk": 6
+        "api": 22
     },
-    "14": {
-        "name": "Ice Cream Sandwich",
-        "version_range": "4.0.1 - 4.0.2",
+    "21": {
+        "name": "Lollipop",
+        "version_range": "5.0",
         "versions": [
-            "4.0.1",
-            "4.0.2"
+            "5.0.0",
+            "5.0.1",
+            "5.0.2",
+            "5.1.0"
         ],
-        "api": 14,
-        "ndk": 7
-    },
-    "15": {
-        "name": "Ice Cream Sandwich",
-        "version_range": "4.0.3 - 4.0.4",
-        "versions": [
-            "4.0.3",
-            "4.0.4"
-        ],
-        "api": 15,
-        "ndk": 8
-    },
-    "16": {
-        "name": "Jelly Bean",
-        "version_range": "4.1.x",
-        "versions": [
-            "4.1.1",
-            "4.1.2"
-        ],
-        "api": 16,
-        "ndk": 8
-    },
-    "17": {
-        "name": "Jelly Bean",
-        "version_range": "4.2.x",
-        "versions": [
-            "4.2",
-            "4.2.1",
-            "4.2.2"
-        ],
-        "api": 17,
-        "ndk": 8
-    },
-    "18": {
-        "name": "Jelly Bean",
-        "version_range": "4.3.x",
-        "versions": [
-            "4.3",
-            "4.3.1"
-        ],
-        "api": 18,
-        "ndk": 8
+        "api": 21
     },
     "19": {
         "name": "KitKat",
@@ -190,8 +127,170 @@
             "4.4.3",
             "4.4.4"
         ],
-        "api": 19,
-        "ndk": 8
+        "api": 19
+    },
+    "18": {
+        "name": "Jelly Bean",
+        "version_range": "4.3.x",
+        "versions": [
+            "4.3",
+            "4.3.1"
+        ],
+        "api": 18
+    },
+    "17": {
+        "name": "Jelly Bean",
+        "version_range": "4.2.x",
+        "versions": [
+            "4.2",
+            "4.2.1",
+            "4.2.2"
+        ],
+        "api": 17
+    },
+    "16": {
+        "name": "Jelly Bean",
+        "version_range": "4.1.x",
+        "versions": [
+            "4.1.1",
+            "4.1.2"
+        ],
+        "api": 16
+    },
+    "15": {
+        "name": "Ice Cream Sandwich",
+        "version_range": "4.0.3 - 4.0.4",
+        "versions": [
+            "4.0.3",
+            "4.0.4"
+        ],
+        "api": 15
+    },
+    "14": {
+        "name": "Ice Cream Sandwich",
+        "version_range": "4.0.1 - 4.0.2",
+        "versions": [
+            "4.0.1",
+            "4.0.2"
+        ],
+        "api": 14
+    },
+    "13": {
+        "name": "Honeycomb",
+        "version_range": "3.2.x",
+        "versions": [
+            "3.2",
+            "3.2.1",
+            "3.2.2",
+            "3.2.4",
+            "3.2.6"
+        ],
+        "api": 13
+    },
+    "12": {
+        "name": "Honeycomb",
+        "version_range": "3.1",
+        "versions": [
+            "3.1"
+        ],
+        "api": 12
+    },
+    "11": {
+        "name": "Honeycomb",
+        "version_range": "3.0",
+        "versions": [
+            "3.0"
+        ],
+        "api": 11
+    },
+    "10": {
+        "name": "Gingerbread",
+        "version_range": "2.3.3 - 2.3.7",
+        "versions": [
+            "2.3.3",
+            "2.3.4",
+            "2.3.5",
+            "2.3.6",
+            "2.3.7"
+        ],
+        "api": 10
+    },
+    "9": {
+        "name": "Gingerbread",
+        "version_range": "2.3 - 2.3.2",
+        "versions": [
+            "2.3",
+            "2.3.1",
+            "2.3.2"
+        ],
+        "api": 9
+    },
+    "8": {
+        "name": "Froyo",
+        "version_range": "2.2.x",
+        "versions": [
+            "2.2",
+            "2.2.1",
+            "2.2.2",
+            "2.2.3"
+        ],
+        "api": 8
+    },
+    "7": {
+        "name": "Eclair",
+        "version_range": "2.1",
+        "versions": [
+            "2.1"
+        ],
+        "api": 7
+    },
+    "6": {
+        "name": "Eclair",
+        "version_range": "2.0.1",
+        "versions": [
+            "2.0.1"
+        ],
+        "api": 6
+    },
+    "5": {
+        "name": "Eclair",
+        "version_range": "2.0",
+        "versions": [
+            "2.0"
+        ],
+        "api": 5
+    },
+    "4": {
+        "name": "Donut",
+        "version_range": "1.6",
+        "versions": [
+            "1.6"
+        ],
+        "api": 4
+    },
+    "3": {
+        "name": "Cupcake",
+        "version_range": "1.5",
+        "versions": [
+            "1.5"
+        ],
+        "api": 3
+    },
+    "2": {
+        "name": null,
+        "version_range": "1.1",
+        "versions": [
+            "1.1"
+        ],
+        "api": 2
+    },
+    "1": {
+        "name": null,
+        "version_range": "1.0",
+        "versions": [
+            "1.0"
+        ],
+        "api": 1
     },
     "20": {
         "name": "KitKat Wear",
@@ -199,139 +298,6 @@
         "versions": [
             "4.4w"
         ],
-        "api": 20,
-        "ndk": 8
-    },
-    "21": {
-        "name": "Lollipop",
-        "version_range": "5.0",
-        "versions": [
-            "5.0.0",
-            "5.0.1",
-            "5.0.2",
-            "5.1.0"
-        ],
-        "api": 21,
-        "ndk": 8
-    },
-    "22": {
-        "name": "Lollipop",
-        "version_range": "5.1",
-        "versions": [
-            "5.1.1"
-        ],
-        "api": 22,
-        "ndk": 8
-    },
-    "23": {
-        "name": "Marshmallow",
-        "version_range": "6.0",
-        "versions": [
-            "6.0.0",
-            "6.0.1"
-        ],
-        "api": 23,
-        "ndk": 8
-    },
-    "24": {
-        "name": "Nougat",
-        "version_range": "7.0",
-        "versions": [
-            "7.0.0"
-        ],
-        "api": 24,
-        "ndk": 8
-    },
-    "25": {
-        "name": "Nougat",
-        "version_range": "7.1",
-        "versions": [
-            "7.1.0",
-            "7.1.1",
-            "7.1.2"
-        ],
-        "api": 25,
-        "ndk": 8
-    },
-    "26": {
-        "name": "Oreo",
-        "version_range": "8.0.0",
-        "versions": [
-            "8.0.0"
-        ],
-        "api": 26,
-        "ndk": 8
-    },
-    "27": {
-        "name": "Oreo",
-        "version_range": "8.1.0",
-        "versions": [
-            "8.1.0"
-        ],
-        "api": 27,
-        "ndk": 8
-    },
-    "28": {
-        "name": "Pie",
-        "version_range": "9",
-        "versions": [
-            "9.0.0"
-        ],
-        "api": 28,
-        "ndk": 8
-    },
-    "29": {
-        "name": "Android10",
-        "version_range": "10",
-        "versions": [
-            "10.0.0"
-        ],
-        "api": 29,
-        "ndk": 8
-    },
-    "30": {
-        "name": "Android11",
-        "version_range": "11",
-        "versions": [
-            "11.0.0"
-        ],
-        "api": 30,
-        "ndk": 8
-    },
-    "31": {
-        "name": "Android12",
-        "version_range": "12",
-        "versions": [
-            "12.0.0"
-        ],
-        "api": 31,
-        "ndk": 8
-    },
-    "32": {
-        "name": "Android12L",
-        "version_range": "12",
-        "versions": [
-            "12.1.0"
-        ],
-        "api": 32,
-        "ndk": 8
-    },
-    "33": {
-        "name": "Android13",
-        "version_range": "13",
-        "versions": [
-            "13.0.0"
-        ],
-        "api": 33,
-        "ndk": 8
-    },
-    "34": {
-        "name": "Android14",
-        "version_range": "14",
-        "versions": [
-            "14.0.0"
-        ],
-        "api": 34,
-        "ndk": 8
+        "api": 20
     }
 }

@@ -5188,12 +5188,11 @@
         "api": {
             "class_name": "android.hardware.camera2.CameraManager",
             "name": "isConcurrentSessionConfigurationSupported",
-            "signature": "(Ljava/util/Map<java/lang/String;Landroid/hardware/camera2/params/SessionConfiguration>;)Z",
-            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->isConcurrentSessionConfigurationSupported(Ljava/util/Map<java/lang/String;Landroid/hardware/camera2/params/SessionConfiguration>;)Z",
+            "signature": "(Ljava/util/Map;)Z",
+            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->isConcurrentSessionConfigurationSupported(Ljava/util/Map;)Z",
             "type": "method",
             "args": [
-                "java.util.Map<java.lang.String",
-                "android.hardware.camera2.params.SessionConfiguration>"
+                "java.util.Map<java.lang.String,android.hardware.camera2.params.SessionConfiguration>"
             ],
             "return_value": "boolean"
         },
@@ -6947,15 +6946,14 @@
         "api": {
             "class_name": "android.net.wifi.WifiManager",
             "name": "reportCreateInterfaceImpact",
-            "signature": "(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer<java/lang/Boolean;Ljava/util/Set;)V",
-            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->reportCreateInterfaceImpact(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer<java/lang/Boolean;Ljava/util/Set;)V",
+            "signature": "(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->reportCreateInterfaceImpact(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer;)V",
             "type": "method",
             "args": [
                 "int",
                 "boolean",
                 "java.util.concurrent.Executor",
-                "java.util.function.BiConsumer<java.lang.Boolean",
-                "java.util.Set<android.net.wifi.WifiManager.InterfaceCreationImpact>>"
+                "java.util.function.BiConsumer<java.lang.Boolean,java.util.Set<android.net.wifi.WifiManager.InterfaceCreationImpact>>"
             ],
             "return_value": "void"
         },
@@ -9187,12 +9185,11 @@
         "api": {
             "class_name": "android.telephony.PhoneStateListener",
             "name": "onEmergencyNumberListChanged",
-            "signature": "(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
-            "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onEmergencyNumberListChanged(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
+            "signature": "(Ljava/util/Map;)V",
+            "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onEmergencyNumberListChanged(Ljava/util/Map;)V",
             "type": "method",
             "args": [
-                "java.util.Map<java.lang.Integer",
-                "java.util.List<android.telephony.emergency.EmergencyNumber>>"
+                "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>"
             ],
             "return_value": "void"
         },
@@ -9966,12 +9963,11 @@
         "api": {
             "class_name": "android.telephony.TelephonyCallback$EmergencyNumberListListener",
             "name": "onEmergencyNumberListChanged",
-            "signature": "(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
-            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$EmergencyNumberListListener;->onEmergencyNumberListChanged(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
+            "signature": "(Ljava/util/Map;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$EmergencyNumberListListener;->onEmergencyNumberListChanged(Ljava/util/Map;)V",
             "type": "method",
             "args": [
-                "java.util.Map<java.lang.Integer",
-                "java.util.List<android.telephony.emergency.EmergencyNumber>>"
+                "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>"
             ],
             "return_value": "void"
         },
@@ -11082,13 +11078,12 @@
         "api": {
             "class_name": "android.telephony.TelephonyManager",
             "name": "getNetworkSlicingConfiguration",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
-            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getNetworkSlicingConfiguration(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getNetworkSlicingConfiguration(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.telephony.data.NetworkSlicingConfig",
-                "android.telephony.TelephonyManager.NetworkSlicingException>"
+                "android.os.OutcomeReceiver<android.telephony.data.NetworkSlicingConfig,android.telephony.TelephonyManager.NetworkSlicingException>"
             ],
             "return_value": "void"
         },

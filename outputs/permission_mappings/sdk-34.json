@@ -576,13 +576,12 @@
         "api": {
             "class_name": "android.adservices.adid.AdIdManager",
             "name": "getAdId",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adid/AdId;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/adid/AdIdManager;->getAdId(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adid/AdId;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/adid/AdIdManager;->getAdId(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.adservices.adid.AdId",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<android.adservices.adid.AdId,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -597,14 +596,13 @@
         "api": {
             "class_name": "android.adservices.adselection.AdSelectionManager",
             "name": "reportImpression",
-            "signature": "(Landroid/adservices/adselection/ReportImpressionRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/adselection/AdSelectionManager;->reportImpression(Landroid/adservices/adselection/ReportImpressionRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/adselection/ReportImpressionRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/AdSelectionManager;->reportImpression(Landroid/adservices/adselection/ReportImpressionRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.adselection.ReportImpressionRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -619,14 +617,13 @@
         "api": {
             "class_name": "android.adservices.adselection.AdSelectionManager",
             "name": "selectAds",
-            "signature": "(Landroid/adservices/adselection/AdSelectionConfig;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adselection/AdSelectionOutcome;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/adselection/AdSelectionManager;->selectAds(Landroid/adservices/adselection/AdSelectionConfig;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/adselection/AdSelectionOutcome;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/adselection/AdSelectionConfig;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/AdSelectionManager;->selectAds(Landroid/adservices/adselection/AdSelectionConfig;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.adselection.AdSelectionConfig",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.adservices.adselection.AdSelectionOutcome",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<android.adservices.adselection.AdSelectionOutcome,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -641,14 +638,13 @@
         "api": {
             "class_name": "android.adservices.adselection.TestAdSelectionManager",
             "name": "overrideAdSelectionConfigRemoteInfo",
-            "signature": "(Landroid/adservices/adselection/AddAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->overrideAdSelectionConfigRemoteInfo(Landroid/adservices/adselection/AddAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/adselection/AddAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->overrideAdSelectionConfigRemoteInfo(Landroid/adservices/adselection/AddAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.adselection.AddAdSelectionOverrideRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -663,14 +659,13 @@
         "api": {
             "class_name": "android.adservices.adselection.TestAdSelectionManager",
             "name": "removeAdSelectionConfigRemoteInfoOverride",
-            "signature": "(Landroid/adservices/adselection/RemoveAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->removeAdSelectionConfigRemoteInfoOverride(Landroid/adservices/adselection/RemoveAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/adselection/RemoveAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->removeAdSelectionConfigRemoteInfoOverride(Landroid/adservices/adselection/RemoveAdSelectionOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.adselection.RemoveAdSelectionOverrideRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -685,13 +680,12 @@
         "api": {
             "class_name": "android.adservices.adselection.TestAdSelectionManager",
             "name": "resetAllAdSelectionConfigRemoteOverrides",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->resetAllAdSelectionConfigRemoteOverrides(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/adselection/TestAdSelectionManager;->resetAllAdSelectionConfigRemoteOverrides(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -706,14 +700,13 @@
         "api": {
             "class_name": "android.adservices.customaudience.CustomAudienceManager",
             "name": "joinCustomAudience",
-            "signature": "(Landroid/adservices/customaudience/JoinCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/customaudience/CustomAudienceManager;->joinCustomAudience(Landroid/adservices/customaudience/JoinCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/customaudience/JoinCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/CustomAudienceManager;->joinCustomAudience(Landroid/adservices/customaudience/JoinCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.customaudience.JoinCustomAudienceRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -728,14 +721,13 @@
         "api": {
             "class_name": "android.adservices.customaudience.CustomAudienceManager",
             "name": "leaveCustomAudience",
-            "signature": "(Landroid/adservices/customaudience/LeaveCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/customaudience/CustomAudienceManager;->leaveCustomAudience(Landroid/adservices/customaudience/LeaveCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/customaudience/LeaveCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/CustomAudienceManager;->leaveCustomAudience(Landroid/adservices/customaudience/LeaveCustomAudienceRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.customaudience.LeaveCustomAudienceRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -750,14 +742,13 @@
         "api": {
             "class_name": "android.adservices.customaudience.TestCustomAudienceManager",
             "name": "overrideCustomAudienceRemoteInfo",
-            "signature": "(Landroid/adservices/customaudience/AddCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->overrideCustomAudienceRemoteInfo(Landroid/adservices/customaudience/AddCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/customaudience/AddCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->overrideCustomAudienceRemoteInfo(Landroid/adservices/customaudience/AddCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.customaudience.AddCustomAudienceOverrideRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -772,14 +763,13 @@
         "api": {
             "class_name": "android.adservices.customaudience.TestCustomAudienceManager",
             "name": "removeCustomAudienceRemoteInfoOverride",
-            "signature": "(Landroid/adservices/customaudience/RemoveCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->removeCustomAudienceRemoteInfoOverride(Landroid/adservices/customaudience/RemoveCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/customaudience/RemoveCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->removeCustomAudienceRemoteInfoOverride(Landroid/adservices/customaudience/RemoveCustomAudienceOverrideRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.customaudience.RemoveCustomAudienceOverrideRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -794,13 +784,12 @@
         "api": {
             "class_name": "android.adservices.customaudience.TestCustomAudienceManager",
             "name": "resetAllCustomAudienceOverrides",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->resetAllCustomAudienceOverrides(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/customaudience/TestCustomAudienceManager;->resetAllCustomAudienceOverrides(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -815,13 +804,12 @@
         "api": {
             "class_name": "android.adservices.measurement.MeasurementManager",
             "name": "getMeasurementApiStatus",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Integer;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->getMeasurementApiStatus(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Integer;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->getMeasurementApiStatus(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Integer",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Integer,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -836,15 +824,14 @@
         "api": {
             "class_name": "android.adservices.measurement.MeasurementManager",
             "name": "registerSource",
-            "signature": "(Landroid/net/Uri;Landroid/view/InputEvent;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerSource(Landroid/net/Uri;Landroid/view/InputEvent;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/net/Uri;Landroid/view/InputEvent;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerSource(Landroid/net/Uri;Landroid/view/InputEvent;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.net.Uri",
                 "android.view.InputEvent",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -859,14 +846,13 @@
         "api": {
             "class_name": "android.adservices.measurement.MeasurementManager",
             "name": "registerTrigger",
-            "signature": "(Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerTrigger(Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerTrigger(Landroid/net/Uri;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.net.Uri",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -881,14 +867,13 @@
         "api": {
             "class_name": "android.adservices.measurement.MeasurementManager",
             "name": "registerWebSource",
-            "signature": "(Landroid/adservices/measurement/WebSourceRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerWebSource(Landroid/adservices/measurement/WebSourceRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/measurement/WebSourceRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerWebSource(Landroid/adservices/measurement/WebSourceRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.measurement.WebSourceRegistrationRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -903,14 +888,13 @@
         "api": {
             "class_name": "android.adservices.measurement.MeasurementManager",
             "name": "registerWebTrigger",
-            "signature": "(Landroid/adservices/measurement/WebTriggerRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerWebTrigger(Landroid/adservices/measurement/WebTriggerRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Object;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/measurement/WebTriggerRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/measurement/MeasurementManager;->registerWebTrigger(Landroid/adservices/measurement/WebTriggerRegistrationRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.measurement.WebTriggerRegistrationRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Object",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -925,14 +909,13 @@
         "api": {
             "class_name": "android.adservices.topics.TopicsManager",
             "name": "getTopics",
-            "signature": "(Landroid/adservices/topics/GetTopicsRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/topics/GetTopicsResponse;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/adservices/topics/TopicsManager;->getTopics(Landroid/adservices/topics/GetTopicsRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/adservices/topics/GetTopicsResponse;Ljava/lang/Exception>;)V",
+            "signature": "(Landroid/adservices/topics/GetTopicsRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/adservices/topics/TopicsManager;->getTopics(Landroid/adservices/topics/GetTopicsRequest;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "android.adservices.topics.GetTopicsRequest",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.adservices.topics.GetTopicsResponse",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<android.adservices.topics.GetTopicsResponse,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -7757,13 +7740,12 @@
         "api": {
             "class_name": "android.devicelock.DeviceLockManager",
             "name": "getDeviceId",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/devicelock/DeviceId;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->getDeviceId(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/devicelock/DeviceId;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->getDeviceId(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.devicelock.DeviceId",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<android.devicelock.DeviceId,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -7778,13 +7760,12 @@
         "api": {
             "class_name": "android.devicelock.DeviceLockManager",
             "name": "isDeviceLocked",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Boolean;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->isDeviceLocked(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Boolean;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->isDeviceLocked(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Boolean",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Boolean,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -7799,13 +7780,12 @@
         "api": {
             "class_name": "android.devicelock.DeviceLockManager",
             "name": "lockDevice",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->lockDevice(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->lockDevice(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Void",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Void,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -7820,13 +7800,12 @@
         "api": {
             "class_name": "android.devicelock.DeviceLockManager",
             "name": "unlockDevice",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
-            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->unlockDevice(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<java/lang/Void;Ljava/lang/Exception>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/devicelock/DeviceLockManager;->unlockDevice(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<java.lang.Void",
-                "java.lang.Exception>"
+                "android.os.OutcomeReceiver<java.lang.Void,java.lang.Exception>"
             ],
             "return_value": "void"
         },
@@ -7990,12 +7969,11 @@
         "api": {
             "class_name": "android.hardware.camera2.CameraManager",
             "name": "isConcurrentSessionConfigurationSupported",
-            "signature": "(Ljava/util/Map<java/lang/String;Landroid/hardware/camera2/params/SessionConfiguration>;)Z",
-            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->isConcurrentSessionConfigurationSupported(Ljava/util/Map<java/lang/String;Landroid/hardware/camera2/params/SessionConfiguration>;)Z",
+            "signature": "(Ljava/util/Map;)Z",
+            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->isConcurrentSessionConfigurationSupported(Ljava/util/Map;)Z",
             "type": "method",
             "args": [
-                "java.util.Map<java.lang.String",
-                "android.hardware.camera2.params.SessionConfiguration>"
+                "java.util.Map<java.lang.String,android.hardware.camera2.params.SessionConfiguration>"
             ],
             "return_value": "boolean"
         },
@@ -9889,15 +9867,14 @@
         "api": {
             "class_name": "android.net.wifi.WifiManager",
             "name": "reportCreateInterfaceImpact",
-            "signature": "(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer<java/lang/Boolean;Ljava/util/Set;)V",
-            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->reportCreateInterfaceImpact(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer<java/lang/Boolean;Ljava/util/Set;)V",
+            "signature": "(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer;)V",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->reportCreateInterfaceImpact(IZLjava/util/concurrent/Executor;Ljava/util/function/BiConsumer;)V",
             "type": "method",
             "args": [
                 "int",
                 "boolean",
                 "java.util.concurrent.Executor",
-                "java.util.function.BiConsumer<java.lang.Boolean",
-                "java.util.Set<android.net.wifi.WifiManager.InterfaceCreationImpact>>"
+                "java.util.function.BiConsumer<java.lang.Boolean,java.util.Set<android.net.wifi.WifiManager.InterfaceCreationImpact>>"
             ],
             "return_value": "void"
         },
@@ -11824,14 +11801,13 @@
         "api": {
             "class_name": "android.telecom.TelecomManager",
             "name": "addCall",
-            "signature": "(Landroid/telecom/CallAttributes;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telecom/CallControl;Landroid/telecom/CallException>;Landroid/telecom/CallControlCallback;Landroid/telecom/CallEventCallback;)V",
-            "dalvik_descriptor": "Landroid/telecom/TelecomManager;->addCall(Landroid/telecom/CallAttributes;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telecom/CallControl;Landroid/telecom/CallException>;Landroid/telecom/CallControlCallback;Landroid/telecom/CallEventCallback;)V",
+            "signature": "(Landroid/telecom/CallAttributes;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;Landroid/telecom/CallControlCallback;Landroid/telecom/CallEventCallback;)V",
+            "dalvik_descriptor": "Landroid/telecom/TelecomManager;->addCall(Landroid/telecom/CallAttributes;Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;Landroid/telecom/CallControlCallback;Landroid/telecom/CallEventCallback;)V",
             "type": "method",
             "args": [
                 "android.telecom.CallAttributes",
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.telecom.CallControl",
-                "android.telecom.CallException>",
+                "android.os.OutcomeReceiver<android.telecom.CallControl,android.telecom.CallException>",
                 "android.telecom.CallControlCallback",
                 "android.telecom.CallEventCallback"
             ],
@@ -12409,12 +12385,11 @@
         "api": {
             "class_name": "android.telephony.PhoneStateListener",
             "name": "onEmergencyNumberListChanged",
-            "signature": "(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
-            "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onEmergencyNumberListChanged(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
+            "signature": "(Ljava/util/Map;)V",
+            "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onEmergencyNumberListChanged(Ljava/util/Map;)V",
             "type": "method",
             "args": [
-                "java.util.Map<java.lang.Integer",
-                "java.util.List<android.telephony.emergency.EmergencyNumber>>"
+                "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>"
             ],
             "return_value": "void"
         },
@@ -13208,12 +13183,11 @@
         "api": {
             "class_name": "android.telephony.TelephonyCallback$EmergencyNumberListListener",
             "name": "onEmergencyNumberListChanged",
-            "signature": "(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
-            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$EmergencyNumberListListener;->onEmergencyNumberListChanged(Ljava/util/Map<java/lang/Integer;Ljava/util/List;)V",
+            "signature": "(Ljava/util/Map;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$EmergencyNumberListListener;->onEmergencyNumberListChanged(Ljava/util/Map;)V",
             "type": "method",
             "args": [
-                "java.util.Map<java.lang.Integer",
-                "java.util.List<android.telephony.emergency.EmergencyNumber>>"
+                "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>"
             ],
             "return_value": "void"
         },
@@ -14362,13 +14336,12 @@
         "api": {
             "class_name": "android.telephony.TelephonyManager",
             "name": "getNetworkSlicingConfiguration",
-            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
-            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getNetworkSlicingConfiguration(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver<android/telephony/data/NetworkSlicingConfig;Landroid/telephony/TelephonyManager/NetworkSlicingException>;)V",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getNetworkSlicingConfiguration(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
             "type": "method",
             "args": [
                 "java.util.concurrent.Executor",
-                "android.os.OutcomeReceiver<android.telephony.data.NetworkSlicingConfig",
-                "android.telephony.TelephonyManager.NetworkSlicingException>"
+                "android.os.OutcomeReceiver<android.telephony.data.NetworkSlicingConfig,android.telephony.TelephonyManager.NetworkSlicingException>"
             ],
             "return_value": "void"
         },

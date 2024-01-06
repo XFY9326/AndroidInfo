@@ -110,7 +110,6 @@ class AndroidAPILevel(DataClassJsonMixin):
     version_range: str
     versions: list[str]
     api: int
-    ndk: Optional[int]
 
     def __str__(self) -> str:
         if self.name is not None:
@@ -169,7 +168,7 @@ class AndroidVersions:
         def _transform_empty_str(text: str) -> Optional[str]:
             return text if len(text) > 0 else None
 
-        table_body = soup.find(id="build").find_next("tbody")
+        table_body = soup.find(id="source-code-tags-and-builds").find_next("tbody")
         build_id_elements = table_body.select("tr > td:nth-child(1)")
         tag_elements = table_body.select("tr > td:nth-child(2)")
         name_elements = table_body.select("tr > td:nth-child(3)")
@@ -202,17 +201,6 @@ class AndroidVersions:
             for tag, e2 in zip(tags, build_id_elements)
         ]
 
-    @staticmethod
-    def _api_level_ndk_fix(api_levels: list[AndroidAPILevel]) -> list[AndroidAPILevel]:
-        api_levels = sorted(api_levels)
-        current_ndk: Optional[int] = None
-        for api_level in api_levels:
-            if api_level.ndk is not None:
-                current_ndk = api_level.ndk
-            else:
-                api_level.ndk = current_ndk
-        return api_levels
-
     def _get_api_levels(self, soup: BeautifulSoup, api_level_mappings: dict[int, list[str]]) -> list[AndroidAPILevel]:
         def _parse_codename(codename: str) -> Optional[str]:
             return codename if "no codename" not in codename else None
@@ -223,32 +211,27 @@ class AndroidVersions:
                 name="KitKat Wear",
                 version_range="4.4w",
                 versions=api_level_mappings[20] if 20 in api_level_mappings else [],
-                api=20,
-                ndk=None
+                api=20
             )
 
-        def _parse_api_ndk(api_ndk_text: str) -> tuple[int, Optional[int]]:
+        def _parse_api_version(api_ndk_text: str) -> int:
             matcher = self._regex_api_ndk.match(api_ndk_text)
-            api_level = int(matcher.group(1))
-            ndk_level = matcher.group(3)
-            ndk_level = int(ndk_level) if ndk_level is not None else None
-            return api_level, ndk_level
+            return int(matcher.group(1))
 
-        section_title = soup.find(id="platform-code-names-versions-api-levels-and-ndk-releases")
-        table_body = section_title.find_next("tbody")
+        section_title = soup.find(id="source-code-tags-and-builds")
+        table_body = section_title.find_previous("tbody")
         codename_elements = table_body.select("tr > td:nth-child(1)")
         version_elements = table_body.select("tr > td:nth-child(2)")
-        api_ndk_elements = table_body.select("tr > td:nth-child(3)")
-        api_ndk = [_parse_api_ndk(e.text.strip()) for e in api_ndk_elements]
+        api_version_elements = table_body.select("tr > td:nth-child(3)")
+        api_versions = [_parse_api_version(e.text.strip()) for e in api_version_elements]
         api_levels = [
             AndroidAPILevel(
                 name=_parse_codename(e1.text.strip()),
                 version_range=e2.text.strip(),
                 versions=api_level_mappings[api] if api in api_level_mappings else [],
-                api=api,
-                ndk=ndk
+                api=api
             )
-            for e1, e2, (api, ndk) in zip(codename_elements, version_elements, api_ndk)
+            for e1, e2, api in zip(codename_elements, version_elements, api_versions)
         ]
         api_levels.append(_generate_kitkat_wear())
         return api_levels
@@ -271,7 +254,7 @@ class AndroidVersions:
             soup = await self._fetch_docs()
             self._build_versions = sorted(self._get_build_versions(soup) + self._get_honeycomb_build_versions(soup))
             api_mappings = await self.get_api_mappings(self._build_versions)
-            self._api_levels = self._api_level_ndk_fix(self._get_api_levels(soup, api_mappings))
+            self._api_levels = self._get_api_levels(soup, api_mappings)
 
     async def list_build_versions(self) -> list[AndroidBuildVersion]:
         await self._prepare()

@@ -285,7 +285,7 @@ class AndroidPlatformAPIPermissions:
     def _parse_args_list_str(text: str) -> list[str]:
         return [
             i.strip()
-            for i in (text.split(",") if "," in text else [text])
+            for i in (text.split(", ") if ", " in text else [text])
             if len(i.strip()) > 0
         ]
 
