@@ -23,6 +23,8 @@ Build versions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outpu
 
 Latest Permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permissions/permissions-REL.json)
 
+Latest SDK Permissions: [Download](https://github.com/XFY9326/AndroidInfo/raw/main/outputs/permissions/permissions-REL-SDK.json)
+
 Permissions with API level: [View](https://github.com/XFY9326/AndroidInfo/tree/main/outputs/permissions)
 
 ### API-Permission mappings

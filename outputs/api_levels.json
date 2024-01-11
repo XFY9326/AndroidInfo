@@ -117,6 +117,14 @@
         ],
         "api": 21
     },
+    "20": {
+        "name": "KitKat Wear",
+        "version_range": "4.4w",
+        "versions": [
+            "4.4w"
+        ],
+        "api": 20
+    },
     "19": {
         "name": "KitKat",
         "version_range": "4.4 - 4.4.4",
@@ -291,13 +299,5 @@
             "1.0"
         ],
         "api": 1
-    },
-    "20": {
-        "name": "KitKat Wear",
-        "version_range": "4.4w",
-        "versions": [
-            "4.4w"
-        ],
-        "api": 20
     }
 }

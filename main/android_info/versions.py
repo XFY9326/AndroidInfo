@@ -234,7 +234,7 @@ class AndroidVersions:
             for e1, e2, api in zip(codename_elements, version_elements, api_versions)
         ]
         api_levels.append(_generate_kitkat_wear())
-        return api_levels
+        return sorted(api_levels, key=lambda x: x.api, reverse=True)
 
     async def _list_android_versions(self, build_versions: list[AndroidBuildVersion]) -> list[str]:
         return sorted(set([i.version for i in build_versions]), key=cmp_to_key(self._version_compare.compare))

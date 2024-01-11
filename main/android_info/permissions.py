@@ -22,6 +22,9 @@ class PermissionComment(DataClassJsonMixin):
     test_api: bool
     hide: bool
 
+    def is_sdk(self) -> bool:
+        return not (self.system_api or self.test_api or self.hide)
+
 
 @dataclasses.dataclass(frozen=True)
 class AndroidPermissionGroup(DataClassJsonMixin):
@@ -38,6 +41,9 @@ class AndroidPermissionGroup(DataClassJsonMixin):
         if isinstance(other, AndroidPermissionGroup):
             return self.name == other.name
         return False
+
+    def is_sdk(self) -> bool:
+        return self.comment.is_sdk()
 
 
 @dataclasses.dataclass(frozen=True)
@@ -58,6 +64,13 @@ class AndroidPermission(DataClassJsonMixin):
         if isinstance(other, AndroidPermission):
             return self.name == other.name
         return False
+
+    def is_sdk(self) -> bool:
+        protect_levels = set(self.protection_levels)
+        return self.comment.is_sdk() and all([
+            i not in protect_levels
+            for i in ["signature", "knownSigner", "signatureOrSystem", "privileged", "internal", "development"]
+        ])
 
 
 @dataclasses.dataclass(frozen=True)
@@ -291,7 +304,13 @@ class AndroidFrameworkPermissions:
         }
         return AndroidPermissions(permission_groups, permissions)
 
-    async def get_permissions(self) -> AndroidPermissions:
+    async def get_permissions(self, sdk: bool = False) -> AndroidPermissions:
         if self._permissions is None:
             self._permissions = await self._get_content()
-        return self._permissions
+        if sdk:
+            return AndroidPermissions(
+                groups={k: v for k, v in self._permissions.groups.items() if v.is_sdk()},
+                permissions={k: v for k, v in self._permissions.permissions.items() if v.is_sdk()},
+            )
+        else:
+            return self._permissions
