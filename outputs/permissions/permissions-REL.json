@@ -5622,6 +5622,24 @@
                 "hide": false
             }
         },
+        "android.permission.MANAGE_DEVICE_POLICY_THREAD_NETWORK": {
+            "name": "android.permission.MANAGE_DEVICE_POLICY_THREAD_NETWORK",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "internal",
+                "role"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.MANAGE_DEVICE_POLICY_WINDOWS": {
             "name": "android.permission.MANAGE_DEVICE_POLICY_WINDOWS",
             "description": null,
