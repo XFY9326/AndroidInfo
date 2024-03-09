@@ -3,10 +3,10 @@ name: Automatic update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '25 0 * * 1'
 
 jobs:
-  update:
+  auto-update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
