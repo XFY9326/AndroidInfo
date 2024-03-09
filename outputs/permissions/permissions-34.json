@@ -1151,6 +1151,23 @@
                 "hide": true
             }
         },
+        "android.permission.CAMERA_HEADLESS_SYSTEM_USER": {
+            "name": "android.permission.CAMERA_HEADLESS_SYSTEM_USER",
+            "description": "This app can access camera as Headless System User.",
+            "label": "Allow an application or service to access camera as Headless System User.",
+            "group": "android.permission-group.UNDEFINED",
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.HIGH_SAMPLING_RATE_SENSORS": {
             "name": "android.permission.HIGH_SAMPLING_RATE_SENSORS",
             "description": "Allows the app to sample sensor data at a rate greater than 200 Hz",
@@ -2026,6 +2043,40 @@
                 "hide": true
             }
         },
+        "android.permission.MANAGE_REMOTE_AUTH": {
+            "name": "android.permission.MANAGE_REMOTE_AUTH",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.USE_REMOTE_AUTH": {
+            "name": "android.permission.USE_REMOTE_AUTH",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.READ_WIFI_CREDENTIAL": {
             "name": "android.permission.READ_WIFI_CREDENTIAL",
             "description": null,
@@ -2400,6 +2451,24 @@
                 "hide": true
             }
         },
+        "android.permission.THREAD_NETWORK_PRIVILEGED": {
+            "name": "android.permission.THREAD_NETWORK_PRIVILEGED",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.NETWORK_BYPASS_PRIVATE_DNS": {
             "name": "android.permission.NETWORK_BYPASS_PRIVATE_DNS",
             "description": null,
@@ -2540,6 +2609,23 @@
                 "hide": true
             }
         },
+        "android.permission.REGISTER_NSD_OFFLOAD_ENGINE": {
+            "name": "android.permission.REGISTER_NSD_OFFLOAD_ENGINE",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.BLUETOOTH": {
             "name": "android.permission.BLUETOOTH",
             "description": "Allows the app to view the configuration of the Bluetooth on the phone, and to make and accept connections with paired devices.",
@@ -2649,7 +2735,8 @@
             "group": null,
             "protection_levels": [
                 "signature",
-                "role"
+                "role",
+                "verifier"
             ],
             "permission_flags": [],
             "priority": 0,
@@ -2657,6 +2744,24 @@
                 "deprecated": false,
                 "system_api": true,
                 "test_api": true,
+                "hide": true
+            }
+        },
+        "android.permission.QUARANTINE_APPS": {
+            "name": "android.permission.QUARANTINE_APPS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "verifier"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
                 "hide": true
             }
         },
@@ -2767,8 +2872,8 @@
         },
         "android.permission.NFC_TRANSACTION_EVENT": {
             "name": "android.permission.NFC_TRANSACTION_EVENT",
-            "description": null,
-            "label": null,
+            "description": "Allows the app to receive information about transactions happening on a Secure Element.",
+            "label": "Secure Element transaction event",
             "group": null,
             "protection_levels": [
                 "normal"
@@ -6826,6 +6931,24 @@
                 "hide": true
             }
         },
+        "android.permission.ALWAYS_UPDATE_WALLPAPER": {
+            "name": "android.permission.ALWAYS_UPDATE_WALLPAPER",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "internal",
+                "role"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.SET_TIME": {
             "name": "android.permission.SET_TIME",
             "description": null,
@@ -8107,6 +8230,25 @@
                 "hide": false
             }
         },
+        "android.permission.READ_DROPBOX_DATA": {
+            "name": "android.permission.READ_DROPBOX_DATA",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged",
+                "development"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.SET_PROCESS_LIMIT": {
             "name": "android.permission.SET_PROCESS_LIMIT",
             "description": null,
@@ -8328,7 +8470,8 @@
             "label": null,
             "group": null,
             "protection_levels": [
-                "signature"
+                "signature",
+                "recents"
             ],
             "permission_flags": [],
             "priority": 0,
@@ -8512,7 +8655,8 @@
             "group": null,
             "protection_levels": [
                 "signature",
-                "module"
+                "module",
+                "recents"
             ],
             "permission_flags": [],
             "priority": 0,
@@ -8708,6 +8852,23 @@
                 "deprecated": false,
                 "system_api": false,
                 "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.ACCESSIBILITY_MOTION_EVENT_OBSERVING": {
+            "name": "android.permission.ACCESSIBILITY_MOTION_EVENT_OBSERVING",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": true,
                 "hide": true
             }
         },
@@ -10231,7 +10392,7 @@
             "priority": 0,
             "comment": {
                 "deprecated": false,
-                "system_api": false,
+                "system_api": true,
                 "test_api": false,
                 "hide": true
             }
@@ -10463,6 +10624,24 @@
                 "deprecated": false,
                 "system_api": true,
                 "test_api": true,
+                "hide": true
+            }
+        },
+        "android.permission.LAUNCH_PERMISSION_SETTINGS": {
+            "name": "android.permission.LAUNCH_PERMISSION_SETTINGS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
                 "hide": true
             }
         },
@@ -10785,6 +10964,24 @@
                 "system_api": false,
                 "test_api": false,
                 "hide": false
+            }
+        },
+        "android.permission.USE_COMPANION_TRANSPORTS": {
+            "name": "android.permission.USE_COMPANION_TRANSPORTS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "module"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
             }
         },
         "android.permission.ASSOCIATE_COMPANION_DEVICES": {
@@ -11520,6 +11717,24 @@
                 "hide": false
             }
         },
+        "android.permission.MEDIA_ROUTING_CONTROL": {
+            "name": "android.permission.MEDIA_ROUTING_CONTROL",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "appop"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER": {
             "name": "android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER",
             "description": null,
@@ -11955,6 +12170,24 @@
                 "hide": false
             }
         },
+        "android.permission.REPORT_USAGE_STATS": {
+            "name": "android.permission.REPORT_USAGE_STATS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "module"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.ACCESS_BROADCAST_RESPONSE_STATS": {
             "name": "android.permission.ACCESS_BROADCAST_RESPONSE_STATS",
             "description": null,
@@ -12000,7 +12233,8 @@
             "group": null,
             "protection_levels": [
                 "signature",
-                "privileged"
+                "privileged",
+                "role"
             ],
             "permission_flags": [],
             "priority": 0,
@@ -13821,7 +14055,8 @@
             "group": null,
             "protection_levels": [
                 "signature",
-                "privileged"
+                "privileged",
+                "role"
             ],
             "permission_flags": [],
             "priority": 0,
@@ -14365,6 +14600,25 @@
                 "hide": true
             }
         },
+        "android.permission.ACCESS_SMARTSPACE": {
+            "name": "android.permission.ACCESS_SMARTSPACE",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged",
+                "development"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.MANAGE_WALLPAPER_EFFECTS_GENERATION": {
             "name": "android.permission.MANAGE_WALLPAPER_EFFECTS_GENERATION",
             "description": null,
@@ -14789,7 +15043,8 @@
             "group": null,
             "protection_levels": [
                 "signature",
-                "privileged"
+                "privileged",
+                "recents"
             ],
             "permission_flags": [],
             "priority": 0,
@@ -15064,6 +15319,43 @@
                 "system_api": false,
                 "test_api": false,
                 "hide": false
+            }
+        },
+        "android.permission.RECEIVE_SANDBOX_TRIGGER_AUDIO": {
+            "name": "android.permission.RECEIVE_SANDBOX_TRIGGER_AUDIO",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged",
+                "appop"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.RECEIVE_SANDBOXED_DETECTION_TRAINING_DATA": {
+            "name": "android.permission.RECEIVE_SANDBOXED_DETECTION_TRAINING_DATA",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "internal",
+                "appop"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
             }
         },
         "android.permission.SEND_DEVICE_CUSTOMIZATION_READY": {
@@ -15659,6 +15951,24 @@
         },
         "android.permission.SIGNAL_REBOOT_READINESS": {
             "name": "android.permission.SIGNAL_REBOOT_READINESS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.SHOW_CUSTOMIZED_RESOLVER": {
+            "name": "android.permission.SHOW_CUSTOMIZED_RESOLVER",
             "description": null,
             "label": null,
             "group": null,
@@ -16335,6 +16645,23 @@
                 "hide": true
             }
         },
+        "android.permission.START_ACTIVITIES_FROM_SDK_SANDBOX": {
+            "name": "android.permission.START_ACTIVITIES_FROM_SDK_SANDBOX",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": true,
+                "hide": true
+            }
+        },
         "android.permission.MIGRATE_HEALTH_CONNECT_DATA": {
             "name": "android.permission.MIGRATE_HEALTH_CONNECT_DATA",
             "description": null,
@@ -16437,6 +16764,128 @@
             "comment": {
                 "deprecated": false,
                 "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.SYNC_FLAGS": {
+            "name": "android.permission.SYNC_FLAGS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.WRITE_FLAGS": {
+            "name": "android.permission.WRITE_FLAGS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.GET_BINDING_UID_IMPORTANCE": {
+            "name": "android.permission.GET_BINDING_UID_IMPORTANCE",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.MANAGE_DISPLAYS": {
+            "name": "android.permission.MANAGE_DISPLAYS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.RESET_HOTWORD_TRAINING_DATA_EGRESS_COUNT": {
+            "name": "android.permission.RESET_HOTWORD_TRAINING_DATA_EGRESS_COUNT",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.PREPARE_FACTORY_RESET": {
+            "name": "android.permission.PREPARE_FACTORY_RESET",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.OVERRIDE_SYSTEM_KEY_BEHAVIOR_IN_FOCUSED_WINDOW": {
+            "name": "android.permission.OVERRIDE_SYSTEM_KEY_BEHAVIOR_IN_FOCUSED_WINDOW",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
                 "test_api": false,
                 "hide": true
             }

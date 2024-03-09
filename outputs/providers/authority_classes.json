@@ -4,8 +4,7 @@
         "names": [
             "android.provider.Telephony$ServiceStateTable"
         ],
-        "related_names": [
-        ]
+        "related_names": []
     },
     "settings": {
         "authority": "settings",
@@ -26,8 +25,7 @@
         "names": [
             "android.provider.CallLog$Locations"
         ],
-        "related_names": [
-        ]
+        "related_names": []
     },
     "com.android.calendar": {
         "authority": "com.android.calendar",
@@ -163,8 +161,7 @@
         "names": [
             "android.provider.SettingsSlicesContract"
         ],
-        "related_names": [
-        ]
+        "related_names": []
     },
     "com.android.voicemail": {
         "authority": "com.android.voicemail",

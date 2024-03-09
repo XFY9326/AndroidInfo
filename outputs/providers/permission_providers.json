@@ -493,6 +493,18 @@
     },
     {
         "package": "com.android.settings",
+        "name": "com.android.settings.biometrics.BiometricSettingsProvider",
+        "authorities": [
+            "com.android.settings.biometrics.provider"
+        ],
+        "exported": true,
+        "read_permission": "com.android.settings.USE_BIOMETRIC_PROVIDER",
+        "write_permission": "com.android.settings.USE_BIOMETRIC_PROVIDER",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
         "name": "com.android.settings.emergency.EmergencyActionContentProvider",
         "authorities": [
             "com.android.settings.emergency"

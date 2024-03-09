@@ -97,6 +97,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.car.carlauncher",
+        "name": "com.android.car.carlauncher.calmmode.CalmModeQCProvider",
+        "authorities": [
+            "com.android.car.carlauncher.calmmode"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.car.developeroptions",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
@@ -911,6 +923,18 @@
     },
     {
         "package": "com.android.settings",
+        "name": "com.android.settings.biometrics.BiometricSettingsProvider",
+        "authorities": [
+            "com.android.settings.biometrics.provider"
+        ],
+        "exported": true,
+        "read_permission": "com.android.settings.USE_BIOMETRIC_PROVIDER",
+        "write_permission": "com.android.settings.USE_BIOMETRIC_PROVIDER",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.settings",
         "name": "com.android.settings.dashboard.suggestions.SuggestionStateProvider",
         "authorities": [
             "com.android.settings.suggestions.status"
@@ -1248,6 +1272,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.google.android.wallpaper.weathereffects",
+        "name": "com.google.android.wallpaper.weathereffects.provider.WeatherEffectsContentProvider",
+        "authorities": [
+            "com.google.android.wallpaper.weathereffects.effectprovider"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.googlecode.android_scripting",
         "name": "androidx.core.content.FileProvider",
         "authorities": [
@@ -1273,7 +1309,7 @@
     },
     {
         "package": "com.mobileer.oboetester",
-        "name": "android.support.v4.content.FileProvider",
+        "name": "androidx.core.content.FileProvider",
         "authorities": [
             "com.mobileer.oboetester.provider"
         ],
