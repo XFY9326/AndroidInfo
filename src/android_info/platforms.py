@@ -207,9 +207,8 @@ class AndroidPlatformProviderAuthorities:
 
     async def dump_platform_authority(self, api: int, output_dir: str, output_file_name: str):
         zip_path = await self._platform.load_platform_zip(api)
-        zip_args = f"\"{zip_path}\""
         code, output, output_error = await run_commands(
-            f"java -jar \"{_PLATFORM_TOOLS_JAR_PATH}\" authority-classes -o \"{output_dir}\" {zip_args}"
+            f"java -jar \"{_PLATFORM_TOOLS_JAR_PATH}\" authority-classes -o \"{output_dir}\" \"{zip_path}\""
         )
         if code == 0:
             output_text: str = output.decode()
@@ -251,7 +250,7 @@ class AndroidPlatformAPIPermissions:
             raw_result: set[_RawAPIPermission]
     ) -> dict[_RawAPIPermission, str]:
         field_apis = {f"{i.api.class_name}:{i.api.name}": i for i in raw_result if isinstance(i.api, _RawField)}
-        field_args = " ".join(field_apis.keys())
+        field_args = " ".join([f"\"{i}\"" for i in field_apis.keys()])
         code, output, output_error = await run_commands(
             f"java -jar \"{_PLATFORM_TOOLS_JAR_PATH}\" field-type -p \"{platform_zip_path}\" -s \"{sources_zip_path}\" {field_args}"
         )
