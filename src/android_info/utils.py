@@ -1,5 +1,7 @@
 import asyncio
+import locale
 import re
+from asyncio import subprocess
 from collections import defaultdict
 from functools import lru_cache
 from itertools import zip_longest
@@ -119,29 +121,41 @@ class VersionCompare:
         return 0
 
 
-async def run_commands(*commands: str, cwd: Optional[str] = None, output: bool = True) -> Union[int, tuple[int, bytes, bytes]]:
+async def _get_process_outputs(process: subprocess.Process, output: bool = True) -> Union[int, tuple[int, str, str]]:
+    if output:
+        stdout, stderr = await process.communicate()
+        return await process.wait(), stdout.decode(locale.getpreferredencoding()), stderr.decode(locale.getpreferredencoding())
+    else:
+        return await process.wait()
+
+
+async def run_commands(*commands: str, cwd: Optional[str] = None, output: bool = True) -> Union[int, tuple[int, str, str]]:
     process = await asyncio.create_subprocess_shell(
         ";".join(commands),
         stdout=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
         stderr=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
         cwd=cwd
     )
-    if output:
-        stdout, stderr = await process.communicate()
-        await process.wait()
-        return process.returncode, stdout, stderr
-    else:
-        await process.wait()
-        return process.returncode
+    return await _get_process_outputs(process, output)
+
+
+async def run_exec(program: str, *args: str, cwd: Optional[str] = None, output: bool = True) -> Union[int, tuple[int, str, str]]:
+    process = await asyncio.create_subprocess_exec(
+        program,
+        *args,
+        stdout=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
+        stderr=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
+        cwd=cwd
+    )
+    return await _get_process_outputs(process, output)
 
 
 async def check_java_version(min_version: str):
     # noinspection PyBroadException
     try:
-        code, _, output_bytes = await run_commands("java -version")
+        code, _, output = await run_commands("java -version")
         if code == 0:
-            output_content: str = output_bytes.decode()
-            matcher = re.search(r"version \"(.*?)\"", output_content)
+            matcher = re.search(r"version \"(.*?)\"", output)
             if matcher is not None:
                 java_version = matcher.group(1).strip()
                 if VersionCompare.instance().compare(min_version, java_version) > 0:

@@ -18,7 +18,7 @@ from lxml.etree import _Element
 from .consts import JVM_CONSTRUCTOR_NAME, JVM_CONSTRUCTOR_RETURN
 from .repository import AndroidRepository
 from .sources import AndroidSources
-from .utils import run_commands, jvm_type_to_signature, get_short_class_name
+from .utils import run_commands, run_exec, jvm_type_to_signature, get_short_class_name
 
 _PLATFORM_TOOLS_JAR_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "libs", "platform_tools.jar")
 
@@ -211,8 +211,7 @@ class AndroidPlatformProviderAuthorities:
             f"java -jar \"{_PLATFORM_TOOLS_JAR_PATH}\" authority-classes -o \"{output_dir}\" \"{zip_path}\""
         )
         if code == 0:
-            output_text: str = output.decode()
-            for line in output_text.splitlines(keepends=False):
+            for line in output.splitlines(keepends=False):
                 if self._OUTPUT_DIVIDER in line:
                     zip_path, output_path = line.split(self._OUTPUT_DIVIDER)
                     output_path: str = os.path.abspath(os.path.normpath(output_path.strip()))
@@ -220,7 +219,7 @@ class AndroidPlatformProviderAuthorities:
         else:
             err_msg = "\n".join([
                 line
-                for i, line in enumerate(output_error.decode().splitlines(keepends=False))
+                for i, line in enumerate(output_error.splitlines(keepends=False))
                 if i != 0 and len(line.strip()) > 0
             ])
             raise ValueError(f"Platform authorities dump failed!\n{err_msg}")
@@ -250,14 +249,13 @@ class AndroidPlatformAPIPermissions:
             raw_result: set[_RawAPIPermission]
     ) -> dict[_RawAPIPermission, str]:
         field_apis = {f"{i.api.class_name}:{i.api.name}": i for i in raw_result if isinstance(i.api, _RawField)}
-        field_args = " ".join([f"\"{i}\"" for i in field_apis.keys()])
-        code, output, output_error = await run_commands(
-            f"java -jar \"{_PLATFORM_TOOLS_JAR_PATH}\" field-type -p \"{platform_zip_path}\" -s \"{sources_zip_path}\" {field_args}"
+        code, output, output_error = await run_exec(
+            "java",
+            *("-jar", _PLATFORM_TOOLS_JAR_PATH, "field-type", "-p", platform_zip_path, "-s", sources_zip_path, *field_apis.keys())
         )
         if code == 0:
-            output_text: str = output.decode()
             result: dict[_RawAPIPermission, str] = {}
-            for line in output_text.splitlines(keepends=False):
+            for line in output.splitlines(keepends=False):
                 if self._OUTPUT_DIVIDER in line:
                     field_api, field_type = line.split(self._OUTPUT_DIVIDER)
                     result[field_apis[field_api.strip()]] = field_type.strip()
@@ -265,7 +263,7 @@ class AndroidPlatformAPIPermissions:
         else:
             err_msg = "\n".join([
                 line
-                for i, line in enumerate(output_error.decode().splitlines(keepends=False))
+                for i, line in enumerate(output_error.splitlines(keepends=False))
                 if len(line.strip()) > 0
             ])
             raise ValueError(f"Platform field type dump failed!\n{err_msg}")
