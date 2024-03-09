@@ -20,6 +20,7 @@ USE_TMP = False
 REMOVE_OLD_OUTPUTS = True
 USE_SYSTEM_PROXY = True
 
+DUMP_VERSIONS = True
 DUMP_PERMISSIONS = True
 DUMP_API_PERMISSION_MAPPINGS = True
 DUMP_AUTHORITIES_CLASS = True
@@ -194,12 +195,14 @@ async def main():
         android_versions = AndroidVersions(client)
 
         api_levels = await android_versions.list_api_levels()
-        with open(os.path.join(output_dir, "api_levels.json"), "w", encoding="utf-8") as f:
-            json.dump({i.api: i.to_dict() for i in api_levels}, f, ensure_ascii=False, indent=4)
+        if DUMP_VERSIONS:
+            with open(os.path.join(output_dir, "api_levels.json"), "w", encoding="utf-8") as f:
+                json.dump({i.api: i.to_dict() for i in api_levels}, f, ensure_ascii=False, indent=4)
 
-        build_versions = await android_versions.list_build_versions()
-        with open(os.path.join(output_dir, "build_versions.json"), "w", encoding="utf-8") as f:
-            json.dump({i.tag: i.to_dict() for i in build_versions}, f, ensure_ascii=False, indent=4)
+        if DUMP_VERSIONS:
+            build_versions = await android_versions.list_build_versions()
+            with open(os.path.join(output_dir, "build_versions.json"), "w", encoding="utf-8") as f:
+                json.dump({i.tag: i.to_dict() for i in build_versions}, f, ensure_ascii=False, indent=4)
 
         if DUMP_PERMISSIONS:
             print()
