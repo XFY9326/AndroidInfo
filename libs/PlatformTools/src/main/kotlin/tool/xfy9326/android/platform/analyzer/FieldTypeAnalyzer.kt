@@ -45,59 +45,62 @@ object FieldTypeAnalyzer {
         }
     }
 
-    fun getFieldTypes(
-        platformZip: File, sourceZip: File, fields: List<ClassField>
-    ): Map<ClassField, String> = ZipFile(sourceZip).use { sourceFile ->
-        val classCache = mutableMapOf<String, ClassOrInterfaceDeclaration>()
+    fun getFieldTypes(platformZip: File, sourceZip: File, fields: List<ClassField>): Map<ClassField, String> =
+        ZipFile(sourceZip).use { sourceFile ->
+            val classCache = mutableMapOf<String, ClassOrInterfaceDeclaration>()
 
-        ZipFile(platformZip).use { platformFile ->
-            StaticJavaParser.getParserConfiguration().setSymbolResolver(
-                JavaSymbolSolver(
-                    TypeSolverBuilder().with(JarTypeSolver(platformFile.openAndroidInputStream())).build()
+            ZipFile(platformZip).use { platformFile ->
+                StaticJavaParser.getParserConfiguration().setSymbolResolver(
+                    JavaSymbolSolver(
+                        TypeSolverBuilder().with(JarTypeSolver(platformFile.openAndroidInputStream())).build()
+                    )
                 )
-            )
-            buildMap {
                 val notInSourceFields = mutableListOf<ClassField>()
-                for (field in fields) {
-                    val entry = sourceFile.getSrcEntry(field)
-                    if (entry != null) {
-                        val parser = StaticJavaParser.parse(sourceFile.getInputStream(entry))
-                        val classSimpleName = field.className.simpleName
-                        val classDeclaration =
-                            classCache[classSimpleName] ?: parser.getClassByClassName(classSimpleName) ?: error("Can't find class ${field.className}")
-                        val fieldType = classDeclaration.getFieldByName(field.fieldName).getOrNull()?.elementType
-                            ?: error("Can't find field ${field.fieldName} in class ${field.className}")
-                        put(field, fieldType.resolve().describe())
-                    } else {
-                        notInSourceFields.add(field)
-                    }
-                }
-                if (notInSourceFields.isNotEmpty()) {
-                    val androidJarStream = platformFile.openAndroidJarInputStream()
-                    val classFieldIndex = notInSourceFields.buildClassIndex()
-                    androidJarStream.entryAsSequence().filterNot {
-                        it.isDirectory
-                    }.mapNotNull {
-                        classFieldIndex[it.realName]?.let { f ->
-                            ClassFile(DataInputStream(androidJarStream)) to f.buildNameIndex()
-                        }
-                    }.flatMap { (classFile, classFields) ->
-                        classFile.fields.asSequence().filterNotNull().mapNotNull {
-                            classFields[it.getName()]?.let { f ->
-                                f to SignatureAttribute.toFieldSignature(it.descriptor).jvmTypeName()
+
+                buildMap {
+                    for (field in fields) {
+                        val entry = sourceFile.getSrcEntry(field)
+                        if (entry != null) {
+                            val parser = StaticJavaParser.parse(sourceFile.getInputStream(entry))
+                            val classSimpleName = field.className.simpleName
+                            val classDeclaration = classCache[classSimpleName] ?: parser.getClassByClassName(classSimpleName)
+                            val fieldType = classDeclaration?.getFieldByName(field.fieldName)?.getOrNull()?.elementType
+                            if (fieldType == null) {
+                                notInSourceFields.add(field)
+                            } else {
+                                put(field, fieldType.resolve().describe())
                             }
+                        } else {
+                            notInSourceFields.add(field)
                         }
-                    }.forEach { (field, typeName) ->
-                        put(field, typeName)
                     }
 
-                    for (field in notInSourceFields) {
-                        if (field !in this) {
-                            error("Class ${field.className} not found")
+                    if (notInSourceFields.isNotEmpty()) {
+                        val androidJarStream = platformFile.openAndroidJarInputStream()
+                        val classFieldIndex = notInSourceFields.buildClassIndex()
+                        androidJarStream.entryAsSequence().filterNot {
+                            it.isDirectory
+                        }.mapNotNull {
+                            classFieldIndex[it.realName]?.let { f ->
+                                ClassFile(DataInputStream(androidJarStream)) to f.buildNameIndex()
+                            }
+                        }.flatMap { (classFile, classFields) ->
+                            classFile.fields.asSequence().filterNotNull().mapNotNull {
+                                classFields[it.name]?.let { f ->
+                                    f to SignatureAttribute.toFieldSignature(it.descriptor).jvmTypeName()
+                                }
+                            }
+                        }.forEach { (field, typeName) ->
+                            put(field, typeName)
+                        }
+
+                        for (field in notInSourceFields) {
+                            if (field !in this) {
+                                error("Can't find field ${field.fieldName} in class ${field.className}")
+                            }
                         }
                     }
                 }
             }
         }
-    }
 }

@@ -44,7 +44,7 @@ Latest ContentProviders with permissions: [Download](https://github.com/XFY9326/
 ## Usage
 
 ```shell
-python3 main/main.py
+python3 src/main.py
 ```
 
 Or you can import any script you like in your code

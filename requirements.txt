@@ -1,0 +1,7 @@
+bs4
+tqdm
+lxml
+aiohttp
+aiofiles
+aioshutil
+dataclasses-json

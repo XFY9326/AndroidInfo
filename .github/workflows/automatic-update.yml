@@ -28,9 +28,9 @@ jobs:
     - name: Install pip dependencies
       run: |
         python3 -m pip install --upgrade pip wheel setuptools
-        if [ -f main/requirements.txt ]; then pip install -r main/requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Update outputs
-      run: python3 main/main.py
+      run: python3 src/main.py
     - name: Push updates
       uses: GuillaumeFalourd/git-commit-push@v1.3
       with:
