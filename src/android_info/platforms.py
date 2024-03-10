@@ -18,7 +18,7 @@ from lxml.etree import _Element
 from .consts import JVM_CONSTRUCTOR_NAME, JVM_CONSTRUCTOR_RETURN
 from .repository import AndroidRepository
 from .sources import AndroidSources
-from .utils import run_commands, run_exec, jvm_type_to_signature, get_short_class_name
+from .utils import run_exec, jvm_type_to_signature, get_short_class_name
 
 _PLATFORM_TOOLS_JAR_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "libs", "platform_tools.jar")
 
@@ -182,7 +182,7 @@ class AndroidPlatform:
     _DEFAULT_CHANNEL = "channel-0"
 
     def __init__(self, client: aiohttp.ClientSession, download_dir: str):
-        self._repo: AndroidRepository = AndroidRepository(client)
+        self._repo: AndroidRepository = AndroidRepository.cached_instance(client)
         self._download_dir: str = download_dir
 
     @lru_cache
@@ -207,8 +207,8 @@ class AndroidPlatformProviderAuthorities:
 
     async def dump_platform_authority(self, api: int, output_dir: str, output_file_name: str):
         zip_path = await self._platform.load_platform_zip(api)
-        code, output, output_error = await run_commands(
-            f"java -jar \"{_PLATFORM_TOOLS_JAR_PATH}\" authority-classes -o \"{output_dir}\" \"{zip_path}\""
+        code, output, output_error = await run_exec(
+            "java", "-jar", _PLATFORM_TOOLS_JAR_PATH, "authority-classes", "-o", output_dir, zip_path
         )
         if code == 0:
             for line in output.splitlines(keepends=False):
@@ -251,7 +251,7 @@ class AndroidPlatformAPIPermissions:
         field_apis = {f"{i.api.class_name}:{i.api.name}": i for i in raw_result if isinstance(i.api, _RawField)}
         code, output, output_error = await run_exec(
             "java",
-            *("-jar", _PLATFORM_TOOLS_JAR_PATH, "field-type", "-p", platform_zip_path, "-s", sources_zip_path, *field_apis.keys())
+            "-jar", _PLATFORM_TOOLS_JAR_PATH, "field-type", "-p", platform_zip_path, "-s", sources_zip_path, *field_apis.keys()
         )
         if code == 0:
             result: dict[_RawAPIPermission, str] = {}

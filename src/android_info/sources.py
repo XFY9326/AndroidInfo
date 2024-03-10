@@ -11,7 +11,7 @@ class AndroidSources:
     _DEFAULT_CHANNEL = "channel-0"
 
     def __init__(self, client: aiohttp.ClientSession, download_dir: str):
-        self._repo: AndroidRepository = AndroidRepository(client)
+        self._repo: AndroidRepository = AndroidRepository.cached_instance(client)
         self._download_dir: str = download_dir
 
     @lru_cache

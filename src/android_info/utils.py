@@ -1,11 +1,10 @@
 import asyncio
 import locale
 import re
-from asyncio import subprocess
 from collections import defaultdict
 from functools import lru_cache
 from itertools import zip_longest
-from typing import Optional, Union
+from typing import Optional
 
 from lxml import etree
 # noinspection PyProtectedMember
@@ -121,39 +120,22 @@ class VersionCompare:
         return 0
 
 
-async def _get_process_outputs(process: subprocess.Process, output: bool = True) -> Union[int, tuple[int, str, str]]:
-    if output:
-        stdout, stderr = await process.communicate()
-        return await process.wait(), stdout.decode(locale.getpreferredencoding()), stderr.decode(locale.getpreferredencoding())
-    else:
-        return await process.wait()
-
-
-async def run_commands(*commands: str, cwd: Optional[str] = None, output: bool = True) -> Union[int, tuple[int, str, str]]:
-    process = await asyncio.create_subprocess_shell(
-        ";".join(commands),
-        stdout=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
-        stderr=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
-        cwd=cwd
-    )
-    return await _get_process_outputs(process, output)
-
-
-async def run_exec(program: str, *args: str, cwd: Optional[str] = None, output: bool = True) -> Union[int, tuple[int, str, str]]:
+async def run_exec(program: str, *args: str, cwd: Optional[str] = None) -> tuple[int, str, str]:
     process = await asyncio.create_subprocess_exec(
         program,
         *args,
-        stdout=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
-        stderr=asyncio.subprocess.PIPE if output else asyncio.subprocess.DEVNULL,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
         cwd=cwd
     )
-    return await _get_process_outputs(process, output)
+    stdout, stderr = await process.communicate()
+    return await process.wait(), stdout.decode(locale.getpreferredencoding()), stderr.decode(locale.getpreferredencoding())
 
 
 async def check_java_version(min_version: str):
     # noinspection PyBroadException
     try:
-        code, _, output = await run_commands("java -version")
+        code, _, output = await run_exec("java", "-version")
         if code == 0:
             matcher = re.search(r"version \"(.*?)\"", output)
             if matcher is not None:

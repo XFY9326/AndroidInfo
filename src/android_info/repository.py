@@ -9,7 +9,7 @@ from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
 
-from android_info.utils import xml_to_dict
+from .utils import xml_to_dict
 
 # noinspection HttpUrlsUsage
 ANDROID_REPO_NS: dict[str, str] = {
@@ -27,12 +27,24 @@ class AndroidRepository:
 
     _DOWNLOAD_CHUNK_SIZE = 1024 * 1024 * 8
 
+    _INSTANCE: Optional['AndroidRepository'] = None
+
     def __init__(self, client: aiohttp.ClientSession):
         self._client = client
         self._tree: Optional[_Element] = None
 
-    async def _prepare(self):
-        if self._tree is None:
+    @staticmethod
+    def cached_instance(client: aiohttp.ClientSession) -> 'AndroidRepository':
+        if AndroidRepository._INSTANCE is None:
+            AndroidRepository._INSTANCE = AndroidRepository(client)
+        assert AndroidRepository._INSTANCE is not None
+        return AndroidRepository._INSTANCE
+
+    async def refresh_cache(self):
+        await self._prepare(True)
+
+    async def _prepare(self, force: bool = False):
+        if self._tree is None or force:
             async with self._client.get(self._REPO_URL) as response:
                 repo_text = await response.text()
             self._tree = etree.fromstring(repo_text.encode("utf-8"))
@@ -118,6 +130,7 @@ class AndroidRepository:
         async with self._client.get(self._get_archive_dl_url(archive_name)) as response:
             async with aiofiles.open(tmp_file_path, "wb") as f:
                 async for chunk in response.content.iter_chunked(self._DOWNLOAD_CHUNK_SIZE):
+                    chunk: bytes
                     await f.write(chunk)
         if os.path.isfile(tmp_file_path):
             await aioshutil.move(tmp_file_path, target_file_path)

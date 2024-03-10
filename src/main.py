@@ -16,7 +16,6 @@ from android_info.providers import AndroidProviderManifests
 from android_info.utils import check_java_version
 from android_info.versions import AndroidVersions, AndroidAPILevel, AndroidBuildTag
 
-USE_TMP = False
 REMOVE_OLD_OUTPUTS = True
 USE_SYSTEM_PROXY = True
 
@@ -57,22 +56,29 @@ async def remove_old_ref_versions_tmp(refs: str, tmp_dir: str):
             pass
 
 
-async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, tmp_dir: str, sdk: bool = False, refs_api: Optional[tuple[str, int]] = None):
-    use_tmp = USE_TMP if refs_api is not None else False
+async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, tmp_dir: str, with_sdk: bool = False, refs_api: Optional[tuple[str, int]] = None):
     refs = refs_api[0] if refs_api is not None else ANDROID_MAIN_REFS
     if refs_api is not None:
         await remove_old_ref_versions_tmp(refs, tmp_dir)
 
-    android_permissions = AndroidFrameworkPermissions(client, refs, tmp_dir, use_tmp)
+    android_permissions = AndroidFrameworkPermissions(client, refs, tmp_dir, refs_api is not None)
 
-    permissions = await android_permissions.get_permissions(sdk)
-
-    tmp_file_name = f"permissions-{refs_api[1] if refs_api is not None else 'REL'}{'' if sdk is False else '-SDK'}.json"
+    permissions = await android_permissions.get_permissions()
+    tmp_file_name = f"permissions-{refs_api[1] if refs_api is not None else 'REL'}.json"
 
     await dump_json(
         data=permissions.to_dict(),
         output_path=os.path.join(output_dir, tmp_file_name)
     )
+
+    if with_sdk:
+        sdk_permissions = await android_permissions.get_permissions(True)
+        tmp_sdk_file_name = f"permissions-{refs_api[1] if refs_api is not None else 'REL'}-SDK.json"
+
+        await dump_json(
+            data=sdk_permissions.to_dict(),
+            output_path=os.path.join(output_dir, tmp_sdk_file_name)
+        )
 
     del android_permissions
 
@@ -86,9 +92,7 @@ async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, api_l
     if not await aiofiles.os.path.exists(tmp_dir):
         await aiofiles.os.makedirs(tmp_dir)
 
-    # Dump REL version
-    await dump_ref_permissions(client, permissions_output_dir, tmp_dir)
-    # Dump SDK REL version
+    # Dump SDK REL permissions
     await dump_ref_permissions(client, permissions_output_dir, tmp_dir, True)
 
     # Dump all API levels version
