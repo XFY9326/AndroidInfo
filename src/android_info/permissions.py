@@ -145,11 +145,12 @@ class _RawPermission:
 
 class _AndroidCoreResString:
     _ID_START = "@string/"
-    _PERMISSION_STRING_MANIFEST = AndroidSourceCodePath("platform/frameworks/base", "core/res/res/values/strings.xml")
+    _PROJECT_PATH = "platform/frameworks/base"
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: Optional[str], load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: Optional[str], lang: Optional[str] = None, load_cache: bool = False):
+        value_path = "values" if lang is None else f"values-{lang.strip()}"
         self._source: AndroidRemoteSourceCode = AndroidRemoteSourceCode(
-            client, self._PERMISSION_STRING_MANIFEST, download_dir
+            client, AndroidSourceCodePath(self._PROJECT_PATH, f"core/res/res/{value_path}/strings.xml"), download_dir
         )
         self._refs: str = refs
         self._load_cache: bool = load_cache
@@ -258,9 +259,9 @@ class _AndroidCoreManifest:
 
 class AndroidFrameworkPermissions:
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: Optional[str] = None, load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: Optional[str] = None, res_lang: Optional[str] = None, load_cache: bool = False):
         self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs, permissions_tmp_dir, load_cache)
-        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, load_cache)
+        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, res_lang, load_cache)
         self._permissions: Optional[AndroidPermissions] = None
 
     async def _parse_raw_text(self, text: Optional[str]) -> Optional[str]:

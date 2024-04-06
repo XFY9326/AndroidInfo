@@ -25,6 +25,8 @@ DUMP_API_PERMISSION_MAPPINGS = True
 DUMP_AUTHORITIES_CLASS = True
 DUMP_CONTENT_PROVIDER_PERMISSIONS = True
 
+RES_LANG = None
+
 MIN_JAVA_VERSION: str = "11"
 
 
@@ -61,7 +63,7 @@ async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, t
     if refs_api is not None:
         await remove_old_ref_versions_tmp(refs, tmp_dir)
 
-    android_permissions = AndroidFrameworkPermissions(client, refs, tmp_dir, refs_api is not None)
+    android_permissions = AndroidFrameworkPermissions(client, refs, tmp_dir, RES_LANG, refs_api is not None)
 
     permissions = await android_permissions.get_permissions()
     tmp_file_name = f"permissions-{refs_api[1] if refs_api is not None else 'REL'}.json"
