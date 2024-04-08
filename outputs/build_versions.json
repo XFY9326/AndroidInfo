@@ -6470,6 +6470,15 @@
         "build_id": "11299693",
         "security_patch_level": "2021-10-05"
     },
+    "android-security-12.0.0_r58": {
+        "tag": "android-security-12.0.0_r58",
+        "version": "12.0.0",
+        "revision": "58",
+        "is_security": true,
+        "name": "Android12",
+        "build_id": "11422630",
+        "security_patch_level": "2021-10-05"
+    },
     "android-12.1.0_r1": {
         "tag": "android-12.1.0_r1",
         "version": "12.1.0",
@@ -6991,6 +7000,15 @@
         "name": "Android13",
         "build_id": "TQ1A.221205.011",
         "security_patch_level": "2022-12-05"
+    },
+    "android-security-13.0.0_r16": {
+        "tag": "android-security-13.0.0_r16",
+        "version": "13.0.0",
+        "revision": "16",
+        "is_security": true,
+        "name": "Android13",
+        "build_id": "11422632",
+        "security_patch_level": "2022-08-05"
     },
     "android-13.0.0_r17": {
         "tag": "android-13.0.0_r17",
@@ -7685,6 +7703,15 @@
         "build_id": "UD1A.230803.022.B1",
         "security_patch_level": "2023-09-05"
     },
+    "android-security-14.0.0_r7": {
+        "tag": "android-security-14.0.0_r7",
+        "version": "14.0.0",
+        "revision": "7",
+        "is_security": true,
+        "name": "Android14",
+        "build_id": "11422633",
+        "security_patch_level": "2023-10-05"
+    },
     "android-14.0.0_r8": {
         "tag": "android-14.0.0_r8",
         "version": "14.0.0",
@@ -7882,5 +7909,23 @@
         "name": "Android14",
         "build_id": "AP1A.240305.019.A1",
         "security_patch_level": "2024-03-05"
+    },
+    "android-14.0.0_r30": {
+        "tag": "android-14.0.0_r30",
+        "version": "14.0.0",
+        "revision": "30",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP1A.240405.002",
+        "security_patch_level": "2024-04-05"
+    },
+    "android-14.0.0_r31": {
+        "tag": "android-14.0.0_r31",
+        "version": "14.0.0",
+        "revision": "31",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP1A.240405.002.A1",
+        "security_patch_level": "2024-04-05"
     }
 }
