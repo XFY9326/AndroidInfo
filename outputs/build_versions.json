@@ -7927,5 +7927,23 @@
         "name": "Android14",
         "build_id": "AP1A.240405.002.A1",
         "security_patch_level": "2024-04-05"
+    },
+    "android-14.0.0_r32": {
+        "tag": "android-14.0.0_r32",
+        "version": "14.0.0",
+        "revision": "32",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP1A.240405.002.A2",
+        "security_patch_level": "2024-04-05"
+    },
+    "android-14.0.0_r33": {
+        "tag": "android-14.0.0_r33",
+        "version": "14.0.0",
+        "revision": "33",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP1A.240405.002.B1",
+        "security_patch_level": "2024-04-05"
     }
 }
