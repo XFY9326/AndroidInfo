@@ -163,7 +163,7 @@ class AndroidSourceCodeQuery:
                 "exhaustive": False,
                 "numberOfContextLines": 0,
                 "pageSize": AndroidSourceCodeQuery._DEFAULT_QUERY_PAGE_NUM,
-                "pageToken": page_token,
+                "pageToken": page_token if page_token is not None else "",
                 "pathPrefix": path_prefix,
                 "repositoryScope": {
                     "root": {
@@ -171,7 +171,7 @@ class AndroidSourceCodeQuery:
                         "repositoryName": repository
                     }
                 },
-                "retrieveMultibranchResults": False,
+                "retrieveMultibranchResults": True,
                 "savedQuery": "",
                 "scoringModel": "",
                 "showPersonalizedResults": False
@@ -229,7 +229,8 @@ class AndroidSourceCodeQuery:
                     is_first_batch = False
                 batch = self._generate_random_batch()
                 url = self._get_api_url(batch)
-                query_config["nextPageToken"] = next_page_token
+                if next_page_token is not None:
+                    query_config["searchOptions"]["pageToken"] = next_page_token
                 content = self._build_query_content(batch, query_config)
                 async with self._client.post(url, data=content, headers={
                     "Content-Type": "text/plain",

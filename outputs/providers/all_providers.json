@@ -36,6 +36,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.avatarpicker",
+        "name": "androidx.core.content.FileProvider",
+        "authorities": [
+            "com.android.avatarpicker.tempprovider"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.bluetooth",
         "name": "com.android.bluetooth.avrcpcontroller.AvrcpCoverArtProvider",
         "authorities": [
