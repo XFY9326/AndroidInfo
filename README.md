@@ -1,5 +1,7 @@
 # AndroidInfo
 
+[![Automatic update](https://github.com/XFY9326/AndroidInfo/actions/workflows/automatic-update.yml/badge.svg)](https://github.com/XFY9326/AndroidInfo/actions/workflows/automatic-update.yml)
+
 Get latest Android info from docs
 
 Reference: [Android source docs](https://source.android.com/docs)
