@@ -7780,7 +7780,7 @@
         "version": "14.0.0",
         "revision": "12",
         "is_security": false,
-        "name": "Udc",
+        "name": "Android14",
         "build_id": "UD1A.231105.004",
         "security_patch_level": "2023-11-05"
     },
@@ -8007,6 +8007,78 @@
         "is_security": false,
         "name": "Android14",
         "build_id": "AP1A.240505.005.B1",
+        "security_patch_level": "2024-05-05"
+    },
+    "android-14.0.0_r38": {
+        "tag": "android-14.0.0_r38",
+        "version": "14.0.0",
+        "revision": "38",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.231203.054",
+        "security_patch_level": "2024-03-05"
+    },
+    "android-14.0.0_r39": {
+        "tag": "android-14.0.0_r39",
+        "version": "14.0.0",
+        "revision": "39",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.231203.057",
+        "security_patch_level": "2024-03-05"
+    },
+    "android-14.0.0_r40": {
+        "tag": "android-14.0.0_r40",
+        "version": "14.0.0",
+        "revision": "40",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.231203.057.A1",
+        "security_patch_level": "2024-03-05"
+    },
+    "android-14.0.0_r41": {
+        "tag": "android-14.0.0_r41",
+        "version": "14.0.0",
+        "revision": "41",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.240505.001",
+        "security_patch_level": "2024-05-05"
+    },
+    "android-14.0.0_r42": {
+        "tag": "android-14.0.0_r42",
+        "version": "14.0.0",
+        "revision": "42",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.240505.001.A1",
+        "security_patch_level": "2024-05-05"
+    },
+    "android-14.0.0_r43": {
+        "tag": "android-14.0.0_r43",
+        "version": "14.0.0",
+        "revision": "43",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.240505.001.B1",
+        "security_patch_level": "2024-05-05"
+    },
+    "android-14.0.0_r44": {
+        "tag": "android-14.0.0_r44",
+        "version": "14.0.0",
+        "revision": "44",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.240505.001.D1",
+        "security_patch_level": "2024-05-05"
+    },
+    "android-14.0.0_r45": {
+        "tag": "android-14.0.0_r45",
+        "version": "14.0.0",
+        "revision": "45",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "UD2A.240505.001.W1",
         "security_patch_level": "2024-05-05"
     }
 }
