@@ -2469,6 +2469,23 @@
                 "hide": true
             }
         },
+        "android.permission.THREAD_NETWORK_TESTING": {
+            "name": "android.permission.THREAD_NETWORK_TESTING",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.NETWORK_BYPASS_PRIVATE_DNS": {
             "name": "android.permission.NETWORK_BYPASS_PRIVATE_DNS",
             "description": null,
