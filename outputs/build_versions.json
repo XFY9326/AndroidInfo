@@ -8107,5 +8107,14 @@
         "name": "Android14",
         "build_id": "UD2A.240505.001.W1",
         "security_patch_level": "2024-05-05"
+    },
+    "android-14.0.0_r50": {
+        "tag": "android-14.0.0_r50",
+        "version": "14.0.0",
+        "revision": "50",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240605.024",
+        "security_patch_level": "2024-06-05"
     }
 }
