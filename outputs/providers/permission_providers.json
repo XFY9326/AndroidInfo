@@ -288,6 +288,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.providers.contactkeys",
+        "name": "com.android.providers.contactkeys.E2eeContactKeysProvider",
+        "authorities": [
+            "com.android.contactkeys.contactkeysprovider"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.providers.contacts",
         "name": "com.android.providers.contacts.CallComposerLocationProvider",
         "authorities": [
@@ -645,6 +657,18 @@
         "exported": true,
         "read_permission": "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
         "write_permission": "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.tv.settings",
+        "name": "com.android.tv.settings.connectivity.NetworkChangeContentProvider",
+        "authorities": [
+            "com.android.settings.connectivity.networkchangedetection"
+        ],
+        "exported": true,
+        "read_permission": "com.android.settings.connectivity.READ_NETWORK_CHANGE_DATA",
+        "write_permission": null,
         "has_uri_permission": false,
         "grant_uri_permissions": []
     }

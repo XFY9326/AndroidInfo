@@ -469,6 +469,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.onboarding.bedsteadonboarding",
+        "name": "com.android.onboarding.bedsteadonboarding.providers.TestContentProvider",
+        "authorities": [
+            "com.android.onboarding.bedsteadonboarding.testprovider"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.packageinstaller",
         "name": "com.android.packageinstaller.wear.WearPackageIconProvider",
         "authorities": [
@@ -585,6 +597,18 @@
         "exported": true,
         "read_permission": "android.permission.READ_CALENDAR",
         "write_permission": "android.permission.WRITE_CALENDAR",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.contactkeys",
+        "name": "com.android.providers.contactkeys.E2eeContactKeysProvider",
+        "authorities": [
+            "com.android.contactkeys.contactkeysprovider"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_CONTACTS",
+        "write_permission": "android.permission.WRITE_CONTACTS",
         "has_uri_permission": false,
         "grant_uri_permissions": []
     },
@@ -1187,18 +1211,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.tv",
-        "name": "com.android.tv.search.LocalSearchProvider",
-        "authorities": [
-            "com.android.tv.search"
-        ],
-        "exported": true,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.tv.frameworkpackagestubs",
         "name": "com.android.browser.provider.BrowserProvider2",
         "authorities": [
@@ -1237,6 +1249,18 @@
     },
     {
         "package": "com.android.tv.settings",
+        "name": "com.android.tv.settings.connectivity.NetworkChangeContentProvider",
+        "authorities": [
+            "com.android.settings.connectivity.networkchangedetection"
+        ],
+        "exported": true,
+        "read_permission": "com.android.settings.connectivity.READ_NETWORK_CHANGE_DATA",
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.tv.settings",
         "name": "com.android.tv.settings.device.eco.EnergyModesContentProvider",
         "authorities": [
             "com.android.tv.settings.device.eco.energymodes"
@@ -1264,6 +1288,18 @@
         "name": "com.android.car.ui.plugin.PluginNameProvider",
         "authorities": [
             "com.android.car.ui.plugin"
+        ],
+        "exported": true,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.google.android.sample.rcsclient",
+        "name": "com.google.android.sample.rcsclient.carrierLock.CarrierLockProvider",
+        "authorities": [
+            "com.sample.lockProvider"
         ],
         "exported": true,
         "read_permission": null,

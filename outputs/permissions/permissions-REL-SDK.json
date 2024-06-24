@@ -1312,6 +1312,23 @@
                 "hide": false
             }
         },
+        "android.permission.DETECT_SCREEN_RECORDING": {
+            "name": "android.permission.DETECT_SCREEN_RECORDING",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.DISABLE_KEYGUARD": {
             "name": "android.permission.DISABLE_KEYGUARD",
             "description": "Allows the app to disable the keylock and any associated password security. For example, the phone disables the keylock when receiving an incoming phone call, then re-enables the keylock when the call is finished.",
@@ -1358,6 +1375,23 @@
             "priority": 0,
             "comment": {
                 "deprecated": true,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.ACCESS_HIDDEN_PROFILES": {
+            "name": "android.permission.ACCESS_HIDDEN_PROFILES",
+            "description": "Allows the app to access hidden profiles.",
+            "label": "Access hidden profiles",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
                 "system_api": false,
                 "test_api": false,
                 "hide": false
@@ -2092,6 +2126,24 @@
             "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
             "description": "Allows the app to make use of foreground services with the type \"systemExempted\"",
             "label": "run foreground service with the type \"systemExempted\"",
+            "group": null,
+            "protection_levels": [
+                "normal",
+                "instant"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING": {
+            "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING",
+            "description": "Allows the app to make use of foreground services with the type \"mediaProcessing\"",
+            "label": "run foreground service with the type \"mediaProcessing\"",
             "group": null,
             "protection_levels": [
                 "normal",
