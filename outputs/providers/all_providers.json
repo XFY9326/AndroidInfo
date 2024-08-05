@@ -1366,5 +1366,17 @@
         "write_permission": null,
         "has_uri_permission": true,
         "grant_uri_permissions": []
+    },
+    {
+        "package": "com.squareup.leakcanary.core",
+        "name": "leakcanary.internal.LeakCanaryFileProvider",
+        "authorities": [
+            "com.squareup.leakcanary.fileprovider.com.squareup.leakcanary.core"
+        ],
+        "exported": false,
+        "read_permission": null,
+        "write_permission": null,
+        "has_uri_permission": true,
+        "grant_uri_permissions": []
     }
 ]
