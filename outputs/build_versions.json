@@ -8269,5 +8269,50 @@
         "name": "Android14",
         "build_id": "AP2A.240805.005.F1",
         "security_patch_level": "2024-08-05"
+    },
+    "android-14.0.0_r62": {
+        "tag": "android-14.0.0_r62",
+        "version": "14.0.0",
+        "revision": "62",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AD1A.240530.030",
+        "security_patch_level": "2024-07-05"
+    },
+    "android-14.0.0_r63": {
+        "tag": "android-14.0.0_r63",
+        "version": "14.0.0",
+        "revision": "63",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AD1A.240530.030.A1",
+        "security_patch_level": "2024-07-05"
+    },
+    "android-14.0.0_r64": {
+        "tag": "android-14.0.0_r64",
+        "version": "14.0.0",
+        "revision": "64",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AD1A.240530.030.A2",
+        "security_patch_level": "2024-07-05"
+    },
+    "android-14.0.0_r65": {
+        "tag": "android-14.0.0_r65",
+        "version": "14.0.0",
+        "revision": "65",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AD1A.240530.030.B1",
+        "security_patch_level": "2024-07-05"
+    },
+    "android-14.0.0_r66": {
+        "tag": "android-14.0.0_r66",
+        "version": "14.0.0",
+        "revision": "66",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AD1A.240530.047",
+        "security_patch_level": "2024-08-05"
     }
 }
