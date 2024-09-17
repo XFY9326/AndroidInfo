@@ -27,6 +27,7 @@ JVM_BASIC_SIGNATURE_MAPPING: dict[str, str] = {
 }
 
 # Manually written due to lack of documentation
+# Reference: https://source.android.com/docs/setup/reference/build-numbers
 API_LEVEL_MAPPING: dict[int, list[str]] = {
     1: ["1.0"],  # No build versions
     2: ["1.1"],  # No build versions

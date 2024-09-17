@@ -6515,6 +6515,15 @@
         "build_id": "11933028",
         "security_patch_level": "2021-10-05"
     },
+    "android-security-12.0.0_r63": {
+        "tag": "android-security-12.0.0_r63",
+        "version": "12.0.0",
+        "revision": "63",
+        "is_security": true,
+        "name": "Android12",
+        "build_id": "12072399",
+        "security_patch_level": "2021-10-05"
+    },
     "android-12.1.0_r1": {
         "tag": "android-12.1.0_r1",
         "version": "12.1.0",
@@ -7126,6 +7135,15 @@
         "name": "Android13",
         "build_id": "TQ1A.230105.001.A3",
         "security_patch_level": "2023-01-05"
+    },
+    "android-security-13.0.0_r21": {
+        "tag": "android-security-13.0.0_r21",
+        "version": "13.0.0",
+        "revision": "21",
+        "is_security": true,
+        "name": "Android13",
+        "build_id": "12072401",
+        "security_patch_level": "2022-08-05"
     },
     "android-13.0.0_r22": {
         "tag": "android-13.0.0_r22",
@@ -7865,6 +7883,15 @@
         "build_id": "UD1A.231105.004",
         "security_patch_level": "2023-11-05"
     },
+    "android-security-14.0.0_r12": {
+        "tag": "android-security-14.0.0_r12",
+        "version": "14.0.0",
+        "revision": "12",
+        "is_security": true,
+        "name": "Android14",
+        "build_id": "12123283",
+        "security_patch_level": "2023-10-05"
+    },
     "android-14.0.0_r13": {
         "tag": "android-14.0.0_r13",
         "version": "14.0.0",
@@ -8314,5 +8341,86 @@
         "name": "Android14",
         "build_id": "AD1A.240530.047",
         "security_patch_level": "2024-08-05"
+    },
+    "android-14.0.0_r67": {
+        "tag": "android-14.0.0_r67",
+        "version": "14.0.0",
+        "revision": "67",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r68": {
+        "tag": "android-14.0.0_r68",
+        "version": "14.0.0",
+        "revision": "68",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003.A1",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r69": {
+        "tag": "android-14.0.0_r69",
+        "version": "14.0.0",
+        "revision": "69",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003.B1",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r70": {
+        "tag": "android-14.0.0_r70",
+        "version": "14.0.0",
+        "revision": "70",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003.C1",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r71": {
+        "tag": "android-14.0.0_r71",
+        "version": "14.0.0",
+        "revision": "71",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003.D1",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r72": {
+        "tag": "android-14.0.0_r72",
+        "version": "14.0.0",
+        "revision": "72",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003.E1",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r73": {
+        "tag": "android-14.0.0_r73",
+        "version": "14.0.0",
+        "revision": "73",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240905.003.F1",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-14.0.0_r74": {
+        "tag": "android-14.0.0_r74",
+        "version": "14.0.0",
+        "revision": "74",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AD1A.240905.004",
+        "security_patch_level": "2024-09-05"
+    },
+    "android-15.0.0_r1": {
+        "tag": "android-15.0.0_r1",
+        "version": "15.0.0",
+        "revision": "1",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP3A.240905.015.A2",
+        "security_patch_level": "2024-09-05"
     }
 }

@@ -760,6 +760,30 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.providers.media.module",
+        "name": "com.android.providers.media.photopicker.PhotoPickerProvider",
+        "authorities": [
+            "com.android.providers.media.photopicker"
+        ],
+        "exported": true,
+        "read_permission": "com.android.providers.media.permission.MANAGE_CLOUD_MEDIA_PROVIDERS",
+        "write_permission": "com.android.providers.media.permission.MANAGE_CLOUD_MEDIA_PROVIDERS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
+        "package": "com.android.providers.media.module",
+        "name": "com.android.providers.media.photopicker.RemoteVideoPreviewProvider",
+        "authorities": [
+            "com.android.providers.media.remote_video_preview"
+        ],
+        "exported": true,
+        "read_permission": "com.android.providers.media.permission.MANAGE_CLOUD_MEDIA_PROVIDERS",
+        "write_permission": "com.android.providers.media.permission.MANAGE_CLOUD_MEDIA_PROVIDERS",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.providers.partnerbookmarks",
         "name": "com.android.providers.partnerbookmarks.PartnerBookmarksProvider",
         "authorities": [

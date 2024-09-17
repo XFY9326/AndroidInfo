@@ -1,4 +1,12 @@
 {
+    "35": {
+        "name": "Android15",
+        "version_range": "15",
+        "versions": [
+            "15.0.0"
+        ],
+        "api": 35
+    },
     "34": {
         "name": "Android14",
         "version_range": "14",

@@ -3,13 +3,13 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     application
-    kotlin("jvm") version "1.9.22"
-    kotlin("plugin.serialization") version "1.9.22"
+    kotlin("jvm") version "2.0.20"
+    kotlin("plugin.serialization") version "2.0.20"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "tool.xfy9326.android.platform"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -20,11 +20,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    implementation("com.github.javaparser:javaparser-core:3.25.9")
-    implementation("com.github.javaparser:javaparser-symbol-solver-core:3.25.9")
-    implementation("com.github.ajalt.clikt:clikt-jvm:4.2.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.2")
+    implementation("com.github.javaparser:javaparser-core:3.26.2")
+    implementation("com.github.javaparser:javaparser-symbol-solver-core:3.26.2")
+    implementation("com.github.ajalt.clikt:clikt-jvm:5.0.0")
     testImplementation(kotlin("test"))
 }
 
@@ -32,18 +32,18 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 kotlin {
     jvmToolchain(17)
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
-        freeCompilerArgs.addAll(
-            "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-            "-opt-in=kotlinx.serialization.ExperimentalSerializationApi"
-        )
+        jvmTarget.set(JvmTarget.JVM_17)
+//        freeCompilerArgs.addAll(
+//            "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+//            "-opt-in=kotlinx.serialization.ExperimentalSerializationApi"
+//        )
     }
 }
 

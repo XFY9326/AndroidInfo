@@ -1,5 +1,6 @@
 package tool.xfy9326.android.platform.analyzer
 
+import com.github.javaparser.ParserConfiguration
 import com.github.javaparser.StaticJavaParser
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
 import com.github.javaparser.symbolsolver.JavaSymbolSolver
@@ -19,6 +20,10 @@ import kotlin.jvm.optionals.getOrNull
 object FieldTypeAnalyzer {
     private const val SRC_DIR = "src"
     private const val ENTRY_DIV = "/"
+
+    init {
+        StaticJavaParser.getParserConfiguration().setLanguageLevel(ParserConfiguration.LanguageLevel.JAVA_17)
+    }
 
     private fun ZipFile.getSrcEntry(field: ClassField): ZipEntry? = getEntry(SRC_DIR + ENTRY_DIV + field.className.javaSourceFilePath)
 
@@ -95,7 +100,6 @@ object FieldTypeAnalyzer {
         onFieldNotFound: (ClassField) -> Unit
     ): Sequence<Pair<ClassField, String>> {
         val classCache = mutableMapOf<String, ClassOrInterfaceDeclaration>()
-
         return fields.asSequence().mapNotNull {
             val classSimpleName = it.className.simpleName
             val classDeclaration = if (classSimpleName in classCache) {

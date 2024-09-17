@@ -1,9 +1,6 @@
 package tool.xfy9326.android.platform
 
-import com.github.ajalt.clikt.core.CliktCommand
-import com.github.ajalt.clikt.core.NoOpCliktCommand
-import com.github.ajalt.clikt.core.context
-import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.*
 import com.github.ajalt.clikt.output.MordantHelpFormatter
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.convert
@@ -37,9 +34,7 @@ private class JarCommand : NoOpCliktCommand(name = "java -jar <FILE>.jar") {
     }
 }
 
-private class AuthorityClassesCommand : CliktCommand(
-    name = "authority-classes", help = "Dump android authority classes"
-) {
+private class AuthorityClassesCommand : CliktCommand(name = "authority-classes") {
     private val output: Path by option(
         names = arrayOf("-o", "--output"), help = "Result output dir"
     ).path(mustExist = false, canBeFile = false).default(Path.of("."))
@@ -52,6 +47,8 @@ private class AuthorityClassesCommand : CliktCommand(
         encodeDefaults = true
         ignoreUnknownKeys = true
     }
+
+    override fun help(context: Context): String = "Dump android authority classes"
 
     override fun run(): Unit = runBlocking {
         suspendRun()
@@ -75,9 +72,7 @@ private class AuthorityClassesCommand : CliktCommand(
     }
 }
 
-private class FieldTypeCommand : CliktCommand(
-    name = "field-type", help = "Dump android sdk field types"
-) {
+private class FieldTypeCommand : CliktCommand(name = "field-type") {
     private val platform: File by option(
         names = arrayOf("-p", "--platform"), help = "Android platform zip file"
     ).file(mustExist = true, canBeDir = false).required()
@@ -87,6 +82,8 @@ private class FieldTypeCommand : CliktCommand(
     private val fields: List<ClassField> by argument(
         help = "Class and field (ClassName:FieldName)"
     ).convert { ClassField.parse(it) }.multiple(required = true)
+
+    override fun help(context: Context): String = "Dump android sdk field types"
 
     override fun run(): Unit = runBlocking {
         suspendRun()
