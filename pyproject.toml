@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "android-info"
+name = "android_info"
 version = "0.1.0"
 description = "Get latest Android versions, permissions, and API-Permission mappings"
 authors = ["XFY9326 <xfy9326@qq.com>"]
@@ -20,6 +20,11 @@ aiohttp = "^3.10.5"
 aiofiles = "^24.1.0"
 aioshutil = "^1.5"
 dataclasses-json = "^0.6.7"
+
+[tool.poetry.group.dev.dependencies]
+pip = "^24.2"
+wheel = "^0.44.0"
+setuptools = "^75.1.0"
 
 [build-system]
 requires = ["poetry-core"]
