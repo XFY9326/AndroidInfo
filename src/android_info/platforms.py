@@ -5,7 +5,6 @@ import re
 import zipfile
 from functools import lru_cache
 from io import BytesIO
-from typing import Optional
 
 import aiofiles.os
 import aiohttp
@@ -28,7 +27,7 @@ class _RawAPI(abc.ABC):
     class_name: str
 
     @abc.abstractmethod
-    def to_android_api(self, type_name: Optional[str] = None) -> 'AndroidAPI':
+    def to_android_api(self, type_name: str | None = None) -> 'AndroidAPI':
         raise NotImplementedError
 
 
@@ -61,7 +60,7 @@ class _RawMethod(_RawAPI):
         class_signature = jvm_type_to_signature(self.class_name)
         return f"{class_signature}->{self.name}{self._get_signature()}"
 
-    def to_android_api(self, type_name: Optional[str] = None) -> 'AndroidAPIMethod':
+    def to_android_api(self, type_name: str | None = None) -> 'AndroidAPIMethod':
         return AndroidAPIMethod(
             class_name=self.class_name,
             name=self.name,
@@ -83,7 +82,7 @@ class _RawField(_RawAPI):
         class_signature = jvm_type_to_signature(self.class_name)
         return f"{class_signature}->{self.name}:{jvm_type_to_signature(type_name)}"
 
-    def to_android_api(self, type_name: Optional[str] = None) -> 'AndroidAPIField':
+    def to_android_api(self, type_name: str | None = None) -> 'AndroidAPIField':
         assert type_name is not None, "Type name in field can't be None"
         return AndroidAPIField(
             class_name=self.class_name,
@@ -97,9 +96,9 @@ class _RawField(_RawAPI):
 @dataclasses.dataclass(frozen=True)
 class _RawAPIPermissionGroup:
     conditional: bool
-    value: Optional[str]
-    all_of: Optional[list[str]]
-    any_of: Optional[list[str]]
+    value: str | None
+    all_of: list[str] | None
+    any_of: list[str] | None
 
     def __hash__(self):
         hash_code = hash(self.value) if self.value is not None else 0
@@ -122,7 +121,7 @@ class _RawAPIPermission:
     api: _RawAPI
     permission_groups: list[_RawAPIPermissionGroup]
 
-    def to_android_api(self, type_name: Optional[str] = None) -> 'AndroidAPIPermission':
+    def to_android_api(self, type_name: str | None = None) -> 'AndroidAPIPermission':
         return AndroidAPIPermission(
             api=self.api.to_android_api(type_name),
             permission_groups=[i.to_android_api() for i in self.permission_groups],
@@ -166,9 +165,9 @@ class AndroidAPIField(AndroidAPI, DataClassJsonMixin):
 @dataclasses.dataclass(frozen=True)
 class APIPermissionGroup(DataClassJsonMixin):
     conditional: bool
-    value: Optional[str] = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
-    all_of: Optional[list[str]] = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
-    any_of: Optional[list[str]] = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    value: str | None = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    all_of: list[str] | None = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    any_of: list[str] | None = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
 
 
 @dataclasses.dataclass(frozen=True)
@@ -344,9 +343,9 @@ class AndroidPlatformAPIPermissions:
                         conditional_elements = annotation_element.xpath(self._ANNOTATION_ITEM_ANNOTATION_VAL_CONDITIONAL_XPATH)
                         conditional = conditional_elements is not None and len(conditional_elements) > 0
                         if val_permission_elements is not None:
-                            value: Optional[str] = None
-                            all_of: Optional[list[str]] = None
-                            any_of: Optional[list[str]] = None
+                            value: str | None = None
+                            all_of: list[str] | None = None
+                            any_of: list[str] | None = None
 
                             for val_permission_element in val_permission_elements:
                                 permissions_text: str = val_permission_element.attrib["val"].strip("{} ")

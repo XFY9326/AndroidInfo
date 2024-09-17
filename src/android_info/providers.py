@@ -2,7 +2,6 @@ import asyncio
 import dataclasses
 import http
 import os
-from typing import Optional
 
 import aiofiles
 import aiofiles.os
@@ -11,7 +10,7 @@ from dataclasses_json import DataClassJsonMixin
 from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
-from tqdm import tqdm
+from tqdm.asyncio import tqdm
 
 from .consts import ANDROID_MANIFEST_NS, SOURCE_CODE_QUERY_EXCLUDE_PATH
 from .source_code import AndroidSourceCodePath, AndroidSourceCodeQuery
@@ -30,8 +29,8 @@ class AndroidProvider(DataClassJsonMixin):
     name: str
     authorities: list[str]
     exported: bool
-    read_permission: Optional[str]
-    write_permission: Optional[str]
+    read_permission: str | None
+    write_permission: str | None
     has_uri_permission: bool
     grant_uri_permissions: list[AndroidUriPermission]
 
@@ -65,9 +64,9 @@ class AndroidProviderManifests:
 
     _REQUEST_DELAY = 1
 
-    def __init__(self, client: aiohttp.ClientSession, manifest_tmp_dir: Optional[str] = None):
+    def __init__(self, client: aiohttp.ClientSession, manifest_tmp_dir: str | None = None):
         self._query: AndroidSourceCodeQuery = AndroidSourceCodeQuery(client)
-        self._manifest_tmp_dir: Optional[str] = manifest_tmp_dir
+        self._manifest_tmp_dir: str | None = manifest_tmp_dir
         self._query_config: dict = self._query.get_query_config(
             query_string=self._QUERY_STRING,
             project=self._QUERY_PROJECT,
@@ -134,8 +133,8 @@ class AndroidProviderManifests:
         package_name = tree.attrib["package"]
         result: list[AndroidProvider] = []
         for provider in providers:
-            read_permission: Optional[str] = None
-            write_permission: Optional[str] = None
+            read_permission: str | None = None
+            write_permission: str | None = None
 
             if android_attrib("permission") in provider.attrib:
                 read_permission = provider.attrib[android_attrib("permission")]
@@ -176,42 +175,44 @@ class AndroidProviderManifests:
         else:
             manifest_content = await (await self._query.get_source()).get_source_code(code_path, refs)
             if self._manifest_tmp_dir is not None:
-                if not os.path.isdir(os.path.dirname(local_path)):
-                    await aiofiles.os.makedirs(os.path.dirname(local_path))
+                await aiofiles.os.makedirs(os.path.dirname(local_path), exist_ok=True)
                 async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
                     await f.write(manifest_content)
 
         return self.get_providers(manifest_content)
 
     async def get_all_android_providers(self, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
+        async def _task(is_last: bool, project: str, provider_path: AndroidSourceCodePath) -> list[AndroidProvider]:
+            has_cache = load_cache and self._has_manifest_tmp(provider_path, refs)
+            if not has_cache and not await (await self._query.get_source()).exists(project, refs):
+                await asyncio.sleep(self._REQUEST_DELAY / 2)
+                return []
+            fetch_success = False
+            while not fetch_success:
+                try:
+                    providers = await self.get_providers_from_manifest(provider_path, refs, load_cache)
+                    fetch_success = True
+                    return providers
+                except aiohttp.ClientResponseError as e:
+                    if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
+                        await asyncio.sleep(20)
+                    elif e.status == http.HTTPStatus.NOT_FOUND:
+                        fetch_success = True
+                    else:
+                        raise
+                if not has_cache and not is_last:
+                    await asyncio.sleep(self._REQUEST_DELAY)
+            return []
+
         provider_path_dict = await self.get_latest_provider_manifest_path()
         result: set[AndroidProvider] = set()
-        with tqdm(desc=refs, total=sum([len(i) for i in provider_path_dict.values()])) as pbar:
-            for project, provider_path_list in provider_path_dict.items():
-                for i, provider_path in enumerate(provider_path_list):
-                    has_cache = load_cache and self._has_manifest_tmp(provider_path, refs)
-                    if not has_cache and not await (await self._query.get_source()).exists(project, refs):
-                        await asyncio.sleep(self._REQUEST_DELAY / 2)
-                        break
-                    fetch_success = False
-                    while not fetch_success:
-                        try:
-                            pbar.set_postfix_str("Fetching")
-                            providers = await self.get_providers_from_manifest(provider_path, refs, load_cache)
-                            result.update(providers)
-                            fetch_success = True
-                            pbar.update(1)
-                        except aiohttp.ClientResponseError as e:
-                            if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
-                                pbar.set_postfix_str("Sleep 20 seconds")
-                                await asyncio.sleep(20)
-                            elif e.status == http.HTTPStatus.NOT_FOUND:
-                                fetch_success = True
-                            else:
-                                raise
-                        if not has_cache and i != len(provider_path_list) - 1:
-                            pbar.set_postfix_str(f"Delay {self._REQUEST_DELAY} seconds")
-                            await asyncio.sleep(self._REQUEST_DELAY)
+        tasks = [
+            asyncio.ensure_future(_task(i == len(provider_path_list) - 1, project, provider_path))
+            for project, provider_path_list in provider_path_dict.items()
+            for i, provider_path in enumerate(provider_path_list)
+        ]
+        for task in tqdm.as_completed(tasks, desc="Fetching providers"):
+            result.update(await task)
         return sorted(result, key=lambda x: (x.package, x.name))
 
     @staticmethod

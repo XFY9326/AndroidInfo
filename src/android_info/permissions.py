@@ -2,7 +2,6 @@ import codecs
 import dataclasses
 import html
 import re
-from typing import Optional
 
 import aiohttp
 from dataclasses_json import DataClassJsonMixin
@@ -29,9 +28,9 @@ class PermissionComment(DataClassJsonMixin):
 @dataclasses.dataclass(frozen=True)
 class AndroidPermissionGroup(DataClassJsonMixin):
     name: str
-    description: Optional[str]
-    label: Optional[str]
-    priority: Optional[int]
+    description: str | None
+    label: str | None
+    priority: int | None
     comment: PermissionComment
 
     def __hash__(self) -> int:
@@ -49,12 +48,12 @@ class AndroidPermissionGroup(DataClassJsonMixin):
 @dataclasses.dataclass(frozen=True)
 class AndroidPermission(DataClassJsonMixin):
     name: str
-    description: Optional[str]
-    label: Optional[str]
-    group: Optional[str]
+    description: str | None
+    label: str | None
+    group: str | None
     protection_levels: list[str]
     permission_flags: list[str]
-    priority: Optional[int]
+    priority: int | None
     comment: PermissionComment
 
     def __hash__(self) -> int:
@@ -88,12 +87,12 @@ class AndroidPermissions(DataClassJsonMixin):
 @dataclasses.dataclass(frozen=True)
 class _RawPermissionGroup:
     name: str
-    description: Optional[str]
-    label: Optional[str]
-    priority: Optional[str]
+    description: str | None
+    label: str | None
+    priority: str | None
     comment: PermissionComment
 
-    def get_priority(self) -> Optional[int]:
+    def get_priority(self) -> int | None:
         return int(self.priority) if self.priority is not None else 0
 
     def __hash__(self) -> int:
@@ -108,16 +107,16 @@ class _RawPermissionGroup:
 @dataclasses.dataclass(frozen=True)
 class _RawPermission:
     name: str
-    description: Optional[str]
-    label: Optional[str]
-    group: Optional[str]
-    protection_level: Optional[str]
-    permission_flags: Optional[str]
-    priority: Optional[str]
+    description: str | None
+    label: str | None
+    group: str | None
+    protection_level: str | None
+    permission_flags: str | None
+    priority: str | None
     comment: PermissionComment
 
     @staticmethod
-    def _divide(text: Optional[str], symbol: str = "|") -> list[str]:
+    def _divide(text: str | None, symbol: str = "|") -> list[str]:
         if text is None:
             return []
         elif symbol in text:
@@ -131,7 +130,7 @@ class _RawPermission:
     def get_permission_flags(self) -> list[str]:
         return self._divide(self.permission_flags)
 
-    def get_priority(self) -> Optional[int]:
+    def get_priority(self) -> int | None:
         return int(self.priority) if self.priority is not None else 0
 
     def __hash__(self) -> int:
@@ -147,14 +146,14 @@ class _AndroidCoreResString:
     _ID_START = "@string/"
     _PROJECT_PATH = "platform/frameworks/base"
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: Optional[str], lang: Optional[str] = None, load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: str | None, lang: str | None = None, load_cache: bool = False):
         value_path = "values" if lang is None else f"values-{lang.strip()}"
         self._source: AndroidRemoteSourceCode = AndroidRemoteSourceCode(
             client, AndroidSourceCodePath(self._PROJECT_PATH, f"core/res/res/{value_path}/strings.xml"), download_dir
         )
         self._refs: str = refs
         self._load_cache: bool = load_cache
-        self._res_strings: Optional[dict[str, str]] = None
+        self._res_strings: dict[str, str] | None = None
 
     async def _get_content(self) -> dict[str, str]:
         manifest = await self._source.get_content(self._refs, self._load_cache)
@@ -169,7 +168,7 @@ class _AndroidCoreResString:
             self._res_strings = await self._get_content()
         return self._res_strings
 
-    async def get_string(self, res_id: str) -> Optional[str]:
+    async def get_string(self, res_id: str) -> str | None:
         string_dict = await self.get_res_strings()
         if res_id.startswith(self._ID_START):
             key = res_id[len(self._ID_START):]
@@ -181,17 +180,17 @@ class _AndroidCoreResString:
 class _AndroidCoreManifest:
     _PERMISSION_MANIFEST = AndroidSourceCodePath("platform/frameworks/base", "core/res/AndroidManifest.xml")
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: Optional[str], load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: str | None, load_cache: bool = False):
         self._source: AndroidRemoteSourceCode = AndroidRemoteSourceCode(
             client, self._PERMISSION_MANIFEST, download_dir
         )
         self._refs: str = refs
         self._load_cache: bool = load_cache
-        self._permission_groups: Optional[dict[str, _RawPermissionGroup]] = None
-        self._permissions: Optional[dict[str, _RawPermission]] = None
+        self._permission_groups: dict[str, _RawPermissionGroup] | None = None
+        self._permissions: dict[str, _RawPermission] | None = None
 
     async def _get_content(self) -> tuple[dict[str, _RawPermissionGroup], dict[str, _RawPermission]]:
-        def _get_android_attrib(element, key: str) -> Optional[str]:
+        def _get_android_attrib(element, key: str) -> str | None:
             return element.attrib[android_attrib(key)] if android_attrib(key) in element.attrib else None
 
         def _get_comment_info(element) -> PermissionComment:
@@ -259,12 +258,12 @@ class _AndroidCoreManifest:
 
 class AndroidFrameworkPermissions:
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: Optional[str] = None, res_lang: Optional[str] = None, load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: str | None = None, res_lang: str | None = None, load_cache: bool = False):
         self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs, permissions_tmp_dir, load_cache)
         self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, res_lang, load_cache)
-        self._permissions: Optional[AndroidPermissions] = None
+        self._permissions: AndroidPermissions | None = None
 
-    async def _parse_raw_text(self, text: Optional[str]) -> Optional[str]:
+    async def _parse_raw_text(self, text: str | None) -> str | None:
         def _clean_text(string: str) -> str:
             string = "\n".join([i.strip() for i in string.splitlines() if len(i.strip()) > 0])
             string = html.unescape(string)

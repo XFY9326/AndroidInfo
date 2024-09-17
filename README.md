@@ -52,13 +52,13 @@ python3 src/main.py
 Or you can import any script you like in your code
 
 ```python
-from android_info.versions import AndroidVersions
-from android_info.permissions import AndroidFrameworkPermissions
-from android_info.platforms import AndroidPlatformAPIPermissions
-from android_info.providers import AndroidProviderManifests
+from android_info import AndroidFrameworkPermissions
+from android_info import AndroidPlatformAPIPermissions, AndroidPlatformProviderAuthorities
+from android_info import AndroidProviderManifests
+from android_info import AndroidVersions, AndroidAPILevel, AndroidBuildTag
 ```
 
 ## Jar libs
 
-'libs/PlatformTools' -> platform_tools.jar (Require JDK 17 to compile, JDK 11 to run)
+'libs/PlatformTools' -> platform_tools.jar (Require JDK 17)
 

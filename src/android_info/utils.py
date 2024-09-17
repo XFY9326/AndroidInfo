@@ -44,7 +44,7 @@ def get_short_class_name(class_name: str) -> str:
             return class_name
 
 
-def xml_to_dict(element: _Element, namespaces: Optional[dict[str, str]] = None) -> Optional[dict]:
+def xml_to_dict(element: _Element, namespaces: dict[str, str] | None = None) -> dict | None:
     ns_idx = {
         v: k for k, v in namespaces.items()
     } if namespaces is not None else None
@@ -59,7 +59,7 @@ def xml_to_dict(element: _Element, namespaces: Optional[dict[str, str]] = None) 
         else:
             return name
 
-    def _recursion(e: _Element) -> Optional[dict]:
+    def _recursion(e: _Element) -> dict | None:
         children = [c for c in e.getchildren() if not isinstance(c.tag, type(etree.Comment))]
         tag = _ns_attr(e.tag)
         if children:
@@ -120,7 +120,7 @@ class VersionCompare:
         return 0
 
 
-async def run_exec(program: str, *args: str, cwd: Optional[str] = None) -> tuple[int, str, str]:
+async def run_exec(program: str, *args: str, cwd: str | None = None) -> tuple[int, str, str]:
     process = await asyncio.create_subprocess_exec(
         program,
         *args,

@@ -6,7 +6,6 @@ import os
 import random
 import urllib.parse
 from io import StringIO
-from typing import Optional
 
 import aiofiles
 import aiofiles.os
@@ -35,9 +34,9 @@ class AndroidProjectMapping:
 
 
 class AndroidRemoteSourceCode:
-    def __init__(self, client: aiohttp.ClientSession, source_code_path: AndroidSourceCodePath, download_dir: Optional[str]):
+    def __init__(self, client: aiohttp.ClientSession, source_code_path: AndroidSourceCodePath, download_dir: str | None):
         self._source: AndroidGoogleSource = AndroidGoogleSource(client)
-        self._download_dir: Optional[str] = download_dir
+        self._download_dir: str | None = download_dir
         self._source_code_path: AndroidSourceCodePath = source_code_path
 
     async def get_content(self, refs: str, load_cache: bool = False) -> str:
@@ -53,8 +52,7 @@ class AndroidRemoteSourceCode:
             else:
                 file_content = await self._source.get_source_code(self._source_code_path, refs)
                 if self._download_dir is not None:
-                    if not os.path.isdir(os.path.dirname(local_path)):
-                        await aiofiles.os.makedirs(os.path.dirname(local_path))
+                    await aiofiles.os.makedirs(os.path.dirname(local_path), exist_ok=True)
                     async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
                         await f.write(file_content)
                 return file_content
@@ -69,7 +67,7 @@ class AndroidGoogleSource:
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
 
-    def _build_url(self, project: str, refs: Optional[str] = None, path: Optional[str] = None):
+    def _build_url(self, project: str, refs: str | None = None, path: str | None = None):
         project = project.lstrip("/ ")
         url = f"{self._BASE_URL}/{project}"
         if refs is not None:
@@ -88,7 +86,7 @@ class AndroidGoogleSource:
         line_elements = file_element.find_all("td", {"id": True})
         return "\n".join([i.text for i in line_elements])
 
-    async def exists(self, project: str, refs: Optional[str] = None) -> bool:
+    async def exists(self, project: str, refs: str | None = None) -> bool:
         async with self._client.head(self._build_url(project, refs)) as response:
             return response.status != http.HTTPStatus.NOT_FOUND
 
@@ -106,7 +104,7 @@ class AndroidPlatformManifest:
 
     def __init__(self, source: AndroidGoogleSource):
         self._source: AndroidGoogleSource = source
-        self._path: Optional[list[AndroidProjectMapping]] = None
+        self._path: list[AndroidProjectMapping] | None = None
 
     async def _load_project_mappings(self) -> list[AndroidProjectMapping]:
         manifest_file = await self._source.get_file(self._MANIFEST_REPO, self._MANIFEST_REF, self._MANIFEST_PATH)
@@ -154,7 +152,7 @@ class AndroidSourceCodeQuery:
             project: str = "",
             repository: str = "",
             path_prefix: str = "",
-            page_token: Optional[str] = None
+            page_token: str | None = None
     ) -> dict:
         return {
             "queryString": query_string,
@@ -196,7 +194,7 @@ class AndroidSourceCodeQuery:
 
     @staticmethod
     def _parse_query_result(text: str) -> dict:
-        batch_barrier: Optional[str] = None
+        batch_barrier: str | None = None
         http_content: list[str] = []
         part_counter = 0
         is_http_success = False
@@ -222,7 +220,7 @@ class AndroidSourceCodeQuery:
     async def query_pages(self, query_config: dict) -> list[dict]:
         result: list[dict] = list()
         is_first_batch = True
-        next_page_token: Optional[str] = None
+        next_page_token: str | None = None
         with tqdm(desc="Code query", total=1) as pbar:
             while is_first_batch or next_page_token is not None:
                 if is_first_batch:

@@ -31,7 +31,7 @@ class AndroidRepository:
 
     def __init__(self, client: aiohttp.ClientSession):
         self._client = client
-        self._tree: Optional[_Element] = None
+        self._tree: _Element | None = None
 
     @staticmethod
     def cached_instance(client: aiohttp.ClientSession) -> 'AndroidRepository':
@@ -74,7 +74,7 @@ class AndroidRepository:
             return pkg_elements
         raise ValueError(f"Package {path} not found!")
 
-    async def list_packages(self, category: Optional[str] = None) -> list[str]:
+    async def list_packages(self, category: str | None = None) -> list[str]:
         await self._prepare()
         if category is None:
             xpath = "/sdk:sdk-repository/remotePackage"
@@ -120,7 +120,7 @@ class AndroidRepository:
         else:
             raise ValueError(f"Unknown archives format: {archives}")
 
-    async def download_archive(self, archive_name: str, output_dir: Optional[str] = None) -> str:
+    async def download_archive(self, archive_name: str, output_dir: str | None = None) -> str:
         if output_dir is None:
             output_dir = "."
         if not os.path.isdir(output_dir):
@@ -138,7 +138,7 @@ class AndroidRepository:
             raise ValueError(f"Missing download tmp: {tmp_file_path}")
         return target_file_path
 
-    async def get_packages(self, path: str, channel: Optional[str] = None) -> list[dict]:
+    async def get_packages(self, path: str, channel: str | None = None) -> list[dict]:
         pkg_elements = await self._get_package_elements(path)
         return sorted([
             d
@@ -146,7 +146,7 @@ class AndroidRepository:
             if channel is None or ("channelRef" in d and d["channelRef"]["@ref"] == channel)
         ], key=lambda x: self.revision_dict_to_list(x["revision"]), reverse=True)
 
-    async def get_latest_package(self, path: str, channel: Optional[str] = None) -> dict:
+    async def get_latest_package(self, path: str, channel: str | None = None) -> dict:
         pkgs = await self.get_packages(path, channel)
         if len(pkgs) > 0:
             return pkgs[0]

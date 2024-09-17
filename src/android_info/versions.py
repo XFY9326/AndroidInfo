@@ -1,7 +1,7 @@
 import dataclasses
 import re
 from functools import cmp_to_key
-from typing import Optional, Union
+from typing import Union
 
 import aiohttp
 from bs4 import BeautifulSoup
@@ -76,16 +76,16 @@ class AndroidBuildTag(DataClassJsonMixin):
 
 @dataclasses.dataclass(frozen=True)
 class AndroidBuildVersion(AndroidBuildTag):
-    name: Optional[str]
+    name: str | None
     build_id: str
-    security_patch_level: Optional[str]
+    security_patch_level: str | None
 
     @staticmethod
     def from_tag(
             tag: Union[str, AndroidBuildTag],
             build_id: str,
-            name: Optional[str] = None,
-            security_patch_level: Optional[str] = None
+            name: str | None = None,
+            security_patch_level: str | None = None
     ) -> 'AndroidBuildVersion':
         if isinstance(tag, str):
             build_tag = AndroidBuildTag.parse(tag)
@@ -106,7 +106,7 @@ class AndroidBuildVersion(AndroidBuildTag):
 
 @dataclasses.dataclass
 class AndroidAPILevel(DataClassJsonMixin):
-    name: Optional[str]
+    name: str | None
     version_range: str
     versions: list[str]
     api: int
@@ -154,10 +154,10 @@ class AndroidVersions:
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
         self._regex_api_ndk: re.Pattern = re.compile(r"API level (\d+)(, NDK (\d+))?")
-        self._build_versions: Optional[list[AndroidBuildVersion]] = None
-        self._api_levels: Optional[list[AndroidAPILevel]] = None
+        self._build_versions: list[AndroidBuildVersion] | None = None
+        self._api_levels: list[AndroidAPILevel] | None = None
         self._version_compare: VersionCompare = VersionCompare.instance()
-        self._checked_api_mappings: Optional[dict[int, list[str]]] = None
+        self._checked_api_mappings: dict[int, list[str]] | None = None
 
     async def _fetch_docs(self) -> BeautifulSoup:
         async with self._client.get(self._BASE_URL) as response:
@@ -165,7 +165,7 @@ class AndroidVersions:
 
     @staticmethod
     def _get_build_versions(soup: BeautifulSoup) -> list[AndroidBuildVersion]:
-        def _transform_empty_str(text: str) -> Optional[str]:
+        def _transform_empty_str(text: str) -> str | None:
             return text if len(text) > 0 else None
 
         table_body = soup.find(id="source-code-tags-and-builds").find_next("tbody")
@@ -202,7 +202,7 @@ class AndroidVersions:
         ]
 
     def _get_api_levels(self, soup: BeautifulSoup, api_level_mappings: dict[int, list[str]]) -> list[AndroidAPILevel]:
-        def _parse_codename(codename: str) -> Optional[str]:
+        def _parse_codename(codename: str) -> str | None:
             return codename if "no codename" not in codename else None
 
         # Missing API 20 in android docs
@@ -275,18 +275,18 @@ class AndroidVersions:
         return [i for i in self._build_versions if i.match_version(version)]
 
     @staticmethod
-    def _get_latest_build_version(build_versions: list[AndroidBuildVersion], is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
+    def _get_latest_build_version(build_versions: list[AndroidBuildVersion], is_security: bool | None = None) -> AndroidBuildVersion | None:
         if len(build_versions) == 0:
             return None
         build_versions = build_versions if is_security is None else [i for i in build_versions if i.is_security == is_security]
         build_versions = sorted(build_versions, reverse=True)
         return build_versions[0]
 
-    async def get_latest_build_version(self, version: str, is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
+    async def get_latest_build_version(self, version: str, is_security: bool | None = None) -> AndroidBuildVersion | None:
         build_versions = await self.get_build_versions(version)
         return self._get_latest_build_version(build_versions, is_security)
 
-    async def get_api_level(self, api: int) -> Optional[AndroidAPILevel]:
+    async def get_api_level(self, api: int) -> AndroidAPILevel | None:
         await self._prepare()
         assert self._api_levels is not None
         if api <= 0:
@@ -311,6 +311,6 @@ class AndroidVersions:
         api_level = await self.get_api_level(api)
         return [build for version in api_level.versions for build in (await self.get_build_versions(version))]
 
-    async def get_latest_api_build_version(self, api: int, is_security: Optional[bool] = None) -> Optional[AndroidBuildVersion]:
+    async def get_latest_api_build_version(self, api: int, is_security: bool | None = None) -> AndroidBuildVersion | None:
         build_versions = await self.get_api_build_versions(api)
         return self._get_latest_build_version(build_versions, is_security)
