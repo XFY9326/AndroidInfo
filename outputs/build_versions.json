@@ -8449,5 +8449,23 @@
         "name": "Android15",
         "build_id": "12319019",
         "security_patch_level": "2024-09-05"
+    },
+    "android-15.0.0_r2": {
+        "tag": "android-15.0.0_r2",
+        "version": "15.0.0",
+        "revision": "2",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP3A.241005.015",
+        "security_patch_level": "2024-10-05"
+    },
+    "android-15.0.0_r3": {
+        "tag": "android-15.0.0_r3",
+        "version": "15.0.0",
+        "revision": "3",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP3A.241005.015.A2",
+        "security_patch_level": "2024-10-05"
     }
 }
