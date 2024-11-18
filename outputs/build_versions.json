@@ -8495,6 +8495,15 @@
         "build_id": "AD1A.240905.004",
         "security_patch_level": "2024-09-05"
     },
+    "android-14.0.0_r75": {
+        "tag": "android-14.0.0_r75",
+        "version": "14.0.0",
+        "revision": "75",
+        "is_security": false,
+        "name": "Android14",
+        "build_id": "AP2A.240805.005.S4",
+        "security_patch_level": "2024-08-05"
+    },
     "android-15.0.0_r1": {
         "tag": "android-15.0.0_r1",
         "version": "15.0.0",

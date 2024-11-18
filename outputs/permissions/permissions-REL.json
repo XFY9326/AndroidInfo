@@ -2781,6 +2781,23 @@
                 "hide": false
             }
         },
+        "android.permission.RANGING": {
+            "name": "android.permission.RANGING",
+            "description": "Allow the app to determine relative position between nearby devices",
+            "label": "determine relative position between nearby devices",
+            "group": "android.permission-group.UNDEFINED",
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.SUSPEND_APPS": {
             "name": "android.permission.SUSPEND_APPS",
             "description": null,

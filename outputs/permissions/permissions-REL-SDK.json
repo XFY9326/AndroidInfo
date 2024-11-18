@@ -1123,6 +1123,23 @@
                 "hide": false
             }
         },
+        "android.permission.RANGING": {
+            "name": "android.permission.RANGING",
+            "description": "Allow the app to determine relative position between nearby devices",
+            "label": "determine relative position between nearby devices",
+            "group": "android.permission-group.UNDEFINED",
+            "protection_levels": [
+                "dangerous"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.BLUETOOTH_ADMIN": {
             "name": "android.permission.BLUETOOTH_ADMIN",
             "description": "Allows the app to configure the local Bluetooth phone, and to discover and pair with remote devices.",
