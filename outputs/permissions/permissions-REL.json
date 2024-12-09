@@ -13366,6 +13366,24 @@
                 "hide": true
             }
         },
+        "android.permission.READ_SUBSCRIPTION_PLANS": {
+            "name": "android.permission.READ_SUBSCRIPTION_PLANS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE": {
             "name": "android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE",
             "description": null,
