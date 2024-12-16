@@ -481,18 +481,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.android.packageinstaller",
-        "name": "com.android.packageinstaller.wear.WearPackageIconProvider",
-        "authorities": [
-            "com.google.android.packageinstaller.wear.provider"
-        ],
-        "exported": false,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.android.permissioncontroller",
         "name": "com.android.permissioncontroller.permission.service.PermissionSearchIndexablesProvider",
         "authorities": [
@@ -1100,18 +1088,6 @@
         "read_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "write_permission": "android.permission.READ_SEARCH_INDEXABLES",
         "has_uri_permission": true,
-        "grant_uri_permissions": []
-    },
-    {
-        "package": "com.android.settingslib.spa.gallery",
-        "name": "com.android.settingslib.spa.slice.SpaSliceProvider",
-        "authorities": [
-            "com.android.spa.gallery.slice.provider"
-        ],
-        "exported": true,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": false,
         "grant_uri_permissions": []
     },
     {

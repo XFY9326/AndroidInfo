@@ -3291,6 +3291,24 @@
                 "hide": true
             }
         },
+        "android.permission.VIBRATE_VENDOR_EFFECTS": {
+            "name": "android.permission.VIBRATE_VENDOR_EFFECTS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.ACCESS_VIBRATOR_STATE": {
             "name": "android.permission.ACCESS_VIBRATOR_STATE",
             "description": "Allows the app to access the vibrator state.",
@@ -10251,6 +10269,25 @@
                 "hide": false
             }
         },
+        "android.permission.ALWAYS_BOUND_TV_INPUT": {
+            "name": "android.permission.ALWAYS_BOUND_TV_INPUT",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged",
+                "vendorPrivileged"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.BIND_TV_INTERACTIVE_APP": {
             "name": "android.permission.BIND_TV_INTERACTIVE_APP",
             "description": null,
@@ -15692,7 +15729,7 @@
             "priority": 0,
             "comment": {
                 "deprecated": false,
-                "system_api": false,
+                "system_api": true,
                 "test_api": false,
                 "hide": true
             }
@@ -16771,6 +16808,59 @@
                 "hide": false
             }
         },
+        "android.permission.BIND_APP_FUNCTION_SERVICE": {
+            "name": "android.permission.BIND_APP_FUNCTION_SERVICE",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.EXECUTE_APP_FUNCTIONS_TRUSTED": {
+            "name": "android.permission.EXECUTE_APP_FUNCTIONS_TRUSTED",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "internal",
+                "role"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.EXECUTE_APP_FUNCTIONS": {
+            "name": "android.permission.EXECUTE_APP_FUNCTIONS",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "internal",
+                "role"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.PROVIDE_OWN_AUTOFILL_SUGGESTIONS": {
             "name": "android.permission.PROVIDE_OWN_AUTOFILL_SUGGESTIONS",
             "description": null,
@@ -17093,6 +17183,23 @@
                 "hide": true
             }
         },
+        "android.permission.MANAGE_KEY_GESTURES": {
+            "name": "android.permission.MANAGE_KEY_GESTURES",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": true
+            }
+        },
         "android.permission.MANAGE_DEVICE_LOCK_STATE": {
             "name": "android.permission.MANAGE_DEVICE_LOCK_STATE",
             "description": null,
@@ -17331,6 +17438,24 @@
             "protection_levels": [
                 "internal",
                 "appop"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": true,
+                "test_api": false,
+                "hide": true
+            }
+        },
+        "android.permission.CAPTURE_CONSENTLESS_BUGREPORT_DELEGATED_CONSENT": {
+            "name": "android.permission.CAPTURE_CONSENTLESS_BUGREPORT_DELEGATED_CONSENT",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "signature",
+                "privileged"
             ],
             "permission_flags": [],
             "priority": 0,

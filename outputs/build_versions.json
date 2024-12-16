@@ -8638,5 +8638,14 @@
         "name": "Android15",
         "build_id": "AP4A.241205.013.B1",
         "security_patch_level": "2024-12-05"
+    },
+    "android-15.0.0_r9": {
+        "tag": "android-15.0.0_r9",
+        "version": "15.0.0",
+        "revision": "9",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP4A.241205.013.C1",
+        "security_patch_level": "2024-12-05"
     }
 }
