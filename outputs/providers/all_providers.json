@@ -1308,18 +1308,6 @@
         "grant_uri_permissions": []
     },
     {
-        "package": "com.google.android.tv.hotwordmic",
-        "name": "com.google.android.tv.hotwordmic.HotwordMicToggleProvider",
-        "authorities": [
-            "atv.hotwordmic"
-        ],
-        "exported": true,
-        "read_permission": null,
-        "write_permission": null,
-        "has_uri_permission": false,
-        "grant_uri_permissions": []
-    },
-    {
         "package": "com.google.android.wallpaper.weathereffects",
         "name": "com.google.android.wallpaper.weathereffects.provider.WeatherEffectsContentProvider",
         "authorities": [
