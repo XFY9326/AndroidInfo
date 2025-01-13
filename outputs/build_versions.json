@@ -6551,6 +6551,15 @@
         "build_id": "12496784",
         "security_patch_level": "2021-10-05"
     },
+    "android-security-12.0.0_r67": {
+        "tag": "android-security-12.0.0_r67",
+        "version": "12.0.0",
+        "revision": "67",
+        "is_security": true,
+        "name": "Android12",
+        "build_id": "12617830",
+        "security_patch_level": "2021-10-05"
+    },
     "android-security-12.1.0_r1": {
         "tag": "android-security-12.1.0_r1",
         "version": "12.1.0",
@@ -6622,6 +6631,15 @@
         "name": "Android12L",
         "build_id": "SP2A.220405.004",
         "security_patch_level": "2022-04-05"
+    },
+    "android-security-12.1.0_r5": {
+        "tag": "android-security-12.1.0_r5",
+        "version": "12.1.0",
+        "revision": "5",
+        "is_security": true,
+        "name": "Android12L",
+        "build_id": "12617834",
+        "security_patch_level": "2022-03-05"
     },
     "android-12.1.0_r5": {
         "tag": "android-12.1.0_r5",
@@ -7262,6 +7280,15 @@
         "build_id": "12496786",
         "security_patch_level": "2022-08-05"
     },
+    "android-security-13.0.0_r25": {
+        "tag": "android-security-13.0.0_r25",
+        "version": "13.0.0",
+        "revision": "25",
+        "is_security": true,
+        "name": "Android13",
+        "build_id": "12617836",
+        "security_patch_level": "2022-08-05"
+    },
     "android-13.0.0_r27": {
         "tag": "android-13.0.0_r27",
         "version": "13.0.0",
@@ -7766,6 +7793,15 @@
         "build_id": "TQ3A.230805.001.S1",
         "security_patch_level": "2023-08-05"
     },
+    "android-13.0.0_r84": {
+        "tag": "android-13.0.0_r84",
+        "version": "13.0.0",
+        "revision": "84",
+        "is_security": false,
+        "name": "Android13",
+        "build_id": "TQ3A.230805.001.S2",
+        "security_patch_level": "2023-08-05"
+    },
     "android-14.0.0_r1": {
         "tag": "android-14.0.0_r1",
         "version": "14.0.0",
@@ -8044,6 +8080,15 @@
         "name": "Android14",
         "build_id": "UQ1A.231205.014",
         "security_patch_level": "2023-12-05"
+    },
+    "android-security-14.0.0_r16": {
+        "tag": "android-security-14.0.0_r16",
+        "version": "14.0.0",
+        "revision": "16",
+        "is_security": true,
+        "name": "Android14",
+        "build_id": "12617837",
+        "security_patch_level": "2023-10-05"
     },
     "android-14.0.0_r17": {
         "tag": "android-14.0.0_r17",
@@ -8603,6 +8648,15 @@
         "build_id": "AP3A.241105.007",
         "security_patch_level": "2024-11-05"
     },
+    "android-security-15.0.0_r4": {
+        "tag": "android-security-15.0.0_r4",
+        "version": "15.0.0",
+        "revision": "4",
+        "is_security": true,
+        "name": "Android15",
+        "build_id": "12617838",
+        "security_patch_level": "2024-09-05"
+    },
     "android-15.0.0_r5": {
         "tag": "android-15.0.0_r5",
         "version": "15.0.0",
@@ -8647,5 +8701,32 @@
         "name": "Android15",
         "build_id": "AP4A.241205.013.C1",
         "security_patch_level": "2024-12-05"
+    },
+    "android-15.0.0_r10": {
+        "tag": "android-15.0.0_r10",
+        "version": "15.0.0",
+        "revision": "10",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP4A.250105.002",
+        "security_patch_level": "2025-01-05"
+    },
+    "android-15.0.0_r11": {
+        "tag": "android-15.0.0_r11",
+        "version": "15.0.0",
+        "revision": "11",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP4A.250105.002.A1",
+        "security_patch_level": "2025-01-05"
+    },
+    "android-15.0.0_r12": {
+        "tag": "android-15.0.0_r12",
+        "version": "15.0.0",
+        "revision": "12",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP4A.250105.002.B1",
+        "security_patch_level": "2025-01-05"
     }
 }
