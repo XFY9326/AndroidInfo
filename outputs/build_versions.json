@@ -8728,5 +8728,14 @@
         "name": "Android15",
         "build_id": "AP4A.250105.002.B1",
         "security_patch_level": "2025-01-05"
+    },
+    "android-15.0.0_r13": {
+        "tag": "android-15.0.0_r13",
+        "version": "15.0.0",
+        "revision": "13",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "AP4A.250105.002.C1",
+        "security_patch_level": "2025-01-05"
     }
 }
