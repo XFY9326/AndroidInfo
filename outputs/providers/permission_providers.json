@@ -84,6 +84,18 @@
         "grant_uri_permissions": []
     },
     {
+        "package": "com.android.devicediagnostics",
+        "name": "com.android.devicediagnostics.GetStatusContentProvider",
+        "authorities": [
+            "com.android.devicediagnostics"
+        ],
+        "exported": true,
+        "read_permission": "android.permission.READ_PRIVILEGED_PHONE_STATE",
+        "write_permission": "android.permission.READ_PRIVILEGED_PHONE_STATE",
+        "has_uri_permission": false,
+        "grant_uri_permissions": []
+    },
+    {
         "package": "com.android.dialer.preferredsim.impl",
         "name": "com.android.dialer.preferredsim.impl.PreferredSimFallbackProvider",
         "authorities": [

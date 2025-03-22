@@ -2,6 +2,7 @@ import asyncio
 import dataclasses
 import http
 import os
+import re
 
 import aiofiles
 import aiofiles.os
@@ -52,6 +53,7 @@ class AndroidProvider(DataClassJsonMixin):
 
 class AndroidProviderManifests:
     _PROVIDER_XPATH = "//application/provider[@android:authorities and (@android:exported='true' or @android:grantUriPermissions='true')]"
+    _APPLICATION_ID_PATTERN = re.compile(r"applicationId\s*(?:=\s*)?(['\"])(.*?)\1")
 
     _QUERY_PROJECT = "android"
     # noinspection SpellCheckingInspection
@@ -82,8 +84,62 @@ class AndroidProviderManifests:
             result.setdefault(path.project, []).append(path)
         return result
 
-    @staticmethod
-    def get_providers(manifest_content: str) -> list[AndroidProvider]:
+    def _get_manifest_tmp_path(self, code_path: AndroidSourceCodePath, refs: str) -> str:
+        return os.path.join(self._manifest_tmp_dir, refs.replace("/", "_"), code_path.full_path)
+
+    def _has_manifest_tmp(self, code_path: AndroidSourceCodePath, refs: str) -> bool:
+        if self._manifest_tmp_dir is None:
+            return False
+        else:
+            return os.path.isfile(self._get_manifest_tmp_path(code_path, refs))
+
+    async def _get_manifest_source_code(self, code_path: AndroidSourceCodePath, refs: str, load_cache: bool = False) -> str:
+        local_path = self._get_manifest_tmp_path(code_path, refs)
+        if load_cache and self._manifest_tmp_dir is not None and os.path.isfile(local_path):
+            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
+                content = await f.read()
+        else:
+            content = await (await self._query.get_source()).get_source_code(code_path, refs)
+            if self._manifest_tmp_dir is not None:
+                await aiofiles.os.makedirs(os.path.dirname(local_path), exist_ok=True)
+                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
+                    await f.write(content)
+        return content
+
+    async def _try_get_package_from_gradle(self, manifest_path: AndroidSourceCodePath, refs: str, load_cache: bool = False):
+        app_path = os.path.dirname(os.path.dirname(os.path.dirname(manifest_path.path)))
+        possible_build_gradle_paths: list[AndroidSourceCodePath] = [
+            AndroidSourceCodePath(
+                project=manifest_path.project,
+                path=f"{app_path}/build.gradle"
+            ),
+            AndroidSourceCodePath(
+                project=manifest_path.project,
+                path=f"{app_path}/build.gradle.kts"
+            )
+        ]
+        gradle_path: AndroidSourceCodePath | None = None
+        gradle_content: str | None = None
+        for possible_code_path in possible_build_gradle_paths:
+            # noinspection PyBroadException
+            try:
+                gradle_content = await self._get_manifest_source_code(possible_code_path, refs, load_cache)
+                gradle_path = possible_code_path
+                break
+            except:
+                pass
+        if gradle_content is None:
+            raise FileNotFoundError(f"Failed to get gradle content for manifest: {manifest_path}")
+
+        match = re.search(self._APPLICATION_ID_PATTERN, gradle_content)
+        if match:
+            return match.group(2)
+        else:
+            raise ValueError(f"Can't get package from build gradle file: {gradle_path}")
+
+    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
+        manifest_content = await self._get_manifest_source_code(code_path, refs, load_cache)
+
         def _get_android_attr(element, name: str, default: str) -> str:
             if android_attrib(name) in element.attrib:
                 return element.attrib[android_attrib(name)]
@@ -130,7 +186,11 @@ class AndroidProviderManifests:
             namespaces=ANDROID_MANIFEST_NS
         )
 
-        package_name = tree.attrib["package"]
+        if "package" in tree.attrib:
+            package_name = tree.attrib["package"]
+        else:
+            package_name = await self._try_get_package_from_gradle(code_path, refs, load_cache)
+
         result: list[AndroidProvider] = []
         for provider in providers:
             read_permission: str | None = None
@@ -157,29 +217,6 @@ class AndroidProviderManifests:
                 )
             )
         return result
-
-    def _get_manifest_tmp_path(self, code_path: AndroidSourceCodePath, refs: str) -> str:
-        return os.path.join(self._manifest_tmp_dir, refs.replace("/", "_"), code_path.full_path)
-
-    def _has_manifest_tmp(self, code_path: AndroidSourceCodePath, refs: str) -> bool:
-        if self._manifest_tmp_dir is None:
-            return False
-        else:
-            return os.path.isfile(self._get_manifest_tmp_path(code_path, refs))
-
-    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
-        local_path = self._get_manifest_tmp_path(code_path, refs)
-        if load_cache and self._manifest_tmp_dir is not None and os.path.isfile(local_path):
-            async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
-                manifest_content = await f.read()
-        else:
-            manifest_content = await (await self._query.get_source()).get_source_code(code_path, refs)
-            if self._manifest_tmp_dir is not None:
-                await aiofiles.os.makedirs(os.path.dirname(local_path), exist_ok=True)
-                async with aiofiles.open(local_path, "w", encoding="utf-8") as f:
-                    await f.write(manifest_content)
-
-        return self.get_providers(manifest_content)
 
     async def get_all_android_providers(self, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
         async def _task(is_last: bool, project: str, provider_path: AndroidSourceCodePath) -> list[AndroidProvider]:

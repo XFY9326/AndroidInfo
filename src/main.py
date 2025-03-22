@@ -245,11 +245,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    looper = asyncio.get_event_loop()
-    try:
-        looper.run_until_complete(main())
-    except KeyboardInterrupt:
-        pass
-    finally:
-        if not looper.is_closed:
-            looper.close()
+    asyncio.run(main())

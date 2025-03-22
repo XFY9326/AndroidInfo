@@ -346,6 +346,40 @@
                 "hide": false
             }
         },
+        "android.permission.APPLY_PICTURE_PROFILE": {
+            "name": "android.permission.APPLY_PICTURE_PROFILE",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.READ_COLOR_ZONES": {
+            "name": "android.permission.READ_COLOR_ZONES",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.READ_EXTERNAL_STORAGE": {
             "name": "android.permission.READ_EXTERNAL_STORAGE",
             "description": "Allows the app to read the contents of your shared storage.",
@@ -1414,6 +1448,23 @@
                 "hide": false
             }
         },
+        "android.permission.QUERY_ADVANCED_PROTECTION_MODE": {
+            "name": "android.permission.QUERY_ADVANCED_PROTECTION_MODE",
+            "description": null,
+            "label": null,
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
         "android.permission.REORDER_TASKS": {
             "name": "android.permission.REORDER_TASKS",
             "description": "Allows the app to move tasks to the foreground and background. The app may do this without your input.",
@@ -1554,6 +1605,23 @@
             "name": "android.permission.HIDE_OVERLAY_WINDOWS",
             "description": "This app can request that the system hides overlays originating from apps from being shown on top of it.",
             "label": "hide other apps overlays",
+            "group": null,
+            "protection_levels": [
+                "normal"
+            ],
+            "permission_flags": [],
+            "priority": 0,
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
+        },
+        "android.permission.TV_IMPLICIT_ENTER_PIP": {
+            "name": "android.permission.TV_IMPLICIT_ENTER_PIP",
+            "description": null,
+            "label": null,
             "group": null,
             "protection_levels": [
                 "normal"
