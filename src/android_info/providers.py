@@ -130,7 +130,7 @@ class AndroidProviderManifests:
                 if e.status == http.HTTPStatus.NOT_FOUND:
                     continue
                 else:
-                    raise
+                    raise RuntimeError(f"Gradle content {possible_code_path} load failed: {e}")
         if gradle_content is None:
             raise FileNotFoundError(f"Failed to get gradle content for manifest: {manifest_path}")
 
