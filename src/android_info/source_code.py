@@ -64,8 +64,11 @@ class AndroidGoogleSource:
     _BS4_PARSER = "lxml"
     _BASE_URL = "https://android.googlesource.com"
 
+    _REQUEST_DELAY = 1
+
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
+        self._lock: asyncio.Lock = asyncio.Lock()
 
     def _build_url(self, project: str, refs: str | None = None, path: str | None = None):
         project = project.lstrip("/ ")
@@ -79,8 +82,10 @@ class AndroidGoogleSource:
         return url
 
     async def get_content(self, url: str) -> str:
-        async with self._client.get(url) as response:
-            html_content = await response.text()
+        async with self._lock:
+            async with self._client.get(url) as response:
+                html_content = await response.text()
+            await asyncio.sleep(self._REQUEST_DELAY)
         soup = BeautifulSoup(html_content, self._BS4_PARSER)
         file_element = soup.find("table", {"class": "FileContents"})
         line_elements = file_element.find_all("td", {"id": True})

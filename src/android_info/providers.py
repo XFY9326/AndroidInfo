@@ -126,8 +126,11 @@ class AndroidProviderManifests:
                 gradle_content = await self._get_manifest_source_code(possible_code_path, refs, load_cache)
                 gradle_path = possible_code_path
                 break
-            except:
-                pass
+            except aiohttp.ClientResponseError as e:
+                if e.status == http.HTTPStatus.NOT_FOUND:
+                    continue
+                else:
+                    raise
         if gradle_content is None:
             raise FileNotFoundError(f"Failed to get gradle content for manifest: {manifest_path}")
 
