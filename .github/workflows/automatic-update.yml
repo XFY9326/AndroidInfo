@@ -11,27 +11,29 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
           fetch-depth: 0
-      - name: Setup Poetry
-        run: pipx install poetry
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+      - name: Setup Python uv
+        uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.12"
-          cache: "poetry"
-      - name: Set up JDK 17
+          enable-cache: true
+          cache-dependency-glob: "**/pyproject.toml"
+      - name: Setup java
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
           java-version: "17"
-      - name: Install dependencies
-        run: poetry install --only main
-      - name: Update outputs
-        run: poetry run python src/main.py
+          cache: "gradle"
+          cache-dependency-path: |
+            libs/PlatformTools/*.gradle*
+            libs/PlatformTools/**/gradle-wrapper.properties
+      - name: Run scripts
+        run: uv run src/main.py
       - name: Push updates
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
-          commit_message: Automatic update commit
+          commit_message: Automatic update ${{ steps.date.outputs.date }}

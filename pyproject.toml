@@ -1,31 +1,21 @@
-[tool.poetry]
+[project]
 name = "android_info"
 version = "0.1.0"
 description = "Get latest Android versions, permissions, and API-Permission mappings"
-authors = ["XFY9326 <xfy9326@qq.com>"]
-license = "MIT"
+authors = [{ name = "XFY9326", email = "xfy9326@qq.com" }]
+requires-python = "~=3.10"
 readme = "README.md"
-
-[virtualenvs]
-create = true
-in-project = true
-ignore-conda-env = true
-
-[tool.poetry.dependencies]
-python = "^3.10"
-bs4 = "^0.0.2"
-tqdm = "^4.66.5"
-lxml = "^5.3.0"
-aiohttp = "^3.10.5"
-aiofiles = "^24.1.0"
-aioshutil = "^1.5"
-dataclasses-json = "^0.6.7"
-
-[tool.poetry.group.dev.dependencies]
-pip = "^24.2"
-wheel = "^0.44.0"
-setuptools = "^75.1.0"
+license = "MIT"
+dependencies = [
+    "bs4>=0.0.2,<0.0.3",
+    "tqdm>=4.66.5,<5",
+    "lxml>=5.3.0,<6",
+    "aiohttp>=3.10.5,<4",
+    "aiofiles>=24.1.0,<25",
+    "aioshutil~=1.5",
+    "dataclasses-json>=0.6.7,<0.7",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
