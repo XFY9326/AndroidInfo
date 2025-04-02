@@ -93,7 +93,8 @@ class AndroidProviderManifests:
         else:
             return os.path.isfile(self._get_manifest_tmp_path(code_path, refs))
 
-    async def _get_manifest_source_code(self, code_path: AndroidSourceCodePath, refs: str, load_cache: bool = False) -> str:
+    async def _get_manifest_source_code(self, code_path: AndroidSourceCodePath, refs: str,
+                                        load_cache: bool = False) -> str:
         local_path = self._get_manifest_tmp_path(code_path, refs)
         if load_cache and self._manifest_tmp_dir is not None and os.path.isfile(local_path):
             async with aiofiles.open(local_path, "r", encoding="utf-8") as f:
@@ -106,7 +107,8 @@ class AndroidProviderManifests:
                     await f.write(content)
         return content
 
-    async def _try_get_package_from_gradle(self, manifest_path: AndroidSourceCodePath, refs: str, load_cache: bool = False):
+    async def _try_get_package_from_gradle(self, manifest_path: AndroidSourceCodePath, refs: str,
+                                           load_cache: bool = False):
         app_path = os.path.dirname(os.path.dirname(os.path.dirname(manifest_path.path)))
         possible_build_gradle_paths: list[AndroidSourceCodePath] = [
             AndroidSourceCodePath(
@@ -140,7 +142,8 @@ class AndroidProviderManifests:
         else:
             raise ValueError(f"Can't get package from build gradle file: {gradle_path}")
 
-    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str, load_cache: bool = False) -> list[AndroidProvider]:
+    async def get_providers_from_manifest(self, code_path: AndroidSourceCodePath, refs: str,
+                                          load_cache: bool = False) -> list[AndroidProvider]:
         manifest_content = await self._get_manifest_source_code(code_path, refs, load_cache)
 
         def _get_android_attr(element, name: str, default: str) -> str:
@@ -154,7 +157,8 @@ class AndroidProviderManifests:
             for uri_element in element.xpath("grant-uri-permission", namespaces=ANDROID_MANIFEST_NS):
                 for name in ["path", "pathPrefix", "pathPattern"]:
                     if android_attrib(name) in uri_element.attrib:
-                        uri_permission_result.append(AndroidUriPermission(name, uri_element.attrib[android_attrib(name)]))
+                        uri_permission_result.append(
+                            AndroidUriPermission(name, uri_element.attrib[android_attrib(name)]))
                         break
             return uri_permission_result
 
@@ -235,7 +239,7 @@ class AndroidProviderManifests:
                     return providers
                 except aiohttp.ClientResponseError as e:
                     if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
-                        await asyncio.sleep(20)
+                        await asyncio.sleep(10)
                     elif e.status == http.HTTPStatus.NOT_FOUND:
                         fetch_success = True
                     else:

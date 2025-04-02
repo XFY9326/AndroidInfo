@@ -34,7 +34,8 @@ class AndroidProjectMapping:
 
 
 class AndroidRemoteSourceCode:
-    def __init__(self, client: aiohttp.ClientSession, source_code_path: AndroidSourceCodePath, download_dir: str | None):
+    def __init__(self, client: aiohttp.ClientSession, source_code_path: AndroidSourceCodePath,
+                 download_dir: str | None):
         self._source: AndroidGoogleSource = AndroidGoogleSource(client)
         self._download_dir: str | None = download_dir
         self._source_code_path: AndroidSourceCodePath = source_code_path
@@ -64,11 +65,11 @@ class AndroidGoogleSource:
     _BS4_PARSER = "lxml"
     _BASE_URL = "https://android.googlesource.com"
 
-    _REQUEST_DELAY = 1
+    _LOCK: asyncio.Lock = asyncio.Lock()
+    _INIT_REQUEST_DELAY = 1
 
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
-        self._lock: asyncio.Lock = asyncio.Lock()
 
     def _build_url(self, project: str, refs: str | None = None, path: str | None = None):
         project = project.lstrip("/ ")
@@ -81,11 +82,23 @@ class AndroidGoogleSource:
                 url += f"/{path}"
         return url
 
+    async def _get_content(self, url: str) -> str:
+        async with self._LOCK:
+            wait_seconds = self._INIT_REQUEST_DELAY
+            for _ in range(5):
+                try:
+                    async with self._client.get(url) as response:
+                        return await response.text()
+                except aiohttp.ClientResponseError as e:
+                    if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
+                        await asyncio.sleep(wait_seconds)
+                        wait_seconds *= 2
+                    else:
+                        raise
+        raise RuntimeError(f"Too many requests: {url}")
+
     async def get_content(self, url: str) -> str:
-        async with self._lock:
-            async with self._client.get(url) as response:
-                html_content = await response.text()
-            await asyncio.sleep(self._REQUEST_DELAY)
+        html_content = await self._get_content(url)
         soup = BeautifulSoup(html_content, self._BS4_PARSER)
         file_element = soup.find("table", {"class": "FileContents"})
         line_elements = file_element.find_all("td", {"id": True})
