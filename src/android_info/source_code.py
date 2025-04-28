@@ -65,7 +65,7 @@ class AndroidRemoteSourceCode:
 class AndroidGoogleSource:
     _BS4_PARSER = "lxml"
     _BASE_URL = "https://android.googlesource.com"
-
+    _UA = UserAgent()
     _LOCK: asyncio.Lock = asyncio.Lock()
     _INIT_REQUEST_DELAY = 5
 
@@ -94,7 +94,7 @@ class AndroidGoogleSource:
                                 "Accept": "text/html,application/xhtml+xml,application/xml",
                                 "Accept-Encoding": "gzip, deflate",
                                 "Cache-Control": "no-cache",
-                                "User-Agent": UserAgent.chrome
+                                "User-Agent": self._UA.chrome
                             }
                     ) as response:
                         return await response.text()
