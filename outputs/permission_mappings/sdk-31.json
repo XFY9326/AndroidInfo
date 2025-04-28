@@ -19,6 +19,262 @@
     {
         "api": {
             "class_name": "android.accounts.AccountManager",
+            "name": "renameAccount",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->renameAccount(Landroid/accounts/Account;Ljava/lang/String;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.accounts.AccountManagerCallback<android.accounts.Account>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.accounts.Account>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "addAccount",
+            "signature": "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->addAccount(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "java.lang.String",
+                "java.lang.String[]",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "confirmCredentials",
+            "signature": "(Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->confirmCredentials(Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "editProperties",
+            "signature": "(Ljava/lang/String;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->editProperties(Ljava/lang/String;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthToken",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthToken",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.os.Bundle",
+                "boolean",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthToken",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "boolean",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthTokenByFeatures",
+            "signature": "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthTokenByFeatures(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "java.lang.String",
+                "java.lang.String[]",
+                "android.app.Activity",
+                "android.os.Bundle",
+                "android.os.Bundle",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "removeAccount",
+            "signature": "(Landroid/accounts/Account;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->removeAccount(Landroid/accounts/Account;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "updateCredentials",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->updateCredentials(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "removeAccount",
+            "signature": "(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->removeAccount(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "android.accounts.AccountManagerCallback<java.lang.Boolean>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<java.lang.Boolean>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
             "name": "getAccounts",
             "signature": "()[Landroid/accounts/Account;",
             "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
@@ -3667,6 +3923,27 @@
     {
         "api": {
             "class_name": "android.bluetooth.le.BluetoothLeScanner",
+            "name": "startScan",
+            "signature": "(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/app/PendingIntent;)I",
+            "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/app/PendingIntent;)I",
+            "type": "method",
+            "args": [
+                "java.util.List<android.bluetooth.le.ScanFilter>",
+                "android.bluetooth.le.ScanSettings",
+                "android.app.PendingIntent"
+            ],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_SCAN"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.bluetooth.le.BluetoothLeScanner",
             "name": "flushPendingScanResults",
             "signature": "(Landroid/bluetooth/le/ScanCallback;)V",
             "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->flushPendingScanResults(Landroid/bluetooth/le/ScanCallback;)V",
@@ -3691,6 +3968,27 @@
             "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Landroid/bluetooth/le/ScanCallback;)V",
             "type": "method",
             "args": [
+                "android.bluetooth.le.ScanCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_SCAN"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.bluetooth.le.BluetoothLeScanner",
+            "name": "startScan",
+            "signature": "(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/bluetooth/le/ScanCallback;)V",
+            "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/bluetooth/le/ScanCallback;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<android.bluetooth.le.ScanFilter>",
+                "android.bluetooth.le.ScanSettings",
                 "android.bluetooth.le.ScanCallback"
             ],
             "return_value": "void"
@@ -4528,6 +4826,67 @@
     },
     {
         "api": {
+            "class_name": "android.hardware.camera2.CameraManager",
+            "name": "isConcurrentSessionConfigurationSupported",
+            "signature": "(Ljava/util/Map;)Z",
+            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->isConcurrentSessionConfigurationSupported(Ljava/util/Map;)Z",
+            "type": "method",
+            "args": [
+                "java.util.Map<java.lang.String,android.hardware.camera2.params.SessionConfiguration>"
+            ],
+            "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CAMERA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.hardware.camera2.CameraManager",
+            "name": "openCamera",
+            "signature": "(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice/StateCallback;Landroid/os/Handler;)V",
+            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice/StateCallback;Landroid/os/Handler;)V",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "android.hardware.camera2.CameraDevice.StateCallback",
+                "android.os.Handler"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CAMERA"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.hardware.camera2.CameraManager",
+            "name": "openCamera",
+            "signature": "(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice/StateCallback;)V",
+            "dalvik_descriptor": "Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice/StateCallback;)V",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "java.util.concurrent.Executor",
+                "android.hardware.camera2.CameraDevice.StateCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CAMERA"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.hardware.fingerprint.FingerprintManager",
             "name": "hasEnrolledFingerprints",
             "signature": "()Z",
@@ -4916,6 +5275,57 @@
                 "float",
                 "long",
                 "android.app.PendingIntent"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.location.LocationManager",
+            "name": "getCurrentLocation",
+            "signature": "(Ljava/lang/String;Landroid/location/LocationRequest;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/location/LocationManager;->getCurrentLocation(Ljava/lang/String;Landroid/location/LocationRequest;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "android.location.LocationRequest",
+                "android.os.CancellationSignal",
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<android.location.Location>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.location.LocationManager",
+            "name": "getCurrentLocation",
+            "signature": "(Ljava/lang/String;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/location/LocationManager;->getCurrentLocation(Ljava/lang/String;Landroid/os/CancellationSignal;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "android.os.CancellationSignal",
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<android.location.Location>"
             ],
             "return_value": "void"
         },
@@ -5376,6 +5786,22 @@
     },
     {
         "api": {
+            "class_name": "android.media.MediaRecorder$AudioSource",
+            "name": "REMOTE_SUBMIX",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/media/MediaRecorder$AudioSource;->REMOTE_SUBMIX:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CAPTURE_AUDIO_OUTPUT"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.net.ConnectivityManager",
             "name": "getLinkProperties",
             "signature": "(Landroid/net/Network;)Landroid/net/LinkProperties;",
@@ -5817,6 +6243,44 @@
             "type": "method",
             "args": [],
             "return_value": "boolean"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CHANGE_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
+            "name": "addNetworkSuggestions",
+            "signature": "(Ljava/util/List;)I",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->addNetworkSuggestions(Ljava/util/List;)I",
+            "type": "method",
+            "args": [
+                "java.util.List<android.net.wifi.WifiNetworkSuggestion>"
+            ],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CHANGE_WIFI_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.net.wifi.WifiManager",
+            "name": "removeNetworkSuggestions",
+            "signature": "(Ljava/util/List;)I",
+            "dalvik_descriptor": "Landroid/net/wifi/WifiManager;->removeNetworkSuggestions(Ljava/util/List;)I",
+            "type": "method",
+            "args": [
+                "java.util.List<android.net.wifi.WifiNetworkSuggestion>"
+            ],
+            "return_value": "int"
         },
         "permission_groups": [
             {
@@ -7355,6 +7819,26 @@
     },
     {
         "api": {
+            "class_name": "android.telecom.TelecomManager",
+            "name": "startConference",
+            "signature": "(Ljava/util/List;Landroid/os/Bundle;)V",
+            "dalvik_descriptor": "Landroid/telecom/TelecomManager;->startConference(Ljava/util/List;Landroid/os/Bundle;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<android.net.Uri>",
+                "android.os.Bundle"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CALL_PHONE"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.telephony.PhoneStateListener",
             "name": "LISTEN_ACTIVE_DATA_SUBSCRIPTION_ID_CHANGE",
             "signature": "I",
@@ -7641,6 +8125,28 @@
     {
         "api": {
             "class_name": "android.telephony.PhoneStateListener",
+            "name": "onCellInfoChanged",
+            "signature": "(Ljava/util/List;)V",
+            "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onCellInfoChanged(Ljava/util/List;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<android.telephony.CellInfo>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "all_of": [
+                    "android.permission.READ_PHONE_STATE",
+                    "android.permission.ACCESS_FINE_LOCATION"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.PhoneStateListener",
             "name": "onCellLocationChanged",
             "signature": "(Landroid/telephony/CellLocation;)V",
             "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onCellLocationChanged(Landroid/telephony/CellLocation;)V",
@@ -7666,6 +8172,25 @@
             "type": "method",
             "args": [
                 "android.telephony.TelephonyDisplayInfo"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.PhoneStateListener",
+            "name": "onEmergencyNumberListChanged",
+            "signature": "(Ljava/util/Map;)V",
+            "dalvik_descriptor": "Landroid/telephony/PhoneStateListener;->onEmergencyNumberListChanged(Ljava/util/Map;)V",
+            "type": "method",
+            "args": [
+                "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>"
             ],
             "return_value": "void"
         },
@@ -7865,6 +8390,25 @@
     {
         "api": {
             "class_name": "android.telephony.SubscriptionManager",
+            "name": "createSubscriptionGroup",
+            "signature": "(Ljava/util/List;)Landroid/os/ParcelUuid;",
+            "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->createSubscriptionGroup(Ljava/util/List;)Landroid/os/ParcelUuid;",
+            "type": "method",
+            "args": [
+                "java.util.List<java.lang.Integer>"
+            ],
+            "return_value": "android.os.ParcelUuid"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.SubscriptionManager",
             "name": "getActiveSubscriptionInfo",
             "signature": "(I)Landroid/telephony/SubscriptionInfo;",
             "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfo(I)Landroid/telephony/SubscriptionInfo;",
@@ -8012,6 +8556,66 @@
     {
         "api": {
             "class_name": "android.telephony.SubscriptionManager",
+            "name": "addSubscriptionsIntoGroup",
+            "signature": "(Ljava/util/List;Landroid/os/ParcelUuid;)V",
+            "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->addSubscriptionsIntoGroup(Ljava/util/List;Landroid/os/ParcelUuid;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<java.lang.Integer>",
+                "android.os.ParcelUuid"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.SubscriptionManager",
+            "name": "removeSubscriptionsFromGroup",
+            "signature": "(Ljava/util/List;Landroid/os/ParcelUuid;)V",
+            "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->removeSubscriptionsFromGroup(Ljava/util/List;Landroid/os/ParcelUuid;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<java.lang.Integer>",
+                "android.os.ParcelUuid"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.SubscriptionManager",
+            "name": "setDeviceToDeviceStatusSharingContacts",
+            "signature": "(ILjava/util/List;)V",
+            "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->setDeviceToDeviceStatusSharingContacts(ILjava/util/List;)V",
+            "type": "method",
+            "args": [
+                "int",
+                "java.util.List<android.net.Uri>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.SubscriptionManager",
             "name": "setDeviceToDeviceStatusSharingPreference",
             "signature": "(II)V",
             "dalvik_descriptor": "Landroid/telephony/SubscriptionManager;->setDeviceToDeviceStatusSharingPreference(II)V",
@@ -8150,6 +8754,28 @@
     },
     {
         "api": {
+            "class_name": "android.telephony.TelephonyCallback$CellInfoListener",
+            "name": "onCellInfoChanged",
+            "signature": "(Ljava/util/List;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$CellInfoListener;->onCellInfoChanged(Ljava/util/List;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<android.telephony.CellInfo>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "all_of": [
+                    "android.permission.READ_PHONE_STATE",
+                    "android.permission.ACCESS_FINE_LOCATION"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.telephony.TelephonyCallback$CellLocationListener",
             "name": "onCellLocationChanged",
             "signature": "(Landroid/telephony/CellLocation;)V",
@@ -8164,6 +8790,25 @@
             {
                 "conditional": false,
                 "value": "android.permission.ACCESS_FINE_LOCATION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyCallback$EmergencyNumberListListener",
+            "name": "onEmergencyNumberListChanged",
+            "signature": "(Ljava/util/Map;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$EmergencyNumberListListener;->onEmergencyNumberListChanged(Ljava/util/Map;)V",
+            "type": "method",
+            "args": [
+                "java.util.Map<java.lang.Integer,java.util.List<android.telephony.emergency.EmergencyNumber>>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PHONE_STATE"
             }
         ]
     },
@@ -8202,6 +8847,25 @@
             {
                 "conditional": false,
                 "value": "android.permission.READ_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyCallback$PhysicalChannelConfigListener",
+            "name": "onPhysicalChannelConfigChanged",
+            "signature": "(Ljava/util/List;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyCallback$PhysicalChannelConfigListener;->onPhysicalChannelConfigChanged(Ljava/util/List;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<android.telephony.PhysicalChannelConfig>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PRECISE_PHONE_STATE"
             }
         ]
     },
@@ -8723,6 +9387,25 @@
     {
         "api": {
             "class_name": "android.telephony.TelephonyManager",
+            "name": "setForbiddenPlmns",
+            "signature": "(Ljava/util/List;)I",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->setForbiddenPlmns(Ljava/util/List;)I",
+            "type": "method",
+            "args": [
+                "java.util.List<java.lang.String>"
+            ],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
             "name": "getDeviceId",
             "signature": "()Ljava/lang/String;",
             "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
@@ -9127,6 +9810,180 @@
     },
     {
         "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "getNetworkSlicingConfiguration",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->getNetworkSlicingConfiguration(Ljava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.os.OutcomeReceiver<android.telephony.data.NetworkSlicingConfig,android.telephony.TelephonyManager.NetworkSlicingException>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "requestCellInfoUpdate",
+            "signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyManager/CellInfoCallback;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->requestCellInfoUpdate(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyManager/CellInfoCallback;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "android.telephony.TelephonyManager.CellInfoCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.ACCESS_FINE_LOCATION"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "sendUssdRequest",
+            "signature": "(Ljava/lang/String;Landroid/telephony/TelephonyManager/UssdResponseCallback;Landroid/os/Handler;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->sendUssdRequest(Ljava/lang/String;Landroid/telephony/TelephonyManager/UssdResponseCallback;Landroid/os/Handler;)V",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "android.telephony.TelephonyManager.UssdResponseCallback",
+                "android.os.Handler"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CALL_PHONE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "setCallComposerStatus",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->setCallComposerStatus(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "setDataEnabled",
+            "signature": "(Z)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V",
+            "type": "method",
+            "args": [
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "setDataEnabledForReason",
+            "signature": "(IZ)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->setDataEnabledForReason(IZ)V",
+            "type": "method",
+            "args": [
+                "int",
+                "boolean"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "setNetworkSelectionModeAutomatic",
+            "signature": "()V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->setNetworkSelectionModeAutomatic()V",
+            "type": "method",
+            "args": [],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "setSignalStrengthUpdateRequest",
+            "signature": "(Landroid/telephony/SignalStrengthUpdateRequest;)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->setSignalStrengthUpdateRequest(Landroid/telephony/SignalStrengthUpdateRequest;)V",
+            "type": "method",
+            "args": [
+                "android.telephony.SignalStrengthUpdateRequest"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.TelephonyManager",
+            "name": "switchMultiSimConfig",
+            "signature": "(I)V",
+            "dalvik_descriptor": "Landroid/telephony/TelephonyManager;->switchMultiSimConfig(I)V",
+            "type": "method",
+            "args": [
+                "int"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MODIFY_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
             "class_name": "android.telephony.euicc.EuiccManager",
             "name": "deleteSubscription",
             "signature": "(ILandroid/app/PendingIntent;)V",
@@ -9350,6 +10207,29 @@
     {
         "api": {
             "class_name": "android.telephony.ims.ImsMmTelManager",
+            "name": "getRegistrationTransportType",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/ims/ImsMmTelManager;->getRegistrationTransportType(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "any_of": [
+                    "android.permission.READ_PRIVILEGED_PHONE_STATE",
+                    "android.permission.READ_PRECISE_PHONE_STATE"
+                ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.ims.ImsMmTelManager",
             "name": "registerImsRegistrationCallback",
             "signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
             "dalvik_descriptor": "Landroid/telephony/ims/ImsMmTelManager;->registerImsRegistrationCallback(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
@@ -9440,6 +10320,46 @@
     {
         "api": {
             "class_name": "android.telephony.ims.ImsRcsManager",
+            "name": "getRegistrationState",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/ims/ImsRcsManager;->getRegistrationState(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PRECISE_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.ims.ImsRcsManager",
+            "name": "getRegistrationTransportType",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/ims/ImsRcsManager;->getRegistrationTransportType(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PRECISE_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.ims.ImsRcsManager",
             "name": "registerImsRegistrationCallback",
             "signature": "(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
             "dalvik_descriptor": "Landroid/telephony/ims/ImsRcsManager;->registerImsRegistrationCallback(Ljava/util/concurrent/Executor;Landroid/telephony/ims/RegistrationManager/RegistrationCallback;)V",
@@ -9490,6 +10410,46 @@
             {
                 "conditional": false,
                 "value": "android.permission.READ_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.ims.RegistrationManager",
+            "name": "getRegistrationState",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/ims/RegistrationManager;->getRegistrationState(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.telephony.ims.RegistrationManager",
+            "name": "getRegistrationTransportType",
+            "signature": "(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "dalvik_descriptor": "Landroid/telephony/ims/RegistrationManager;->getRegistrationTransportType(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V",
+            "type": "method",
+            "args": [
+                "java.util.concurrent.Executor",
+                "java.util.function.Consumer<java.lang.Integer>"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.READ_PRIVILEGED_PHONE_STATE"
             }
         ]
     },

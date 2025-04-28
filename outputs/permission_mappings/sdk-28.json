@@ -19,6 +19,262 @@
     {
         "api": {
             "class_name": "android.accounts.AccountManager",
+            "name": "renameAccount",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->renameAccount(Landroid/accounts/Account;Ljava/lang/String;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.accounts.AccountManagerCallback<android.accounts.Account>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.accounts.Account>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.AUTHENTICATE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "addAccount",
+            "signature": "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->addAccount(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "java.lang.String",
+                "java.lang.String[]",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "confirmCredentials",
+            "signature": "(Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->confirmCredentials(Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "editProperties",
+            "signature": "(Ljava/lang/String;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->editProperties(Ljava/lang/String;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthToken",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthToken",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.os.Bundle",
+                "boolean",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthToken",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthToken(Landroid/accounts/Account;Ljava/lang/String;ZLandroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "boolean",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.USE_CREDENTIALS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "getAuthTokenByFeatures",
+            "signature": "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAuthTokenByFeatures(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "java.lang.String",
+                "java.lang.String",
+                "java.lang.String[]",
+                "android.app.Activity",
+                "android.os.Bundle",
+                "android.os.Bundle",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "removeAccount",
+            "signature": "(Landroid/accounts/Account;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->removeAccount(Landroid/accounts/Account;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "updateCredentials",
+            "signature": "(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->updateCredentials(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "java.lang.String",
+                "android.os.Bundle",
+                "android.app.Activity",
+                "android.accounts.AccountManagerCallback<android.os.Bundle>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<android.os.Bundle>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
+            "name": "removeAccount",
+            "signature": "(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "dalvik_descriptor": "Landroid/accounts/AccountManager;->removeAccount(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;",
+            "type": "method",
+            "args": [
+                "android.accounts.Account",
+                "android.accounts.AccountManagerCallback<java.lang.Boolean>",
+                "android.os.Handler"
+            ],
+            "return_value": "android.accounts.AccountManagerFuture<java.lang.Boolean>"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.MANAGE_ACCOUNTS"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.accounts.AccountManager",
             "name": "getAccounts",
             "signature": "()[Landroid/accounts/Account;",
             "dalvik_descriptor": "Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
@@ -1356,10 +1612,52 @@
         "api": {
             "class_name": "android.bluetooth.le.BluetoothLeScanner",
             "name": "startScan",
+            "signature": "(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/app/PendingIntent;)I",
+            "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/app/PendingIntent;)I",
+            "type": "method",
+            "args": [
+                "java.util.List<android.bluetooth.le.ScanFilter>",
+                "android.bluetooth.le.ScanSettings",
+                "android.app.PendingIntent"
+            ],
+            "return_value": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.bluetooth.le.BluetoothLeScanner",
+            "name": "startScan",
             "signature": "(Landroid/bluetooth/le/ScanCallback;)V",
             "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Landroid/bluetooth/le/ScanCallback;)V",
             "type": "method",
             "args": [
+                "android.bluetooth.le.ScanCallback"
+            ],
+            "return_value": "void"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.BLUETOOTH_ADMIN"
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.bluetooth.le.BluetoothLeScanner",
+            "name": "startScan",
+            "signature": "(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/bluetooth/le/ScanCallback;)V",
+            "dalvik_descriptor": "Landroid/bluetooth/le/BluetoothLeScanner;->startScan(Ljava/util/List;Landroid/bluetooth/le/ScanSettings;Landroid/bluetooth/le/ScanCallback;)V",
+            "type": "method",
+            "args": [
+                "java.util.List<android.bluetooth.le.ScanFilter>",
+                "android.bluetooth.le.ScanSettings",
                 "android.bluetooth.le.ScanCallback"
             ],
             "return_value": "void"
@@ -2349,6 +2647,22 @@
                     "android.permission.ACCESS_COARSE_LOCATION",
                     "android.permission.ACCESS_FINE_LOCATION"
                 ]
+            }
+        ]
+    },
+    {
+        "api": {
+            "class_name": "android.media.MediaRecorder$AudioSource",
+            "name": "REMOTE_SUBMIX",
+            "signature": "I",
+            "dalvik_descriptor": "Landroid/media/MediaRecorder$AudioSource;->REMOTE_SUBMIX:I",
+            "type": "field",
+            "field_type": "int"
+        },
+        "permission_groups": [
+            {
+                "conditional": false,
+                "value": "android.permission.CAPTURE_AUDIO_OUTPUT"
             }
         ]
     },

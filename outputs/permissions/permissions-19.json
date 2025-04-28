@@ -2475,7 +2475,12 @@
             ],
             "permission_flags": [],
             "priority": 0,
-            "comment": null
+            "comment": {
+                "deprecated": false,
+                "system_api": false,
+                "test_api": false,
+                "hide": false
+            }
         },
         "android.permission.CHANGE_NETWORK_STATE": {
             "name": "android.permission.CHANGE_NETWORK_STATE",
