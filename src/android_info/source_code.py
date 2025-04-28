@@ -11,6 +11,7 @@ import aiofiles
 import aiofiles.os
 import aiohttp
 from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
 from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
@@ -66,7 +67,7 @@ class AndroidGoogleSource:
     _BASE_URL = "https://android.googlesource.com"
 
     _LOCK: asyncio.Lock = asyncio.Lock()
-    _INIT_REQUEST_DELAY = 1
+    _INIT_REQUEST_DELAY = 5
 
     def __init__(self, client: aiohttp.ClientSession):
         self._client: aiohttp.ClientSession = client
@@ -87,7 +88,15 @@ class AndroidGoogleSource:
             wait_seconds = self._INIT_REQUEST_DELAY
             for _ in range(5):
                 try:
-                    async with self._client.get(url) as response:
+                    async with self._client.get(
+                            url=url,
+                            headers={
+                                "Accept": "text/html,application/xhtml+xml,application/xml",
+                                "Accept-Encoding": "gzip, deflate",
+                                "Cache-Control": "no-cache",
+                                "User-Agent": UserAgent.chrome
+                            }
+                    ) as response:
                         return await response.text()
                 except aiohttp.ClientResponseError as e:
                     if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:

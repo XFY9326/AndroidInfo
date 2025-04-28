@@ -58,7 +58,8 @@ async def remove_old_ref_versions_tmp(refs: str, tmp_dir: str):
             pass
 
 
-async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, tmp_dir: str, with_sdk: bool = False, refs_api: tuple[str, int] | None = None):
+async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, tmp_dir: str, with_sdk: bool = False,
+                               refs_api: tuple[str, int] | None = None):
     refs = refs_api[0] if refs_api is not None else ANDROID_MAIN_REFS
     if refs_api is not None:
         await remove_old_ref_versions_tmp(refs, tmp_dir)
@@ -85,13 +86,15 @@ async def dump_ref_permissions(client: aiohttp.ClientSession, output_dir: str, t
     del android_permissions
 
 
-async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, api_levels: list[AndroidAPILevel], android_versions: AndroidVersions):
+async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, api_levels: list[AndroidAPILevel],
+                           android_versions: AndroidVersions):
     async def _task(api: int, versions: list[str]):
         for version in reversed(versions):
             latest_build_version = await android_versions.get_latest_build_version(version, False)
             if latest_build_version is not None:
                 try:
-                    await dump_ref_permissions(client, permissions_output_dir, tmp_dir, False, (latest_build_version.tag, api))
+                    await dump_ref_permissions(client, permissions_output_dir, tmp_dir, False,
+                                               (latest_build_version.tag, api))
                     break
                 except aiohttp.ClientResponseError as e:
                     if e.status != http.HTTPStatus.NOT_FOUND:
@@ -119,7 +122,8 @@ async def dump_permissions(client: aiohttp.ClientSession, output_dir: str, api_l
         await task
 
 
-async def dump_api_permission_mappings(client: aiohttp.ClientSession, platform_dir: str, sources_dir: str, output_dir: str, api_levels: list[AndroidAPILevel]):
+async def dump_api_permission_mappings(client: aiohttp.ClientSession, platform_dir: str, sources_dir: str,
+                                       output_dir: str, api_levels: list[AndroidAPILevel]):
     async def _task(api: int):
         try:
             api_permissions = await platform_api.get_api_permissions(api)
@@ -149,7 +153,8 @@ async def dump_api_permission_mappings(client: aiohttp.ClientSession, platform_d
         await task
 
 
-async def dump_content_provider_authority_classes(client: aiohttp.ClientSession, download_dir: str, output_dir: str, api_levels: list[AndroidAPILevel]):
+async def dump_content_provider_authority_classes(client: aiohttp.ClientSession, download_dir: str, output_dir: str,
+                                                  api_levels: list[AndroidAPILevel]):
     providers_dir = os.path.join(output_dir, "providers")
     if not await aiofiles.os.path.exists(providers_dir):
         await aiofiles.os.makedirs(providers_dir)
@@ -206,7 +211,8 @@ async def main():
         await aiofiles.os.makedirs(sources_download_dir)
 
     tcp_connector = aiohttp.TCPConnector(limit_per_host=REQUEST_LIMIT_PER_HOST)
-    async with aiohttp.ClientSession(connector=tcp_connector, trust_env=USE_SYSTEM_PROXY, raise_for_status=True) as client:
+    async with aiohttp.ClientSession(connector=tcp_connector, trust_env=USE_SYSTEM_PROXY,
+                                     raise_for_status=True) as client:
         print("Loading versions ...")
 
         android_versions = AndroidVersions(client)
@@ -229,7 +235,8 @@ async def main():
         if DUMP_API_PERMISSION_MAPPINGS:
             print()
             print("Loading API-Permission mappings ...")
-            await dump_api_permission_mappings(client, platform_download_dir, sources_download_dir, output_dir, api_levels)
+            await dump_api_permission_mappings(client, platform_download_dir, sources_download_dir, output_dir,
+                                               api_levels)
 
         if DUMP_AUTHORITIES_CLASS:
             print()

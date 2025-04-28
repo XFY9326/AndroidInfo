@@ -275,14 +275,17 @@ class AndroidVersions:
         return [i for i in self._build_versions if i.match_version(version)]
 
     @staticmethod
-    def _get_latest_build_version(build_versions: list[AndroidBuildVersion], is_security: bool | None = None) -> AndroidBuildVersion | None:
+    def _get_latest_build_version(build_versions: list[AndroidBuildVersion],
+                                  is_security: bool | None = None) -> AndroidBuildVersion | None:
         if len(build_versions) == 0:
             return None
-        build_versions = build_versions if is_security is None else [i for i in build_versions if i.is_security == is_security]
+        build_versions = build_versions if is_security is None else [i for i in build_versions if
+                                                                     i.is_security == is_security]
         build_versions = sorted(build_versions, reverse=True)
         return build_versions[0]
 
-    async def get_latest_build_version(self, version: str, is_security: bool | None = None) -> AndroidBuildVersion | None:
+    async def get_latest_build_version(self, version: str,
+                                       is_security: bool | None = None) -> AndroidBuildVersion | None:
         build_versions = await self.get_build_versions(version)
         return self._get_latest_build_version(build_versions, is_security)
 
@@ -311,6 +314,7 @@ class AndroidVersions:
         api_level = await self.get_api_level(api)
         return [build for version in api_level.versions for build in (await self.get_build_versions(version))]
 
-    async def get_latest_api_build_version(self, api: int, is_security: bool | None = None) -> AndroidBuildVersion | None:
+    async def get_latest_api_build_version(self, api: int,
+                                           is_security: bool | None = None) -> AndroidBuildVersion | None:
         build_versions = await self.get_api_build_versions(api)
         return self._get_latest_build_version(build_versions, is_security)

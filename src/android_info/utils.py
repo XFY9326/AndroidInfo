@@ -56,8 +56,7 @@ def xml_to_dict(element: _Element, namespaces: dict[str, str] | None = None) -> 
             matcher = ns_attr_pattern.fullmatch(name)
             if matcher and matcher.group(1) in ns_idx:
                 return f"{ns_idx[matcher.group(1)]}:{matcher.group(2)}"
-        else:
-            return name
+        return name
 
     def _recursion(e: _Element) -> dict | None:
         children = [c for c in e.getchildren() if not isinstance(c.tag, type(etree.Comment))]
@@ -129,7 +128,8 @@ async def run_exec(program: str, *args: str, cwd: str | None = None) -> tuple[in
         cwd=cwd
     )
     stdout, stderr = await process.communicate()
-    return await process.wait(), stdout.decode(locale.getpreferredencoding()), stderr.decode(locale.getpreferredencoding())
+    return await process.wait(), stdout.decode(locale.getpreferredencoding()), stderr.decode(
+        locale.getpreferredencoding())
 
 
 async def check_java_version(min_version: str):
@@ -141,7 +141,8 @@ async def check_java_version(min_version: str):
             if matcher is not None:
                 java_version = matcher.group(1).strip()
                 if VersionCompare.instance().compare(min_version, java_version) > 0:
-                    raise EnvironmentError(f"Current java version {java_version}. Require java version >= {min_version}!")
+                    raise EnvironmentError(
+                        f"Current java version {java_version}. Require java version >= {min_version}!")
             else:
                 raise EnvironmentError("Unknown java version")
         else:

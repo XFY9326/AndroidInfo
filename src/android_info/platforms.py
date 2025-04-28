@@ -166,8 +166,10 @@ class AndroidAPIField(AndroidAPI, DataClassJsonMixin):
 class APIPermissionGroup(DataClassJsonMixin):
     conditional: bool
     value: str | None = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
-    all_of: list[str] | None = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
-    any_of: list[str] | None = dataclasses.field(default=None, metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    all_of: list[str] | None = dataclasses.field(default=None,
+                                                 metadata=dataclasses_json.config(exclude=lambda x: x is None))
+    any_of: list[str] | None = dataclasses.field(default=None,
+                                                 metadata=dataclasses_json.config(exclude=lambda x: x is None))
 
 
 @dataclasses.dataclass(frozen=True)
@@ -250,7 +252,8 @@ class AndroidPlatformAPIPermissions:
         field_apis = {f"{i.api.class_name}:{i.api.name}": i for i in raw_result if isinstance(i.api, _RawField)}
         code, output, output_error = await run_exec(
             "java",
-            "-jar", _PLATFORM_TOOLS_JAR_PATH, "field-type", "-p", platform_zip_path, "-s", sources_zip_path, *field_apis.keys()
+            "-jar", _PLATFORM_TOOLS_JAR_PATH, "field-type", "-p", platform_zip_path, "-s", sources_zip_path,
+            *field_apis.keys()
         )
         if code == 0:
             result: dict[_RawAPIPermission, str] = {}
@@ -285,7 +288,8 @@ class AndroidPlatformAPIPermissions:
             if len(i.strip()) > 0
         ]
 
-    def _build_android_api_permission(self, name: str, permissions: list[_RawAPIPermissionGroup], class_names: set[str]) -> _RawAPIPermission:
+    def _build_android_api_permission(self, name: str, permissions: list[_RawAPIPermissionGroup],
+                                      class_names: set[str]) -> _RawAPIPermission:
         method_matcher = self._method_name_pattern.fullmatch(name)
         if method_matcher is None:
             constructor_matcher = self._constructor_name_pattern.fullmatch(name)
@@ -339,8 +343,10 @@ class AndroidPlatformAPIPermissions:
                 if annotation_elements is not None and len(annotation_elements) > 0:
                     api_permission_groups = []
                     for annotation_element in annotation_elements:
-                        val_permission_elements: list[_Element] = annotation_element.xpath(self._ANNOTATION_ITEM_ANNOTATION_VAL_PERMISSION_XPATH)
-                        conditional_elements = annotation_element.xpath(self._ANNOTATION_ITEM_ANNOTATION_VAL_CONDITIONAL_XPATH)
+                        val_permission_elements: list[_Element] = annotation_element.xpath(
+                            self._ANNOTATION_ITEM_ANNOTATION_VAL_PERMISSION_XPATH)
+                        conditional_elements = annotation_element.xpath(
+                            self._ANNOTATION_ITEM_ANNOTATION_VAL_CONDITIONAL_XPATH)
                         conditional = conditional_elements is not None and len(conditional_elements) > 0
                         if val_permission_elements is not None:
                             value: str | None = None
@@ -351,7 +357,8 @@ class AndroidPlatformAPIPermissions:
                                 permissions_text: str = val_permission_element.attrib["val"].strip("{} ")
                                 permissions = [
                                     p.strip().strip("\"")
-                                    for p in (permissions_text.split(",") if "," in permissions_text else [permissions_text])
+                                    for p in
+                                    (permissions_text.split(",") if "," in permissions_text else [permissions_text])
                                 ]
                                 group_type = val_permission_element.attrib["name"]
                                 if group_type == "allOf":

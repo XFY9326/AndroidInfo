@@ -146,7 +146,8 @@ class _AndroidCoreResString:
     _ID_START = "@string/"
     _PROJECT_PATH = "platform/frameworks/base"
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: str | None, lang: str | None = None, load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, download_dir: str | None, lang: str | None = None,
+                 load_cache: bool = False):
         value_path = "values" if lang is None else f"values-{lang.strip()}"
         self._source: AndroidRemoteSourceCode = AndroidRemoteSourceCode(
             client, AndroidSourceCodePath(self._PROJECT_PATH, f"core/res/res/{value_path}/strings.xml"), download_dir
@@ -206,13 +207,12 @@ class _AndroidCoreManifest:
                         test_api="@TestApi" in prev_element.text,
                         hide="@hide" in prev_element.text
                     )
-            else:
-                return PermissionComment(
-                    deprecated=False,
-                    system_api=False,
-                    test_api=False,
-                    hide=False
-                )
+            return PermissionComment(
+                deprecated=False,
+                system_api=False,
+                test_api=False,
+                hide=False
+            )
 
         manifest = await self._source.get_content(self._refs, self._load_cache)
         tree: _Element = etree.fromstring(manifest.encode("utf-8"))
@@ -258,9 +258,11 @@ class _AndroidCoreManifest:
 
 class AndroidFrameworkPermissions:
 
-    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: str | None = None, res_lang: str | None = None, load_cache: bool = False):
+    def __init__(self, client: aiohttp.ClientSession, refs: str, permissions_tmp_dir: str | None = None,
+                 res_lang: str | None = None, load_cache: bool = False):
         self._manifest: _AndroidCoreManifest = _AndroidCoreManifest(client, refs, permissions_tmp_dir, load_cache)
-        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, res_lang, load_cache)
+        self._res_string: _AndroidCoreResString = _AndroidCoreResString(client, refs, permissions_tmp_dir, res_lang,
+                                                                        load_cache)
         self._permissions: AndroidPermissions | None = None
 
     async def _parse_raw_text(self, text: str | None) -> str | None:
