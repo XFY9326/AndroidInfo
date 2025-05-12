@@ -8989,5 +8989,59 @@
         "name": "Android15",
         "build_id": "BP1A.250405.007.D1",
         "security_patch_level": "2025-04-05"
+    },
+    "android-15.0.0_r31": {
+        "tag": "android-15.0.0_r31",
+        "version": "15.0.0",
+        "revision": "31",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "BD4A.250505.003",
+        "security_patch_level": "2025-05-05"
+    },
+    "android-15.0.0_r32": {
+        "tag": "android-15.0.0_r32",
+        "version": "15.0.0",
+        "revision": "32",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "BP1A.250505.005",
+        "security_patch_level": "2025-05-05"
+    },
+    "android-15.0.0_r33": {
+        "tag": "android-15.0.0_r33",
+        "version": "15.0.0",
+        "revision": "33",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "BP1A.250505.005.A1",
+        "security_patch_level": "2025-05-05"
+    },
+    "android-15.0.0_r34": {
+        "tag": "android-15.0.0_r34",
+        "version": "15.0.0",
+        "revision": "34",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "BP1A.250505.005.B1",
+        "security_patch_level": "2025-05-05"
+    },
+    "android-15.0.0_r35": {
+        "tag": "android-15.0.0_r35",
+        "version": "15.0.0",
+        "revision": "35",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "BP1A.250505.005.C1",
+        "security_patch_level": "2025-05-05"
+    },
+    "android-15.0.0_r36": {
+        "tag": "android-15.0.0_r36",
+        "version": "15.0.0",
+        "revision": "36",
+        "is_security": false,
+        "name": "Android15",
+        "build_id": "BP1A.250505.005.D1",
+        "security_patch_level": "2025-05-05"
     }
 }
