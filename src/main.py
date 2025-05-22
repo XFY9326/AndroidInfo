@@ -6,6 +6,7 @@ import os
 import aiofiles.os
 import aiohttp
 import aioshutil
+from fake_useragent import UserAgent
 from tqdm.asyncio import tqdm
 
 from android_info import ANDROID_MAIN_REFS
@@ -211,8 +212,18 @@ async def main():
         await aiofiles.os.makedirs(sources_download_dir)
 
     tcp_connector = aiohttp.TCPConnector(limit_per_host=REQUEST_LIMIT_PER_HOST)
-    async with aiohttp.ClientSession(connector=tcp_connector, trust_env=USE_SYSTEM_PROXY,
-                                     raise_for_status=True) as client:
+    async with aiohttp.ClientSession(
+            connector=tcp_connector,
+            headers={
+                "Accept": "*/*",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "en;q=0.8",
+                "Cache-Control": "no-cache",
+                "User-Agent": UserAgent().chrome
+            },
+            trust_env=USE_SYSTEM_PROXY,
+            raise_for_status=True
+    ) as client:
         print("Loading versions ...")
 
         android_versions = AndroidVersions(client)

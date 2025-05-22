@@ -11,7 +11,6 @@ import aiofiles
 import aiofiles.os
 import aiohttp
 from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
 from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
@@ -65,7 +64,6 @@ class AndroidRemoteSourceCode:
 class AndroidGoogleSource:
     _BS4_PARSER = "lxml"
     _BASE_URL = "https://android.googlesource.com"
-    _UA = UserAgent()
     _LOCK: asyncio.Lock = asyncio.Lock()
     _INIT_REQUEST_DELAY = 5
 
@@ -91,10 +89,7 @@ class AndroidGoogleSource:
                     async with self._client.get(
                             url=url,
                             headers={
-                                "Accept": "text/html,application/xhtml+xml,application/xml",
-                                "Accept-Encoding": "gzip, deflate",
-                                "Cache-Control": "no-cache",
-                                "User-Agent": self._UA.chrome
+                                "Accept": "text/html,application/xhtml+xml,application/xml"
                             }
                     ) as response:
                         return await response.text()
