@@ -166,6 +166,8 @@
             "android.provider.ContactsContract$QuickContact",
             "android.provider.ContactsContract$RawContacts",
             "android.provider.ContactsContract$RawContacts$Data",
+            "android.provider.ContactsContract$RawContacts$DefaultAccount",
+            "android.provider.ContactsContract$RawContacts$DefaultAccount$DefaultAccountAndState",
             "android.provider.ContactsContract$RawContacts$DisplayPhoto",
             "android.provider.ContactsContract$RawContacts$Entity",
             "android.provider.ContactsContract$RawContactsColumns",
