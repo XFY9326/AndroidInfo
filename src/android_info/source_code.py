@@ -109,8 +109,19 @@ class AndroidGoogleSource:
         return "\n".join([i.text for i in line_elements])
 
     async def exists(self, project: str, refs: str | None = None) -> bool:
-        async with self._client.head(self._build_url(project, refs)) as response:
-            return response.status != http.HTTPStatus.NOT_FOUND
+        async with self._LOCK:
+            wait_seconds = self._INIT_REQUEST_DELAY
+            for _ in range(5):
+                try:
+                    async with self._client.head(self._build_url(project, refs)) as response:
+                        return response.status != http.HTTPStatus.NOT_FOUND
+                except aiohttp.ClientResponseError as e:
+                    if e.status == http.HTTPStatus.TOO_MANY_REQUESTS:
+                        await asyncio.sleep(wait_seconds)
+                        wait_seconds *= 2
+                    else:
+                        raise
+        raise RuntimeError(f"Too many requests: {project}/{refs}")
 
     async def get_file(self, project: str, refs: str, path: str) -> str:
         return await self.get_content(self._build_url(project, refs, path))
