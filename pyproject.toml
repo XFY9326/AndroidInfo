@@ -3,14 +3,14 @@ name = "android_info"
 version = "0.1.0"
 description = "Get latest Android versions, permissions, and API-Permission mappings"
 authors = [{ name = "XFY9326", email = "xfy9326@qq.com" }]
-requires-python = "~=3.10"
+requires-python = ">=3.10"
 readme = "README.md"
 license = "MIT"
 dependencies = [
     "bs4>=0.0.2,<0.0.3",
     "tqdm>=4.66.5,<5",
-    "lxml>=5.4.0,<6",
-    "aiohttp>=3.11.18,<4",
+    "lxml>=6.0.0,<7",
+    "aiohttp>=3.12.14,<4",
     "aiofiles>=24.1.0,<25",
     "aioshutil~=1.5",
     "dataclasses-json>=0.6.7,<0.7",
