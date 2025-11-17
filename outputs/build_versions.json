@@ -9169,5 +9169,14 @@
         "name": "Android16",
         "build_id": "BP2A.250605.031.A3",
         "security_patch_level": "2025-06-05"
+    },
+    "android-16.0.0_r3": {
+        "tag": "android-16.0.0_r3",
+        "version": "16.0.0",
+        "revision": "3",
+        "is_security": false,
+        "name": "Android16",
+        "build_id": "BP3A.250905.014",
+        "security_patch_level": "2025-09-05"
     }
 }
