@@ -9152,6 +9152,15 @@
         "build_id": "BP1A.250505.005.D1",
         "security_patch_level": "2025-05-05"
     },
+    "android-security-16.0.0_r1": {
+        "tag": "android-security-16.0.0_r1",
+        "version": "16.0.0",
+        "revision": "1",
+        "is_security": true,
+        "name": "Android16",
+        "build_id": "13943552",
+        "security_patch_level": "2025-08-05"
+    },
     "android-16.0.0_r1": {
         "tag": "android-16.0.0_r1",
         "version": "16.0.0",
@@ -9160,6 +9169,15 @@
         "name": "Android16",
         "build_id": "BP2A.250605.031.A2",
         "security_patch_level": "2025-06-05"
+    },
+    "android-security-16.0.0_r2": {
+        "tag": "android-security-16.0.0_r2",
+        "version": "16.0.0",
+        "revision": "2",
+        "is_security": true,
+        "name": "Android16",
+        "build_id": "14094968",
+        "security_patch_level": "2025-08-05"
     },
     "android-16.0.0_r2": {
         "tag": "android-16.0.0_r2",
