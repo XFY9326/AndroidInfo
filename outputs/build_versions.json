@@ -7451,6 +7451,15 @@
         "build_id": "TQ2A.230305.008.A1",
         "security_patch_level": "2023-03-05"
     },
+    "android-security-13.0.0_r33": {
+        "tag": "android-security-13.0.0_r33",
+        "version": "13.0.0",
+        "revision": "33",
+        "is_security": true,
+        "name": "Android13",
+        "build_id": "14367587",
+        "security_patch_level": "2022-08-05"
+    },
     "android-13.0.0_r34": {
         "tag": "android-13.0.0_r34",
         "version": "13.0.0",
@@ -8324,6 +8333,15 @@
         "build_id": "UQ1A.240205.002.B1",
         "security_patch_level": "2024-02-05"
     },
+    "android-security-14.0.0_r24": {
+        "tag": "android-security-14.0.0_r24",
+        "version": "14.0.0",
+        "revision": "24",
+        "is_security": true,
+        "name": "Android14",
+        "build_id": "14367588",
+        "security_patch_level": "2023-10-05"
+    },
     "android-14.0.0_r25": {
         "tag": "android-14.0.0_r25",
         "version": "14.0.0",
@@ -8954,6 +8972,15 @@
         "build_id": "AP4A.250105.002.B1",
         "security_patch_level": "2025-01-05"
     },
+    "android-security-15.0.0_r12": {
+        "tag": "android-security-15.0.0_r12",
+        "version": "15.0.0",
+        "revision": "12",
+        "is_security": true,
+        "name": "Android15",
+        "build_id": "14367589",
+        "security_patch_level": "2024-09-05"
+    },
     "android-15.0.0_r13": {
         "tag": "android-15.0.0_r13",
         "version": "15.0.0",
@@ -9196,5 +9223,23 @@
         "name": "Android16",
         "build_id": "BP3A.250905.014",
         "security_patch_level": "2025-09-05"
+    },
+    "android-security-16.0.0_r3": {
+        "tag": "android-security-16.0.0_r3",
+        "version": "16.0.0",
+        "revision": "3",
+        "is_security": true,
+        "name": "Android16",
+        "build_id": "14367590",
+        "security_patch_level": "2025-08-05"
+    },
+    "android-16.0.0_r4": {
+        "tag": "android-16.0.0_r4",
+        "version": "16.0.0",
+        "revision": "4",
+        "is_security": false,
+        "name": "Android16",
+        "build_id": "BP4A.251205.006",
+        "security_patch_level": "2025-12-05"
     }
 }
