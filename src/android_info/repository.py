@@ -9,6 +9,7 @@ from lxml import etree
 # noinspection PyProtectedMember
 from lxml.etree import _Element
 
+from .task import SingleFlight
 from .utils import xml_to_dict
 
 # noinspection HttpUrlsUsage
@@ -32,6 +33,7 @@ class AndroidRepository:
     def __init__(self, client: aiohttp.ClientSession):
         self._client = client
         self._tree: _Element | None = None
+        self._task_manager: SingleFlight = SingleFlight()
 
     @staticmethod
     def cached_instance(client: aiohttp.ClientSession) -> 'AndroidRepository':
@@ -120,7 +122,7 @@ class AndroidRepository:
         else:
             raise ValueError(f"Unknown archives format: {archives}")
 
-    async def download_archive(self, archive_name: str, output_dir: str | None = None) -> str:
+    async def _download_archive_task(self, archive_name: str, output_dir: str | None) -> str:
         if output_dir is None:
             output_dir = "."
         if not os.path.isdir(output_dir):
@@ -137,6 +139,14 @@ class AndroidRepository:
         else:
             raise ValueError(f"Missing download tmp: {tmp_file_path}")
         return target_file_path
+
+    async def download_archive(self, archive_name: str, output_dir: str | None = None) -> str:
+        return await self._task_manager.run(
+            archive_name,
+            self._download_archive_task,
+            archive_name,
+            output_dir
+        )
 
     async def get_packages(self, path: str, channel: str | None = None) -> list[dict]:
         pkg_elements = await self._get_package_elements(path)

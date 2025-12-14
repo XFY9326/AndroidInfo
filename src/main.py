@@ -2,6 +2,7 @@ import asyncio
 import http
 import json
 import os
+from typing import Any
 
 import aiofiles.os
 import aiohttp
@@ -35,7 +36,7 @@ def filter_available_api_levels(api_levels: list[AndroidAPILevel]) -> list[Andro
     return [i for i in api_levels if i.api >= 4 and i.api != 11 and i.api != 12 and i.api != 20]
 
 
-async def dump_json(data: any, output_path: str):
+async def dump_json(data: Any, output_path: str):
     async with aiofiles.open(output_path, "w", encoding="utf-8") as f:
         await f.write(json.dumps(data, ensure_ascii=False, indent=4))
 
